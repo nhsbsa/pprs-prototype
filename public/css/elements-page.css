@@ -990,6 +990,14 @@ hr {
   padding-right: 1.5rem;
 }
 
+.issueFormView {
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: #f8f8f8;
+    overflow: hidden;
+    border: 2px solid #ececec;
+}
+
 .button:visited {
   background-color: #007f45;
 }
