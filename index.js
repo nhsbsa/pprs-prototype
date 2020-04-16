@@ -44,6 +44,7 @@ app.get('/', (req, res) => { res.render('index') });
 app.get('/view-prototype1', (req, res) => { res.render('view-prototype1') });
 app.get('/view-prototype1-prev-version', (req, res) => { res.render('view-prototype1-audit-trail-previous-version') });
 app.get('/view-prototype1-first-version', (req, res) => { res.render('view-prototype1-audit-trail-first-version') });
+app.get('/view-prototype2', (req, res) => { res.render('view-prototype2') });
 
 /**
  * Server Activation
