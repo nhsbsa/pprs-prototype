@@ -42,6 +42,7 @@ app.use(express.static(path.join(__dirname, "public")));
  */
 app.get('/', (req, res) => { res.render('index') });
 app.get('/view-prototype1', (req, res) => { res.render('view-prototype1') });
+app.get('/view-prototype1-prev-version', (req, res) => { res.render('view-prototype1-audit-trail-previous-version') });
 
 /**
  * Server Activation
