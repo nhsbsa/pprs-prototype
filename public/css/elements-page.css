@@ -998,6 +998,24 @@ hr {
     border: 2px solid #ececec;
 }
 
+.userBtn--secondary {
+    margin-top: 23px;
+	color: #0b0c0c;
+	background-color: #f3f2f1;
+    float: right;
+    -webkit-box-shadow: 0 2px 0 #929191;
+    box-shadow: 0 2px 0 #929191;
+}
+
+.userBtn--secondary:link, .userBtn--secondary:link:focus, .userBtn--secondary:hover, .userBtn--secondary:focus, .userBtn--secondary:visited {
+    color: #0b0c0c;
+	background-color: #f3f2f1;
+}
+
+.userBtn--secondary:hover {
+    background-color: #dbdad9;
+}
+
 .button:visited {
   background-color: #007f45;
 }
