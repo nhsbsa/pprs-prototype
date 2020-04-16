@@ -19,30 +19,30 @@
 
 {% block content %}
 <div class="column-full">
-  <h1  class="heading-large" style="margin-top:0; display:inline-block">View details in one big block</h1>
-  <a id="editButton" style="margin-top:0; float:right;" class="button" href="#">Edit</a>
+  <h1  class="heading-large" style="margin-top:0; display:inline-block">View product history in one big block</h1>
 </div>
 
 <div class="column-full" style="padding-left:0; padding-right:0;">
+  <div class="column-third">
+  <a id="viewPrevVersion" style="margin-top:0;" class="button" href="#">View previous version</a>
+  </div>
+
+  <div class="column-third">
+    <h2 class="heading-medium" style="margin-top:0; text-align:center">Version 2 of 3</h2>
+  </div>
+
+  <div class="column-third">
+  <a id="viewCurrentVersion" style="margin-top:0; float:right;" class="button" href="#">View current version</a>
+  </div>
+
   <div class="issueFormView">
 
     <div class="column-full" style="padding-left:0; padding-right:0">
 
       <div class="column-half" style="padding-left:0; padding-right:0">
 
-        <h2 class="heading-small">SNOMED</h2>
-        <span>123456</span>
-
-      </div>
-
-    </div>
-
-    <div class="column-full" style="padding-left:0; padding-right:0">
-
-      <div class="column-half" style="padding-left:0; padding-right:0">
-
         <h2 class="heading-small issueviewHeaders">Organisation <a href="#">Edit</a></h2>
-        <span>Biogen Idec Limited</span>
+        <span>A. Menarini Farmaceutica Internazionale SRL</span>
 
       </div>
 
@@ -57,21 +57,32 @@
 
     <div class="column-full" style="padding-left:0; padding-right:0">
 
-      <div class="column-third" style="padding-left:0; padding-right:0">
-
-        <h2 class="heading-small">Presentation</h2>
-        <span>Spinraza (5ml) solution for injection 12mg</span>
-
-      </div>
-
-      <div class="column-third" style="padding-left:0; padding-right:0">
+      <div class="column-half" style="padding-left:0; padding-right:0">
 
         <h2 class="heading-small">Legal category</h2>
         <span>POM</span>
 
       </div>
 
-      <div class="column-third" style="padding-left:0; padding-right:0">
+      <div class="column-half" style="padding-left:0; padding-right:0">
+
+        <h2 class="heading-small">Presentation</h2>
+        <span>Spinraza (5ml) solution for injection 12mg</span>
+
+      </div>
+
+    </div>
+
+    <div class="column-full" style="padding-left:0; padding-right:0">
+
+      <div class="column-half" style="padding-left:0; padding-right:0">
+
+        <h2 class="heading-small">SNOMED</h2>
+        <span>123456</span>
+
+      </div>
+
+      <div class="column-half" style="padding-left:0; padding-right:0">
 
         <h2 class="heading-small">Pack size</h2>
         <span>1</span>
@@ -82,42 +93,35 @@
 
     <div class="column-full" style="padding-left:0; padding-right:0">
 
-      <div class="column-third" style="padding-left:0; padding-right:0">
+      <div class="column-half" style="padding-left:0; padding-right:0">
 
         <h2 class="heading-small">Form</h2>
         <span>Vial</span>
 
       </div>
 
-      <div class="column-third" style="padding-left:0; padding-right:0">
-
-        <h2 class="heading-small">Publish on maximum price list</h2>
-        <span>Y</span>
-
-      </div>
-
-    </div>
-
-    <div class="column-full" style="padding-left:0; padding-right:0">
-
-      <div class="column-third" style="padding-left:0; padding-right:0">
+      <div class="column-half" style="padding-left:0; padding-right:0">
 
         <h2 class="heading-small">Max price</h2>
         <span>&pound;75000.00</span>
 
       </div>
 
-      <div class="column-third" style="padding-left:0; padding-right:0">
+    </div>
 
-        <h2 class="heading-small">Date from</h2>
-        <span>01/01/2020</span>
+    <div class="column-full" style="padding-left:0; padding-right:0">
+
+      <div class="column-half" style="padding-left:0; padding-right:0">
+
+        <h2 class="heading-small">Date From</h2>
+        <span>01/01/2019</span>
 
       </div>
 
       <div class="column-half" style="padding-left:0; padding-right:0">
 
-        <h2 class="heading-small">Date to</h2>
-        <span></span>
+        <h2 class="heading-small">Date To</h2>
+        <span>01/01/2020</span>
 
       </div>
 
@@ -125,8 +129,17 @@
 
     <div class="column-full" style="padding-left:0; padding-right:0">
 
-      <h2 class="heading-small">Comments</h2>
-      <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      <div class="column-half" style="padding-left:0; padding-right:0">
+
+        <h2 class="heading-small">Publish on maximum price list</h2>
+        <span>Y</span>
+
+      </div>
+
+      <div class="column-half" style="padding-left:0; padding-right:0">
+
+        <h2 class="heading-small">Comments</h2>
+        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Sed maximus sapien ligula, ac euismod sapien scelerisque eget.
               Cras pulvinar felis nulla, at vehicula orci ullamcorper ut.
               Curabitur molestie mi ac ligula viverra, vitae mollis dui volutpat.
@@ -135,28 +148,23 @@
               velit ut mauris sollicitudin ultrices. Proin a magna varius, finibus
               risus quis, luctus neque. Nunc at sem felis. </span>
 
+      </div>
+
     </div>
 
     <div class="column-full" style="padding-left:0; padding-right:0">
 
-      <div class="column-third" style="padding-left:0; padding-right:0">
+      <div class="column-half" style="padding-left:0; padding-right:0">
 
         <h2 class="heading-small">New Active Substance (NAS)</h2>
         <span>Y</span>
 
       </div>
 
-      <div class="column-third" style="padding-left:0; padding-right:0">
+      <div class="column-half" style="padding-left:0; padding-right:0">
 
         <h2 class="heading-small">Date of marketing authorisation</h2>
         <span>01/01/2020</span>
-
-      </div>
-
-      <div class="column-third" style="padding-left:0; padding-right:0">
-
-        <h2 class="heading-small">Expiry date of NAS = NAS Date + 36 months</h2>
-        <span></span>
 
       </div>
 
@@ -164,21 +172,32 @@
 
     <div class="column-full" style="padding-left:0; padding-right:0">
 
-      <div class="column-third" style="padding-left:0; padding-right:0">
+      <div class="column-half" style="padding-left:0; padding-right:0">
+
+        <h2 class="heading-small">Expiry date of NAS = NAS Date + 36 months</h2>
+        <span></span>
+
+      </div>
+
+      <div class="column-half" style="padding-left:0; padding-right:0">
 
         <h2 class="heading-small">Temporary price</h2>
         <span>&pound;2.49</span>
 
       </div>
 
-      <div class="column-third" style="padding-left:0; padding-right:0">
+    </div>
+
+    <div class="column-full" style="padding-left:0; padding-right:0">
+
+      <div class="column-half" style="padding-left:0; padding-right:0">
 
         <h2 class="heading-small">Temporary price effective date</h2>
         <span>01/01/2020</span>
 
       </div>
 
-      <div class="column-third" style="padding-left:0; padding-right:0">
+      <div class="column-half" style="padding-left:0; padding-right:0">
 
         <h2 class="heading-small">Temporary price end date</h2>
         <span>31/12/9999</span>
@@ -222,8 +241,6 @@
       </div>
 
     </div>
-
-    <a id="viewAuditTrail" class="button userBtn--secondary" href="#">View audit trail</a>
 
   </div>
 
