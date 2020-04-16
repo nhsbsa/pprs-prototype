@@ -3747,6 +3747,10 @@ input[type=number] {
   }
 }
 
+.smaller-font {
+    font-size:80%;
+}
+
 .elements-index .heading-medium {
   margin: 1em 0 0 0;
 }
