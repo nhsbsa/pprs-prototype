@@ -235,6 +235,10 @@ legend {
   display: table;
 }
 
+th {
+    font-weight: bold;
+}
+
 html,
 body,
 button,
