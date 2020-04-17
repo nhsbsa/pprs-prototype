@@ -97,6 +97,10 @@
   width: 100%;
 }
 
+th {
+    font-weight: bold;
+}
+
 .visually-hidden,
 .visuallyhidden {
   position: absolute;
@@ -233,10 +237,6 @@ legend {
   box-sizing: border-box;
   max-width: 100%;
   display: table;
-}
-
-th {
-    font-weight: bold;
 }
 
 html,
