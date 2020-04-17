@@ -1,0 +1,236 @@
+{% extends "base.html" %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+<div class="column-two-thirds">
+  <div class="breadcrumbs">
+    <ol>
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <li>
+        <a href="#">Manage products</a>
+      </li>
+      <li>Product XX</li>
+    </ol>
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="column-full">
+  <h1  class="heading-large" style="margin-top:0; display:inline-block">View details in tables</h1>
+  <a id="editButton" style="margin-top:0; float:right;" class="button" href="#">Edit</a>
+</div>
+
+<div class="column-full" style="padding-left:0; padding-right:0;">
+  <h2 class="heading-medium">Product information</h2>
+  <div class="issueFormView">
+
+    <div class="column-full" style="padding-left:0; padding-right:0; padding-top:5px;">
+
+      <div class="column-half" style="padding-left:0;">
+
+        <h2 class="heading-small">SNOMED</h2>
+        <span>123456</span>
+
+      </div>
+
+      <div class="column-half" style="padding-left:0;">
+
+        <h2 class="heading-small">Legal category</h2>
+        <span>POM</span>
+
+      </div>
+
+    </div>
+
+    <div class="column-full" style="padding-left:0; padding-right:0; padding-top:5px;">
+
+      <div class="column-half" style="padding-left:0;">
+
+        <h2 class="heading-small">Presentation</h2>
+        <span>Spinraza (5ml) solution for injection 12mg</span>
+
+      </div>
+
+      <div class="column-half" style="padding-left:0;">
+
+        <h2 class="heading-small">Pack size</h2>
+        <span>1</span>
+
+      </div>
+
+    </div>
+
+    <div class="column-full" style="padding-left:0; padding-right:0; padding-top:5px;">
+
+      <div class="column-third" style="padding-left:0;">
+
+        <h2 class="heading-small">Form</h2>
+        <span>Vial</span>
+
+      </div>
+
+      <div class="column-third" style="padding-left:0;">
+
+        <h2 class="heading-small">Publish on maximum price list</h2>
+        <span>Y</span>
+
+      </div>
+
+      <div class="column-third" style="padding-left:0;">
+
+        <h2 class="heading-small">OTC payment</h2>
+        <span>Y</span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <h2 class="heading-medium">Organisation information</h2>
+  <div class="column-full" style="padding-left:0; padding-right:0; padding-top:5px;">
+    <div class="issueFormView">
+
+      <div class="column-full" style="padding-left:0; padding-right:0; padding-top:5px;">
+
+        <div class="column-third" style="padding-left:0;">
+
+          <label for="dateSearch">Search by date</label>
+          <input id="dateSearch" type="text">
+
+        </div>
+
+        <div class="column-third" style="padding-left:0">
+          <a id="dateSearchButton" style="margin-top:0;" class="button" href="#">Search by date</a>
+        </div>
+
+        <div class="column-third" style="padding-left:0">
+          <a id="dateResetButton" style="margin-top:0; float:right;" class="button" href="#">Reset date filter</a>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="column-full" style="padding-left:0; padding-right:0; padding-top:5px;">
+
+      <div class="column-third" style="padding-left:0;">
+        <span>Biogen Idec Limited</span>
+      </div>
+
+      <div class="column-third" style="padding-left:0;">
+        <span>Statutory</span>
+      </div>
+
+    </div>
+
+    <table>
+
+      <tr>
+        <th>Price change</th>
+        <th>Price change from</th>
+        <th>Price change to</th>
+        <th>Max price</th>
+        <th>Max price from</th>
+        <th>Max price to</th>
+        <th>Temp price</th>
+        <th>Temp price from</th>
+        <th>Temp price to</th>
+        <th>Discontinued</th>
+      </tr>
+
+      <tr>
+        <td>&pound;2530.70</td>
+        <td>01/01/2020</td>
+        <td>31/12/9999</td>
+        <td>&pound;75000.00</td>
+        <td>01/01/2020</td>
+        <td>31/12/9999</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>N</td>
+      </tr>
+
+      <tr>
+        <td>&pound;1872.70</td>
+        <td>14/03/2015</td>
+        <td>01/01/2020</td>
+        <td>&pound;75000.00</td>
+        <td>14/03/2015</td>
+        <td>01/01/2020</td>
+        <td>&pound;99999.99</td>
+        <td>14/03/2015</td>
+        <td>01/01/2020</td>
+        <td>N</td>
+      </tr>
+
+    </table>
+
+    <div class="column-full" style="padding-left:0; padding-right:0; padding-top:5px;">
+
+      <div class="column-third" style="padding-left:0;">
+        <span>A. Menarini Farmaceutica Internazionale SRL</span>
+      </div>
+
+      <div class="column-third" style="padding-left:0;">
+        <span>Voluntary</span>
+      </div>
+
+    </div>
+
+    <table>
+
+      <tr>
+        <th>Price change</th>
+        <th>Price change from</th>
+        <th>Price change to</th>
+        <th>Max price</th>
+        <th>Max price from</th>
+        <th>Max price to</th>
+        <th>Temp price</th>
+        <th>Temp price from</th>
+        <th>Temp price to</th>
+        <th>Discontinued</th>
+      </tr>
+
+      <tr>
+        <td>&pound;1872.70</td>
+        <td>06/08/2010</td>
+        <td>14/03/2015</td>
+        <td>&pound;75000.00</td>
+        <td>06/08/2010</td>
+        <td>14/03/2015</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>N</td>
+      </tr>
+
+    </table>
+
+  </div>
+
+  <div class="column-full" style="padding-left:0; padding-right:0; padding-top:5px;">
+
+    <h2 class="heading-medium">Comments</h2>
+    <div class="issueFormView">
+
+    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Sed maximus sapien ligula, ac euismod sapien scelerisque eget.
+              Cras pulvinar felis nulla, at vehicula orci ullamcorper ut.
+              Curabitur molestie mi ac ligula viverra, vitae mollis dui volutpat.
+              Aenean eu vestibulum quam. Sed mattis arcu a mi tristique, eget
+              tincidunt dolor elementum. Aenean ut lacinia libero. Maecenas vitae
+              velit ut mauris sollicitudin ultrices. Proin a magna varius, finibus
+              risus quis, luctus neque. Nunc at sem felis. </span>
+
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}
