@@ -18,9 +18,35 @@
 {% endblock %}
 
 {% block content %}
+<div class="column-two-thirds">
+  <div class="breadcrumbs">
+    <ol>
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <li>
+        <a href="#">Prototype 2</a>
+      </li>
+      <li>Product XX</li>
+    </ol>
+  </div>
+</div>
+
+<!-- ------------------------------------------------------------------------------------------ -->
+
 <div class="column-full">
   <h1  class="heading-large" style="margin-top:0; display:inline-block">View details in sections</h1>
   <a id="editButton" style="margin-top:0; float:right;" class="button" href="#">Edit</a>
+</div>
+
+<div class="column-full" style="padding-left:0; padding-right:0;">
+  <div class="column-third">
+    <a id="viewPrevVersion" style="margin-top:0;" class="button" href="/view-prototype2-prev-version">View previous version</a>
+  </div>
+
+  <div class="column-third">
+    <h2 class="heading-medium" style="margin-top:0; text-align:center"> 01/01/2020 - Date </h2>
+  </div>
 </div>
 
 <div class="column-full" style="padding-left:0; padding-right:0;">
@@ -255,9 +281,5 @@
 
   </div>
 
-</div>
-
-<div class="column-full" style="padding-top:8px;">
-  <a id="viewAuditTrail" class="button" style="float:right;" href="/view-prototype2-prev-version">View audit trail</a>
 </div>
 {% endblock %}
