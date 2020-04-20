@@ -48,7 +48,7 @@ app.get('/view-prototype2', (req, res) => { res.render('view-prototype2') });
 app.get('/view-prototype2-prev-version', (req, res) => { res.render('view-prototype2-audit-trail-previous-version') });
 app.get('/view-prototype2-first-version', (req, res) => { res.render('view-prototype2-audit-trail-first-version') });
 app.get('/view-prototype3', (req, res) => { res.render('view-prototype3') });
-app.get('/view-final-prototype1', (req, res) => { res.render('view-final-prototype1') });
+app.get('/view-prototype-final1', (req, res) => { res.render('view-prototype-final1') });
 
 /**
  * Server Activation
