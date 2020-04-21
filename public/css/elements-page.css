@@ -996,7 +996,7 @@ hr {
 
 .issueFormView {
     box-sizing: border-box;
-    padding: 20px;
+    padding: 0px 20px 0 20px;
     background-color: #f8f8f8;
     overflow: hidden;
     border: 2px solid #ececec;

@@ -1,0 +1,11 @@
+.flex {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.mt-10 {
+    margin-top:20px;
+}
+.mb-20 {
+    margin-bottom:20px;
+}
