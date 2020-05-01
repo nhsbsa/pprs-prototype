@@ -55,7 +55,7 @@
         cookies<span class="visuallyhidden"> (Opens in a new window)</span></a>
     </p>
   </div>
-  <header th:fragment="header" role="banner" id="nhs-global-header" class="with-proposition">
+	<header th:fragment="header" role="banner" id="nhs-global-header" class="with-proposition">
 		<div class="header-wrapper">
 			<div class="header-global">
 				<div class="header-logo">
@@ -72,7 +72,8 @@
 
 	<!-- <main class="elements-index" id="content" role="main"> -->
 	<main id="content" role="main">
-    {% block content %}{% endblock %}
-  </main>
+		{% block beforeContent %}{% endblock %}
+		{% block content %}{% endblock %}
+	</main>
 </body>
 </html>

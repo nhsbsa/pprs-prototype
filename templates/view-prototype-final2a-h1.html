@@ -1,0 +1,233 @@
+{% extends "base.html" %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <div class="breadcrumbs">
+      <ol>
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="#">Prototype f2a</a>
+        </li>
+        <li>
+          <a href="#">Manage products</a>
+        </li>
+        <li>Product XX</li>
+      </ol>
+    </div>
+  </div>
+</div>
+{% endblock %} 
+{% block content %}
+
+<!-- ------------------------------------------------------------------------------------------ -->
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <h1 class="heading-large">
+      <span class="heading-secondary">Branded medicines</span>
+      Spinraza (5ml) solution for injection 12mg
+    </h1>
+  </div>
+</div>
+
+<div class="grid-row">
+  <div class="column-full">
+    <div class="grid-row">
+      <div class="column-two-thirds">
+        <details class="mb-20">
+          <summary>
+            <span class="summary">This product has product history changes</span>
+          </summary>
+
+          <div class="panel panel-border-narrow">
+            <p>
+              <a href="/view-prototype-final2a-h0">Valid from 01/01/2018 to 19/02/2020</a>
+            </p>
+            <p>
+              <a href="/view-prototype-final2a-h1"></a>Valid from 20/02/2020 to 09/03/2020 (displayed)
+            </p>
+            <p>
+              <a href="/view-prototype-final2a-h2">Valid from 10/03/2020 to 12/05/2020</a> - CURRENT
+            </p>
+            <p>
+              <a href="/view-prototype-final2a-h3">Valid from 13/05/2020 to 30/09/2020</a>
+            </p>
+            <p>
+              <a href="/view-prototype-final2a-h4">Valid from 01/10/2020</a>
+            </p>
+          </div>
+        </details>
+      </div>
+    </div>
+    <div class="grid-row flex">
+      <div class="column-half">
+        <h2 class="heading-large">Product information</h2>
+      </div>
+      <div class="column-half flex">
+        <a href="#" class="button mt-10">Edit</a>
+      </div>
+    </div>
+
+    <div class="issueFormView">
+      <div class="grid-row">
+        <div class="column-third">
+          <h2 class="heading-small issueviewHeaders">
+            Organisation
+            <a href="#">Edit</a>
+          </h2>
+          <p>Biogen Idec Limited</p>
+        </div>
+
+        <div class="column-third">
+          <h2 class="heading-small issueviewHeaders">Membership</h2>
+          <p>Statutory</p>
+        </div>
+
+        <div class="column-third">
+          <h2 class="heading-small">SNOMED</h2>
+          <p>123456</p>
+        </div>
+      </div>
+
+      <div class="grid-row">
+        <div class="column-third">
+          <h2 class="heading-small">Presentation</h2>
+          <p>Spinraza (5ml) solution for injection 12mg</p>
+        </div>
+
+        <div class="column-third">
+          <h2 class="heading-small">Form</h2>
+          <p>Vial</p>
+        </div>
+
+        <div class="column-third">
+          <h2 class="heading-small">Pack size</h2>
+          <p>1</p>
+        </div>
+      </div>
+
+      <div class="grid-row">
+        <div class="column-third">
+          <h2 class="heading-small">Legal category</h2>
+          <p>POM</p>
+        </div>
+
+        <div class="column-third">
+          <h2 class="heading-small">Publish on maximum price list</h2>
+          <p>Y</p>
+        </div>
+      </div>
+
+      <div class="grid-row">
+        <div class="column-third">
+          <h2 class="heading-small">Max price</h2>
+          <p>&pound;75000.00</p>
+        </div>
+
+        <div class="column-third">
+          <h2 class="heading-small">Date from</h2>
+          <p>20/02/2020</p>
+        </div>
+
+        <div class="column-third">
+          <h2 class="heading-small">Date to</h2>
+          <p>30/09/2020</p>
+        </div>
+      </div>
+
+      <div class="column-full"><hr /></div>
+
+      <div class="grid-row">
+        <div class="column-full">
+          <h2 class="heading-small">Comments</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus
+            sapien ligula, ac euismod sapien scelerisque eget. Cras pulvinar
+            felis nulla, at vehicula orci ullamcorper ut. Curabitur molestie mi
+            ac ligula viverra, vitae mollis dui volutpat. Aenean eu vestibulum
+            quam. Sed mattis arcu a mi tristique, eget tincidunt dolor
+            elementum. Aenean ut lacinia libero. Maecenas vitae velit ut mauris
+            sollicitudin ultrices. Proin a magna varius, finibus risus quis,
+            luctus neque. Nunc at sem felis.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="heading-large">New Active Substance (NAS)</h2>
+    <div class="issueFormView">
+        <div class="grid-row">
+        <div class="column-third">
+          <h2 class="heading-small">NAS</h2>
+          <p>Yes</p>
+        </div>
+
+        <div class="column-third">
+          <h2 class="heading-small">Date of marketing authorisation</h2>
+          <p>01/01/2018</p>
+        </div>
+
+        <div class="column-third">
+          <h2 class="heading-small">Expiry date of NAS<br>(calculated)</h2>
+          <p>01/01/2021</p>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="heading-large">Temporary price</h2>
+    <div class="issueFormView">
+      <div class="grid-row">
+        <div class="column-third">
+          <h2 class="heading-small">Temporary price</h2>
+          <p>&nbsp;</p>
+        </div>
+
+        <div class="column-third">
+          <h2 class="heading-small">Effective date</h2>
+          <p></p>
+        </div>
+
+        <div class="column-third">
+          <h2 class="heading-small">End date</h2>
+          <p></p>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="heading-large">Historic Cash Payment (HCP)</h2>
+
+    <div class="issueFormView">
+      <div class="grid-row">
+        <div class="column-half">
+          <h2 class="heading-small">Subject to HCP</h2>
+          <p>N</p>
+        </div>
+
+        <div class="column-half">
+          <h2 class="heading-small">NHS list price as at 31 December 2013</h2>
+          <p></p>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="heading-large">Other information</h2>
+    <div class="issueFormView">
+
+      <div class="grid-row">
+        <div class="column-half">
+          <h2 class="heading-small">OTC payment</h2>
+          <p>Y</p>
+        </div>
+
+        <div class="column-half">
+          <h2 class="heading-small">Discontinued</h2>
+          <p>N</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

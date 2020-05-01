@@ -52,6 +52,13 @@ app.get('/view-prototype-final1', (req, res) => { res.render('view-prototype-fin
 app.get('/view-prototype-final1-prev-version', (req, res) => { res.render('view-prototype-final1-audit-trail-previous-version') });
 app.get('/view-prototype-final1-first-version', (req, res) => { res.render('view-prototype-final1-audit-trail-first-version') });
 app.get('/view-prototype-final2', (req, res) => { res.render('view-prototype-final2') });
+app.get('/view-prototype-final2a', (req, res) => { res.render('view-prototype-final2a') });
+
+app.get('/view-prototype-final2a-h0', (req, res) => { res.render('view-prototype-final2a-h0') });
+app.get('/view-prototype-final2a-h1', (req, res) => { res.render('view-prototype-final2a-h1') });
+app.get('/view-prototype-final2a-h2', (req, res) => { res.render('view-prototype-final2a-h2') });
+app.get('/view-prototype-final2a-h3', (req, res) => { res.render('view-prototype-final2a-h3') });
+app.get('/view-prototype-final2a-h4', (req, res) => { res.render('view-prototype-final2a-h4') });
 
 /**
  * Server Activation
