@@ -1,0 +1,146 @@
+{% extends "base.html" %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+<div class="grid-row">
+    <div class="column-two-thirds">
+        <div class="breadcrumbs">
+            <ol>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="#">Prototype f2a</a>
+                </li>
+                <li>
+                    <a href="#">Manage products</a>
+                </li>
+                <li>
+                    <a href ='#'>Product XX</a>
+                </li>
+                <li>
+                    <a href ='#'>Edit Product XX</a>
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block content %}
+
+<!-- ------------------------------------------------------------------------------------------ -->
+<div class="grid-row">
+    <div class="column-two-thirds">
+        <h1 class="heading-large">
+            <span class="heading-secondary">Branded medicines</span>
+            Spinraza (5ml) solution for injection 12mg
+        </h1>
+    </div>
+</div>
+
+<div class="grid-row">
+    <div class="column-full">
+        <div class="grid-row">
+
+        </div>
+        <div class="grid-row flex">
+            <div class="column-half">
+                <h2 class="heading-large">Product information</h2>
+            </div>
+            <div class="column-half flex">
+                <a href="#" class="button mt-10">Submit</a>
+            </div>
+
+        </div>
+
+        <div class="issueFormView">
+            <div class="grid-row">
+                <div class="column-third">
+                    <h2 class="heading-small issueviewHeaders">
+                        Organisation
+                    </h2>
+                    <p>Biogen Idec Limited</p>
+                </div>
+
+                <div class="column-third">
+                    <h2 class="heading-small issueviewHeaders">Membership</h2>
+                    <p>Statutory</p>
+                </div>
+
+                <div class="column-third">
+                    <h2 class="heading-small">SNOMED</h2>
+                    <p>123456</p>
+                </div>
+            </div>
+
+            <div class="grid-row">
+                <div class="column-third">
+                    <h2 class="heading-small">Presentation</h2>
+                    <p>Spinraza (5ml) solution for injection 12mg</p>
+                </div>
+
+                <div class="column-third">
+                    <h2 class="heading-small">Form</h2>
+                    <p>Vial</p>
+                </div>
+
+                <div class="column-third">
+                    <h2 class="heading-small">Pack size</h2>
+                    <p>1</p>
+                </div>
+            </div>
+
+            <div class="grid-row">
+                <div class="column-third">
+                    <h2 class="heading-small">Legal category</h2>
+                    <p>POM</p>
+                </div>
+
+                <div class="column-third">
+                    <h2 class="heading-small">Publish on maximum price list</h2>
+                   <div class="form-radio" >
+                    <input type="radio" >
+                    <label> Yes </label>
+                   </div>
+
+                    <div class="form-radio" >
+                    <input type="radio">
+                    <label> No </label>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="grid-row">
+                <div class="column-third">
+                    <h2 class="heading-small">Max price</h2>
+                    <i>£</i>
+                    <input type="text" value="75000.00">
+
+                  </div>
+
+                <div class="column-third">
+                    <h2 class="heading-small">Date from</h2>
+                    <input type="date" value="2020-01-01">
+                </div>
+
+                <div class="column-third">
+                    <h2 class="heading-small">Date to</h2>
+                    <input type="date" value="3456-02-01">
+                </div>
+            </div>
+
+            <div class="column-full"><hr /></div>
+
+            <div class="grid-row">
+                <div class="column-full ">
+                    <h2 class="heading-small">Comments</h2>
+                    <textarea class="form-input" style="width:100%" rows="5"  maxlength="255">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus sapien ligula, ac euismod sapien scelerisque eget. Cras pulvinar felis nulla
+                    </textarea>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

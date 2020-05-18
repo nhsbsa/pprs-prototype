@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+<div class="grid-row">
+    <div class="column-two-thirds">
+        <div class="breadcrumbs">
+            <ol>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="#">Prototype f2a</a>
+                </li>
+                <li>
+                    <a href="#">Manage products</a>
+                </li>
+                <li>
+                    <a href ='#'>Product XX</a>
+                </li>
+                <li>
+                    <a href ='#'>Edit Product XX</a>
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block content %}
+
+<!-- ------------------------------------------------------------------------------------------ -->
+<div class="grid-row">
+    <div class="column-two-thirds">
+        <h1 class="heading-large">
+            <span class="heading-secondary">Branded medicines</span>
+            Spinraza (5ml) solution for injection 12mg
+        </h1>
+    </div>
+</div>
+
+<div class="grid-row">
+    <div class="column-full">
+        <div class="grid-row">
+
+        </div>
+        <div class="grid-row flex">
+            <div class="column-two-thirds">
+                <h2 class="heading-large">Other information</h2>
+            </div>
+            <div class="column-third flex">
+                <a href="#" class="button mt-10">Submit</a>
+            </div>
+
+        </div>
+        <div class="issueFormView">
+
+            <div class="grid-row">
+                <div class="column-half">
+                    <h2 class="heading-small">OTC payment</h2>
+                    <div class="form-radio" >
+                        <input type="radio">
+                        <label> Yes </label>
+                    </div>
+
+                    <div class="form-radio" >
+                        <input type="radio">
+                        <label> No </label>
+                    </div>
+                </div>
+
+                <div class="column-half">
+                    <h2 class="heading-small">Discontinued</h2>
+                    <div class="form-radio" >
+                        <input type="radio">
+                        <label> Yes </label>
+                    </div>
+
+                    <div class="form-radio" >
+                        <input type="radio">
+                        <label> No </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

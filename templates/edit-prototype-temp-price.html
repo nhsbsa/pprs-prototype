@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+<div class="grid-row">
+    <div class="column-two-thirds">
+        <div class="breadcrumbs">
+            <ol>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="#">Prototype f2a</a>
+                </li>
+                <li>
+                    <a href="#">Manage products</a>
+                </li>
+                <li>
+                    <a href ='#'>Product XX</a>
+                </li>
+                <li>
+                    <a href ='#'>Edit Product XX</a>
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block content %}
+
+<!-- ------------------------------------------------------------------------------------------ -->
+<div class="grid-row">
+    <div class="column-two-thirds">
+        <h1 class="heading-large">
+            <span class="heading-secondary">Branded medicines</span>
+            Spinraza (5ml) solution for injection 12mg
+        </h1>
+    </div>
+</div>
+
+<div class="grid-row">
+    <div class="column-full">
+        <div class="grid-row">
+
+        </div>
+        <div class="grid-row flex">
+            <div class="column-half">
+                <h2 class="heading-large">Temporary Price</h2>
+            </div>
+            <div class="column-half flex">
+                <a href="" class="button mt-10">Submit</a>
+            </div>
+
+        </div>
+
+
+        <div class="issueFormView">
+            <div class="grid-row">
+                <div class="column-third">
+                    <h2 class="heading-small">Temporary price</h2>
+                    <i>£</i>
+                    <input type="text" value="50000.00">
+                </div>
+
+                <div class="column-third">
+                    <h2 class="heading-small">Effective date</h2>
+                    <input class="form-input" type="date" value="2020-01-01">
+                </div>
+
+                <div class="column-third">
+                    <h2 class="heading-small">End date</h2>
+                    <input class="form-input" type="date" value="2020-12-01">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}
