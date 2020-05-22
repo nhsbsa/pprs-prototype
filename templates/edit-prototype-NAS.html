@@ -16,10 +16,10 @@
                     <a href="#">Manage products</a>
                 </li>
                 <li>
-                    <a href ='#'>Product XX</a>
+                    <a href='#'>Product XX</a>
                 </li>
                 <li>
-                    <a href ='#'>Edit Product XX</a>
+                    <a href='#'>Edit Product XX</a>
                 </li>
             </ol>
         </div>
@@ -41,44 +41,66 @@
 <div class="grid-row">
     <div class="column-full">
         <div class="grid-row">
-
-        </div>
-        <div class="grid-row flex">
-            <div class="column-two-thirds">
+            <div class="column-full">
                 <h2 class="heading-large">New Active Substance (NAS)</h2>
             </div>
-            <div class="column-third flex">
-                <a href="#" class="button mt-10">Submit</a>
-            </div>
-
         </div>
         <div class="issueFormView">
-            <div class="grid-row">
-                <div class="column-third">
+            <div class="column-full" style="margin-bottom:15px">
+                <div class="grid-row">
                     <h2 class="heading-small">NAS</h2>
-                    <div class="form-radio" >
-                    <input type="radio">
-                    <label> Yes </label>
-                    </div>
+                    <div class="form-radio">
+                        <span style="padding:0; margin-right:15px">
+                            <input type="radio">
+                            <label> Yes </label>
+                        </span>
 
-                    <div class="form-radio" >
-                    <input type="radio">
-                    <label> No </label>
+                        <span style="padding:0">
+                            <input type="radio">
+                            <label> No </label>
+                        </span>
                     </div>
                 </div>
 
-                <div class="column-third">
+                <div class="grid-row">
                     <h2 class="heading-small">Date of marketing authorisation</h2>
-                    <input type="date" value="2020-01-01">
+                    <div class="form-date">
+                        <div class="form-group">
+                            <label>
+                                Day
+                            </label>
+                            <input type="number" value="6" pattern="[0-9]*" inputmode="numeric">
+                        </div>
+                    </div>
+                    <div class="form-date">
+                        <div class="form-group">
+                            <label>
+                                Month
+                            </label>
+                            <input type="number" value="3" pattern="[0-9]*" inputmode="numeric">
+                        </div>
+                    </div>
+                    <div class="form-date">
+                        <div class="form-group">
+                            <label>
+                                Year
+                            </label>
+                            <input type="number" value="2076" pattern="[0-9]*" inputmode="numeric">
+                        </div>
+                    </div>
                 </div>
 
-                <div class="column-third">
-                    <h2 class="heading-small">Expiry date of NAS</h2>
-                    <p>01/01/2021</p>
-                </div>
             </div>
         </div>
 
+        <div class="column-full">
+            <div class="grid-row">
+                <a href="#" class="button mt-10">Submit</a>
+            </div>
+            <div class="grid-row">
+                <a href="#" class="heading-small">Cancel</a>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}

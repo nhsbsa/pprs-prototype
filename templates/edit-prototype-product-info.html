@@ -16,10 +16,10 @@
                     <a href="#">Manage products</a>
                 </li>
                 <li>
-                    <a href ='#'>Product XX</a>
+                    <a href='#'>Product XX</a>
                 </li>
                 <li>
-                    <a href ='#'>Edit Product XX</a>
+                    <a href='#'>Edit Product XX</a>
                 </li>
             </ol>
         </div>
@@ -44,102 +44,116 @@
 
         </div>
         <div class="grid-row flex">
-            <div class="column-half">
+            <div class="column-full">
                 <h2 class="heading-large">Product information</h2>
             </div>
-            <div class="column-half flex">
-                <a href="#" class="button mt-10">Submit</a>
-            </div>
-
         </div>
 
         <div class="issueFormView">
-            <div class="grid-row">
-                <div class="column-third">
-                    <h2 class="heading-small issueviewHeaders">
-                        Organisation
-                    </h2>
-                    <p>Biogen Idec Limited</p>
-                </div>
 
-                <div class="column-third">
-                    <h2 class="heading-small issueviewHeaders">Membership</h2>
-                    <p>Statutory</p>
-                </div>
-
-                <div class="column-third">
-                    <h2 class="heading-small">SNOMED</h2>
-                    <p>123456</p>
-                </div>
-            </div>
-
-            <div class="grid-row">
-                <div class="column-third">
-                    <h2 class="heading-small">Presentation</h2>
-                    <p>Spinraza (5ml) solution for injection 12mg</p>
-                </div>
-
-                <div class="column-third">
-                    <h2 class="heading-small">Form</h2>
-                    <p>Vial</p>
-                </div>
-
-                <div class="column-third">
-                    <h2 class="heading-small">Pack size</h2>
-                    <p>1</p>
-                </div>
-            </div>
-
-            <div class="grid-row">
-                <div class="column-third">
-                    <h2 class="heading-small">Legal category</h2>
-                    <p>POM</p>
-                </div>
-
-                <div class="column-third">
-                    <h2 class="heading-small">Publish on maximum price list</h2>
-                   <div class="form-radio" >
-                    <input type="radio" >
-                    <label> Yes </label>
-                   </div>
-
-                    <div class="form-radio" >
-                    <input type="radio">
-                    <label> No </label>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="grid-row">
-                <div class="column-third">
+            <div class="column-full">
+                <div class="grid-row">
                     <h2 class="heading-small">Max price</h2>
                     <i>£</i>
                     <input type="text" value="75000.00">
 
-                  </div>
+                </div>
 
-                <div class="column-third">
+                <div class="grid-row">
                     <h2 class="heading-small">Date from</h2>
-                    <input type="date" value="2020-01-01">
+                    <div class="form-date">
+                        <div class="form-group">
+                            <label>
+                                Day
+                            </label>
+                            <input type="number" value="6" pattern="[0-9]*" inputmode="numeric">
+                        </div>
+                    </div>
+                    <div class="form-date">
+                        <div class="form-group">
+                            <label>
+                                Month
+                            </label>
+                            <input type="number" value="3" pattern="[0-9]*" inputmode="numeric">
+                        </div>
+                    </div>
+                    <div class="form-date">
+                        <div class="form-group">
+                            <label>
+                                Year
+                            </label>
+                            <input type="number" value="2076" pattern="[0-9]*" inputmode="numeric">
+                        </div>
+                    </div>
                 </div>
 
-                <div class="column-third">
+                <div class="grid-row">
                     <h2 class="heading-small">Date to</h2>
-                    <input type="date" value="3456-02-01">
+                    <div class="form-date">
+                        <div class="form-group">
+                            <label>
+                                Day
+                            </label>
+                            <input type="number" value="6" pattern="[0-9]*" inputmode="numeric">
+                        </div>
+                    </div>
+                    <div class="form-date">
+                        <div class="form-group">
+                            <label>
+                                Month
+                            </label>
+                            <input type="number" value="3" pattern="[0-9]*" inputmode="numeric">
+                        </div>
+                    </div>
+                    <div class="form-date">
+                        <div class="form-group">
+                            <label>
+                                Year
+                            </label>
+                            <input type="number" value="2076" pattern="[0-9]*" inputmode="numeric">
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="column-full"><hr /></div>
 
-            <div class="grid-row">
-                <div class="column-full ">
+                <div class="grid-row">
+                    <h2 class="heading-small">Publish on maximum price list</h2>
+                    <div class="form-radio">
+                        <span style="padding:0; margin-right:15px">
+                            <input type="radio">
+                            <label> Yes </label>
+                        </span>
+
+                        <span style="padding:0">
+                            <input type="radio">
+                            <label> No </label>
+                        </span>
+                    </div>
+
+                </div>
+
+                <div class="grid-row">
+                    <hr/>
+                </div>
+
+                <div class="grid-row">
+
                     <h2 class="heading-small">Comments</h2>
-                    <textarea class="form-input" style="width:100%" rows="5"  maxlength="255">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus sapien ligula, ac euismod sapien scelerisque eget. Cras pulvinar felis nulla
+                    <textarea class="form-input" style="width:100%" rows="5" maxlength="255">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus sapien ligula, ac euismod sapien scelerisque eget. Cras pulvinar felis nulla
                     </textarea>
+
                 </div>
             </div>
         </div>
+
+    <div class="column-full">
+        <div class="grid-row">
+            <a href="#" class="button mt-10">Submit</a>
+        </div>
+        <div class="grid-row">
+            <a href="#" class="heading-small">Cancel</a>
+        </div>
+    </div>
 
     </div>
 </div>

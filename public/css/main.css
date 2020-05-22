@@ -1455,16 +1455,16 @@ table {
 }
 
 table th,
-table td {
-  font-family: Arial, sans-serif;
-  font-weight: 400;
-  text-transform: none;
-  font-size: 16px;
-  line-height: 1.25;
-  padding: 0.6315789474em 1.0526315789em 0.4736842105em 0;
-  text-align: left;
-  border-bottom: 1px solid #bfc1c3;
-}
+ table td {
+   font-family: Arial, sans-serif;
+   font-weight: 400;
+   text-transform: none;
+   font-size: 16px;
+   line-height: 1.25;
+   padding: 0.6315789474em 1.0526315789em 0.4736842105em 0;
+   text-align: left;
+   border-bottom: 1px solid #bfc1c3;
+ }
 
 @media (min-width: 641px) {
   table th,

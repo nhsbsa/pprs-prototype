@@ -16,10 +16,10 @@
                     <a href="#">Manage products</a>
                 </li>
                 <li>
-                    <a href ='#'>Product XX</a>
+                    <a href='#'>Product XX</a>
                 </li>
                 <li>
-                    <a href ='#'>Edit Product XX</a>
+                    <a href='#'>Edit Product XX</a>
                 </li>
             </ol>
         </div>
@@ -44,207 +44,590 @@
 
         </div>
         <div class="grid-row flex">
-            <div class="column-half">
+            <div class="column-full">
                 <h2 class="heading-large">Product information</h2>
             </div>
-            <div class="column-half flex">
-                <a href="#" class="button mt-10">Submit</a>
-            </div>
+
 
         </div>
 
         <div class="issueFormView">
-            <div class="grid-row">
-                <div class="column-third">
-                    <h2 class="heading-small issueviewHeaders">
-                        Organisation
-                    </h2>
-                    <p>Biogen Idec Limited</p>
-                </div>
+            <table>
+                <tr class="grid-row">
+                    <td class="column-third">
+                        <h2 class="heading-small issueviewHeaders">
+                            Organisation
+                        </h2>
+                    </td>
+                    <td class="column-third">
+                        <h2 class="heading-small issueviewHeaders">Membership</h2>
+                    </td>
 
-                <div class="column-third">
-                    <h2 class="heading-small issueviewHeaders">Membership</h2>
-                    <p>Statutory</p>
-                </div>
+                    <td class="column-third">
+                        <h2 class="heading-small issueviewHeaders">SNOMED</h2>
 
-                <div class="column-third">
-                    <h2 class="heading-small">SNOMED</h2>
-                    <p>123456</p>
-                </div>
-            </div>
+                    </td>
+                </tr>
+                <tr class="grid-row">
+                    <td class="column-third">
+                        <p>Biogen Idec Limited</p>
+                    </td>
+                    <td class="column-third">
+                        <p>Statutory</p>
+                    </td>
+                    <td class="column-third">
+                        <p>123456</p>
+                    </td>
+                </tr>
 
-            <div class="grid-row">
-                <div class="column-third">
-                    <h2 class="heading-small">Presentation</h2>
-                    <p>Spinraza (5ml) solution for injection 12mg</p>
-                </div>
+                <!--            <div class="grid-row">-->
+                <!--                <div class="column-third">-->
+                <!--                    <h2 class="heading-small issueviewHeaders">-->
+                <!--                        Organisation-->
+                <!--                    </h2>-->
+                <!--                    <p>Biogen Idec Limited</p>-->
+                <!--                </div>-->
 
-                <div class="column-third">
-                    <h2 class="heading-small">Form</h2>
-                    <p>Vial</p>
-                </div>
+                <!--                <div class="column-third">-->
+                <!--                    <h2 class="heading-small issueviewHeaders">Membership</h2>-->
+                <!--                    <p>Statutory</p>-->
+                <!--                </div>-->
 
-                <div class="column-third">
-                    <h2 class="heading-small">Pack size</h2>
-                    <p>1</p>
-                </div>
-            </div>
+                <!--                <div class="column-third">-->
+                <!--                    <h2 class="heading-small">SNOMED</h2>-->
+                <!--                    <p>123456</p>-->
+                <!--                </div>-->
+                <!--            </div>-->
 
-            <div class="grid-row">
-                <div class="column-third">
-                    <h2 class="heading-small">Legal category</h2>
-                    <p>POM</p>
-                </div>
+                <!--            <div class="grid-row">-->
+                <!--                <div class="column-third">-->
+                <!--                    <h2 class="heading-small">Presentation</h2>-->
+                <!--                    <p>Spinraza (5ml) solution for injection 12mg</p>-->
+                <!--                </div>-->
 
-                <div class="column-third">
-                    <h2 class="heading-small">Publish on maximum price list</h2>
-                   <div class="form-radio" >
-                    <input type="radio" >
-                    <label> Yes </label>
-                   </div>
+                <!--                <div class="column-third">-->
+                <!--                    <h2 class="heading-small">Form</h2>-->
+                <!--                    <p>Vial</p>-->
+                <!--                </div>-->
 
-                    <div class="form-radio" >
-                    <input type="radio">
-                    <label> No </label>
-                    </div>
+                <!--                <div class="column-third">-->
+                <!--                    <h2 class="heading-small">Pack size</h2>-->
+                <!--                    <p>1</p>-->
+                <!--                </div>-->
+                <!--            </div>-->
 
-                </div>
-            </div>
+                <tr class="grid-row">
+                    <td class="column-third">
+                        <h2 class="heading-small issueviewHeaders">
+                            Presentation
+                        </h2>
+                    </td>
+                    <td class="column-third">
+                        <h2 class="heading-small issueviewHeaders">Form</h2>
+                    </td>
 
-            <div class="grid-row">
-                <div class="column-third">
-                    <h2 class="heading-small">Max price</h2>
-                    <i>£</i>
-                    <input type="text" value="75000.00">
+                    <td class="column-third">
+                        <h2 class="heading-small issueviewHeaders">Pack size</h2>
 
-                  </div>
+                    </td>
+                </tr>
+                <tr class="grid-row">
+                    <td class="column-third">
+                        <p>Spinraza (5ml) solution for injection 12mg</p>
+                    </td>
+                    <td class="column-third">
+                        <p>Vial</p>
+                    </td>
+                    <td class="column-third">
+                        <p>1</p>
+                    </td>
+                </tr>
 
-                <div class="column-third">
-                    <h2 class="heading-small">Date from</h2>
-                    <input type="date" value="2020-01-01">
-                </div>
+                <!--            <div class="grid-row">-->
+                <!--                <div class="column-third">-->
+                <!--                    <h2 class="heading-small">Legal category</h2>-->
+                <!--                    <p>POM</p>-->
+                <!--                </div>-->
 
-                <div class="column-third">
-                    <h2 class="heading-small">Date to</h2>
-                    <input type="date" value="3456-02-01">
-                </div>
-            </div>
+                <!--                <div class="column-third">-->
+                <!--                    <h2 class="heading-small">Publish on maximum price list</h2>-->
 
-            <div class="column-full"><hr /></div>
+                <!--                   <div class="form-radio" >-->
+                <!--                       <div class="column-third" style="padding:0">-->
+                <!--                    <input type="radio" >-->
+                <!--                    <label> Yes </label>-->
+                <!--                       </div>-->
 
-            <div class="grid-row">
-                <div class="column-full ">
-                    <h2 class="heading-small">Comments</h2>
-                    <textarea class="form-input" style="width:100%" rows="5"  maxlength="255">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus sapien ligula, ac euismod sapien scelerisque eget. Cras pulvinar felis nulla
-                    </textarea>
-                </div>
-            </div>
+                <!--                       <div class="column-third" style="padding:0">-->
+                <!--                    <input type="radio">-->
+                <!--                    <label> No </label>-->
+                <!--                       </div>-->
+                <!--                    </div>-->
+
+                <!--                </div>-->
+                <!--            </div>-->
+
+                <tr class="grid-row">
+                    <td class="column-third">
+                        <h2 class="heading-small issueviewHeaders">
+                            Legal category
+                        </h2>
+                    </td>
+                    <td class="column-third">
+                        <h2 class="heading-small issueviewHeaders">Publish on maximum price list</h2>
+                    </td>
+
+
+                </tr>
+                <tr class="grid-row">
+                    <td class="column-third">
+                        <p>POM</p>
+                    </td>
+                    <td class="column-third">
+                        <div class="form-radio">
+                            <div class="column-third" style="padding:0">
+                                <input type="radio">
+                                <label> Yes </label>
+                            </div>
+
+                            <div class="column-third" style="padding:0">
+                                <input type="radio">
+                                <label> No </label>
+                            </div>
+                        </div>
+                    </td>
+
+                </tr>
+
+                <!--            <div class="grid-row">-->
+                <!--                <div class="column-third">-->
+                <!--                    <h2 class="heading-small">Max price</h2>-->
+                <!--                    <i>£</i>-->
+                <!--                    <input type="text" value="75000.00">-->
+
+                <!--                  </div>-->
+
+                <!--                <div class="column-third">-->
+                <!--                    <h2 class="heading-small">Date from</h2>-->
+                <!--                    <div class="form-date">-->
+                <!--                        <div class="form-group">-->
+                <!--                            <label>-->
+                <!--                                Day-->
+                <!--                            </label>-->
+                <!--                            <input  type="number" value="6" pattern="[0-9]*" inputmode="numeric">-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+                <!--                    <div class="form-date">-->
+                <!--                        <div class="form-group">-->
+                <!--                            <label>-->
+                <!--                                Month-->
+                <!--                            </label>-->
+                <!--                            <input type="number" value="3" pattern="[0-9]*" inputmode="numeric">-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+                <!--                    <div class="form-date">-->
+                <!--                        <div class="form-group">-->
+                <!--                            <label>-->
+                <!--                                Year-->
+                <!--                            </label>-->
+                <!--                            <input  type="nummber" value="2076" pattern="[0-9]*" inputmode="numeric">-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+                <!--                </div>-->
+
+                <!--                <div class="column-third">-->
+                <!--                    <h2 class="heading-small">Date to</h2>-->
+                <!--                    <div class="form-date">-->
+                <!--                        <div class="form-group">-->
+                <!--                            <label>-->
+                <!--                                Day-->
+                <!--                            </label>-->
+                <!--                            <input  type="number" value="6" pattern="[0-9]*" inputmode="numeric">-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+                <!--                    <div class="form-date">-->
+                <!--                        <div class="form-group">-->
+                <!--                            <label>-->
+                <!--                                Month-->
+                <!--                            </label>-->
+                <!--                            <input type="number" value="3" pattern="[0-9]*" inputmode="numeric">-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+                <!--                    <div class="form-date">-->
+                <!--                        <div class="form-group">-->
+                <!--                            <label>-->
+                <!--                                Year-->
+                <!--                            </label>-->
+                <!--                            <input  type="nummber" value="2076" pattern="[0-9]*" inputmode="numeric">-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+                <!--                </div>-->
+                <!--            </div>-->
+
+                <tr class="grid-row">
+                    <td class="column-third">
+                        <h2 class="heading-small issueviewHeaders">
+                            Max price
+                        </h2>
+                    </td>
+                    <td class="column-third">
+                        <h2 class="heading-small issueviewHeaders">Date from</h2>
+                    </td>
+
+                    <td class="column-third">
+                        <h2 class="heading-small issueviewHeaders">Date to</h2>
+
+                    </td>
+                </tr>
+                <tr class="grid-row">
+                    <td class="column-third">
+                        <i>£</i>
+                        <input class="inputText" type="text" value="75000.00">
+                    </td>
+                    <td class="column-third">
+                        <div class="form-date">
+                            <div class="form-group">
+                                <label>
+                                    Day
+                                </label>
+                                <input type="number" value="6" pattern="[0-9]*" inputmode="numeric">
+                            </div>
+                        </div>
+                        <div class="form-date">
+                            <div class="form-group">
+                                <label>
+                                    Month
+                                </label>
+                                <input type="number" value="3" pattern="[0-9]*" inputmode="numeric">
+                            </div>
+                        </div>
+                        <div class="form-date">
+                            <div class="form-group">
+                                <label>
+                                    Year
+                                </label>
+                                <input type="number" value="2076" pattern="[0-9]*" inputmode="numeric">
+                            </div>
+                        </div>
+                    </td>
+
+                    <td class="column-third">
+                        <div class="form-date">
+                            <div class="form-group">
+                                <label>
+                                    Day
+                                </label>
+                                <input type="number" value="6" pattern="[0-9]*" inputmode="numeric">
+                            </div>
+                        </div>
+                        <div class="form-date">
+                            <div class="form-group">
+                                <label>
+                                    Month
+                                </label>
+                                <input type="number" value="3" pattern="[0-9]*" inputmode="numeric">
+                            </div>
+                        </div>
+                        <div class="form-date">
+                            <div class="form-group">
+                                <label>
+                                    Year
+                                </label>
+                                <input type="number" value="2076" pattern="[0-9]*" inputmode="numeric">
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+
+                <!--            <div class="grid-row">-->
+                <!--                <div class="column-full ">-->
+                <!--                    <h2 class="heading-small">Comments</h2>-->
+                <!--                    <textarea class="form-input" style="width:100%" rows="5"  maxlength="255">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus sapien ligula, ac euismod sapien scelerisque eget. Cras pulvinar felis nulla-->
+                <!--                    </textarea>-->
+                <!--                </div>-->
+                <!--            </div>-->
+
+                <tr class="grid-row">
+                    <td class="column-full">
+                        <hr/>
+                        <h2 class="heading-small issueviewHeaders">
+                            Comments
+                        </h2>
+                    </td>
+
+                </tr>
+                <tr class="grid-row">
+                    <td class="column-full">
+
+
+                        <textarea class="form-input" style="width:100%" rows="5" maxlength="255">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus sapien ligula, ac euismod sapien scelerisque eget. Cras pulvinar felis nulla></textarea>
+
+                    </td>
+
+                </tr>
+            </table>
         </div>
 
         <h2 class="heading-large">New Active Substance (NAS)</h2>
+
         <div class="issueFormView">
-            <div class="grid-row">
-                <div class="column-third">
-                    <h2 class="heading-small">NAS</h2>
-                    <div class="form-radio" >
-                    <input type="radio">
-                    <label> Yes </label>
-                    </div>
+            <table>
+                <tr class="grid-row">
+                    <td class="column-third">
+                        <h2 class="heading-small">NAS</h2>
+                    </td>
+                    <td class="column-third">
+                        <h2 class="heading-small">Date of marketing authorisation</h2>
+                    </td>
+                    <td class="column-third">
+                        <h2 class="heading-small">Expiry date of NAS</h2>
+                    </td>
+                </tr>
 
-                    <div class="form-radio" >
-                    <input type="radio">
-                    <label> No </label>
-                    </div>
-                </div>
+                <tr class="grid-row">
+                    <td class="column-third" style="display: table-cell; vertical-align: bottom">
+                        <div class="form-radio">
+                            <div class="column-third" style="padding:0">
+                                <input type="radio">
+                                <label> Yes </label>
+                            </div>
 
-                <div class="column-third">
-                    <h2 class="heading-small">Date of marketing authorisation</h2>
-                    <input type="date" value="2020-01-01">
-                </div>
+                            <div class="column-third" style="padding:0">
+                                <input type="radio">
+                                <label> No </label>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="column-third">
+                        <div class="form-date">
+                            <div class="form-group">
+                                <label>
+                                    Day
+                                </label>
+                                <input type="number" value="6" pattern="[0-9]*" inputmode="numeric">
+                            </div>
+                        </div>
+                        <div class="form-date">
+                            <div class="form-group">
+                                <label>
+                                    Month
+                                </label>
+                                <input type="number" value="3" pattern="[0-9]*" inputmode="numeric">
+                            </div>
+                        </div>
+                        <div class="form-date">
+                            <div class="form-group">
+                                <label>
+                                    Year
+                                </label>
+                                <input type="number" value="2076" pattern="[0-9]*" inputmode="numeric">
+                            </div>
+                        </div>
+                    </td>
+                    <td class="column-third">
+                        <div class="form-date">
+                            <div class="form-group">
+                                <label>
+                                    Day
+                                </label>
+                                <input type="number" value="6" pattern="[0-9]*" inputmode="numeric">
+                            </div>
+                        </div>
+                        <div class="form-date">
+                            <div class="form-group">
+                                <label>
+                                    Month
+                                </label>
+                                <input type="number" value="3" pattern="[0-9]*" inputmode="numeric">
+                            </div>
+                        </div>
+                        <div class="form-date">
+                            <div class="form-group">
+                                <label>
+                                    Year
+                                </label>
+                                <input type="number" value="2076" pattern="[0-9]*" inputmode="numeric">
+                            </div>
+                        </div>
+                    </td>
+                </tr>
 
-                <div class="column-third">
-                    <h2 class="heading-small">Expiry date of NAS</h2>
-                    <p>01/01/2021</p>
-                </div>
-            </div>
+            </table>
         </div>
 
         <h2 class="heading-large">Temporary price</h2>
+
         <div class="issueFormView">
-            <div class="grid-row">
-                <div class="column-third">
-                    <h2 class="heading-small">Temporary price</h2>
-                    <i>£</i>
-                    <input type="text" value="50000.00">
-                </div>
+            <table>
+                <tr class="grid-row">
+                    <td class="column-third">
+                        <h2 class="heading-small">Temporary price</h2>
+                    </td>
+                    <td class="column-third">
+                        <h2 class="heading-small">Effective date</h2>
+                    </td>
+                    <td class="column-third">
+                        <h2 class="heading-small">End date</h2>
+                    </td>
+                </tr>
 
-                <div class="column-third">
-                    <h2 class="heading-small">Effective date</h2>
-                    <input class="form-input" type="date" value="2020-01-01">
-                </div>
+                <tr class="grid-row">
+                    <td class="column-third">
+                        <i>£</i>
+                        <input class="inputText" type="text" value="50000.00">
+                    </td>
+                    <td class="column-third">
+                        <div class="form-date">
+                            <div class="form-group">
+                                <label>
+                                    Day
+                                </label>
+                                <input type="number" value="6" pattern="[0-9]*" inputmode="numeric">
+                            </div>
+                        </div>
+                        <div class="form-date">
+                            <div class="form-group">
+                                <label>
+                                    Month
+                                </label>
+                                <input type="number" value="3" pattern="[0-9]*" inputmode="numeric">
+                            </div>
+                        </div>
+                        <div class="form-date">
+                            <div class="form-group">
+                                <label>
+                                    Year
+                                </label>
+                                <input type="number" value="2076" pattern="[0-9]*" inputmode="numeric">
+                            </div>
+                        </div>
+                    </td>
+                    <td class="column-third">
+                        <div class="form-date">
+                            <div class="form-group">
+                                <label>
+                                    Day
+                                </label>
+                                <input type="number" value="6" pattern="[0-9]*" inputmode="numeric">
+                            </div>
+                        </div>
+                        <div class="form-date">
+                            <div class="form-group">
+                                <label>
+                                    Month
+                                </label>
+                                <input type="number" value="3" pattern="[0-9]*" inputmode="numeric">
+                            </div>
+                        </div>
+                        <div class="form-date">
+                            <div class="form-group">
+                                <label>
+                                    Year
+                                </label>
+                                <input type="number" value="2076" pattern="[0-9]*" inputmode="numeric">
+                            </div>
+                        </div>
+                    </td>
+                </tr>
 
-                <div class="column-third">
-                    <h2 class="heading-small">End date</h2>
-                    <input class="form-input" type="date" value="2020-12-01">
-                </div>
-            </div>
+            </table>
         </div>
+
 
         <h2 class="heading-large">Historic Cash Payment (HCP)</h2>
 
         <div class="issueFormView">
-            <div class="grid-row">
-                <div class="column-half">
-                    <h2 class="heading-small">Subject to HCP</h2>
-                    <div class="form-radio" >
-                        <input type="radio">
-                        <label> Yes </label>
-                    </div>
+            <table>
+                <tr class="grid-row">
+                    <td class="column-half">
+                        <h2 class="heading-small">Subject to HCP</h2>
+                    </td>
+                    <td class="column-half">
+                        <h2 class="heading-small">NHS list price as at 31 December 2013</h2>
+                    </td>
+                </tr>
 
-                    <div class="form-radio" >
-                        <input type="radio">
-                        <label> No </label>
-                    </div>
-                </div>
+                <tr class="grid-row">
+                    <td class="column-half">
+                        <div class="form-radio">
+                            <div class="column-quarter" style="padding:0">
+                                <input type="radio">
+                                <label> Yes </label>
+                            </div>
 
-                <div class="column-half">
-                    <h2 class="heading-small">NHS list price as at 31 December 2013</h2>
-                    <p>£50,000</p>
-                </div>
-            </div>
+                            <div class="column-quarter" style="padding:0">
+                                <input type="radio">
+                                <label> No </label>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="column-half">
+                        <p>£50,000</p>
+                    </td>
+
+                </tr>
+
+            </table>
         </div>
 
         <h2 class="heading-large">Other information</h2>
         <div class="issueFormView">
 
-            <div class="grid-row">
-                <div class="column-half">
-                    <h2 class="heading-small">OTC payment</h2>
-                    <div class="form-radio" >
-                        <input type="radio">
-                        <label> Yes </label>
-                    </div>
+            <table>
+                <tr class="grid-row">
+                    <td class="column-half">
+                        <h2 class="heading-small">Over The Counter payment</h2>
+                    </td>
+                    <td class="column-half">
+                        <h2 class="heading-small">Discontinued</h2>
+                    </td>
+                </tr>
 
-                    <div class="form-radio" >
-                        <input type="radio">
-                        <label> No </label>
-                    </div>
-                </div>
+                <tr class="grid-row">
+                    <td class="column-half">
+                        <div class="form-radio">
+                            <div class="column-quarter" style="padding:0">
+                                <input type="radio">
+                                <label> Yes </label>
+                            </div>
 
-                <div class="column-half">
-                    <h2 class="heading-small">Discontinued</h2>
-                    <div class="form-radio" >
-                        <input type="radio">
-                        <label> Yes </label>
-                    </div>
+                            <div class="column-quarter" style="padding:0">
+                                <input type="radio">
+                                <label> No </label>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="column-half">
+                        <div class="form-radio">
+                            <div class="column-quarter" style="padding:0">
+                                <input type="radio">
+                                <label> Yes </label>
+                            </div>
 
-                    <div class="form-radio" >
-                        <input type="radio">
-                        <label> No </label>
-                    </div>
-                </div>
-            </div>
+                            <div class="column-quarter" style="padding:0">
+                                <input type="radio">
+                                <label> No </label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
         </div>
+
     </div>
+
+</div>
+<div class="column-full">
+    <div class="grid-row">
+
+    <a href="#" class="button mt-10">Submit</a>
+    </div>
+
+    <div class="grid-row">
+    <a href="#">Cancel</a>
+    </div>
+</div>
+
 </div>
 {% endblock %}

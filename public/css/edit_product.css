@@ -2,3 +2,36 @@
   display: block;
   margin-bottom: 15px;
 }
+
+.issueFormView table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.issueFormView table th,
+ .issueFormView table td {
+   font-family: Arial, sans-serif;
+   font-weight: 400;
+   text-transform: none;
+   text-align: left;
+   border-bottom: none;
+ }
+
+ .issueFormView table tr{
+    height: 0;
+ }
+
+ .issueFormView table td p{
+    margin:0;
+ }
+
+.issueFormView table td .form-radio{
+    margin-top:0;
+}
+
+.inputText {
+    width:80%;
+}
+

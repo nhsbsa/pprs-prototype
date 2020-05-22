@@ -16,10 +16,10 @@
                     <a href="#">Manage products</a>
                 </li>
                 <li>
-                    <a href ='#'>Product XX</a>
+                    <a href='#'>Product XX</a>
                 </li>
                 <li>
-                    <a href ='#'>Edit Product XX</a>
+                    <a href='#'>Edit Product XX</a>
                 </li>
             </ol>
         </div>
@@ -44,42 +44,50 @@
 
         </div>
         <div class="grid-row flex">
-            <div class="column-two-thirds">
+            <div class="column-full">
                 <h2 class="heading-large">Other information</h2>
             </div>
-            <div class="column-third flex">
-                <a href="#" class="button mt-10">Submit</a>
-            </div>
-
         </div>
         <div class="issueFormView">
+            <div class="column-full" style="margin-bottom:15px">
+                <div class="grid-row">
+                    <h2 class="heading-small">Over The Counter payment</h2>
+                    <div class="form-radio">
+                        <span style="padding:0; margin-right:15px">
+                            <input type="radio">
+                            <label> Yes </label>
+                        </span>
 
-            <div class="grid-row">
-                <div class="column-half">
-                    <h2 class="heading-small">OTC payment</h2>
-                    <div class="form-radio" >
-                        <input type="radio">
-                        <label> Yes </label>
-                    </div>
-
-                    <div class="form-radio" >
-                        <input type="radio">
-                        <label> No </label>
+                        <span style="padding:0">
+                            <input type="radio">
+                            <label> No </label>
+                        </span>
                     </div>
                 </div>
-
-                <div class="column-half">
+                <div class="grid-row">
                     <h2 class="heading-small">Discontinued</h2>
-                    <div class="form-radio" >
-                        <input type="radio">
-                        <label> Yes </label>
+                    <div class="form-radio">
+                        <span style="padding:0; margin-right:15px">
+                            <input type="radio">
+                            <label> Yes </label>
+                        </span>
+
+                        <span style="padding:0">
+                            <input type="radio">
+                            <label> No </label>
+                        </span>
                     </div>
 
-                    <div class="form-radio" >
-                        <input type="radio">
-                        <label> No </label>
-                    </div>
                 </div>
+            </div>
+        </div>
+
+        <div class="column-full">
+            <div class="grid-row">
+                <a href="#" class="button mt-10">Submit</a>
+            </div>
+            <div class="grid-row">
+                <a href="#" class="heading-small">Cancel</a>
             </div>
         </div>
     </div>
