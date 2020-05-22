@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+
+{% block content %}
+
+<!-- ------------------------------------------------------------------------------------------ -->
+<div class="grid-row">
+    <div class="column-two-thirds">
+        <h1 class="heading-large">
+            <span class="heading-secondary">Branded medicines</span>
+            Spinraza (5ml) solution for injection 12mg
+        </h1>
+    </div>
+</div>
+
+<div class="grid-row">
+    <div class="column-full">
+        <div class="grid-row">
+
+        </div>
+        <div class="grid-row flex">
+            <div class="column-full">
+                <h2 class="heading-large">Historic Cash Payment (HCP)</h2>
+            </div>
+
+        </div>
+
+
+        <div class="issueFormView">
+            <div class="column-full" style="margin-bottom:15px">
+                <div class="grid-row">
+                    <h2 class="heading-small">Subject to HCP</h2>
+                    <div class="form-radio">
+                        <span style="padding:0; margin-right:15px">
+                            <input type="radio">
+                            <label> Yes </label>
+                        </span>
+
+                        <span style="padding:0">
+                            <input type="radio">
+                            <label> No </label>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="column-full">
+            <div class="grid-row">
+                <a href="/register-prototype-other-info" class="button mt-10">Next</a>
+            </div>
+            <div class="grid-row">
+                <a href="/register-prototype-temp-price" class="heading-small">Back</a>
+            </div>
+            <div class="grid-row">
+                <a href="/" class="heading-small">Cancel</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

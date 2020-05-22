@@ -61,11 +61,18 @@ app.get('/view-prototype-final2a-h3', (req, res) => { res.render('view-prototype
 app.get('/view-prototype-final2a-h4', (req, res) => { res.render('view-prototype-final2a-h4') });
 app.get('/edit-prototype1', (req, res) => { res.render('edit-prototype1') });
 app.get('/view-prototype-with-links', (req, res) => { res.render('view-prototype-with-links1') });
+app.get('/view-prototype-with-links2', (req, res) => { res.render('view-prototype-with-links2') });
+
 app.get('/edit-prototype-product-info', (req, res) => { res.render('edit-prototype-product-info') });
 app.get('/edit-prototype-NAS', (req, res) => { res.render('edit-prototype-NAS') });
 app.get('/edit-prototype-temp-price', (req, res) => { res.render('edit-prototype-temp-price') });
 app.get('/edit-prototype-HCP', (req, res) => { res.render('edit-prototype-HCP') });
 app.get('/edit-prototype-other-info', (req, res) => { res.render('edit-prototype-other-info') });
+app.get('/register-prototype-product-info', (req, res) => { res.render('register-prototype-product-info') });
+app.get('/register-prototype-NAS', (req, res) => { res.render('register-prototype-NAS') });
+app.get('/register-prototype-temp-price', (req, res) => { res.render('register-prototype-temp-price') });
+app.get('/register-prototype-HCP', (req, res) => { res.render('register-prototype-HCP') });
+app.get('/register-prototype-other-info', (req, res) => { res.render('register-prototype-other-info') });
 
 /**
  * Server Activation

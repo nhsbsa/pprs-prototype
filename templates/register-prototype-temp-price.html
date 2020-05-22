@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+
+{% block content %}
+
+<!-- ------------------------------------------------------------------------------------------ -->
+<div class="grid-row">
+    <div class="column-two-thirds">
+        <h1 class="heading-large">
+            <span class="heading-secondary">Branded medicines</span>
+            Spinraza (5ml) solution for injection 12mg
+        </h1>
+    </div>
+</div>
+
+<div class="grid-row">
+    <div class="column-full">
+        <div class="grid-row">
+
+        </div>
+        <div class="grid-row">
+            <div class="column-full">
+                <h2 class="heading-large">Temporary Price</h2>
+            </div>
+
+        </div>
+
+
+        <div class="issueFormView">
+            <div class="column-full" style="margin-bottom:15px">
+                <div class="grid-row">
+                    <h2 class="heading-small">Temporary price</h2>
+                    <i>£</i>
+                    <input type="text" >
+                </div>
+
+                <div class="grid-row">
+                    <h2 class="heading-small">Effective date</h2>
+                    <div class="form-date">
+                        <div class="form-group">
+                            <label>
+                                Day
+                            </label>
+                            <input type="number" pattern="[0-9]*" inputmode="numeric">
+                        </div>
+                    </div>
+                    <div class="form-date">
+                        <div class="form-group">
+                            <label>
+                                Month
+                            </label>
+                            <input type="number" pattern="[0-9]*" inputmode="numeric">
+                        </div>
+                    </div>
+                    <div class="form-date">
+                        <div class="form-group">
+                            <label>
+                                Year
+                            </label>
+                            <input type="number" pattern="[0-9]*" inputmode="numeric">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-row">
+                    <h2 class="heading-small">End date</h2>
+                    <div class="form-date">
+                        <div class="form-group">
+                            <label>
+                                Day
+                            </label>
+                            <input type="number" pattern="[0-9]*" inputmode="numeric">
+                        </div>
+                    </div>
+                    <div class="form-date">
+                        <div class="form-group">
+                            <label>
+                                Month
+                            </label>
+                            <input type="number" pattern="[0-9]*" inputmode="numeric">
+                        </div>
+                    </div>
+                    <div class="form-date">
+                        <div class="form-group">
+                            <label>
+                                Year
+                            </label>
+                            <input type="number" pattern="[0-9]*" inputmode="numeric">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="column-full">
+            <div class="grid-row">
+                <a href="/register-prototype-HCP" class="button mt-10">Next</a>
+            </div>
+            <div class="grid-row">
+                <a href="/register-prototype-NAS" class="heading-small">Back</a>
+            </div>
+            <div class="grid-row">
+                <a href="/" class="heading-small">Cancel</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
