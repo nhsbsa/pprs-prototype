@@ -1,0 +1,323 @@
+{% extends "base.html" %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+<div class="grid-row">
+    <div class="column-two-thirds">
+        <div class="breadcrumbs">
+            <ol>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="#">Prototype f2a</a>
+                </li>
+                <li>
+                    <a href="#">Manage products</a>
+                </li>
+                <li>Product XX</li>
+            </ol>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block content %}
+
+<div class="grid-row">
+    <div class="column-two-thirds">
+        <h1 class="heading-large">
+            <span class="heading-secondary">Branded medicines</span>
+            Spinraza (5ml) solution for injection 12mg
+        </h1>
+    </div>
+</div>
+
+<div class="grid-row">
+    <div class="column-full">
+        <details class="mb-20">
+            <summary>
+                <span class="summary">This product has product history changes</span>
+            </summary>
+
+            <div class="panel panel-border-narrow">
+                <p>
+                    <a href="/view-prototype-final2a-h0">Valid from 01/01/2018 to 19/02/2020</a>
+                </p>
+                <p>
+                    <a href="/view-prototype-final2a-h1">Valid from 20/02/2020 to 09/03/2020</a>
+                </p>
+                <p>
+                    <a href="/view-prototype-final2a-h2"></a>Valid from 10/03/2020 to 12/05/2020 - CURRENT
+                    (displayed)
+                </p>
+                <p>
+                    <a href="/view-prototype-final2a-h3">Valid from 13/05/2020 to 30/09/2020</a>
+                </p>
+                <p>
+                    <a href="/view-prototype-final2a-h4">Valid from 01/10/2020</a>
+                </p>
+            </div>
+        </details>
+
+
+        <div class="versions-prod">
+            <div class="grid-row">
+                <div class="column-third">
+                    <h2 class="heading-small issueviewHeaders">
+                        Organisation
+                    </h2>
+                    <p>Biogen Idec Limited</p>
+                </div>
+
+                <div class="column-third">
+                    <h2 class="heading-small issueviewHeaders">Membership</h2>
+                    <p>Statutory</p>
+                </div>
+
+                <div class="column-third">
+                    <h2 class="heading-small">SNOMED</h2>
+                    <p>123456</p>
+                </div>
+            </div>
+
+            <div class="grid-row">
+                <div class="column-third">
+                    <h2 class="heading-small">Presentation</h2>
+                    <p>Spinraza (5ml) solution for injection 12mg</p>
+                </div>
+
+                <div class="column-third">
+                    <h2 class="heading-small">Form</h2>
+                    <p>Vial</p>
+                </div>
+
+                <div class="column-third">
+                    <h2 class="heading-small">Pack size</h2>
+                    <p>1</p>
+                </div>
+            </div>
+
+            <div class="grid-row">
+                <div class="column-third">
+                    <h2 class="heading-small">Legal category</h2>
+                    <p>POM</p>
+                </div>
+
+                <div class="column-third">
+                    <h2 class="heading-small">Publish on maximum price list
+                    </h2>
+
+                    <p>Y</p>
+                </div>
+            </div>
+
+            <div class="grid-row">
+                <div class="column-third">
+                    <h2 class="heading-small">Max price
+                    </h2>
+                    <p>&pound;75000.00</p>
+                </div>
+
+                <div class="column-third">
+                    <h2 class="heading-small">Date from
+                    </h2>
+                    <p>20/02/2020</p>
+                </div>
+
+                <div class="column-third">
+                    <h2 class="heading-small">Date to
+                    </h2>
+                    <p>30/09/2020</p>
+                </div>
+            </div>
+            <div class="grid-row">
+                <div class="column-full">
+                    <a href="/edit-prototype-product-info" class="right-floater" id="edit">Edit</a>
+                </div>
+            </div>
+            <div class="grid-row">
+                <div class="column-third">
+                    <h2 class="heading-small">Comments</h2>
+                    <a href="/">Add comment</a>
+                </div>
+                <div class="column-two-thirds">
+
+
+                    <h3 class="heading-small">Change to price</h3>
+                    <p>A change was made to the price of this item</p>
+                    <p class="form-hint">By Graeme Tones on 29/05/2020</p>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="tabs tabbed">
+            <div class="tabs-nav">
+                <ul class="tabs-list">
+
+                    <li><a href="#tab-NAS" class="tab">New Active Substance (NAS)</a></li>
+                    <li><a href="#tab-tempPrice" class="tab">Temporary price</a></li>
+                    <li><a href="#tab-HCP" class="tab">Historic Cash Payment (HCP)</a></li>
+                    <li><a href="#tab-other" class="tab">Other</a></li>
+
+                </ul>
+            </div>
+
+            <div class="tabs-content">
+
+                <div id="tab-NAS" class="tabcontent tabs-panel">
+                    <div class="tabs-panel-inner">
+                        <div class="formcontainer-tab">
+                            <div class="grid-row">
+                                <div class="column-third">
+                                    <h2 class="heading-medium">New Active Substance (NAS)</h2>
+                                </div>
+                                <div class="column-two-thirds">
+                                    <dl class="summary-list mt-tab">
+                                        <div class="summary-list__row">
+                                            <dt class="summary-list__key">Date of marketing authorisation</dt>
+                                            <dd class="summary-list__value" id="firstName">01/01/2018</dd>
+                                            <dd class="summary-list__actions">
+                                                <a id="linkChangeFirstName" href="#"><span>Edit</span> <span
+                                                        class="visually-hidden">Edit date of marketing
+                                                        authorisation</span> </a>
+                                            </dd>
+                                        </div>
+                                        <div class="summary-list__row">
+                                            <dt class="summary-list__key">Expiry date of NAS</dt>
+                                            <dd class="summary-list__value" id="dob">01/01/2018</dd>
+                                            <dd class="summary-list__actions">
+                                                <a id="linkChangeDob" href="#"> <span>Edit</span> <span
+                                                        class="visually-hidden">Ediy expiry of NAS</span>
+                                                </a>
+                                            </dd>
+                                        </div>
+                                    </dl>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="tab-tempPrice" class="tabcontent tabs-panel">
+                    <div class="tabs-panel-inner">
+                        <div class="formcontainer-tab">
+                            <div class="grid-row">
+                                <div class="column-third">
+                                    <h2 class="heading-medium">Temporary Price</h2>
+                                </div>
+                                <div class="column-two-thirds">
+
+                                    <dl class="summary-list mt-tab">
+                                        <div class="summary-list__row">
+                                            <dt class="summary-list__key">Temporary price</dt>
+                                            <dd class="summary-list__value" id="firstName">£2.49</dd>
+                                            <dd class="summary-list__actions">
+                                                <a id="linkChangeFirstName" href="#"><span>Edit</span> <span
+                                                        class="visually-hidden">Edit temporary price</span> </a>
+                                            </dd>
+                                        </div>
+                                        <div class="summary-list__row">
+                                            <dt class="summary-list__key">Effective date</dt>
+                                            <dd class="summary-list__value" id="dob">01/01/2018</dd>
+                                            <dd class="summary-list__actions">
+                                                <a id="linkChangeDob" href="#"> <span>Edit</span> <span
+                                                        class="visually-hidden">Ediy expiry of NAS</span>
+                                                </a>
+                                            </dd>
+                                        </div>
+                                        <div class="summary-list__row">
+                                            <dt class="summary-list__key">End date</dt>
+                                            <dd class="summary-list__value" id="dob">12/05/2018</dd>
+                                            <dd class="summary-list__actions">
+                                                <a id="linkChangeDob" href="#"> <span>Edit</span> <span
+                                                        class="visually-hidden">Ediy expiry of NAS</span>
+                                                </a>
+                                            </dd>
+                                        </div>
+                                    </dl>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="tab-HCP" class="tabcontent tabs-panel">
+                    <div class="tabs-panel-inner">
+                        <div class="formcontainer-tab">
+                            <div class="grid-row flex">
+                                <div class="column-third">
+                                    <h2 class="heading-medium">Historic Cash Payment (HCP)</h2>
+                                </div>
+                                <div class="column-two-thirds">
+                                    <dl class="summary-list mt-tab">
+                                        <div class="summary-list__row">
+                                            <dt class="summary-list__key">Subject to HCP</dt>
+                                            <dd class="summary-list__value" id="firstName">Yes</dd>
+                                            <dd class="summary-list__actions">
+                                                <a id="linkChangeFirstName" href="#"><span>Edit</span> <span
+                                                        class="visually-hidden">Edit HCP</span> </a>
+                                            </dd>
+                                        </div>
+                                        <div class="summary-list__row">
+                                            <dt class="summary-list__key">NHS list price as at 31 December 2013</dt>
+                                            <dd class="summary-list__value" id="dob">&pound; 7.99</dd>
+                                            <dd class="summary-list__actions">
+                                                <a id="linkChangeDob" href="#"> <span>Edit</span> <span
+                                                        class="visually-hidden">Ediy NHS list price</span>
+                                                </a>
+                                            </dd>
+                                        </div>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div id="tab-other" class="tabcontent tabs-panel">
+                    <div class="tabs-panel-inner">
+                        <div class="formcontainer-tab">
+
+                            <div class="grid-row">
+                                <div class="column-third">
+                                    <h2 class="heading-medium">Other Information</h2>
+                                </div>
+                                <div class="column-two-thirds">
+
+                                    <dl class="summary-list mt-tab">
+                                        <div class="summary-list__row">
+                                            <dt class="summary-list__key">Over The Counter payment</dt>
+                                            <dd class="summary-list__value" id="firstName">Yes</dd>
+                                            <dd class="summary-list__actions">
+                                                <a id="linkChangeFirstName" href="#"><span>Edit</span> <span
+                                                        class="visually-hidden">Edit over the counter payment</span>
+                                                </a>
+                                            </dd>
+                                        </div>
+                                        <div class="summary-list__row">
+                                            <dt class="summary-list__key">Discontinued</dt>
+                                            <dd class="summary-list__value" id="dob">Yes</dd>
+                                            <dd class="summary-list__actions">
+                                                <a id="linkChangeDob" href="#"> <span>Edit</span> <span
+                                                        class="visually-hidden">Edit discontinued</span>
+                                                </a>
+                                            </dd>
+                                        </div>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

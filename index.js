@@ -74,6 +74,9 @@ app.get('/register-prototype-temp-price', (req, res) => { res.render('register-p
 app.get('/register-prototype-HCP', (req, res) => { res.render('register-prototype-HCP') });
 app.get('/register-prototype-other-info', (req, res) => { res.render('register-prototype-other-info') });
 
+// Shaun's pages
+app.get('/register-product-sc', (req, res) => { res.render('register-product-sc') });
+app.get('/prototype-with-links-sc', (req, res) => { res.render('prototype-with-links-sc') });
 /**
  * Server Activation
  */
