@@ -85,7 +85,7 @@ app.get('/edit-prototype-NAS-sc', (req, res) => { res.render('edit-prototype-NAS
 app.get('/edit-prototype-temp-price-sc', (req, res) => { res.render('edit-prototype-temp-price-sc') });
 app.get('/edit-prototype-HCP-sc', (req, res) => { res.render('edit-prototype-HCP-sc') });
 app.get('/edit-prototype-other-info-sc', (req, res) => { res.render('edit-prototype-other-info-sc') });
-app.get('/errors', (req, res) => { res.render('errors') });
+app.get('/accessibleerrors', (req, res) => { res.render('errors') });
 
 /**
  * Server Activation
