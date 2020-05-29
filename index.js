@@ -77,6 +77,7 @@ app.get('/register-prototype-other-info', (req, res) => { res.render('register-p
 // Shaun's pages
 app.get('/register-product-sc', (req, res) => { res.render('register-product-sc') });
 app.get('/prototype-with-links-sc', (req, res) => { res.render('prototype-with-links-sc') });
+app.get('/prototype-with-links-sc1', (req, res) => { res.render('prototype-with-links-sc1') });
 /**
  * Server Activation
  */
