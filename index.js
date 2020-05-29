@@ -75,9 +75,17 @@ app.get('/register-prototype-HCP', (req, res) => { res.render('register-prototyp
 app.get('/register-prototype-other-info', (req, res) => { res.render('register-prototype-other-info') });
 
 // Shaun's pages
-app.get('/register-product-sc', (req, res) => { res.render('register-product-sc') });
+app.get('/prototype-with-links-sc0', (req, res) => { res.render('prototype-with-links-sc0') });
 app.get('/prototype-with-links-sc', (req, res) => { res.render('prototype-with-links-sc') });
 app.get('/prototype-with-links-sc1', (req, res) => { res.render('prototype-with-links-sc1') });
+
+// edit pages
+app.get('/register-product-sc', (req, res) => { res.render('register-product-sc') });
+app.get('/edit-prototype-NAS-sc', (req, res) => { res.render('edit-prototype-NAS-sc') });
+app.get('/edit-prototype-temp-price-sc', (req, res) => { res.render('edit-prototype-temp-price-sc') });
+app.get('/edit-prototype-HCP-sc', (req, res) => { res.render('edit-prototype-HCP-sc') });
+app.get('/edit-prototype-other-info-sc', (req, res) => { res.render('edit-prototype-other-info-sc') });
+
 /**
  * Server Activation
  */

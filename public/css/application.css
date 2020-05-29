@@ -144,4 +144,6 @@
     .mt-tab {
         margin-top: 1.875em;
     }
-    
+    .mb-10 {
+        margin-bottom: 10px !important;
+    }
