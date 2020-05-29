@@ -25,13 +25,6 @@
 
         <h1 class="heading-large">My page</h1>
 
-        <p>Things to ensure when using errors</p>
-        <ul class="list">
-            <li class="list-item">Always have descriptive error messages that can be inserted on the fields using something like th:if="${#fields.hasErrors('tempPrice')}"</li>
-            <li class="list-item">You can use th:classappend="${#fields.hasErrors('tempPrice')} ? form-control-error" to toggle classes if an error is present</li>
-            <li class="list-item">Same for the form-group error insertion as well th:classappend="${#fields.hasErrors('tempPrice')} ? error" to toggle classes if an error is present</li>
-        </ul>
-
         <div class="form-group error">
                 <label for="tempPrice" class="form-label-bold">Temporary price</label>
                 <span class="form-hint">Price in pounds (&pound;)</span>
