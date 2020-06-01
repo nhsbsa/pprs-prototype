@@ -1,109 +1,94 @@
 {% extends "base.html" %}
 
 <!-- Breadcrumb goes inside the beforeContent block -->
-
+{% block beforeContent %}
+<div class="grid-row">
+    <div class="column-full">
+        <a href="/register-prototype-NAS" class="link-back">Back</a>
+    </div>
+</div>
+{% endblock %}
 {% block content %}
 
-<!-- ------------------------------------------------------------------------------------------ -->
 <div class="grid-row">
     <div class="column-two-thirds">
         <h1 class="heading-large">
-            <span class="heading-secondary">Branded medicines</span>
-            Spinraza (5ml) solution for injection 12mg
+            <span class="heading-secondary">Spinraza (5ml) solution for injection 12mg</span>
+            Temporary price
         </h1>
     </div>
 </div>
 
 <div class="grid-row">
-    <div class="column-full">
-        <div class="grid-row">
+    <div class="column-two-thirds">
 
+        <div class="form-group">
+            <label for="tempPrice" class="form-label-bold">Temporary price</label>
+            <span class="form-hint">Price in pounds (&pound;)</span>
+            <input type="text" value="50000.00" class="form-control" id="tempPrice">
         </div>
-        <div class="grid-row">
-            <div class="column-full">
-                <h2 class="heading-large">Temporary Price</h2>
-            </div>
-
-        </div>
-
-
-        <div class="issueFormView">
-            <div class="column-full" style="margin-bottom:15px">
-                <div class="grid-row">
-                    <h2 class="heading-small">Temporary price</h2>
-                    <i>£</i>
-                    <input type="text" >
-                </div>
-
-                <div class="grid-row">
-                    <h2 class="heading-small">Effective date</h2>
-                    <div class="form-date">
-                        <div class="form-group">
-                            <label>
-                                Day
-                            </label>
-                            <input type="number" pattern="[0-9]*" inputmode="numeric">
-                        </div>
+        <div class="form-group">
+            <fieldset>
+                <legend>
+                    <span class="form-label-bold">Effective date</span>
+                    <span class="form-hint" id="dob-hint">For example, 11 07 1987</span>
+                </legend>
+                <div class="form-date">
+                    <div class="form-group form-group-day">
+                        <label class="form-label" for="date-from-day">Day</label>
+                        <input class="form-control" id="date-from-day" name="date-from-day" type="text" pattern="[0-9]*"
+                               aria-describedby="date-from-day">
                     </div>
-                    <div class="form-date">
-                        <div class="form-group">
-                            <label>
-                                Month
-                            </label>
-                            <input type="number" pattern="[0-9]*" inputmode="numeric">
-                        </div>
+                    <div class="form-group form-group-month">
+                        <label class="form-label" for="date-from-month">Month</label>
+                        <input class="form-control" id="date-from-month" name="date-from-month" type="text"
+                               pattern="[0-9]*">
                     </div>
-                    <div class="form-date">
-                        <div class="form-group">
-                            <label>
-                                Year
-                            </label>
-                            <input type="number" pattern="[0-9]*" inputmode="numeric">
-                        </div>
+                    <div class="form-group form-group-year">
+                        <label class="form-label" for="date-from-year">Year</label>
+                        <input class="form-control" id="date-from-year" name="date-from-year" type="text"
+                               pattern="[0-9]*" min="0">
                     </div>
                 </div>
-
-                <div class="grid-row">
-                    <h2 class="heading-small">End date</h2>
-                    <div class="form-date">
-                        <div class="form-group">
-                            <label>
-                                Day
-                            </label>
-                            <input type="number" pattern="[0-9]*" inputmode="numeric">
-                        </div>
+            </fieldset>
+        </div>
+        <div class="form-group">
+            <fieldset>
+                <legend>
+                    <span class="form-label-bold">End date</span>
+                    <span class="form-hint" id="dob-hint">For example, 11 07 1987</span>
+                </legend>
+                <div class="form-date">
+                    <div class="form-group form-group-day">
+                        <label class="form-label" for="date-from-day">Day</label>
+                        <input class="form-control" id="date-from-day" name="date-from-day" type="text" pattern="[0-9]*"
+                               aria-describedby="date-from-day">
                     </div>
-                    <div class="form-date">
-                        <div class="form-group">
-                            <label>
-                                Month
-                            </label>
-                            <input type="number" pattern="[0-9]*" inputmode="numeric">
-                        </div>
+                    <div class="form-group form-group-month">
+                        <label class="form-label" for="date-from-month">Month</label>
+                        <input class="form-control" id="date-from-month" name="date-from-month" type="text"
+                               pattern="[0-9]*">
                     </div>
-                    <div class="form-date">
-                        <div class="form-group">
-                            <label>
-                                Year
-                            </label>
-                            <input type="number" pattern="[0-9]*" inputmode="numeric">
-                        </div>
+                    <div class="form-group form-group-year">
+                        <label class="form-label" for="date-from-year">Year</label>
+                        <input class="form-control" id="date-from-year" name="date-from-year" type="text">
+                        <input class="form-control" id="date-from-year" name="date-from-year" type="text"
+                               pattern="[0-9]*" min="0">
                     </div>
                 </div>
+            </fieldset>
+        </div>
 
-            </div>
+
+        <div class="form-group">
+            <a href="register-prototype-HCP" class="button mt-10" role="button">Next</a>
         </div>
-        <div class="column-full">
-            <div class="grid-row">
-                <a href="/register-prototype-HCP" class="button mt-10">Next</a>
-            </div>
-            <div class="grid-row">
-                <a href="/register-prototype-NAS" class="heading-small">Back</a>
-            </div>
-            <div class="grid-row">
-                <a href="/" class="heading-small">Cancel</a>
-            </div>
+
+        <div class="form-group">
+            <a href="/" class="heading-small">Cancel</a>
         </div>
+
+
     </div>
 </div>
 {% endblock %}
