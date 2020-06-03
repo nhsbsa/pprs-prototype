@@ -87,6 +87,9 @@ app.get('/edit-prototype-HCP-sc', (req, res) => { res.render('edit-prototype-HCP
 app.get('/edit-prototype-other-info-sc', (req, res) => { res.render('edit-prototype-other-info-sc') });
 app.get('/accessibleerrors', (req, res) => { res.render('errors') });
 
+app.get('/confirmation-page', (req, res) => { res.render('confirmation-page') });
+app.get('/view-product-register-journey', (req, res) => { res.render('prototype-view-product-register-journey') });
+
 /**
  * Server Activation
  */

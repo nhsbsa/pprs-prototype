@@ -1,0 +1,147 @@
+{% extends "base.html" %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+<div class="grid-row">
+    <div class="column-full">
+        <div class="breadcrumbs">
+            <ol>
+                <li>
+                    <a href="/pprs/home">Home</a>
+                </li>
+                <li>
+                    <a href="/pprs/products/list">Manage products</a>
+                </li>
+                <li><a href="/pprs/products/add">Link product organisation</a>
+                </li>
+                <li><a href="/pprs/products/add/product">Link product details</a></li>
+
+                <li>Confirm and save</li>
+            </ol>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block content %}
+
+
+
+    <div class="column-full">
+        <h1 id="main-content" class="heading-large" style="margin-top:0; display:inline-block">Confirm and save</h1>
+    </div>
+
+    <div class="column-full" style="padding-left:0; padding-right:0;">
+        <div class="issueFormView">
+
+            <div class="column-full" style="padding-left:0; padding-right:0">
+
+                <div class="column-half" style="padding-left:0; padding-right:0">
+
+                    <h2 class="heading-small issueviewHeaders">Product Name</h2>
+                    <span>ACCUSOL 35 KO Solution</span>
+
+                </div>
+
+                <div class="column-half" style="padding-left:0; padding-right:0">
+
+                    <h2 class="heading-small issueviewHeaders">Manufacturer</h2>
+                    <span>Nikkiso Belgium BVBA</span>
+
+                </div>
+
+            </div>
+
+            <div class="column-full" style="padding-left:0; padding-right:0">
+
+                <div class="column-half" style="padding-left:0; padding-right:0">
+
+                    <h2 class="heading-small">SNOMED</h2>
+                    <span>6000883658647</span>
+
+                </div>
+
+                <div class="column-half" style="padding-left:0; padding-right:0">
+
+                    <h2 class="heading-small">Pack Size</h2>
+                    <span>5L 1 bag</span>
+
+                </div>
+
+            </div>
+
+            <div class="column-full" style="padding-left:0; padding-right:0">
+
+                <div class="column-half" style="padding-left:0; padding-right:0">
+
+                    <h2 class="heading-small">Form</h2>
+                    <span>1 bag</span>
+
+                </div>
+
+                <div class="column-half" style="padding-left:0; padding-right:0">
+
+                    <h2 class="heading-small">Organisation Name</h2>
+                    <span>Bristol-Myers Squibb Pharmaceuticals Limited</span>
+
+
+                </div>
+
+
+
+            </div>
+        </div>
+
+    </div>
+    <div class="column-full" style="padding-top:20px">
+        <form name="productForm" action="/pprs/products/add/legalcat" id="userform" method="post"><input type="hidden" name="_csrf" value="8e11331d-23f9-4710-8baf-f453b994e050"/>
+
+            <div class="column-full">
+
+            </div>
+
+            <div class="column-full" style="padding-left:0; padding-right:0">
+
+                <div class="column-half">
+                    <div class="form-group">
+                        <label for="legalCategory" class="form-label-bold">Legal Category</label>
+
+                        <select class="form-control" id="legalCategory" name="legalCategory">
+                            <option disabled="disabled" value="">Select a legal category</option>
+                            <option value="POM">POM</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="column-half">
+                    <div class="form-group">
+                        <span style="visibility:hidden;">02/06/2020</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="column-full" style="padding-left:0; padding-right:0">
+
+
+
+            </div>
+
+            <div class="column-full">
+
+                <div class="form-group">
+                    <!-- Save customer button -->
+                    <button class="button" type="submit" value="Save" id="saveproduct">Link product</button>
+                    <a id="" href="/register-prototype-product-info">Register max price</a>
+                    <a id="cancelButton" href="/">Cancel</a>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+
+</body>
+
+</html>
+{% endblock %}
