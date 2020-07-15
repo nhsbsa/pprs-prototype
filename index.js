@@ -99,6 +99,9 @@ app.get('/presentation-level-report-form', (req, res) => { res.render('presentat
 // Presentation level report done
 app.get('/presentation-level-report-done', (req, res) => { res.render('presentation-level-report-done')});
 
+// Presentation level report all
+app.get('/presentation-level-report-view-all', (req, res) => { res.render('presentation-level-report-view-all')});
+
 
 app.get('/sales-dashboard', (req, res) => { res.render('sales-dashboard') });
 
