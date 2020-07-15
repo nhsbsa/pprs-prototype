@@ -90,6 +90,12 @@ app.get('/accessibleerrors', (req, res) => { res.render('errors') });
 app.get('/confirmation-page', (req, res) => { res.render('confirmation-page') });
 app.get('/view-product-register-journey', (req, res) => { res.render('prototype-view-product-register-journey') });
 
+// Presentation level sales report view
+app.get('/presentation-level-report-view', (req, res) => { res.render('presentation-level-report-view') });
+
+// 
+app.get('/presentation-level-report-form', (req, res) => { res.render('presentation-level-report-form')})
+
 /**
  * Server Activation
  */

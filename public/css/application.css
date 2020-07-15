@@ -108,11 +108,15 @@
     .summary-list__key, .summary-list__value {
         word-wrap: break-word;
         overflow-wrap: break-word;
+
+    }
+    .summary-list__value {
+        text-align: right;
     }
     
     @media ( min-width : 40.0625em) {
         .summary-list__value {
-            width: 30%;
+            width: 10%;
         }
     }
     
@@ -120,7 +124,6 @@
         .summary-list__key, .summary-list__value, .summary-list__actions {
             display: table-cell;
             padding-right: 20px;
-            width: 60%;
         }
     }
     
@@ -146,4 +149,15 @@
     }
     .mb-10 {
         margin-bottom: 10px !important;
+    }
+    #contentPLS {
+        max-width: 90vw;
+        margin: 0 auto;
+    }
+    .mb-20 {
+        margin-bottom: 20px;
+    }
+    .fc {
+        margin-top: 1.875em !important;
+    margin-bottom: 0.8333333333em !important;
     }
