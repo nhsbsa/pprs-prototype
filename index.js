@@ -96,6 +96,9 @@ app.get('/presentation-level-report-view', (req, res) => { res.render('presentat
 // 
 app.get('/presentation-level-report-form', (req, res) => { res.render('presentation-level-report-form')})
 
+app.get('/sales-dashboard', (req, res) => { res.render('sales-dashboard') });
+
+
 /**
  * Server Activation
  */
