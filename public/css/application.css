@@ -188,3 +188,24 @@
 .mt-20 {
     margin-top: 20px;
 }
+.done-panel {
+    margin-top: 20px;
+    color: #fff;
+    background: #005EB8;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+#done-tick {
+    display: inline-block;
+    width: 35px;
+    height: 23px;
+    padding: 4px 10px 4px 4px;
+    background-color: #005EB8;
+    background-image: url(/images/done-tick.png);
+    background-repeat: no-repeat;
+}
+.white {
+    color: white;
+}
