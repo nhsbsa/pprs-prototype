@@ -3,161 +3,188 @@
     justify-content: flex-end;
     align-items: center;
 }
+
 .mt-10 {
-    margin-top:20px;
+    margin-top: 20px;
 }
+
 .mb-20 {
-    margin-bottom:20px;
+    margin-bottom: 20px;
 }
+
 .right-floater {
-    float:right;
+    float: right;
 }
 
 @media (min-width: 641px) {
-	.versions-prod {
-	    padding-top: 50px;
-	    padding-right: 30px;
-	    padding-bottom: 20px;
-	    padding-left: 30px;
-	}
-		}
-	.versions-prod {
-	    position: relative;
-	    overflow: hidden;
-	    border: 3px solid #2360AC;
-	    margin-top: 30px;
-	    margin-bottom: 35px;
-	    padding-top: 15px;
-	    padding-right: 15px;
-	    padding-bottom: 15px;
-	    padding-left: 15px;
-	}
-	.versions-prod:before {
-	    content: "PRODUCT INFORMATION";
-	    position: absolute;
-	    top: 0;
-	    left: 0;
-	    padding: 0.2105263158em 0.7894736842em 0.2105263158em 0.7894736842em;
-	    font-family: Arial, sans-serif;
-	    font-weight: 400;
-	    text-transform: none;
-	    font-size: 16px;
-	    line-height: 1.25;
-	    background: #2360AC;
-	    color: white;
+    .versions-prod {
+        padding-top: 50px;
+        padding-right: 30px;
+        padding-bottom: 20px;
+        padding-left: 30px;
     }
-    .summary-list {
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        font-weight: 400;
-        line-height: 1.25;
-        margin: 0;
-        margin-bottom: 20px;
-    }
-    
-    @media ( max-width : 40.0525em) {
-        .summary-list__row {
-            margin-bottom: 15px;
-            border-bottom: 1px solid #b1b4b6;
-        }
-    }
-    
-    @media ( min-width : 40.0625em) {
-        .summary-list__row {
-            display: table-row;
-        }
-    }
-    
-    .summary-list__key {
-        margin-bottom: 5px;
-        font-weight: 700;
-    }
-    
-    @media ( max-width : 40.0525em) {
-        .summary-list__value {
-            margin-bottom: 15px;
-        }
-    }
-    
-    .summary-list__key, .summary-list__value {
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-    }
-    
-    @media ( min-width : 40.0625em) {
-        .summary-list__key, .summary-list__value, .summary-list__actions {
-            padding-top: 10px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #b1b4b6;
-        }
-    }
-    
-    @media ( min-width : 40.0625em) {
-        .summary-list__key, .summary-list__value, .summary-list__actions {
-            display: table-cell;
-            padding-right: 20px;
-        }
-    }
-    
-    @media ( min-width : 40.0625em) {
-        .summary-list__key {
-            width: 50%;
-        }
-    }
-    
-    .summary-list__key, .summary-list__value {
-        word-wrap: break-word;
-        overflow-wrap: break-word;
+}
 
+.versions-prod {
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #2360AC;
+    margin-top: 30px;
+    margin-bottom: 35px;
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+}
+
+.versions-prod:before {
+    content: "PRODUCT INFORMATION";
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.2105263158em 0.7894736842em 0.2105263158em 0.7894736842em;
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    font-size: 16px;
+    line-height: 1.25;
+    background: #2360AC;
+    color: white;
+}
+
+.summary-list {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    line-height: 1.25;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+@media (max-width : 40.0525em) {
+    .summary-list__row {
+        margin-bottom: 15px;
+        border-bottom: 1px solid #b1b4b6;
     }
+}
+
+@media (min-width : 40.0625em) {
+    .summary-list__row {
+        display: table-row;
+    }
+}
+
+.summary-list__key {
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+@media (max-width : 40.0525em) {
     .summary-list__value {
-        text-align: right;
-    }
-    
-    @media ( min-width : 40.0625em) {
-        .summary-list__value {
-            width: 10%;
-        }
-    }
-    
-    @media ( min-width : 40.0625em) {
-        .summary-list__key, .summary-list__value, .summary-list__actions {
-            display: table-cell;
-            padding-right: 20px;
-        }
-    }
-    
-    @media ( max-width : 40.0525em) {
-        .summary-list__value {
-            margin-bottom: 15px;
-        }
-    }
-    
-    .summary-list__actions {
         margin-bottom: 15px;
     }
-    
-    @media ( min-width : 40.0625em) {
-        .summary-list__actions {
-            width: 10%;
-            padding-right: 0;
-            text-align: right;
-        }
+}
+
+.summary-list__key,
+.summary-list__value {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+@media (min-width : 40.0625em) {
+
+    .summary-list__key,
+    .summary-list__value,
+    .summary-list__actions {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #b1b4b6;
     }
-    .mt-tab {
-        margin-top: 1.875em;
+}
+
+@media (min-width : 40.0625em) {
+
+    .summary-list__key,
+    .summary-list__value,
+    .summary-list__actions {
+        display: table-cell;
+        padding-right: 20px;
     }
-    .mb-10 {
-        margin-bottom: 10px !important;
+}
+
+@media (min-width : 40.0625em) {
+    .summary-list__key {
+        width: 50%;
     }
-    #contentPLS {
-        max-width: 90vw;
-        margin: 0 auto;
+}
+
+.summary-list__key,
+.summary-list__value {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+
+}
+
+.summary-list__value {
+    text-align: right;
+}
+
+@media (min-width : 40.0625em) {
+    .summary-list__value {
+        width: 10%;
     }
-    .mb-20 {
-        margin-bottom: 20px;
+}
+
+@media (min-width : 40.0625em) {
+
+    .summary-list__key,
+    .summary-list__value,
+    .summary-list__actions {
+        display: table-cell;
+        padding-right: 20px;
     }
-    .fc {
-        margin-top: 1.875em !important;
+}
+
+@media (max-width : 40.0525em) {
+    .summary-list__value {
+        margin-bottom: 15px;
+    }
+}
+
+.summary-list__actions {
+    margin-bottom: 15px;
+}
+
+@media (min-width : 40.0625em) {
+    .summary-list__actions {
+        width: 10%;
+        padding-right: 0;
+        text-align: right;
+    }
+}
+
+.mt-tab {
+    margin-top: 1.875em;
+}
+
+.mb-10 {
+    margin-bottom: 10px !important;
+}
+
+#contentPLS {
+    max-width: 90vw;
+    margin: 0 auto;
+}
+
+.mb-20 {
+    margin-bottom: 20px !important;
+}
+
+.fc {
+    margin-top: 1.875em !important;
     margin-bottom: 0.8333333333em !important;
-    }
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
