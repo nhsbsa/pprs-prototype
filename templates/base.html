@@ -36,7 +36,7 @@
     <!--[if IE 8]><link href="/css/elements-page-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
     <link href="/css/vendor/prism.css" media="screen" rel="stylesheet" />
     <!--[if gt IE 8]><!-->
-    <script src="javascripts/vendor/prism.js"></script>
+    <script src="/js/prism.js"></script>
     <!--<![endif]-->
     <link rel="stylesheet" href="/css/application.css">
     <link rel="stylesheet" href="/css/edit_product.css">
@@ -76,6 +76,19 @@
 		{% block beforeContent %}{% endblock %}
 		{% block content %}{% endblock %}
   </main>
-  <script src="/js/tabs.js"></script>
+  <!-- <script src="/js/tabs.js"></script> -->
+  <script src="/js/govuk-template.js"></script>
+  <script src="/js/jquery-1.11.0.min.js"></script>
+
+
+  <script src="/js/bind.js"></script>
+  <script src="/js/shim-links-with-button-role.js"></script>
+  <script src="/js/show-hide-content.js"></script>
+
+  <script src="/js/details.polyfill.js"></script>
+  <script src="/js/application.js"></script>
+
+  <script>if (typeof window.GOVUK === 'undefined') document.body.className = document.body.className.replace('js-enabled', '');</script>
+  
 </body>
 </html>
