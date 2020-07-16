@@ -105,6 +105,8 @@ app.get('/presentation-level-report-view-all', (req, res) => { res.render('prese
 
 app.get('/sales-dashboard', (req, res) => { res.render('sales-dashboard') });
 
+app.get('/annual-submissions', (req, res) => { res.render('annual-submissions') });
+
 
 /**
  * Server Activation

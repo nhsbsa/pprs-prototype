@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <div class="breadcrumbs">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li>Annual Submissions</li>
+      </ol>
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block content %}
+
+
+<div class="grid-row" style="margin-bottom: 20px;">
+  <div class="column-two-thirds">
+    <h1 class="heading-large">
+      <span class="heading-secondary">Branded medicines</span>
+      Annual Submissions
+    </h1>
+  </div>
+</div>
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <div class="panel panel-border-wide" id="contact-by-text">
+      <div class="grid-row">
+        <div class="column-third">
+          <h2 class="heading-small">Company</h2>
+          <p>Boots Parmacy</p>
+        </div>
+        <div class="column-third">
+          <h2 class="heading-small">Year</h2>
+          <p>2020</p>
+        </div>
+        <div class="column-third">
+          <h2 class="heading-small">Reference</h2>
+          <p>12345678</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="grid-row">
+  <div class="column-full">
+    <h2 class="heading-medium">2020 - Annual Submission</h2>
+    <p class="">Statutory Scheme Annual Sales Report: DecYEnd 01/Jan/2020 - 31/Dec/2020</p>
+    <p class="bold-xsmall">No submission for period found. Click 'Create' to start a submission.</p>
+    <a class="button button-start" href="#" role="button">Create</a>
+    <p><a href="#">Upload Files</a></p>
+    <h2 class="heading-medium">Previous Annual Submissions</h2>
+    <details>
+      <summary><span class="summary">2019 - Annual Submission (Complete)</span></summary>
+      <div class="panel panel-border-narrow">
+        <p>Statutory Scheme Annual Sales Report: DecYEnd 01/Jan/2019 - 31/Dec/2019</p>
+        <p class="bold-xsmall">Submission completed for this period. ID: 10082</p>
+        <p class="bold-xsmall">Status: Submitted</p>
+        <p class="bold-xsmall">Submitted by: John Smith on 01/01/2020.</p>
+        <a class="button">View</a>
+        <p><a href="#">Upload Files</a></p>
+      </div>
+    </details>
+    <details>
+      <summary><span class="summary">2018 - Annual Submission (Complete)</span></summary>
+      <div class="panel panel-border-narrow">
+        <p>Statutory Scheme Annual Sales Report: DecYEnd 01/Jan/2018 - 31/Dec/2018</p>
+        <p class="bold-xsmall">Submission completed for this period. ID: 10081</p>
+        <p class="bold-xsmall">Status: Submitted</p>
+        <p class="bold-xsmall">Submitted by: John Smith on 01/01/2019.</p>
+        <a class="button">View</a>
+        <p><a href="#">Upload Files</a></p>
+      </div>
+    </details>
+  </div>
+</div>
+{% endblock %}
