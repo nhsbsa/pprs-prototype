@@ -1,0 +1,171 @@
+{% extends "base.html" %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <div class="breadcrumbs">
+      <ol>
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="#">Product Submission</a>
+        </li>
+        <!-- <li>
+                    <a href="#">Manage products</a>
+                </li>
+                <li>Product XX</li> -->
+      </ol>
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block content %}
+<div class="grid-row">
+  <div class="column-full">
+    <h1 class="heading-large">
+      <span class="heading-secondary">Branded medicines</span>
+      Product level report submission
+    </h1>
+  </div>
+</div>
+
+<div class="grid-row">
+  <div class="column-full">
+    <h3 class="heading-medium">Select Required Year</h3>
+  </div>
+</div>
+<div class="grid-row">
+  <div class="column-one-quarter">
+    <div class="form-group">
+      <label class="form-label" for="select-box">This is the label text</label>
+      <select class="form-control" id="select-box">
+        <option>2020</option>
+        <option>2019</option>
+        <option>2018</option>
+        <option>2017</option>
+        <option>2016</option>
+        <option>2021</option>
+      </select>
+    </div>
+    <a href="" class="button">Search</a>
+  </div>
+</div>
+</div>
+<br>
+<div class="grid-row">
+  <div class="column-full">
+    <H3 class="heading-medium">Annual Submissions</H3>
+    <table class="mb-20">
+      <thead>
+        <tr>
+          <th>Annual</th>
+          <th>Date from</th>
+          <th>Date To</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Dec Year End</td>
+          <td>01/01/2020</td>
+          <td>31/12/2020
+        </tr>
+      </tbody>
+    </table>
+    <div class="form-group">
+      <a href="" class="button" style="margin-right: 10px;">Create</a>
+      <a href="" class="button">Files</a>
+    </div>
+    <div class="grid-row">
+      <div class="column-full">
+        <H3 class="heading-medium">Quarterly Submissions</H3>
+        <table class="mb-20">
+          <thead>
+            <tr>
+              <th>Quarter</th>
+              <th>Date from</th>
+              <th>Date To</th>
+              <th>Submitted by</th>
+              <th>Submitted on </th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Q1</td>
+              <td>01/01/2020</td>
+              <td>31/12/2020</td>
+              <td>Grayham Tones</td>
+              <td>08/07/2020</td>
+              <td>submitted</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="form-group">
+          <a href="" class="button" style="margin-right: 10px;">View</a>
+          <a href="" class="button">Files</a>
+        </div>
+        <table class="mb-20">
+          <thead>
+            <tr>
+              <th>Quarter</th>
+              <th>Date from</th>
+              <th>Date To</th>
+              <th>Submitted by</th>
+              <th>Submitted on </th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Q2</td>
+              <td>01/01/2020</td>
+              <td>31/12/2020</td>
+              <td>Grayham Tones</td>
+              <td>08/07/2020</td>
+              <td>submitted</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="form-group">
+          <a href="" class="button" style="margin-right: 10px;">View</a>
+          <a href="" class="button">Files</a>
+        </div>
+        <table class="mb-20">
+          <thead>
+            <tr>
+              <th>Quarter</th>
+              <th>Date from</th>
+              <th>Date To</th>
+              <th>Submitted by</th>
+              <th>Submitted on </th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Q3</td>
+              <td>01/01/2020</td>
+              <td>31/12/2020</td>
+              <td>Grayham Tones</td>
+              <td>08/07/2020</td>
+              <td>submitted</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="form-group">
+          <a href="" class="button" style="margin-right: 10px;">Create</a>
+          <a href="" class="button">Files</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+{% endblock %}

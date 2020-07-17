@@ -107,6 +107,8 @@ app.get('/sales-dashboard', (req, res) => { res.render('sales-dashboard') });
 
 app.get('/annual-submissions', (req, res) => { res.render('annual-submissions') });
 
+app.get('/product-level-returns-submission', (req, res) => { res.render('product-level-returns-submission') });
+
 
 /**
  * Server Activation
