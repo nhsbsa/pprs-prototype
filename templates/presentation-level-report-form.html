@@ -94,518 +94,204 @@
 </div>
 <div class="grid-row">
     <div class="column-full">
-        <h3 class="heading-medium">Product cateogry</h3>
+        <h3 class="heading-medium">Total sales of scheme products</h3>
+
         <div class="form-group">
-            <details>
 
-                <summary><span class="summary">Primary Care sales</span></summary>
-
-                <div class="grid-row">
-                    <div class="column-full">
-
-                        <h3 class="heading-medium">
-                            Which type of payment is this product?
-                        </h3>
-
-                        <form>
-                            <div class="form-group">
-                                <fieldset>
-
-                                    <legend class="visually-hidden">Which type of payment are is this product</legend>
-
-                                    <div class="multiple-choice" data-target="total-sales-fields">
-                                        <input id="total-sales" type="radio" name="sale-type" value="Yes">
-                                        <label for="total-sales">Total sales of scheme
-                                            products</label>
-                                    </div>
-                                    <div class="panel panel-border-narrow js-hidden" id="total-sales-fields">
-                                        <div class="grid-row">
-                                            <div class="column-two-thirds">
-
-                                                <div class="form-group">
-                                                    <label for="totalsales" class="form-label-bold">Quantity</label>
-                                                    <input type="text" class="form-control" id="totalsales">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="totalsales" class="form-label-bold">Net sales</label>
-                                                    <input type="text" class="form-control" id="totalsales">
-
-                                                </div>
-
-                                                <div class="form-group">
-                                                    <label for="totalsales" class="form-label-bold">Gross sales</label>
-                                                    <input type="text" class="form-control" id="totalsales" disabled>
-
-                                                </div>
-
-
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-
-                                    <div class="multiple-choice" data-target="ecp-fields">
-                                        <input id="ecptype" type="radio" name="sale-type" value="No">
-                                        <label for="ecptype">Exceptional Central Procurements (ECP)</label>
-                                    </div>
-
-                                    <div class="panel panel-border-narrow js-hidden" id="ecp-fields">
-
-                                        <div class="grid-row">
-                                            <div class="column-two-thirds">
-                                                <div class="form-group">
-                                                    <label for="totalsales" class="form-label-bold">Quantity</label>
-                                                    <input type="text" class="form-control" id="totalsales">
-
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="totalsales" class="form-label-bold">Net sales</label>
-                                                    <input type="text" class="form-control" id="totalsales">
-
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="totalsales" class="form-label-bold">Gross sales</label>
-                                                    <input type="text" class="form-control" id="totalsales" disabled>
-
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="multiple-choice" data-target="cpvfields">
-                                        <input id="cpvtype" type="radio" name="sale-type" value="No">
-                                        <label for="cpvtype">Centrally Procured Vaccines (CPV)</label>
-                                    </div>
-                                    <div class="panel panel-border-narrow js-hidden" id="cpvfields">
-                                        <div class="grid-row">
-                                            <div class="column-two-thirds">
-                                                <div class="form-group">
-                                                    <label for="totalsales" class="form-label-bold">Quantity</label>
-                                                    <input type="text" class="form-control" id="totalsales">
-
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="totalsales" class="form-label-bold">Net sales</label>
-                                                    <input type="text" class="form-control" id="totalsales">
-
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="totalsales" class="form-label-bold">Gross sales</label>
-                                                    <input type="text" class="form-control" id="totalsales" disabled>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="multiple-choice" data-target="lvfields">
-                                        <input id="lvtype" type="radio" name="sale-type" value="No">
-                                        <label for="lvtype">Low Value Sales (LV)</label>
-                                    </div>
-                                    <div class="panel panel-border-narrow js-hidden" id="lvfields">
-                                        <div class="grid-row">
-                                            <div class="column-two-thirds">
-                                                <div class="form-group">
-                                                    <label for="totalsales" class="form-label-bold">Quantity</label>
-                                                    <input type="text" class="form-control" id="totalsales">
-
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="totalsales" class="form-label-bold">Net sales</label>
-                                                    <input type="text" class="form-control" id="totalsales">
-
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="totalsales" class="form-label-bold">Gross sales</label>
-                                                    <input type="text" class="form-control" id="totalsales" disabled>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="multiple-choice" data-target="nasfields">
-                                        <input id="nastype" type="radio" name="sale-type" value="No">
-                                        <label for="nastype">New Active Substances (NAS)</label>
-                                    </div>
-                                    <div class="panel panel-border-narrow js-hidden" id="nasfields">
-                                        <div class="grid-row">
-                                            <div class="column-two-thirds">
-                                                <div class="form-group">
-                                                    <label for="totalsales" class="form-label-bold">Quantity</label>
-                                                    <input type="text" class="form-control" id="totalsales">
-
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="totalsales" class="form-label-bold">Net sales</label>
-                                                    <input type="text" class="form-control" id="totalsales">
-
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="totalsales" class="form-label-bold">Gross sales</label>
-                                                    <input type="text" class="form-control" id="totalsales" disabled>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                </fieldset>
-                            </div>
-
-                    </div>
-                </div>
-
-            </details>
-        </div>
-        <div class="form-group">
-                <details>
-    
-                    <summary><span class="summary">Homecare sales</span></summary>
-    
+            <div class="grid-row">
+                <div class="column-full">
                     <div class="grid-row">
-                        <div class="column-full">
-    
-                            <h3 class="heading-medium">
-                                Which type of payment is this product?
-                            </h3>
-    
-
-                                <div class="form-group">
-                                    <fieldset>
-    
-                                        <legend class="visually-hidden">Which type of payment are is this product</legend>
-    
-                                        <div class="multiple-choice" data-target="total-sales-fields">
-                                            <input id="total-sales" type="radio" name="sale-type" value="Yes">
-                                            <label for="total-sales">Total sales of scheme
-                                                products</label>
-                                        </div>
-                                        <div class="panel panel-border-narrow js-hidden" id="total-sales-fields">
-                                            <div class="grid-row">
-                                                <div class="column-two-thirds">
-    
-                                                    <div class="form-group">
-                                                        <label for="totalsales" class="form-label-bold">Quantity</label>
-                                                        <input type="text" class="form-control" id="totalsales">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="totalsales" class="form-label-bold">Net sales</label>
-                                                        <input type="text" class="form-control" id="totalsales">
-    
-                                                    </div>
-    
-                                                    <div class="form-group">
-                                                        <label for="totalsales" class="form-label-bold">Gross sales</label>
-                                                        <input type="text" class="form-control" id="totalsales" disabled>
-    
-                                                    </div>
-    
-    
-                                                </div>
-    
-                                            </div>
-    
-                                        </div>
-    
-                                        <div class="multiple-choice" data-target="ecp-fields">
-                                            <input id="ecptype" type="radio" name="sale-type" value="No">
-                                            <label for="ecptype">Exceptional Central Procurements (ECP)</label>
-                                        </div>
-    
-                                        <div class="panel panel-border-narrow js-hidden" id="ecp-fields">
-    
-                                            <div class="grid-row">
-                                                <div class="column-two-thirds">
-                                                    <div class="form-group">
-                                                        <label for="totalsales" class="form-label-bold">Quantity</label>
-                                                        <input type="text" class="form-control" id="totalsales">
-    
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="totalsales" class="form-label-bold">Net sales</label>
-                                                        <input type="text" class="form-control" id="totalsales">
-    
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="totalsales" class="form-label-bold">Gross sales</label>
-                                                        <input type="text" class="form-control" id="totalsales" disabled>
-    
-                                                    </div>
-                                                </div>
-                                            </div>
-    
-                                        </div>
-    
-                                        <div class="multiple-choice" data-target="cpvfields">
-                                            <input id="cpvtype" type="radio" name="sale-type" value="No">
-                                            <label for="cpvtype">Centrally Procured Vaccines (CPV)</label>
-                                        </div>
-                                        <div class="panel panel-border-narrow js-hidden" id="cpvfields">
-                                            <div class="grid-row">
-                                                <div class="column-two-thirds">
-                                                    <div class="form-group">
-                                                        <label for="totalsales" class="form-label-bold">Quantity</label>
-                                                        <input type="text" class="form-control" id="totalsales">
-    
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="totalsales" class="form-label-bold">Net sales</label>
-                                                        <input type="text" class="form-control" id="totalsales">
-    
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="totalsales" class="form-label-bold">Gross sales</label>
-                                                        <input type="text" class="form-control" id="totalsales" disabled>
-    
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-    
-                                        <div class="multiple-choice" data-target="lvfields">
-                                            <input id="lvtype" type="radio" name="sale-type" value="No">
-                                            <label for="lvtype">Low Value Sales (LV)</label>
-                                        </div>
-                                        <div class="panel panel-border-narrow js-hidden" id="lvfields">
-                                            <div class="grid-row">
-                                                <div class="column-two-thirds">
-                                                    <div class="form-group">
-                                                        <label for="totalsales" class="form-label-bold">Quantity</label>
-                                                        <input type="text" class="form-control" id="totalsales">
-    
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="totalsales" class="form-label-bold">Net sales</label>
-                                                        <input type="text" class="form-control" id="totalsales">
-    
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="totalsales" class="form-label-bold">Gross sales</label>
-                                                        <input type="text" class="form-control" id="totalsales" disabled>
-    
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-    
-                                        <div class="multiple-choice" data-target="nasfields">
-                                            <input id="nastype" type="radio" name="sale-type" value="No">
-                                            <label for="nastype">New Active Substances (NAS)</label>
-                                        </div>
-                                        <div class="panel panel-border-narrow js-hidden" id="nasfields">
-                                            <div class="grid-row">
-                                                <div class="column-two-thirds">
-                                                    <div class="form-group">
-                                                        <label for="totalsales" class="form-label-bold">Quantity</label>
-                                                        <input type="text" class="form-control" id="totalsales">
-    
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="totalsales" class="form-label-bold">Net sales</label>
-                                                        <input type="text" class="form-control" id="totalsales">
-    
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="totalsales" class="form-label-bold">Gross sales</label>
-                                                        <input type="text" class="form-control" id="totalsales" disabled>
-    
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-    
-    
-                                    </fieldset>
-                                </div>
-    
+                        <div class="column-third">
+                            <label for="totalsales" class="form-label-bold">Quantity</label>
+                            <input type="text" class="form-control" id="totalsales">
+                        </div>
+                        <div class="column-third">
+                            <label for="totalsales" class="form-label-bold">Net sales</label>
+                            <input type="text" class="form-control" id="totalsales">
+                        </div>
+                        <div class="column-third">
+                            <label for="totalsales" class="form-label-bold">Gross sales</label>
+                            <input type="text" class="form-control" id="totalsales" disabled>
                         </div>
                     </div>
-    
-                </details>
-            </div>
-            <div class="form-group">
-                    <details>
-        
-                        <summary><span class="summary">All other customers</span></summary>
-        
-                        <div class="grid-row">
-                            <div class="column-full">
-        
-                                <h3 class="heading-medium">
-                                    Which type of payment is this product?
-                                </h3>
-        
 
-                                    <div class="form-group">
-                                        <fieldset>
-        
-                                            <legend class="visually-hidden">Which type of payment are is this product</legend>
-        
-                                            <div class="multiple-choice" data-target="total-sales-fields">
-                                                <input id="total-sales" type="radio" name="sale-type" value="Yes">
-                                                <label for="total-sales">Total sales of scheme
-                                                    products</label>
-                                            </div>
-                                            <div class="panel panel-border-narrow js-hidden" id="total-sales-fields">
-                                                <div class="grid-row">
-                                                    <div class="column-two-thirds">
-        
-                                                        <div class="form-group">
-                                                            <label for="totalsales" class="form-label-bold">Quantity</label>
-                                                            <input type="text" class="form-control" id="totalsales">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label for="totalsales" class="form-label-bold">Net sales</label>
-                                                            <input type="text" class="form-control" id="totalsales">
-        
-                                                        </div>
-        
-                                                        <div class="form-group">
-                                                            <label for="totalsales" class="form-label-bold">Gross sales</label>
-                                                            <input type="text" class="form-control" id="totalsales" disabled>
-        
-                                                        </div>
-        
-        
-                                                    </div>
-        
-                                                </div>
-        
-                                            </div>
-        
-                                            <div class="multiple-choice" data-target="ecp-fields">
-                                                <input id="ecptype" type="radio" name="sale-type" value="No">
-                                                <label for="ecptype">Exceptional Central Procurements (ECP)</label>
-                                            </div>
-        
-                                            <div class="panel panel-border-narrow js-hidden" id="ecp-fields">
-        
-                                                <div class="grid-row">
-                                                    <div class="column-two-thirds">
-                                                        <div class="form-group">
-                                                            <label for="totalsales" class="form-label-bold">Quantity</label>
-                                                            <input type="text" class="form-control" id="totalsales">
-        
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label for="totalsales" class="form-label-bold">Net sales</label>
-                                                            <input type="text" class="form-control" id="totalsales">
-        
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label for="totalsales" class="form-label-bold">Gross sales</label>
-                                                            <input type="text" class="form-control" id="totalsales" disabled>
-        
-                                                        </div>
-                                                    </div>
-                                                </div>
-        
-                                            </div>
-        
-                                            <div class="multiple-choice" data-target="cpvfields">
-                                                <input id="cpvtype" type="radio" name="sale-type" value="No">
-                                                <label for="cpvtype">Centrally Procured Vaccines (CPV)</label>
-                                            </div>
-                                            <div class="panel panel-border-narrow js-hidden" id="cpvfields">
-                                                <div class="grid-row">
-                                                    <div class="column-two-thirds">
-                                                        <div class="form-group">
-                                                            <label for="totalsales" class="form-label-bold">Quantity</label>
-                                                            <input type="text" class="form-control" id="totalsales">
-        
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label for="totalsales" class="form-label-bold">Net sales</label>
-                                                            <input type="text" class="form-control" id="totalsales">
-        
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label for="totalsales" class="form-label-bold">Gross sales</label>
-                                                            <input type="text" class="form-control" id="totalsales" disabled>
-        
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-        
-                                            <div class="multiple-choice" data-target="lvfields">
-                                                <input id="lvtype" type="radio" name="sale-type" value="No">
-                                                <label for="lvtype">Low Value Sales (LV)</label>
-                                            </div>
-                                            <div class="panel panel-border-narrow js-hidden" id="lvfields">
-                                                <div class="grid-row">
-                                                    <div class="column-two-thirds">
-                                                        <div class="form-group">
-                                                            <label for="totalsales" class="form-label-bold">Quantity</label>
-                                                            <input type="text" class="form-control" id="totalsales">
-        
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label for="totalsales" class="form-label-bold">Net sales</label>
-                                                            <input type="text" class="form-control" id="totalsales">
-        
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label for="totalsales" class="form-label-bold">Gross sales</label>
-                                                            <input type="text" class="form-control" id="totalsales" disabled>
-        
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-        
-                                            <div class="multiple-choice" data-target="nasfields">
-                                                <input id="nastype" type="radio" name="sale-type" value="No">
-                                                <label for="nastype">New Active Substances (NAS)</label>
-                                            </div>
-                                            <div class="panel panel-border-narrow js-hidden" id="nasfields">
-                                                <div class="grid-row">
-                                                    <div class="column-two-thirds">
-                                                        <div class="form-group">
-                                                            <label for="totalsales" class="form-label-bold">Quantity</label>
-                                                            <input type="text" class="form-control" id="totalsales">
-        
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label for="totalsales" class="form-label-bold">Net sales</label>
-                                                            <input type="text" class="form-control" id="totalsales">
-        
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label for="totalsales" class="form-label-bold">Gross sales</label>
-                                                            <input type="text" class="form-control" id="totalsales" disabled>
-        
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-        
-        
-                                        </fieldset>
-                                    </div>
-        
-                            </div>
-                        </div>
-        
-                    </details>
+
+
                 </div>
-     </div>   
+                <div class="column-full">
+                        <h3 class="heading-medium">Total sales of Primary care products</h3>
+                    <div class="grid-row">
+                        <div class="column-third">
+                            <label for="totalsales" class="form-label-bold">Quantity</label>
+                            <input type="text" class="form-control" id="totalsales">
+                        </div>
+                        <div class="column-third">
+                            <label for="totalsales" class="form-label-bold">Net sales</label>
+                            <input type="text" class="form-control" id="totalsales">
+                        </div>
+                        <div class="column-third">
+                            <label for="totalsales" class="form-label-bold">Gross sales</label>
+                            <input type="text" class="form-control" id="totalsales" disabled>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="column-full">
+                        <h3 class="heading-medium">Total sales of Homecare products</h3>
+                    <div class="grid-row">
+                        <div class="column-third">
+                            <label for="totalsales" class="form-label-bold">Quantity</label>
+                            <input type="text" class="form-control" id="totalsales">
+                        </div>
+                        <div class="column-third">
+                            <label for="totalsales" class="form-label-bold">Net sales</label>
+                            <input type="text" class="form-control" id="totalsales">
+                        </div>
+                        <div class="column-third">
+                            <label for="totalsales" class="form-label-bold">Gross sales</label>
+                            <input type="text" class="form-control" id="totalsales" disabled>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
 
 </div>
+<div class="form-group">
+        <div class="grid-row">
+                <div class="column-full">
+
+                    <h3 class="heading-medium">
+                        Exceptions
+                    </h3>
+
+                    <form>
+                        <div class="form-group">
+                            <fieldset>
+
+                                <legend class="visually-hidden">Which type of payment are is this product</legend>
+
+                                <div class="panel panel-border-narrow js-hidden" id="ecp-fields">
+
+                                    <div class="grid-row">
+                                        <div class="column-two-thirds">
+                                            <div class="form-group">
+                                                <label for="totalsales" class="form-label-bold">Quantity</label>
+                                                <input type="text" class="form-control" id="totalsales">
+
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="totalsales" class="form-label-bold">Net sales</label>
+                                                <input type="text" class="form-control" id="totalsales">
+
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="totalsales" class="form-label-bold">Gross sales</label>
+                                                <input type="text" class="form-control" id="totalsales" disabled>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="multiple-choice" data-target="cpvfields">
+                                    <input id="cpvtype" type="radio" name="sale-type" value="No">
+                                    <label for="cpvtype">Centrally Procured Vaccines (CPV)</label>
+                                </div>
+                                <div class="panel panel-border-narrow js-hidden" id="cpvfields">
+                                    <div class="grid-row">
+                                        <div class="column-two-thirds">
+                                            <div class="form-group">
+                                                <label for="totalsales" class="form-label-bold">Quantity</label>
+                                                <input type="text" class="form-control" id="totalsales">
+
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="totalsales" class="form-label-bold">Net sales</label>
+                                                <input type="text" class="form-control" id="totalsales">
+
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="totalsales" class="form-label-bold">Gross sales</label>
+                                                <input type="text" class="form-control" id="totalsales" disabled>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="multiple-choice" data-target="lvfields">
+                                    <input id="lvtype" type="radio" name="sale-type" value="No">
+                                    <label for="lvtype">Low Value Sales (LV)</label>
+                                </div>
+                                <div class="panel panel-border-narrow js-hidden" id="lvfields">
+                                    <div class="grid-row">
+                                        <div class="column-two-thirds">
+                                            <div class="form-group">
+                                                <label for="totalsales" class="form-label-bold">Quantity</label>
+                                                <input type="text" class="form-control" id="totalsales">
+
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="totalsales" class="form-label-bold">Net sales</label>
+                                                <input type="text" class="form-control" id="totalsales">
+
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="totalsales" class="form-label-bold">Gross sales</label>
+                                                <input type="text" class="form-control" id="totalsales" disabled>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="multiple-choice" data-target="nasfields">
+                                    <input id="nastype" type="radio" name="sale-type" value="No">
+                                    <label for="nastype">New Active Substances (NAS)</label>
+                                </div>
+                                <div class="panel panel-border-narrow js-hidden" id="nasfields">
+                                    <div class="grid-row">
+                                        <div class="column-two-thirds">
+                                            <div class="form-group">
+                                                <label for="totalsales" class="form-label-bold">Quantity</label>
+                                                <input type="text" class="form-control" id="totalsales">
+
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="totalsales" class="form-label-bold">Net sales</label>
+                                                <input type="text" class="form-control" id="totalsales">
+
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="totalsales" class="form-label-bold">Gross sales</label>
+                                                <input type="text" class="form-control" id="totalsales" disabled>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </fieldset>
+                        </div>
+
+                </div>
+            </div>
+    </div>
 <div class="grid-row">
 
     <div class="column-two-thirds">
 
         <div class="form-group">
-
-                <a href="presentation-level-report-view" class="button">Save and continue</a>
-
-
-
+            <a href="presentation-level-report-view" class="button">Save and continue</a>
         </div>
         <a href="#" rel="noopener noreferrer">Cancel</a>
     </div>
