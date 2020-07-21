@@ -114,7 +114,7 @@
 
 @media (min-width : 40.0625em) {
     .summary-list__key {
-        width: 50%;
+        width: 90%;
     }
 }
 
@@ -208,4 +208,7 @@
 }
 .white {
     color: white;
+}
+.w100 {
+    width: 100%;
 }
