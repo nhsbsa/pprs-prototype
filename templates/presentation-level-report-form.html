@@ -70,7 +70,6 @@
         <table class="mb-20">
             <thead>
                 <tr>
-                    <th>SNOMED code</th>
                     <th>Pack size</th>
                     <th>Form</th>
                     <th>Max price</th>
@@ -80,7 +79,6 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>37228511000001105</td>
                     <td>16</td>
                     <td>Oral</td>
                     <td>&pound;16.99</td>
@@ -168,7 +166,7 @@
                 <div class="column-full">
 
                     <h3 class="heading-medium">
-                        Exceptions
+                        Exemptions
                     </h3>
 
                     <form>
@@ -200,6 +198,31 @@
                                     </div>
 
                                 </div>
+                                <div class="multiple-choice" data-target="cpvfields">
+                                        <input id="cpvtype" type="checkbox" name="sale-type" value="No">
+                                        <label for="cpvtype">Exceptional Central Procurements (ECP)</label>
+                                    </div>
+                                    <div class="panel panel-border-narrow js-hidden" id="cpvfields">
+                                        <div class="grid-row">
+                                            <div class="column-two-thirds">
+                                                <div class="form-group">
+                                                    <label for="totalsales" class="form-label-bold">Quantity</label>
+                                                    <input type="text" class="form-control" id="totalsales">
+    
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="totalsales" class="form-label-bold">Net sales</label>
+                                                    <input type="text" class="form-control" id="totalsales">
+    
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="totalsales" class="form-label-bold">Gross sales</label>
+                                                    <input type="text" class="form-control" id="totalsales" disabled>
+    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
                                 <div class="multiple-choice" data-target="cpvfields">
                                     <input id="cpvtype" type="checkbox" name="sale-type" value="No">
