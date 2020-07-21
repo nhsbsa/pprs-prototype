@@ -102,8 +102,12 @@ app.get('/presentation-level-report-done', (req, res) => { res.render('presentat
 // Presentation level report all
 app.get('/presentation-level-report-view-all', (req, res) => { res.render('presentation-level-report-view-all')});
 
-// Presentation level report all
+// Zero returns
 app.get('/zeroreturns', (req, res) => { res.render('zeroreturns')});
+
+// Tabbed dashboard
+app.get('/sales-dashboard-tabs', (req, res) => { res.render('sales-dashboard-tabs')});
+
 
 
 app.get('/sales-dashboard', (req, res) => { res.render('sales-dashboard') });
