@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <div class="breadcrumbs">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li>Annual submissions</li>
+      </ol>
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block content %}
+
+
+<div class="grid-row" style="margin-bottom: 20px;">
+  <div class="column-two-thirds">
+    <h1 class="heading-large">
+      <span class="heading-secondary">Branded medicines</span>
+      Annual submissions
+    </h1>
+  </div>
+</div>
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <div class="panel panel-border-wide" id="contact-by-text">
+      <div class="grid-row">
+        <div class="column-third">
+          <h2 class="heading-small">Company</h2>
+          <p>Test Parmacy</p>
+        </div>
+        <div class="column-third">
+          <h2 class="heading-small">Year</h2>
+          <p>2020</p>
+        </div>
+        <div class="column-third">
+          <h2 class="heading-small">Reference</h2>
+          <p>12345678</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="grid-row">
+  <div class="column-full">
+    <h2 class="heading-medium">2020 - Annual submissions</h2>
+
+    <p>You have multiple submissions for 2020.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Report</th>
+                <th>Submission date</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Unaudited annual presentation level sales report</td>
+                <td>From 01/Jan/2020 until 31/Jul/2020</td>
+                <td><a href="#">Edit</a></td>
+            </tr>
+            <tr>
+                <td>Some other report</td>
+                <td>From 01/Aug/2020 until 31/Dec/2020</td>
+                <td><a href="#">Submit</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 class="heading-medium">Previous years annual submissions</h2>
+    <details>
+      <summary><span class="summary">2019 - Annual submission (Complete)</span></summary>
+      <div class="panel panel-border-narrow">
+        <p>Statutory Scheme Annual Sales Report: DecYEnd 01/Jan/2019 - 31/Dec/2019</p>
+        <p class="bold-xsmall">Submission completed for this period. ID: 10082</p>
+        <p class="bold-xsmall">Status: Submitted</p>
+        <p class="bold-xsmall">Submitted by: John Smith on 01/01/2020.</p>
+        <a class="button">View</a>
+
+      </div>
+    </details>
+    <details>
+      <summary><span class="summary">2018 - Annual submission (Complete)</span></summary>
+      <div class="panel panel-border-narrow">
+        <p>Statutory Scheme Annual Sales Report: DecYEnd 01/Jan/2018 - 31/Dec/2018</p>
+        <p class="bold-xsmall">Submission completed for this period. ID: 10081</p>
+        <p class="bold-xsmall">Status: Submitted</p>
+        <p class="bold-xsmall">Submitted by: John Smith on 01/01/2019.</p>
+        <a class="button">View</a>
+
+      </div>
+    </details>
+  </div>
+</div>
+{% endblock %}
