@@ -109,16 +109,18 @@ app.get('/zeroreturns', (req, res) => { res.render('zeroreturns')});
 app.get('/sales-dashboard-tabs', (req, res) => { res.render('sales-dashboard-tabs')});
 
 
-
 app.get('/sales-dashboard', (req, res) => { res.render('sales-dashboard') });
 
 app.get('/annual-submissions', (req, res) => { res.render('annual-submissions') });
 
 app.get('/product-level-returns-submission', (req, res) => { res.render('product-level-returns-submission') });
 
+
 // Multiple annual submissions
 
 app.get('/multiple-annual-submissions', (req, res) => { res.render('multiple-annual-submissions') });
+
+app.get('/company-submission', (req, res) => { res.render('product-level-returns-company-submission') });
 
 
 /**
