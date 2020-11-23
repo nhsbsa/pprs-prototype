@@ -123,6 +123,15 @@ app.get('/multiple-annual-submissions', (req, res) => { res.render('multiple-ann
 app.get('/company-submission', (req, res) => { res.render('product-level-returns-company-submission') });
 
 
+// Suggested link product journey
+app.get('/link-journey-multiple-products', (req, res) => { res.render('product-org-search') });
+app.get('/product-search', (req, res) => { res.render('product-search-link') });
+app.get('/product-search-results', (req, res) => { res.render('product-add-search-result') });
+app.get('/registration-choice', (req, res) => { res.render('registration-choice') });
+app.get('/link-product-confirmation-page', (req, res) => { res.render('link-product-confirmation-page') });
+app.get('/link-another-product-choice', (req, res) => { res.render('link-another-product-choice') });
+
+
 /**
  * Server Activation
  */

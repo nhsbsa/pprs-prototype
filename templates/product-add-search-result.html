@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+<div class="grid-row">
+    <div class="column-two-thirds">
+        <div class="breadcrumbs">
+            <ol>
+                <li><a href="/">Home</a></li>
+                <li><a href="/link-journey-multiple-products">Search for a company</a></li>
+                <li><a href="/product-search">Search for a product</a></li>
+                <li><span>Search results</span></li>
+            </ol>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block content %}
+
+<div class="grid-row">
+    <div class="column-full">
+        <h1 id="main-content" class="heading-large mt-0">
+            <span id="secondary-header" class="heading-secondary">Link product to company</span>
+            <span id="primary-header">Search results</span>
+        </h1>
+    </div>
+</div>
+
+<div class="grid-row">
+    <div class="column-two-thirds">
+        <div>
+            <h2 id="yourSearch" class="heading-medium mt-0">Your search
+                <a id="editLink" class="heading-medium right-floater"
+                   href="/product-search">Edit Search</a>
+            </h2>
+        </div>
+    </div>
+</div>
+<div class="grid-row">
+    <div class="column-two-thirds mb-20">
+        <dl id="criteriaList" class="summary-list">
+            <div id="presentationList" class="summary-list__row">
+                <dt id="presentationKey" class="summary-list__key">Presentation</dt>
+                <dd id="presentationValue" class="summary-list__value">a</dd>
+            </div>
+        </dl>
+    </div>
+</div>
+
+
+<div class="grid-row">
+
+    <div class="column-full">
+
+        <h2 id="resultsHeading" class="heading-medium">Results</h2>
+        <div>
+            <p>Page  1 of 1  - 3 total results</p>
+        </div>
+        <table id="largerResultsTable">
+            <thead>
+            <tr>
+                <th id="nameHeader" scope="col">Presentation</th>
+                <th id="supplierHeader" scope="col">CDR Supplier</th>
+                <th id="formHeader" scope="col">Form</th>
+                <th id="snomedHeader" scope="col">SNOMED</th>
+                <th id="packSizeHeader" scope="col">Pack Size</th>
+                <th id="legalCatHeader" scope="col">Legal Category</th>
+                <th id="discontinuedHeader" scope="col">CDR Discontinued</th>
+                <th id="choiceHeader" scope="col">Choose this product</th>
+            </tr>
+            </thead>
+            <tr>
+                <td>Paracetamol</td>
+                <td>Boots</td>
+                <td>Tablet</td>
+                <td>00000001</td>
+                <td>16</td>
+                <td>POM</td>
+                <td>false</td>
+                <td>
+                    <a href="/registration-choice">Choose This Product</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Ibuprofen</td>
+                <td>Supplier 1</td>
+                <td>Tablet</td>
+                <td>00000002</td>
+                <td>28</td>
+                <td>GSL</td>
+                <td>false</td>
+                <td> - </td>
+            </tr>
+            <tr>
+                <td>Multivitamins</td>
+                <td>Asda</td>
+                <td>Tablet</td>
+                <td>00000003</td>
+                <td>30</td>
+                <td>POM</td>
+                <td>false</td>
+                <td>
+                    <a href="/registration-choice">Choose This Product</a>
+                </td>
+            </tr>
+        </table>
+        <p>Showing 1-3 of 3 results</p>
+    </div>
+</div>
+
+{% endblock %}
