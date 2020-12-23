@@ -131,6 +131,11 @@ app.get('/registration-choice', (req, res) => { res.render('registration-choice'
 app.get('/link-product-confirmation-page', (req, res) => { res.render('link-product-confirmation-page') });
 app.get('/link-another-product-choice', (req, res) => { res.render('link-another-product-choice') });
 
+// Quarterly collection
+
+app.get('/quarterly-dropdown-table', (req, res) => { res.render('quarterly-dropdown-table') });
+
+
 
 /**
  * Server Activation

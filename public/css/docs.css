@@ -6336,56 +6336,46 @@ b {
       color: #212b32;
       top: 0; } }
 
-.nhsuk-related-nav {
-  border-top: 1px solid #d8dde0; }
-  @media (max-width: 48.0525em) {
-    .nhsuk-related-nav {
-      margin-top: 48px; } }
+.nhsuk-body-white {
+  background-color: #ffffff; }
 
-.nhsuk-related-nav__heading {
-  font-size: 16px;
-  font-size: 1rem;
-  line-height: 1.2;
-  margin-bottom: 12px;
-  padding-top: 16px; }
-  @media (min-width: 40.0625em) {
-    .nhsuk-related-nav__heading {
-      font-size: 19px;
-      font-size: 1.1875rem;
-      line-height: 1.2; } }
-  @media print {
-    .nhsuk-related-nav__heading {
-      font-size: 14pt;
-      line-height: 1.2; } }
+.nhsuk-body-grey {
+  background-color: #f0f4f5; }
 
-.nhsuk-related-nav__list {
-  font-size: 14px;
-  font-size: 0.875rem;
-  line-height: 1.71429;
-  list-style: none;
-  padding-left: 0; }
-  @media (min-width: 40.0625em) {
-    .nhsuk-related-nav__list {
-      font-size: 16px;
-      font-size: 1rem;
-      line-height: 1.5; } }
-  @media print {
-    .nhsuk-related-nav__list {
-      font-size: 14pt;
-      line-height: 1.2; } }
+#hc_extension_bkgnd {
+  background-color: #d8dde0 !important; }
 
-.nhsuk-related-nav__list {
-  font-size: 14px;
-  font-size: 0.875rem;
-  line-height: 1.71429;
-  list-style: none;
-  padding-left: 0; }
+.app-pre {
+  margin-bottom: 16px;
+  background: #ffffff;
+  border: 1px solid #d8dde0;
+  overflow: auto;
+  margin-top: 0;
+  padding: 16px;
+  position: relative; }
   @media (min-width: 40.0625em) {
-    .nhsuk-related-nav__list {
-      font-size: 16px;
-      font-size: 1rem;
-      line-height: 1.5; } }
-  @media print {
-    .nhsuk-related-nav__list {
-      font-size: 14pt;
-      line-height: 1.2; } }
+    .app-pre {
+      margin-bottom: 24px; } }
+
+li .app-code,
+p .app-code {
+  background: #ffffff;
+  border: 1px solid #d8dde0;
+  padding: 4px 16px;
+  font-size: 0.8em; }
+
+.nhsuk-expander .app-pre,
+.nhsuk-expander p .app-code,
+.nhsuk-expander li .app-code {
+  background: #f0f4f5;
+  border: 1px solid #d8dde0; }
+
+.app-img-guide {
+  width: 100%; }
+
+.nhsuk-table__body .nhsuk-table__cell {
+  vertical-align: top; }
+
+.nhsuk-table__header,
+.nhsuk-table__cell {
+  padding: 16px 16px 16px 0; }

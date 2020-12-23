@@ -109,6 +109,68 @@
     }
   }
 }).call(this);
+(function () {
+    var purchaseVolume = document.getElementById("purchase-volume");
+    var netPurchaseCost = document.getElementById("net-purchase-cost");
+    var addAvePurchasePrice = document.getElementById("average-purchase-price");
 
+    purchaseVolume.onchange = function() {calcDisabledInputFields(addAvePurchasePrice, purchaseVolume, netPurchaseCost)};
+    netPurchaseCost.onchange = function() {calcDisabledInputFields(addAvePurchasePrice, purchaseVolume, netPurchaseCost)};
 
+    var salesVolume = document.getElementById("sales-volume");
+    var netSalesValue = document.getElementById("net-sales-value");
+    var addAveSalesPrice = document.getElementById("average-sales-price");
 
+    salesVolume.onchange = function() {calcDisabledInputFields(addAveSalesPrice, salesVolume, netSalesValue)};
+    netSalesValue.onchange = function() {calcDisabledInputFields(addAveSalesPrice, salesVolume, netSalesValue)};
+
+}).call(this);
+function calcDisabledInputFields(addAvePrice, volume, net) {
+    var sum = net.value / volume.value;
+
+    if (isNaN(sum) || sum == "Infinity") {
+        addAvePrice.value = "";
+    } else {
+        addAvePrice.value = sum.toFixed(2);
+    }
+}
+function addRow () {
+    var table = document.getElementById("myTable");
+    var row = table.insertRow(-1);
+
+    var cell1 = row.insertCell(0);
+    var medicineNameDropdown = document.getElementById("medicine-name");
+    cell1.innerHTML = medicineNameDropdown.options[medicineNameDropdown.selectedIndex].text;
+
+    var cell2 = row.insertCell(1);
+    cell2.innerHTML = document.getElementById("purchase-volume").value;
+    document.getElementById("purchase-volume").value = "";
+
+    var cell3 = row.insertCell(2);
+    cell3.innerHTML = document.getElementById("net-purchase-cost").value;
+    document.getElementById("net-purchase-cost").value = "";
+
+    var cell4 = row.insertCell(3);
+    cell4.innerHTML = document.getElementById("sales-volume").value;
+     document.getElementById("sales-volume").value = "";
+
+    var cell5 = row.insertCell(4);
+    cell5.innerHTML = document.getElementById("net-sales-value").value;
+    document.getElementById("net-sales-value").value = "";
+
+    var cell6 = row.insertCell(5);
+    cell6.innerHTML = document.getElementById("additional-comments").value;
+    document.getElementById("additional-comments").value = "";
+
+    var cell7 = row.insertCell(6);
+    var commentsOnPriceChanges = document.getElementById("comments-on-price-changes");
+    cell7.innerHTML = commentsOnPriceChanges.options[commentsOnPriceChanges.selectedIndex].text;
+
+    var cell8 = row.insertCell(7);
+    cell8.innerHTML = document.getElementById("average-purchase-price").value;
+    document.getElementById("average-purchase-price").value = "";
+
+    var cell9 = row.insertCell(8);
+    cell9.innerHTML = document.getElementById("average-sales-price").value;
+    document.getElementById("average-sales-price").value = "";
+}
