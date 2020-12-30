@@ -114,19 +114,19 @@
     var netPurchaseCost = document.getElementById("net-purchase-cost");
     var addAvePurchasePrice = document.getElementById("average-purchase-price");
 
-    purchaseVolume.onchange = function() {calcDisabledInputFields(addAvePurchasePrice, purchaseVolume, netPurchaseCost)};
-    netPurchaseCost.onchange = function() {calcDisabledInputFields(addAvePurchasePrice, purchaseVolume, netPurchaseCost)};
+    purchaseVolume.onchange = function() {calcDisabledInputFields(addAvePurchasePrice, purchaseVolume.value, netPurchaseCost.value)};
+    netPurchaseCost.onchange = function() {calcDisabledInputFields(addAvePurchasePrice, purchaseVolume.value, netPurchaseCost.value)};
 
     var salesVolume = document.getElementById("sales-volume");
     var netSalesValue = document.getElementById("net-sales-value");
     var addAveSalesPrice = document.getElementById("average-sales-price");
 
-    salesVolume.onchange = function() {calcDisabledInputFields(addAveSalesPrice, salesVolume, netSalesValue)};
-    netSalesValue.onchange = function() {calcDisabledInputFields(addAveSalesPrice, salesVolume, netSalesValue)};
+    salesVolume.onchange = function() {calcDisabledInputFields(addAveSalesPrice, salesVolume.value, netSalesValue.value)};
+    netSalesValue.onchange = function() {calcDisabledInputFields(addAveSalesPrice, salesVolume.value, netSalesValue.value)};
 
 }).call(this);
-function calcDisabledInputFields(addAvePrice, volume, net) {
-    var sum = net.value / volume.value;
+function calcDisabledInputFields(addAvePrice, volumeValue, netValue) {
+    var sum = netValue / volumeValue;
 
     if (isNaN(sum) || sum == "Infinity") {
         addAvePrice.value = "";
@@ -173,4 +173,52 @@ function addRow () {
     var cell9 = row.insertCell(8);
     cell9.innerHTML = document.getElementById("average-sales-price").value;
     document.getElementById("average-sales-price").value = "";
+
+    var cell10 = row.insertCell(9);
+    cell10.innerHTML = '<a onclick="editRow(this)">Edit</a>';
+
+    var cell11 = row.insertCell(10);
+    cell11.innerHTML = '<a onclick="deleteRow(this)">Delete</a>'
+}
+function editRow (row) {
+    var table = document.getElementById("myTable");
+    var rowIndex = row.parentNode.parentNode.rowIndex;
+
+    for (var j = 0, col; col = table.rows[rowIndex].cells[j]; j++) {
+        switch(j) {
+            case 0:
+                document.getElementById("medicine-name").value = col.innerHTML;
+                break;
+            case 1:
+                document.getElementById("purchase-volume").value = col.innerHTML;
+                break;
+            case 2:
+                document.getElementById("net-purchase-cost").value = col.innerHTML;
+                break;
+            case 3:
+                document.getElementById("sales-volume").value = col.innerHTML;
+                break;
+            case 4:
+                document.getElementById("net-sales-value").value = col.innerHTML;
+                break;
+            case 5:
+                document.getElementById("additional-comments").value = col.innerHTML;
+                break;
+            case 6:
+                document.getElementById("comments-on-price-changes").value = col.innerHTML;
+                break;
+            case 7:
+                document.getElementById("average-purchase-price").value = col.innerHTML;
+                break;
+            case 8:
+                document.getElementById("average-sales-price").value = col.innerHTML;
+                break;
+        }
+    }
+
+    deleteRow(row);
+}
+function deleteRow (row) {
+    var rowIndex = row.parentNode.parentNode.rowIndex;
+    document.getElementById("myTable").deleteRow(rowIndex);
 }

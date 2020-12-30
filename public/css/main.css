@@ -6389,3 +6389,17 @@ b {
     .nhsuk-related-nav__list {
       font-size: 14pt;
       line-height: 1.2; } }
+
+.filterBtn {
+	margin-top: 23px;
+	position: relative;
+}
+
+.filterResults {
+	box-sizing: border-box;
+	padding: 20px;
+	background-color: #dee0e2;
+	margin: 0 auto;
+	margin-bottom: 10px;
+	overflow: hidden;
+}

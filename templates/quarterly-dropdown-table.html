@@ -1,18 +1,37 @@
 {% extends 'layout.html' %}
 
 {% block pageTitle %}
-  Quarterly dropdown table
+  Quarterly collection - dropdown table
 {% endblock %}
 
 {% block content %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
     <h1>
-      Quarterly Dropdown Table
+      Quarterly collection - dropdown table
     </h1>
+  </div>
 
+  <div class="nhsuk-grid-column-full filterResults">
+    <div class="nhsuk-grid-column-full" style="margin-bottom: 20px;">
+      <label for="filter" class="nhsuk-heading-s" style="margin: 5px;">Filter</label>
+      <input id="filter" class="nhsuk-u-width-full" type="text"/>
+    </div>
+
+    <div class="nhsuk-grid-column-full">
+      <div class="nhsuk-grid-column-one-half">
+        <a href="#" class="nhsuk-button">Search</a>
+      </div>
+
+      <div class="nhsuk-grid-column-one-half">
+        <a href="#" class="nhsuk-button nhsuk-button--secondary" style="float: right;">Reset filter</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="nhsuk-grid-column-full">
     <table role="table" id="myTable" class="nhsuk-table-responsive">
-      <caption class="nhsuk-table__caption">Adding records in table</caption>
+      <caption class="nhsuk-table__caption">Quarterly drug collection</caption>
       <thead role="rowgroup" class="nhsuk-table__head">
       <tr role="row">
         <th role="columnheader" class="" scope="col">
@@ -42,6 +61,12 @@
         <th role="columnheader" class="" scope="col">
           Average sales price (£)
         </th>
+        <th role="columnheader" class="" scope="col">
+          Edit
+        </th>
+        <th role="columnheader" class="" scope="col">
+          Delete
+        </th>
       </tr>
       </thead>
       <tbody class="nhsuk-table__body">
@@ -68,10 +93,51 @@
           <span class="nhsuk-table-responsive__heading">Comments on price changes </span> Change of supplier
         </td>
         <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading">Average purchase price (£) </span>0.5
+          <span class="nhsuk-table-responsive__heading">Average purchase price (£) </span>0.50
         </td>
         <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading">Average sales price (£) </span>50
+          <span class="nhsuk-table-responsive__heading">Average sales price (£) </span>50.00
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Edit </span><a onclick="editRow(this)">Edit</a>
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Delete </span><a onclick="deleteRow(this)">Delete</a>
+        </td>
+      </tr>
+      <tr role="row" class="nhsuk-table__row">
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Medicine name </span>Ibuprofen
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Purchase volume (number of packs) </span>6
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Net purchase cost (£) </span>18
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Sales volume (number of packs) </span>5
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Net sales value (£) </span>20
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Additional comments </span>Test 1
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Comments on price changes </span>Concessionary price product
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Average purchase price (£) </span>3.00
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Average sales price (£) </span>4.00
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Edit </span><a onclick="editRow(this)">Edit</a>
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Delete </span><a onclick="deleteRow(this)">Delete</a>
         </td>
       </tr>
       </tbody>
@@ -191,7 +257,7 @@
       </div>
     </div>
 
-    <a onclick="addRow()">Submit</a>
+    <button class="nhsuk-button nhsuk-button--secondary" onclick="addRow()">Submit</button>
   </div>
 </div>
 
