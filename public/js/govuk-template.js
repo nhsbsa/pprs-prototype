@@ -110,6 +110,23 @@
   }
 }).call(this);
 (function () {
+    var toggle = document.getElementById("expanderToggle");
+    var records = document.getElementsByTagName("details");
+    if (toggle != null) {
+        toggle.onchange = function() {
+            if (toggle.checked) {
+                for (var i = 0; i < records.length; i++) {
+                    records[i].classList.remove("nhsuk-expander");
+                }
+            } else {
+                for (var i = 0; i < records.length; i++) {
+                    records[i].classList.add("nhsuk-expander");
+                }
+            }
+        }
+    }
+}).call(this);
+(function () {
     var purchaseVolume = document.getElementById("purchase-volume");
     var netPurchaseCost = document.getElementById("net-purchase-cost");
     var addAvePurchasePrice = document.getElementById("average-purchase-price");

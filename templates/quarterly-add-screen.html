@@ -19,10 +19,12 @@ Add new record
                     <label class="nhsuk-heading-xs" for="medicine-name">Medicine Name</label>
                 </div>
                 <div class="nhsuk-grid-column-two-thirds">
-                    <select id="medicine-name">
+                    <input id="medicine-name" list="medicines" type="text"/>
+                    <datalist id="medicines">
+                        <option>Paracetamol</option>
                         <option>Ibuprofen</option>
                         <option>Calpol</option>
-                    </select>
+                    </datalist>
                 </div>
             </div>
         </div>
