@@ -4,7 +4,6 @@
     <list default="true" id="45961e31-1828-49cf-afed-a4b09f2d6762" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/govuk-template.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/govuk-template.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/quarterly-dropdown-table.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/quarterly-dropdown-table.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

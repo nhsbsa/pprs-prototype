@@ -266,7 +266,6 @@ function deleteRow (row) {
         var table = document.getElementById("myTable");
         var found = false;
         for (var i = 1, row; row = table.rows[i]; i++) {
-            if (found) {break;}
             if (medicineName.value == row.cells[0].innerHTML) {
                 found = true;
                 for (var j = 1, col; col = row.cells[j]; j++) {
@@ -303,6 +302,7 @@ function deleteRow (row) {
                 document.getElementById("average-purchase-price").value = "";
                 document.getElementById("average-sales-price").value = "";
             }
+            if (found) {break;}
         }
     };
 }).call(this);
