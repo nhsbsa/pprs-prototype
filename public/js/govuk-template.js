@@ -153,49 +153,70 @@ function calcDisabledInputFields(addAvePrice, volumeValue, netValue) {
 }
 function addRow () {
     var table = document.getElementById("myTable");
-    var row = table.insertRow(-1);
-
-    var cell1 = row.insertCell(0);
     var medicineNameDropdown = document.getElementById("medicine-name");
-    cell1.innerHTML = medicineNameDropdown.options[medicineNameDropdown.selectedIndex].text;
+    var found = false;
+    for (var i = 1, row; row = table.rows[i]; i++) {
+        if (medicineNameDropdown.value == row.cells[0].innerHTML) {
+            found = true;
+            for (var j = 1, col; col = row.cells[j]; j++) {
+                switch(j) {
+                    case 1:
+                        col.innerHTML = document.getElementById("purchase-volume").value;
+                        break;
+                    case 2:
+                        col.innerHTML = document.getElementById("net-purchase-cost").value;
+                        break;
+                    case 3:
+                        col.innerHTML = document.getElementById("sales-volume").value;
+                        break;
+                    case 4:
+                        col.innerHTML = document.getElementById("net-sales-value").value;
+                        break;
+                    case 5:
+                        col.innerHTML = document.getElementById("comments-on-price-changes").value;
+                        break;
+                    case 6:
+                        col.innerHTML = document.getElementById("average-purchase-price").value;
+                        break;
+                    case 7:
+                        col.innerHTML = document.getElementById("average-sales-price").value;
+                        break;
+                }
+            }
+        }
+    }
 
-    var cell2 = row.insertCell(1);
-    cell2.innerHTML = document.getElementById("purchase-volume").value;
-    document.getElementById("purchase-volume").value = "";
+    if (found === false) {
+        var row = table.insertRow(-1);
 
-    var cell3 = row.insertCell(2);
-    cell3.innerHTML = document.getElementById("net-purchase-cost").value;
-    document.getElementById("net-purchase-cost").value = "";
+        var cell1 = row.insertCell(0);
+        cell1.innerHTML = medicineNameDropdown.options[medicineNameDropdown.selectedIndex].text;
 
-    var cell4 = row.insertCell(3);
-    cell4.innerHTML = document.getElementById("sales-volume").value;
-     document.getElementById("sales-volume").value = "";
+        var cell2 = row.insertCell(1);
+        cell2.innerHTML = document.getElementById("purchase-volume").value;
 
-    var cell5 = row.insertCell(4);
-    cell5.innerHTML = document.getElementById("net-sales-value").value;
-    document.getElementById("net-sales-value").value = "";
+        var cell3 = row.insertCell(2);
+        cell3.innerHTML = document.getElementById("net-purchase-cost").value;
 
-    var cell6 = row.insertCell(5);
-    cell6.innerHTML = document.getElementById("additional-comments").value;
-    document.getElementById("additional-comments").value = "";
+        var cell4 = row.insertCell(3);
+        cell4.innerHTML = document.getElementById("sales-volume").value;
 
-    var cell7 = row.insertCell(6);
-    var commentsOnPriceChanges = document.getElementById("comments-on-price-changes");
-    cell7.innerHTML = commentsOnPriceChanges.options[commentsOnPriceChanges.selectedIndex].text;
+        var cell5 = row.insertCell(4);
+        cell5.innerHTML = document.getElementById("net-sales-value").value;
 
-    var cell8 = row.insertCell(7);
-    cell8.innerHTML = document.getElementById("average-purchase-price").value;
-    document.getElementById("average-purchase-price").value = "";
+        var cell6 = row.insertCell(5);
+        var commentsOnPriceChanges = document.getElementById("comments-on-price-changes");
+        cell6.innerHTML = commentsOnPriceChanges.options[commentsOnPriceChanges.selectedIndex].text;
 
-    var cell9 = row.insertCell(8);
-    cell9.innerHTML = document.getElementById("average-sales-price").value;
-    document.getElementById("average-sales-price").value = "";
+        var cell7 = row.insertCell(6);
+        cell7.innerHTML = document.getElementById("average-purchase-price").value;
 
-    var cell10 = row.insertCell(9);
-    cell10.innerHTML = '<a onclick="editRow(this)">Edit</a>';
+        var cell8 = row.insertCell(7);
+        cell8.innerHTML = document.getElementById("average-sales-price").value;
 
-    var cell11 = row.insertCell(10);
-    cell11.innerHTML = '<a onclick="deleteRow(this)">Delete</a>'
+        var cell9 = row.insertCell(8);
+        cell9.innerHTML = '<a onclick="deleteRow(this)">Delete</a>'
+    }
 }
 function editRow (row) {
     var table = document.getElementById("myTable");
@@ -239,3 +260,49 @@ function deleteRow (row) {
     var rowIndex = row.parentNode.parentNode.rowIndex;
     document.getElementById("myTable").deleteRow(rowIndex);
 }
+(function editRow () {
+    var medicineName = document.getElementById("medicine-name");
+    medicineName.onchange = function() {
+        var table = document.getElementById("myTable");
+        var found = false;
+        for (var i = 1, row; row = table.rows[i]; i++) {
+            if (found) {break;}
+            if (medicineName.value == row.cells[0].innerHTML) {
+                found = true;
+                for (var j = 1, col; col = row.cells[j]; j++) {
+                    switch(j) {
+                        case 1:
+                            document.getElementById("purchase-volume").value = col.innerHTML;
+                            break;
+                        case 2:
+                            document.getElementById("net-purchase-cost").value = col.innerHTML;
+                            break;
+                        case 3:
+                            document.getElementById("sales-volume").value = col.innerHTML;
+                            break;
+                        case 4:
+                            document.getElementById("net-sales-value").value = col.innerHTML;
+                            break;
+                        case 5:
+                            document.getElementById("comments-on-price-changes").value = col.innerHTML;
+                            break;
+                        case 6:
+                            document.getElementById("average-purchase-price").value = col.innerHTML;
+                            break;
+                        case 7:
+                            document.getElementById("average-sales-price").value = col.innerHTML;
+                            break;
+                    }
+                }
+            } else {
+                document.getElementById("purchase-volume").value = "";
+                document.getElementById("net-purchase-cost").value = "";
+                document.getElementById("sales-volume").value = "";
+                document.getElementById("net-sales-value").value = "";
+                document.getElementById("comments-on-price-changes").value = "";
+                document.getElementById("average-purchase-price").value = "";
+                document.getElementById("average-sales-price").value = "";
+            }
+        }
+    };
+}).call(this);
