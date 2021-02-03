@@ -1,0 +1,143 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Quarterly collection - dropdown table
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-width-container">
+    <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-full">
+            <h1>
+                Quarterly collection - dropdown table
+            </h1>
+        </div>
+
+        <div class="nhsuk-grid-column-full filterResults">
+            <div class="nhsuk-grid-column-full" style="margin-bottom: 20px;">
+                <label class="nhsuk-heading-s" for="filter" style="margin: 5px;">Filter</label>
+                <input class="nhsuk-u-width-full" id="filter" type="text"/>
+            </div>
+
+            <div class="nhsuk-grid-column-full">
+                <div class="nhsuk-grid-column-one-half">
+                    <a class="nhsuk-button" href="#">Search</a>
+                </div>
+
+                <div class="nhsuk-grid-column-one-half">
+                    <a class="nhsuk-button nhsuk-button--secondary" href="#" style="float: right;">Reset filter</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="nhsuk-grid-column-full nhsuk-table__panel-with-heading-tab">
+            <h2 class="nhsuk-table__heading-tab">Drugs</h2>
+            <table class="nhsuk-table-responsive" id="myTable" role="table" style="white-space: normal;">
+                <thead class="nhsuk-table__head" role="rowgroup" style="white-space: normal;">
+                <tr role="row">
+                    <th class="" role="columnheader" scope="col">
+                        Medicine name
+                    </th>
+                    <th class="" role="columnheader" scope="col">
+                        Purchase volume (number of packs)
+                    </th>
+                    <th class="" role="columnheader" scope="col">
+                        Net purchase cost (£)
+                    </th>
+                    <th class="" role="columnheader" scope="col">
+                        Sales volume (number of packs)
+                    </th>
+                    <th class="" role="columnheader" scope="col">
+                        Net sales value (£)
+                    </th>
+                    <th class="" role="columnheader" scope="col">
+                        Comments on price changes
+                    </th>
+                    <th class="" role="columnheader" scope="col">
+                        Average purchase price (£)
+                    </th>
+                    <th class="" role="columnheader" scope="col">
+                        Average sales price (£)
+                    </th>
+                    <th class="" role="columnheader" scope="col">
+                        Delete
+                    </th>
+                </tr>
+                </thead>
+                <tbody class="nhsuk-table__body">
+                <tr class="nhsuk-table__row" role="row">
+                    <td class="nhsuk-table__cell" role="cell">Paracetamol</td>
+                    <td class="nhsuk-table__cell" role="cell">24</td>
+                    <td class="nhsuk-table__cell" role="cell">12</td>
+                    <td class="nhsuk-table__cell" role="cell">4</td>
+                    <td class="nhsuk-table__cell" role="cell">200</td>
+                    <td class="nhsuk-table__cell" role="cell">Change of supplier</td>
+                    <td class="nhsuk-table__cell" role="cell">0.50</td>
+                    <td class="nhsuk-table__cell" role="cell">50.00</td>
+                    <td class="nhsuk-table__cell" role="cell">
+                        <a onclick="deleteRow(this)">Delete</a>
+                    </td>
+                </tr>
+                <tr class="nhsuk-table__row" role="row">
+                    <td class="nhsuk-table__cell" role="cell">Ibuprofen</td>
+                    <td class="nhsuk-table__cell" role="cell">6</td>
+                    <td class="nhsuk-table__cell" role="cell">18</td>
+                    <td class="nhsuk-table__cell" role="cell">5</td>
+                    <td class="nhsuk-table__cell" role="cell">20</td>
+                    <td class="nhsuk-table__cell" role="cell">Concessionary price product</td>
+                    <td class="nhsuk-table__cell" role="cell">3.00</td>
+                    <td class="nhsuk-table__cell" role="cell">4.00</td>
+                    <td class="nhsuk-table__cell" role="cell">
+                        <a onclick="deleteRow(this)">Delete</a>
+                    </td>
+                </tr>
+                <tr class="nhsuk-table__row" role="row">
+                    <td class="nhsuk-table__cell" role="cell">
+                        <input id="medicine-name" list="medicines" style="width: 15ex"/>
+                        <datalist id="medicines">
+                            <option>Paracetamol</option>
+                            <option>Ibuprofen</option>
+                            <option selected="selected">Calpol</option>
+                        </datalist>
+                    </td>
+                    <td class="nhsuk-table__cell" role="cell">
+                        <input class="nhsuk-input--width-4" id="purchase-volume" type="text"/>
+                    </td>
+                    <td class="nhsuk-table__cell" role="cell">
+                        <input class="nhsuk-input--width-4" id="net-purchase-cost" type="text"/>
+                    </td>
+                    <td class="nhsuk-table__cell" role="cell">
+                        <input class="nhsuk-input--width-4" id="sales-volume" type="text"/>
+                    </td>
+                    <td class="nhsuk-table__cell" role="cell">
+                        <input class="nhsuk-input--width-4" id="net-sales-value" type="text"/>
+                    </td>
+                    <td class="nhsuk-table__cell" role="cell">
+                        <select id="comments-on-price-changes" style="width: 19ex">
+                            <option disabled selected>Select supplier</option>
+                            <option>Change of supplier</option>
+                            <option>Commercial decision</option>
+                            <option>Concessionary price product</option>
+                            <option>Customer mix</option>
+                            <option>Data corrected</option>
+                            <option>Not regular business</option>
+                        </select>
+                    </td>
+                    <td class="nhsuk-table__cell" role="cell">
+                        <input class="nhsuk-input--width-4" disabled id="average-purchase-price" type="text"/>
+                    </td>
+                    <td class="nhsuk-table__cell" role="cell">
+                        <input class="nhsuk-input--width-4" disabled id="average-sales-price" type="text"/>
+                    </td>
+                    <td>
+                        <button class="button-looks-like-link" id="addLink" onclick="addRow()">Submit</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <a href="#" class="nhsuk-button">Submit table</a>
+    </div>
+</div>
+{% endblock %}

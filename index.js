@@ -134,6 +134,8 @@ app.get('/link-another-product-choice', (req, res) => { res.render('link-another
 // Quarterly collection
 
 app.get('/quarterly-dropdown-table', (req, res) => { res.render('quarterly-dropdown-table') });
+app.get('/quarterly-dropdown-table-horizontal', (req, res) => { res.render('quarterly-dropdown-table-horizontal') });
+app.get('/quarterly-new-table-horizontal', (req, res) => { res.render('quarterly-new-table-horizontal') });
 app.get('/quarterly-multiple-screens', (req, res) => { res.render('quarterly-multiple-screens') });
 app.get('/quarterly-add-screen', (req, res) => { res.render('quarterly-add-screen') });
 app.get('/quarterly-edit-screen', (req, res) => { res.render('quarterly-edit-screen') });

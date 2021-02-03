@@ -6403,3 +6403,21 @@ b {
 	margin-bottom: 10px;
 	overflow: hidden;
 }
+
+.button-looks-like-link {
+  background: none!important;
+  border: none!important;
+  font-size: 19px;
+  color: #2e3191;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.button-looks-like-link:hover {
+	color: #4276b8;
+}
+
+.button-looks-like-link:focus {
+	background-color: #ffbf47!important;
+	outline: 3px solid #ffbf47;
+}

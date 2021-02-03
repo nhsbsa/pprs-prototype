@@ -187,10 +187,15 @@ function addRow () {
     }
 
     if (found === false) {
-        var row = table.insertRow(-1);
+        var row;
+        if (window.location.href.indexOf("new") != -1) {
+            row = table.insertRow(-1);
+        } else {
+            row = table.insertRow(table.rows.length - 1);
+        }
 
         var cell1 = row.insertCell(0);
-        cell1.innerHTML = medicineNameDropdown.options[medicineNameDropdown.selectedIndex].text;
+        cell1.innerHTML = medicineNameDropdown.value;
 
         var cell2 = row.insertCell(1);
         cell2.innerHTML = document.getElementById("purchase-volume").value;
