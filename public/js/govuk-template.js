@@ -220,7 +220,7 @@ function addRow () {
         cell8.innerHTML = document.getElementById("average-sales-price").value;
 
         var cell9 = row.insertCell(8);
-        cell9.innerHTML = '<a onclick="deleteRow(this)">Delete</a>'
+        cell9.innerHTML = '<button class="button-looks-like-link" onclick="deleteRow(this)">Delete</button>'
     }
 }
 function editRow (row) {

@@ -4,6 +4,7 @@
 {% block headCSS %}
   <link href="/css/main.css" rel="stylesheet">
   <link href="/css/prism.css" rel="stylesheet">
+  <link href="/css/paginator.css" rel="stylesheet">
   <link href="/css/docs.css" rel="stylesheet">
 {% endblock %}
 
@@ -27,6 +28,28 @@
         </a>
       </div>
     </div>
+    <ul class="nhsuk-header__navigation-list" style="padding-left: 5%; padding-right: 5%" id="tabs">
+      <li class="nhsuk-header__navigation-item">
+        <a class="nhsuk-header__navigation-link" id="home" href="#"> Home
+        </a>
+      </li>
+      <li class="nhsuk-header__navigation-item">
+        <a class="nhsuk-header__navigation-link" id="companies" href="#"> Companies
+        </a>
+      </li>
+      <li class="nhsuk-header__navigation-item">
+        <a class="nhsuk-header__navigation-link" id="products" href="#"> Products
+        </a>
+      </li>
+      <li class="nhsuk-header__navigation-item">
+        <a class="nhsuk-header__navigation-link" id="reports" href="#"> Reports
+        </a>
+      </li>
+      <li class="nhsuk-header__navigation-item">
+        <a class="nhsuk-header__navigation-link" id="logout" href="#"> Log out
+        </a>
+      </li>
+    </ul>
   </header>
 {% endblock %}
 
