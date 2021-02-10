@@ -4,8 +4,6 @@
     <list default="true" id="45961e31-1828-49cf-afed-a4b09f2d6762" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/docs.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/docs.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/monthly-table-horizontal.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/monthly-table-horizontal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/quarterly-dropdown-table-horizontal-errors.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/quarterly-dropdown-table-horizontal-errors.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/quarterly-dropdown-table-horizontal.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/quarterly-dropdown-table-horizontal.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />

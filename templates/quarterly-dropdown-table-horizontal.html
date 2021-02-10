@@ -365,7 +365,12 @@ Quarterly drug collection
                 </tr>
                 </tbody>
             </table>
+            <div class="nhsuk-grid-row">
             <a href="/quarterly-dropdown-table-horizontal-errors" style="float: right">With errors</a>
+            </div>
+            <div class="nhsuk-grid-row">
+            <a href="#popup1" style="float: right">With warnings</a>
+            </div>
         </div>
     </div>
 </div>
@@ -392,6 +397,17 @@ Quarterly drug collection
 <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
         <a class="nhsuk-button" href="/quarterly-monthly-confirm">Submit table</a>
+    </div>
+</div>
+
+<div class="overlay" id="popup1">
+    <div class="popup">
+        <h2>Warning</h2>
+        <a class="close" href="#">&times;</a>
+        <div>
+            <p>The average purchase cost is greater than £500.00. Check that the data is correct.</p>
+            <p>If correct, you can <a href="#">add record</a></p>
+        </div>
     </div>
 </div>
 {% endblock %}
