@@ -6476,3 +6476,8 @@ p .app-code {
 		line-height: 1.25
 	}
 }
+
+.bottom-of-row {
+    position: absolute;
+    bottom: 16px;
+}

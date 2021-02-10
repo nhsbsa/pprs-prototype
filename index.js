@@ -135,7 +135,9 @@ app.get('/link-another-product-choice', (req, res) => { res.render('link-another
 
 app.get('/quarterly-dropdown-table', (req, res) => { res.render('quarterly-dropdown-table') });
 app.get('/quarterly-dropdown-table-horizontal', (req, res) => { res.render('quarterly-dropdown-table-horizontal') });
+app.get('/quarterly-dropdown-table-horizontal-errors', (req, res) => { res.render('quarterly-dropdown-table-horizontal-errors') });
 app.get('/monthly-table-horizontal', (req, res) => { res.render('monthly-table-horizontal') });
+app.get('/quarterly-monthly-confirm', (req, res) => { res.render('quarterly-monthly-confirm') });
 app.get('/quarterly-new-table-horizontal', (req, res) => { res.render('quarterly-new-table-horizontal') });
 app.get('/quarterly-multiple-screens', (req, res) => { res.render('quarterly-multiple-screens') });
 app.get('/quarterly-add-screen', (req, res) => { res.render('quarterly-add-screen') });
