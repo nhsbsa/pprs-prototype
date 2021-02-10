@@ -6481,3 +6481,133 @@ p .app-code {
     position: absolute;
     bottom: 16px;
 }
+
+@media (min-width: 58.0625em) {
+  .nhsuk-table-fixed-height{
+    overflow-y:auto;
+    height: 500px;
+  }
+
+  .nhsuk-table-resizable thead th{
+    position: sticky !important;
+    top: 0;
+    background: #f0f4f5;
+    z-index: 99;
+    /* [1] */
+  }
+
+}
+
+.nhsuk-table-resizable .nhsuk-table__body .nhsuk-table-responsive__heading {
+  font-weight: 600;
+  padding-right: 16px;
+  text-align: left;
+  /* [8] */
+}
+
+#top-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+}
+
+@media (min-width: 58.0625em) {
+  .nhsuk-table-resizable. nhsuk-table__body .nhsuk-table-responsive__heading {
+    display: none;
+    /* [9] */
+  }
+  #top-button {
+  display: none
+  }
+}
+
+.nhsuk-table-resizable .nhsuk-table__body .nhsuk-table__row {
+  display: block;
+  /* [3] */
+  margin-bottom: 24px;
+}
+
+.nhsuk-table-resizable .nhsuk-table__body .nhsuk-table__row:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 58.0625em) {
+  .nhsuk-table-resizable .nhsuk-table__body .nhsuk-table__row {
+    display: table-row;
+    margin-bottom: 0;
+    /* [4] */
+  }
+}
+
+.nhsuk-table-resizable .nhsuk-table__body .nhsuk-table__row th {
+  text-align: right;
+}
+
+@media (min-width: 58.0625em) {
+  .nhsuk-table-resizable .nhsuk-table__body .nhsuk-table__row th {
+    text-align: left;
+  }
+}
+
+.nhsuk-table-resizable .nhsuk-table__body .nhsuk-table__row td {
+  display: block;
+  display: flex;
+  justify-content: space-between;
+  /* [5] */
+  min-width: 1px;
+  /* [6] */
+}
+
+@media (min-width: 58.0625em) {
+  .nhsuk-table-resizable .nhsuk-table__body .nhsuk-table__row td {
+    display: table-cell;
+  }
+}
+
+@media (max-width: 58.0525em) {
+  .nhsuk-table-resizable .nhsuk-table__body .nhsuk-table__row td {
+    padding-right: 0;
+    text-align: right;
+    /* [7] */
+  }
+  .nhsuk-table-responsive {
+  overflow-x: unset;
+  }
+
+  .nhsuk-table-resizable .nhsuk-table__body .nhsuk-table__row td:last-child {
+    border-bottom: 3px solid #d8dde0;
+  }
+}
+
+@media (min-width: 58.0525em) {
+  .nhsuk-table-resizable .nhsuk-table__body  {
+    max-height: 500px;
+    /* e.g. */
+    overflow-y: scroll;
+    /* keeps the scrollbar even if it doesn't need it; display purpose */
+  }
+  #button-search {
+  text-align: right
+  }
+}
+
+
+.nhsuk-table-ellipsis-data{
+  position: relative;
+}
+
+@media (min-width: 58.0625em) {
+  .nhsuk-table-ellipsis-data .nhsuk-u-font-size-16 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 8px;
+  }
+
+  .nhsuk-table-resizable-column-selector {
+    margin-right: 5px;
+  }
+}
