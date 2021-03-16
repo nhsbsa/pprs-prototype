@@ -136,25 +136,23 @@ Quarterly drug collection
                         </datalist>
                     </td>
                     <td class="nhsuk-table__cell" role="cell" style="position: relative">
-                        <span class="nhsuk-error-message" id="purchase-volume-error">Enter a purchase volume</span>
                         <input class="nhsuk-input--width-4 nhsuk-input--error" id="purchase-volume" type="text"/>
                         <label class="nhsuk-u-visually-hidden" for="purchase-volume">Purchase volume</label>
                     </td>
                     <td class="nhsuk-table__cell" role="cell" style="position: relative">
-                        <span class="nhsuk-error-message" id="net-purchase-error">Enter net purchase cost in the correct format, like 123.45</span>
                         <input class="nhsuk-input--width-4 nhsuk-input--error" id="net-purchase-cost" type="text" value="five"/>
                         <label class="nhsuk-u-visually-hidden" for="net-purchase-cost">Net purchase cost</label>
                     </td>
                     <td class="nhsuk-table__cell" role="cell" style="position: relative">
-                        <input class="nhsuk-input--width-4 bottom-of-row" id="sales-volume" type="text" value="123"/>
+                        <input class="nhsuk-input--width-4" id="sales-volume" type="text" value="123"/>
                         <label class="nhsuk-u-visually-hidden" for="sales-volume">Sales volume</label>
                     </td>
                     <td class="nhsuk-table__cell" role="cell" style="position: relative">
-                        <input class="nhsuk-input--width-4 bottom-of-row" id="net-sales-value" type="text" value="123"/>
+                        <input class="nhsuk-input--width-4" id="net-sales-value" type="text" value="123"/>
                         <label class="nhsuk-u-visually-hidden" for="net-sales-value">Net sales value</label>
                     </td>
                     <td class="nhsuk-table__cell" role="cell" style="position: relative">
-                        <select class="bottom-of-row" id="comments-on-price-changes" style="width: 19ex">
+                        <select id="comments-on-price-changes" style="width: 19ex">
                             <option disabled>Select supplier</option>
                             <option selected>Change of supplier</option>
                             <option>Commercial decision</option>
@@ -166,24 +164,23 @@ Quarterly drug collection
                         <label class="nhsuk-u-visually-hidden" for="comments-on-price-changes">Comments</label>
                     </td>
                     <td class="nhsuk-table__cell" role="cell" style="position: relative">
-                        <input class="nhsuk-input--width-4 bottom-of-row" disabled id="average-purchase-price"
+                        <input class="nhsuk-input--width-4" disabled id="average-purchase-price"
                                type="text"/>
                         <label class="nhsuk-u-visually-hidden" for="average-purchase-price">Average purchase
                             price</label>
                     </td>
                     <td class="nhsuk-table__cell" role="cell" style="position: relative">
-                        <input class="nhsuk-input--width-4 bottom-of-row" disabled id="average-sales-price"
+                        <input class="nhsuk-input--width-4" disabled id="average-sales-price"
                                type="text"/>
                         <label class="nhsuk-u-visually-hidden" for="average-sales-price">Average sales price</label>
                     </td>
                     <td style="position: relative">
-                        <button class="button-looks-like-link bottom-of-row" id="addLink" onclick="addRow()">Submit
+                        <button class="button-looks-like-link" id="addLink" onclick="addRow()">Submit
                         </button>
                     </td>
                 </tr>
                 </tbody>
             </table>
-            <a href="/quarterly-dropdown-table-horizontal" style="float: right">Without errors</a>
         </div>
     </div>
 </div>
@@ -207,6 +204,7 @@ Quarterly drug collection
         </ul>
     </nav>
 </div>
+<a href="/quarterly-dropdown-table-horizontal" style="float: right">Without errors</a>
 <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
         <a class="nhsuk-button" href="/quarterly-monthly-confirm">Submit table</a>
