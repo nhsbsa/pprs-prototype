@@ -1,11 +1,14 @@
 # pprs-prototype
-
+&ensp;
+```diff
+- Please note this prototype has not been linked up with heroku so can only be viewed on a local machine
+```
 &ensp;
 ## Project Setup
 ### Cloning the project
 Clone the project using git:
 ```shell
-git clone https://github.com/nhsbsa/medicines-management-prototype.git
+git clone https://github.com/nhsbsa/pprs-prototype.git
 ```
 or
 ```shell
@@ -41,13 +44,6 @@ To run the prototype locally, use gulp:
 gulp
 ```
 
-The prototype will then open a window in your browser on http://localhost:3000.
+The prototype will then open a window in your browser on http://localhost:5000.
 
-Browser sync settings can be accessed on http://localhost:3001.
-
-## Running Pa11y accessibility checks
- 
-```shell
-pa11y-ci -c pa11y.json
-```
-&ensp;
+Browser sync settings can be accessed on http://localhost:5001.
