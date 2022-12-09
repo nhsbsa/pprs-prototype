@@ -1,0 +1,130 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Add new record
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+        <h1>
+            Add new record
+        </h1>
+    </div>
+
+    <div class="nhsuk-grid-row">
+        <div class="nhsuk-width-container-fluid">
+            <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-one-third">
+                    <label class="nhsuk-heading-xs" for="medicine-name">Medicine Name</label>
+                </div>
+                <div class="nhsuk-grid-column-two-thirds">
+                    <input id="medicine-name" list="medicines" type="text"/>
+                    <datalist id="medicines">
+                        <option>Paracetamol</option>
+                        <option>Ibuprofen</option>
+                        <option>Calpol</option>
+                    </datalist>
+                </div>
+            </div>
+        </div>
+
+        <div class="nhsuk-width-container-fluid">
+            <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-one-third">
+                    <label class="nhsuk-heading-xs" for="purchase-volume">Purchase volume (number of packs)</label>
+                </div>
+                <div class="nhsuk-grid-column-two-thirds">
+                    <input id="purchase-volume" type="text" />
+                </div>
+            </div>
+        </div>
+
+        <div class="nhsuk-width-container-fluid">
+            <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-one-third">
+                    <label class="nhsuk-heading-xs" for="net-purchase-cost">Net purchase cost (£)</label>
+                </div>
+                <div class="nhsuk-grid-column-two-thirds">
+                    <input id="net-purchase-cost" type="text" />
+                </div>
+            </div>
+        </div>
+
+        <div class="nhsuk-width-container-fluid">
+            <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-one-third">
+                    <label class="nhsuk-heading-xs" for="sales-volume">Sales volume (number of packs)</label>
+                </div>
+                <div class="nhsuk-grid-column-two-thirds">
+                    <input id="sales-volume" type="text" />
+                </div>
+            </div>
+        </div>
+
+        <div class="nhsuk-width-container-fluid">
+            <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-one-third">
+                    <label class="nhsuk-heading-xs" for="net-sales-value">Net sales value (£)</label>
+                </div>
+                <div class="nhsuk-grid-column-two-thirds">
+                    <input id="net-sales-value" type="text" />
+                </div>
+            </div>
+        </div>
+
+        <div class="nhsuk-width-container-fluid">
+            <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-one-third">
+                    <label class="nhsuk-heading-xs" for="additional-comments">Additional comments</label>
+                </div>
+                <div class="nhsuk-grid-column-two-thirds">
+                    <input id="additional-comments" type="text" />
+                </div>
+            </div>
+        </div>
+
+        <div class="nhsuk-width-container-fluid">
+            <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-one-third">
+                    <label class="nhsuk-heading-xs" for="comments-on-price-changes">Comments on price changes</label>
+                </div>
+                <div class="nhsuk-grid-column-two-thirds">
+                    <select id="comments-on-price-changes">
+                        <option>Change of supplier</option>
+                        <option>Commercial decision</option>
+                        <option>Concessionary price product</option>
+                        <option>Customer mix</option>
+                        <option>Data corrected</option>
+                        <option>Not regular business</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="nhsuk-width-container-fluid">
+            <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-one-third">
+                    <label class="nhsuk-heading-xs" for="average-purchase-price">Average purchase price (£)</label>
+                </div>
+                <div class="nhsuk-grid-column-two-thirds">
+                    <input id="average-purchase-price" type="text" disabled />
+                </div>
+            </div>
+        </div>
+
+        <div class="nhsuk-width-container-fluid">
+            <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-one-third">
+                    <label class="nhsuk-heading-xs" for="average-sales-price">Average sales price (£)</label>
+                </div>
+                <div class="nhsuk-grid-column-two-thirds">
+                    <input id="average-sales-price" type="text" disabled />
+                </div>
+            </div>
+        </div>
+
+        <a class="nhsuk-button" href="#">Submit</a>
+    </div>
+</div>
+{% endblock %}

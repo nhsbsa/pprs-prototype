@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <div class="breadcrumbs">
+    <ol>
+      <li><a href="/">Home</a></li>
+      <li><a href="/link-journey-multiple-products">Search for a company</a></li>
+      <li><span>Search for a product</span></li>
+    </ol>
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block content %}
+
+<div class="grid-row">
+  <div class="column-full">
+    <h1 id="main-content" class="heading-large mt-0">
+      <span id="secondary-header" class="heading-secondary">Link product to company</span>
+      <span id="primary-header">Search for a product</span>
+    </h1>
+    <div class="filterResults">
+      <form>
+        <div class="grid-row">
+          <div class="column-half">
+            <span class="form-group">
+              <label class="form-label" for="name" id="name-label">Presentation</label>
+              <input class="form-control width-three-quarters" id="name" type="text"/>
+            </span>
+          </div>
+          <div class="column-half">
+            <span class="form-group">
+              <label class="form-label" for="cdrSupplier" id="cdrSupplier-label">CDR Supplier</label>
+              <input class="form-control width-three-quarters" id="cdrSupplier" type="text"/>
+            </span>
+          </div>
+        </div>
+        <div class="grid-row">
+          <div class="column-half">
+            <span class="form-group">
+              <label for="product-form" class="form-label" id="product-form-label">Form</label>
+              <input class="form-control width-three-quarters" id="product-form" type="text"/>
+            </span>
+          </div>
+          <div class="column-half">
+            <span class="form-group">
+              <label for="snomed" class="form-label" id="snomed-label">SNOMED</label>
+              <input type="text" id="snomed" class="form-control width-three-quarters"/>
+            </span>
+          </div>
+        </div>
+        <div class="grid-row">
+          <div class="column-half">
+          <span class="form-group">
+            <div class="multiple-choice" data-target="conditional-display-futureDate">
+            <input class="js-disable-submit--input" type="checkbox" id="futureDated"></input>
+            <label for="futureDated">Future dated product</label>
+          </div>
+          </span>
+          </div>
+          <div class="column-half">
+            <div class="form-group panel-border-narrow js-hidden" id="conditional-display-futureDate">
+              <fieldset>
+                <legend class="mb-20">
+                  <span id="futureDate-label" class="form-label-bold">Future effective date</span>
+                  <span id="dob-hint">For example, 11 07 2050</span>
+                </legend>
+                <div class="form-date">
+                  <div class="form-group form-group-day">
+                    <label class="form-label" id="futureDate-day-label" for="futureDate-day">Day</label>
+                    <input class="form-control" id="futureDate-day" name="futureDate-day" type="text"/>
+                  </div>
+                  <div class="form-group form-group-month">
+                    <label class="form-label" id="futureDate-month-label" for="futureDate-month">Month</label>
+                    <input class="form-control" id="futureDate-month" name="futureDate-month" type="text"/>
+                  </div>
+                  <div class="form-group form-group-year">
+                    <label class="form-label" id="futureDate-year-label" for="futureDate-year">Year</label>
+                    <input class="form-control" id="futureDate-year" name="futureDate-year" type="text"/>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+
+        <div class="column-full">
+          <div>
+            <a class="button" id="submit" href="/product-search-results">Search</a>
+            <a id="resetProductFilters" href="#">Reset search</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

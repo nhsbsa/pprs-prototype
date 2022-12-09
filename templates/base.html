@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!--[if gt IE 8]><!-->
+    <link href="/css/govuk-template.css" media="screen" rel="stylesheet" />
+    <!--<![endif]-->
+    <!--[if IE 6]><link href="/css/govuk-template-ie6.css" media="screen" rel="stylesheet" /><![endif]-->
+    <!--[if IE 7]><link href="/css/govuk-template-ie7.css" media="screen" rel="stylesheet" /><![endif]-->
+    <!--[if IE 8]><link href="/css/govuk-template-ie8.css" media="screen" rel="stylesheet" /><![endif]-->
+    <link href="/css/govuk-template-print.css" media="print" rel="stylesheet" />
+  
+    <!--[if IE 8]><link href="/css/fonts-ie8.css" media="all" rel="stylesheet" /><![endif]-->
+    <!--[if gte IE 9]><!-->
+    <link href="/css/fonts.css" media="all" rel="stylesheet" />
+    <!--<![endif]-->
+    <!--[if lt IE 9]><script th:src="javascripts/ie.js"></script><![endif]-->
+  
+    <link rel="shortcut icon" href="images/favicon.ico?ok=1" type="image/x-icon" />
+    <link rel="mask-icon" href="images/gov.uk_logotype_crown.svg" color="#0b0c0c" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="images/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="images/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="images/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon-60x60.png" />
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:image" content="public/images/opengraph-image.png" />
+  
+    <!--[if gt IE 8]><!-->
+    <link href="/css/elements-page.css" rel="stylesheet" type="text/css" />
+    <!--<![endif]-->
+    <!--[if IE 6]><link href="/css/elements-page-ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+    <!--[if IE 7]><link href="/css/elements-page-ie7.css" rel="stylesheet" type="text/css" /><![endif]-->
+    <!--[if IE 8]><link href="/css/elements-page-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
+    <link href="/css/vendor/prism.css" media="screen" rel="stylesheet" />
+    <!--[if gt IE 8]><!-->
+    <script src="/js/prism.js"></script>
+    <!--<![endif]-->
+    <link rel="stylesheet" href="/css/application.css">
+    <link rel="stylesheet" href="/css/edit_product.css">
+</head>
+<body class="nhs-bsa">
+  <script>
+    document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
+  </script>
+  <div id="skiplink-container">
+    <div>
+      <a href="#content" class="skiplink">Skip to main content</a>
+    </div>
+  </div>
+  <div id="global-cookie-message">
+    <p>
+      NHS.NET uses cookies to make the site simpler. <a target="_blank" rel="noopener" href="https://www.nhsbsa.nhs.uk/our-policies/cookies" title="Find out more about cookies">Find out more about
+        cookies<span class="visuallyhidden"> (Opens in a new window)</span></a>
+    </p>
+  </div>
+	<header th:fragment="header" role="banner" id="nhs-global-header" class="with-proposition">
+		<div class="header-wrapper">
+			<div class="header-global">
+				<div class="header-logo">
+					<a href="/" title="Go to the homepage" id="logo" class="content">
+						<!--[if gt IE 8]><!-->
+						<img src="/images/bsa_logo.svg" alt="NHS Logo" />
+						<!--<![endif]-->
+						<!--[if lte IE 8]><img th:src="@{/webjars/nhs-template/images/bsa_logo.png}" alt="NHS Logo"/><![endif]-->
+					</a>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- <main class="elements-index" id="content" role="main"> -->
+	<main id="content" role="main">
+		{% block beforeContent %}{% endblock %}
+		{% block content %}{% endblock %}
+  </main>
+  <!-- <script src="/js/tabs.js"></script> -->
+  <script src="/js/govuk-template.js"></script>
+  <script src="/js/jquery-1.11.0.min.js"></script>
+
+
+  <script src="/js/bind.js"></script>
+  <script src="/js/shim-links-with-button-role.js"></script>
+  <script src="/js/show-hide-content.js"></script>
+
+  <script src="/js/details.polyfill.js"></script>
+  <script src="/js/application.js"></script>
+
+  <script src="/js/tabs.js"></script>
+
+  <script>if (typeof window.GOVUK === 'undefined') document.body.className = document.body.className.replace('js-enabled', '');</script>
+  
+</body>
+</html>

@@ -1,0 +1,258 @@
+{% extends "base.html" %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+<div class="column-two-thirds">
+  <div class="breadcrumbs">
+    <ol>
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <li>
+        <a href="#">Manage products</a>
+      </li>
+      <li>Product XX</li>
+    </ol>
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="column-two-thirds">
+  <div class="breadcrumbs">
+    <ol>
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <li>
+        <a href="#">Prototype 1</a>
+      </li>
+      <li>Product XX</li>
+    </ol>
+  </div>
+</div>
+
+<!-- ------------------------------------------------------------------------------------------ -->
+
+<div class="column-full">
+  <h1  class="heading-large" style="margin-top:0; display:inline-block">View product history in one big block</h1>
+</div>
+
+<div class="column-full" style="padding-left:0; padding-right:0;">
+  <div class="column-third">
+    <h2 class="heading-medium" style="margin-top:0; text-align:center; visibility:hidden;">Version 1 of 3</h2>
+  </div>
+
+  <div class="column-third">
+    <h2 class="heading-medium" style="margin-top:0; text-align:center">Version 1 of 3</h2>
+  </div>
+
+  <div class="column-third">
+  <a id="viewNextVersion" style="margin-top:0; float:right;" class="button" href="/view-prototype1-prev-version">View next version</a>
+  </div>
+</div>
+
+<div class="column-full" style="padding-left:0; padding-right:0;">
+  <div class="issueFormView">
+
+    <div class="column-full" style="padding-left:0; padding-right:0">
+
+      <div class="column-half" style="padding-left:0;">
+
+        <h2 class="heading-small">SNOMED</h2>
+        <span>123456</span>
+
+      </div>
+
+    </div>
+
+    <div class="column-full" style="padding-left:0; padding-right:0; padding-top:5px;">
+
+      <div class="column-half" style="padding-left:0;">
+
+        <h2 class="heading-small issueviewHeaders">Organisation</h2>
+        <span>A. Menarini Farmaceutica Internazionale SRL</span>
+
+      </div>
+
+      <div class="column-half" style="padding-left:0;">
+
+        <h2 class="heading-small issueviewHeaders">Membership</h2>
+        <span>Statutory</span>
+
+      </div>
+
+    </div>
+
+    <div class="column-full" style="padding-left:0; padding-right:0; padding-top:5px;">
+
+      <div class="column-third" style="padding-left:0;">
+
+        <h2 class="heading-small">Presentation</h2>
+        <span>Spinraza (5ml) solution for injection 12mg</span>
+
+      </div>
+
+      <div class="column-third" style="padding-left:0;">
+
+        <h2 class="heading-small">Legal category</h2>
+        <span>POM</span>
+
+      </div>
+
+      <div class="column-third" style="padding-left:0;">
+
+        <h2 class="heading-small">Pack size</h2>
+        <span>999</span>
+
+      </div>
+
+    </div>
+
+    <div class="column-full" style="padding-left:0; padding-right:0; padding-top:5px;">
+
+      <div class="column-third" style="padding-left:0;">
+
+        <h2 class="heading-small">Form</h2>
+        <span>Vial</span>
+
+      </div>
+
+      <div class="column-third" style="padding-left:0;">
+
+        <h2 class="heading-small">Publish on maximum price list</h2>
+        <span>Y</span>
+
+      </div>
+
+    </div>
+
+    <div class="column-full" style="padding-left:0; padding-right:0; padding-top:5px;">
+
+      <div class="column-third" style="padding-left:0;">
+
+        <h2 class="heading-small">Max price</h2>
+        <span>&pound;75000.00</span>
+
+      </div>
+
+      <div class="column-third" style="padding-left:0;">
+
+        <h2 class="heading-small">Date from</h2>
+        <span>01/01/2020</span>
+
+      </div>
+
+      <div class="column-third" style="padding-left:0;">
+
+        <h2 class="heading-small">Date to</h2>
+        <span>31/12/9999</span>
+
+      </div>
+
+    </div>
+
+    <div class="column-full" style="padding-left:0; padding-right:0; padding-top:5px;">
+
+      <h2 class="heading-small">Comments</h2>
+      <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Sed maximus sapien ligula, ac euismod sapien scelerisque eget.
+              Cras pulvinar felis nulla, at vehicula orci ullamcorper ut.
+              Curabitur molestie mi ac ligula viverra, vitae mollis dui volutpat.
+              Aenean eu vestibulum quam. Sed mattis arcu a mi tristique, eget
+              tincidunt dolor elementum. Aenean ut lacinia libero. Maecenas vitae
+              velit ut mauris sollicitudin ultrices. Proin a magna varius, finibus
+              risus quis, luctus neque. Nunc at sem felis. </span>
+
+    </div>
+
+    <div class="column-full" style="padding-left:0; padding-right:0; padding-top:5px;">
+
+      <div class="column-third" style="padding-left:0;">
+
+        <h2 class="heading-small">New Active Substance (NAS)</h2>
+        <span>Y</span>
+
+      </div>
+
+      <div class="column-third" style="padding-left:0;">
+
+        <h2 class="heading-small">Date of marketing authorisation</h2>
+        <span>01/01/2020</span>
+
+      </div>
+
+      <div class="column-third" style="padding-left:0;">
+
+        <h2 class="heading-small">Expiry date of NAS</h2>
+        <span></span>
+
+      </div>
+
+    </div>
+
+    <div class="column-full" style="padding-left:0; padding-right:0; padding-top:5px;">
+
+      <div class="column-third" style="padding-left:0;">
+
+        <h2 class="heading-small">Temporary price</h2>
+        <span>&pound;2.49</span>
+
+      </div>
+
+      <div class="column-third" style="padding-left:0;">
+
+        <h2 class="heading-small">Temporary price effective date</h2>
+        <span>01/01/2020</span>
+
+      </div>
+
+      <div class="column-third" style="padding-left:0;">
+
+        <h2 class="heading-small">Temporary price end date</h2>
+        <span>31/12/9999</span>
+
+      </div>
+
+    </div>
+
+    <div class="column-full" style="padding-left:0; padding-right:0; padding-top:5px;">
+
+      <div class="column-half" style="padding-left:0;">
+
+        <h2 class="heading-small">Subject to Historic Cash Payment (HCP)</h2>
+        <span>N</span>
+
+      </div>
+
+      <div class="column-half" style="padding-left:0;">
+
+        <h2 class="heading-small">NHS list price as at 31 December 2013 (HCP only)</h2>
+        <span></span>
+
+      </div>
+
+    </div>
+
+    <div class="column-full" style="padding-left:0; padding-right:0; padding-top:5px;">
+
+      <div class="column-half" style="padding-left:0;">
+
+        <h2 class="heading-small">OTC payment</h2>
+        <span>Y</span>
+
+      </div>
+
+      <div class="column-half" style="padding-left:0;">
+
+        <h2 class="heading-small">Discontinued</h2>
+        <span>N</span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}

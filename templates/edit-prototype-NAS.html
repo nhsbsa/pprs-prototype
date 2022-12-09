@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+<div class="grid-row">
+    <div class="column-two-thirds">
+        <div class="breadcrumbs">
+            <ol>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="#">Prototype f2a</a>
+                </li>
+                <li>
+                    <a href="#">Manage products</a>
+                </li>
+                <li>
+                    <a href='#'>Product XX</a>
+                </li>
+                <li>
+                    <a href='#'>Edit Product XX</a>
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block content %}
+
+<!-- ------------------------------------------------------------------------------------------ -->
+<div class="grid-row">
+    <div class="column-two-thirds">
+        <h1 class="heading-large">
+            <span class="heading-secondary">Branded medicines</span>
+            Spinraza (5ml) solution for injection 12mg
+        </h1>
+    </div>
+</div>
+
+<div class="grid-row">
+    <div class="column-full">
+        <div class="grid-row">
+            <div class="column-full">
+                <h2 class="heading-large">New Active Substance (NAS)</h2>
+            </div>
+        </div>
+        <div class="issueFormView">
+            <div class="column-full" style="margin-bottom:15px">
+                <div class="grid-row">
+                    <h2 class="heading-small">NAS</h2>
+                    <div class="form-radio">
+                        <span style="padding:0; margin-right:15px">
+                            <input type="radio">
+                            <label> Yes </label>
+                        </span>
+
+                        <span style="padding:0">
+                            <input type="radio">
+                            <label> No </label>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="grid-row">
+                    <h2 class="heading-small">Date of marketing authorisation</h2>
+                    <div class="form-date">
+                        <div class="form-group">
+                            <label>
+                                Day
+                            </label>
+                            <input type="number" value="6" pattern="[0-9]*" inputmode="numeric">
+                        </div>
+                    </div>
+                    <div class="form-date">
+                        <div class="form-group">
+                            <label>
+                                Month
+                            </label>
+                            <input type="number" value="3" pattern="[0-9]*" inputmode="numeric">
+                        </div>
+                    </div>
+                    <div class="form-date">
+                        <div class="form-group">
+                            <label>
+                                Year
+                            </label>
+                            <input type="number" value="2076" pattern="[0-9]*" inputmode="numeric">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="column-full">
+            <div class="grid-row">
+                <a href="#" class="button mt-10">Submit</a>
+            </div>
+            <div class="grid-row">
+                <a href="/" class="heading-small">Cancel</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

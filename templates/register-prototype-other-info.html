@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+<div class="grid-row">
+    <div class="column-full">
+        <a href="/register-prototype-HCP" class="link-back">Back</a>
+    </div>
+</div>
+{% endblock %}
+{% block content %}
+<div class="grid-row">
+    <div class="column-two-thirds">
+        <h1 class="heading-large">
+            <span class="heading-secondary">Spinraza (5ml) solution for injection 12mg</span>
+            Other information
+        </h1>
+    </div>
+</div>
+
+<div class="grid-row">
+    <div class="column-two-thirds">
+
+        <div class="form-group">
+            <fieldset class="inline">
+                <legend>
+                    <span class="form-label-bold">
+                        Over the counter payment?
+                    </span>
+                </legend>
+                <div class="multiple-choice">
+                    <input id="radio-inline-yes" type="radio" name="radio-inline-group" value="Yes">
+                    <label for="radio-inline-yes">Yes</label>
+                </div>
+                <div class="multiple-choice">
+                    <input id="radio-inline-no" type="radio" name="radio-inline-group" value="No">
+                    <label for="radio-inline-no">No</label>
+                </div>
+            </fieldset>
+        </div>
+        <div class="form-group">
+            <fieldset class="inline">
+                <legend>
+                    <span class="form-label-bold">
+                        Discontinued
+                    </span>
+                </legend>
+                <div class="multiple-choice">
+                    <input id="radio-inline-yes" type="radio" name="radio-inline-group" value="Yes">
+                    <label for="radio-inline-yes">Yes</label>
+                </div>
+                <div class="multiple-choice">
+                    <input id="radio-inline-no" type="radio" name="radio-inline-group" value="No">
+                    <label for="radio-inline-no">No</label>
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="form-group">
+            <a href="#" class="button mt-10" role="button">Submit</a>
+        </div>
+
+
+        <div class="form-group">
+            <a href="/" class="heading-small">Cancel</a>
+        </div>
+
+
+
+    </div>
+</div>
+{% endblock %}

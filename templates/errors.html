@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+
+{% block content %}
+<div class="grid-row">
+    <div class="column-full">
+        <div class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-1" tabindex="-1" autofocus>
+
+            <h1 class="heading-medium error-summary-heading" id="error-summary-heading-example-1">
+                A problem has occurred.
+            </h1>
+
+            <p>
+                Optional description of the errors and how to correct them
+            </p>
+
+            <ul class="error-summary-list">
+                <li><a href="#tempPrice">Temporary price must be completed</a></li>
+                <li><a href="#date-from-day">Effective date must be completed</a></li>
+                <li><a href="#date-to-day">End date must be completed</a></li>
+            </ul>
+
+        </div>
+
+        <h1 class="heading-large">My page</h1>
+
+        <div class="form-group error">
+                <label for="tempPrice" class="form-label-bold">Temporary price</label>
+                <span class="form-hint">Price in pounds (&pound;)</span>
+                <span class="error-message">Temporary price must be completed</span>
+                <input type="text" value="50000.00" class="form-control" id="tempPrice">
+            </div>
+            <div class="form-group error">
+                <fieldset>
+                    <legend>
+                        <span class="form-label-bold">Effective date</span>
+                        <span class="form-hint" id="dob-hint">For example, 11 07 1987</span>
+                        <span class="error-message">Effective date must be completed</span>
+                    </legend>
+                    <div class="form-date">
+                        <div class="form-group form-group-day">
+                            <label class="form-label" for="date-from-day">Day</label>
+                            <input class="form-control form-control-error" id="date-from-day" name="date-from-day" type="text" pattern="[0-9]*"
+                                aria-describedby="date-from-day">
+                        </div>
+                        <div class="form-group form-group-month">
+                            <label class="form-label" for="date-from-month">Month</label>
+                            <input class="form-control form-control-error" id="date-from-month" name="date-from-month" type="text"
+                                pattern="[0-9]*">
+                        </div>
+                        <div class="form-group form-group-year">
+                            <label class="form-label" for="date-from-year">Year</label>
+                            <input class="form-control form-control-error" id="date-from-year" name="date-from-year" type="text"
+                                pattern="[0-9]*" min="0">
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="form-group error">
+                <fieldset>
+                    <legend>
+                        <span class="form-label-bold">End date</span>
+                        <span class="form-hint" id="dob-hint">For example, 11 07 1987</span>
+                        <span class="error-message">End date must be completed</span>
+                    </legend>
+                    <div class="form-date">
+                        <div class="form-group form-group-day">
+                            <label class="form-label" for="date-from-day">Day</label>
+                            <input class="form-control form-control-error" id="date-from-day" name="date-from-day" type="text" pattern="[0-9]*"
+                                aria-describedby="date-to-day">
+                        </div>
+                        <div class="form-group form-group-month">
+                            <label class="form-label" for="date-from-month">Month</label>
+                            <input class="form-control form-control-error" id="date-from-month" name="date-from-month" type="text"
+                                pattern="[0-9]*">
+                        </div>
+                        <div class="form-group form-group-year">
+                            <label class="form-label" for="date-from-year">Year</label>
+                            <input class="form-control form-control-error" id="date-from-year" name="date-from-year" type="text"
+                                pattern="[0-9]*" min="0">
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+    
+
+    </div>
+
+
+
+</div>
+
+
+{% endblock %}

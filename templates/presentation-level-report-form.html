@@ -1,0 +1,323 @@
+{% extends "base.html" %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+<div class="grid-row">
+    <div class="column-two-thirds">
+        <div class="breadcrumbs">
+            <ol>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="#">Prototype f2a</a>
+                </li>
+                <li>
+                    <a href="#">Manage products</a>
+                </li>
+                <li>Product XX</li>
+            </ol>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block content %}
+
+<div class="grid-row">
+    <div class="column-full">
+        <h1 class="heading-large">
+            <span class="heading-secondary">Yondelis 0.25mg powder for concentrate for solution for infusion vials</span>
+            Submit your presentation level report
+        </h1>
+    </div>
+</div>
+<div class="grid-row">
+
+    <div class="column-two-thirds">
+        <div class="panel panel-border-wide">
+            <div class="grid-row">
+                <div class="column-third">
+                    <h2 class="heading-small">Company</h2>
+                    <p>Test Parmacy</p>
+
+                </div>
+                <div class="column-third">
+                    <h2 class="heading-small">Year</h2>
+                    <p>2020</p>
+
+                </div>
+                <div class="column-third">
+
+                    <h2 class="heading-small">Reference</h2>
+                    <p>12345678</p>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="grid-row">
+    <div class="column-two-thirds">
+
+        <h2 class="heading-medium">
+            Product information</h2>
+    </div>
+    <div class="column-full">
+
+        <table class="mb-20">
+            <thead>
+                <tr>
+                    <th>Pack size</th>
+                    <th>Form</th>
+                    <th>Max price</th>
+                    <th>Date from</th>
+                    <th>Date to</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>16</td>
+                    <td>Oral</td>
+                    <td>&pound;16.99</td>
+                    <td>12/07/2020</td>
+                    <td>13/07/2020</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+<div class="grid-row">
+    <div class="column-full">
+        <h3 class="heading-medium">Total sales of scheme products</h3>
+
+        <h3 class="heading-medium">Total sales of Primary Care products</h3>
+        <div class="form-group">
+
+            <div class="grid-row">
+                <div class="column-full">
+                    <div class="grid-row">
+                        <div class="column-third">
+                            <label for="totalsales" class="form-label-bold">Quantity</label>
+                            <input type="text" class="form-control" id="totalsales">
+                        </div>
+                        <div class="column-third">
+                            <label for="totalsales" class="form-label-bold">Net sales</label>
+                            <input type="text" class="form-control" id="totalsales">
+                        </div>
+                        <div class="column-third">
+                            <label for="totalsales" class="form-label-bold">Gross sales</label>
+                            <input type="text" class="form-control" id="totalsales" disabled>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <div class="column-full">
+                        <h3 class="heading-medium">Total sales of Homecare products</h3>
+                    <div class="grid-row">
+                        <div class="column-third">
+                            <label for="totalsales" class="form-label-bold">Quantity</label>
+                            <input type="text" class="form-control" id="totalsales">
+                        </div>
+                        <div class="column-third">
+                            <label for="totalsales" class="form-label-bold">Net sales</label>
+                            <input type="text" class="form-control" id="totalsales">
+                        </div>
+                        <div class="column-third">
+                            <label for="totalsales" class="form-label-bold">Gross sales</label>
+                            <input type="text" class="form-control" id="totalsales" disabled>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="column-full">
+                        <h3 class="heading-medium">Total sales of to all other customers (e.g. Secondary care)</h3>
+                    <div class="grid-row">
+                        <div class="column-third">
+                            <label for="totalsales" class="form-label-bold">Quantity</label>
+                            <input type="text" class="form-control" id="totalsales">
+                        </div>
+                        <div class="column-third">
+                            <label for="totalsales" class="form-label-bold">Net sales</label>
+                            <input type="text" class="form-control" id="totalsales">
+                        </div>
+                        <div class="column-third">
+                            <label for="totalsales" class="form-label-bold">Gross sales</label>
+                            <input type="text" class="form-control" id="totalsales" disabled>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+<div class="form-group">
+        <div class="grid-row">
+                <div class="column-full">
+
+                    <h3 class="heading-medium">
+                        Exemptions
+                    </h3>
+
+                    <form>
+                        <div class="form-group">
+                            <fieldset>
+
+                                <legend class="visually-hidden">Which type of payment are is this product</legend>
+
+                                <div class="panel panel-border-narrow js-hidden" id="ecp-fields">
+
+                                    <div class="grid-row">
+                                        <div class="column-two-thirds">
+                                            <div class="form-group">
+                                                <label for="totalsales" class="form-label-bold">Quantity</label>
+                                                <input type="text" class="form-control" id="totalsales">
+
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="totalsales" class="form-label-bold">Net sales</label>
+                                                <input type="text" class="form-control" id="totalsales">
+
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="totalsales" class="form-label-bold">Gross sales</label>
+                                                <input type="text" class="form-control" id="totalsales" disabled>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="multiple-choice" data-target="cpvfields">
+                                        <input id="cpvtype" type="checkbox" name="sale-type" value="No">
+                                        <label for="cpvtype">Exceptional Central Procurements (ECP)</label>
+                                    </div>
+                                    <div class="panel panel-border-narrow js-hidden" id="cpvfields">
+                                        <div class="grid-row">
+                                            <div class="column-two-thirds">
+                                                <div class="form-group">
+                                                    <label for="totalsales" class="form-label-bold">Quantity</label>
+                                                    <input type="text" class="form-control" id="totalsales">
+    
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="totalsales" class="form-label-bold">Net sales</label>
+                                                    <input type="text" class="form-control" id="totalsales">
+    
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="totalsales" class="form-label-bold">Gross sales</label>
+                                                    <input type="text" class="form-control" id="totalsales" disabled>
+    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                <div class="multiple-choice" data-target="cpvfields">
+                                    <input id="cpvtype" type="checkbox" name="sale-type" value="No">
+                                    <label for="cpvtype">Centrally Procured Vaccines (CPV)</label>
+                                </div>
+                                <div class="panel panel-border-narrow js-hidden" id="cpvfields">
+                                    <div class="grid-row">
+                                        <div class="column-two-thirds">
+                                            <div class="form-group">
+                                                <label for="totalsales" class="form-label-bold">Quantity</label>
+                                                <input type="text" class="form-control" id="totalsales">
+
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="totalsales" class="form-label-bold">Net sales</label>
+                                                <input type="text" class="form-control" id="totalsales">
+
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="totalsales" class="form-label-bold">Gross sales</label>
+                                                <input type="text" class="form-control" id="totalsales" disabled>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="multiple-choice" data-target="lvfields">
+                                    <input id="lvtype" type="checkbox" name="sale-type" value="No">
+                                    <label for="lvtype">Low Value Sales (LV)</label>
+                                </div>
+                                <div class="panel panel-border-narrow js-hidden" id="lvfields">
+                                    <div class="grid-row">
+                                        <div class="column-two-thirds">
+                                            <div class="form-group">
+                                                <label for="totalsales" class="form-label-bold">Quantity</label>
+                                                <input type="text" class="form-control" id="totalsales">
+
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="totalsales" class="form-label-bold">Net sales</label>
+                                                <input type="text" class="form-control" id="totalsales">
+
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="totalsales" class="form-label-bold">Gross sales</label>
+                                                <input type="text" class="form-control" id="totalsales" disabled>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="multiple-choice" data-target="nasfields">
+                                    <input id="nastype" type="checkbox" name="sale-type" value="No">
+                                    <label for="nastype">New Active Substances (NAS)</label>
+                                </div>
+                                <div class="panel panel-border-narrow js-hidden" id="nasfields">
+                                    <div class="grid-row">
+                                        <div class="column-two-thirds">
+                                            <div class="form-group">
+                                                <label for="totalsales" class="form-label-bold">Quantity</label>
+                                                <input type="text" class="form-control" id="totalsales">
+
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="totalsales" class="form-label-bold">Net sales</label>
+                                                <input type="text" class="form-control" id="totalsales">
+
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="totalsales" class="form-label-bold">Gross sales</label>
+                                                <input type="text" class="form-control" id="totalsales" disabled>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </fieldset>
+                        </div>
+
+                </div>
+            </div>
+    </div>
+<div class="grid-row">
+
+    <div class="column-two-thirds">
+
+        <div class="form-group">
+            <a href="presentation-level-report-view" class="button">Save and continue</a>
+        </div>
+        <a href="#" rel="noopener noreferrer">Cancel</a>
+    </div>
+</div>
+{% endblock %}

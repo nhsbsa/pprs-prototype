@@ -1,0 +1,145 @@
+{% extends "base.html" %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+<div class="grid-row">
+  <div class="breadcrumbs">
+    <ol>
+      <li><a href="/">Home</a></li>
+      <li>
+        <a href="#">Search for a company</a>
+      </li>
+      <li>
+        <a href="#">Search for a product</a>
+      </li>
+      <li>
+        <a href="#">Search results</a>
+      </li>
+      <li>
+        <a href="#">
+          Do you want to register additional information?</a></li>
+      <li>Confirmation page</li>
+    </ol>
+  </div>
+</div>
+{% endblock %}
+{% block content %}
+<div class="grid-row">
+  <div class="column-full">
+    <h2 id="main-caption" class="caption-large">Link product to company</h2>
+    <h1 id="main-content" class="heading-large" style="margin-top: 0;">Confirmation page</h1>
+  </div>
+
+  <div class="column-full no-padding-left-right">
+    <div class="issueFormView">
+
+      <div class="column-full no-padding-left-right">
+        <div class="column-half no-padding-left-right">
+          <h2 id="name-label" class="heading-small issueviewHeaders">Presentation</h2>
+          <p id="productNameValue">Paracetamol</p>
+        </div>
+
+        <div class="column-half no-padding-left-right">
+          <h2 id="cdrSupplier-label" class="heading-small issueviewHeaders">CDR Supplier</h2>
+          <p id="cdrSupplierValue">Boots</p>
+        </div>
+      </div>
+
+      <div class="column-full no-padding-left-right">
+        <div class="column-half no-padding-left-right">
+          <h2 id="snomed-label" class="heading-small">SNOMED</h2>
+          <p id="snomedValue">00000001</p>
+        </div>
+
+        <div class="column-half no-padding-left-right">
+          <h2 id="packSizeHeader" class="heading-small">Pack Size</h2>
+          <p id="packSizeValue">16</p>
+        </div>
+      </div>
+
+      <div class="column-full no-padding-left-right">
+
+        <div class="column-half no-padding-left-right">
+          <h2 id="product-form-label" class="heading-small">Form</h2>
+          <p id="formValue">Tablet</p>
+        </div>
+
+        <div class="column-half no-padding-left-right">
+          <h2 id="companyHeader" class="heading-small">Company</h2>
+          <p id="companyValue">Company 1</p>
+        </div>
+      </div>
+
+      <div class="column-full no-padding-left-right">
+        <h2 id="legalCatHeader" class="heading-small">Legal Category</h2>
+        <p id="legalCatValue">POM</p>
+      </div>
+      <div class="column-full no-padding-left-right">
+        <div class="form-group">
+          <fieldset>
+            <legend>
+              <span class="form-label-bold" id="date-from-label">Date from</span>
+              <span class="form-hint" id="date-from-hint">For example, 27 3 2007</span>
+            </legend>
+
+            <div class="form-date">
+              <div class="form-group form-group-day">
+                <label class="form-label" for="date-from-day" id="date-from-day-label">Day</label>
+                <input class="form-control" id="date-from-day"/>
+              </div>
+              <div class="form-group form-group-month">
+                <label class="form-label" for="date-from-month"
+                       id="date-from-month-label">Month</label>
+                <input class="form-control" id="date-from-month" type="text"/>
+              </div>
+              <div class="form-group form-group-year">
+                <label class="form-label" for="date-from-year"
+                       id="date-from-year-label">Year</label>
+                <input class="form-control" id="date-from-year" type="text"/>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+      <div class="form-group">
+        <fieldset>
+          <legend>
+            <span class="form-label-bold" id="date-to-label">Date to</span>
+            <span class="form-hint" id="date-to-hint">
+              This is the last day of validity, for example, 27 3 2007
+            </span>
+          </legend>
+
+          <div class="form-date">
+            <div class="form-group form-group-day">
+              <label class="form-label" for="date-to-day" id="date-to-day-label">Day</label>
+              <input class="form-control" id="date-to-day" type="text"/>
+            </div>
+            <div class="form-group form-group-month">
+              <label class="form-label" for="date-to-month" id="date-to-month-label">Month</label>
+              <input class="form-control" id="date-to-month" name="date-to-month" type="text"/>
+            </div>
+            <div class="form-group form-group-year">
+              <label class="form-label" for="date-to-year" id="date-to-year-label">Year</label>
+              <input class="form-control" id="date-to-year" type="text"/>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+
+  <div class="column-full">
+    <div class="mt-20">
+        <a href="/link-another-product-choice" class="button" type="submit" id="saveLinkButton">Link product</a>
+    </div>
+  </div>
+
+  <div class="column-full">
+    <div class="mt-20">
+      <a id="cancel" href="#" class="heading-small">Cancel</a>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

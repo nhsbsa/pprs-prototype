@@ -1,0 +1,269 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Monthly drug collection
+{% endblock %}
+
+{% block content %}
+<div class="app-pane">
+    <div class="app-pane__side-bar">
+        <nav class="app-side-nav">
+            <h2 class="app-side-nav__heading">Period</h2>
+            <ul class="nhsuk-list app-side-nav__list">
+                <li class="app-side__link">
+                    <a class="app-side-nav__link" href="/quarterly-dropdown-table-horizontal">Quarterly drug
+                        collection</a>
+                </li>
+                <li class="app-side__link app-side-nav__item--current">
+                    <a class="app-side-nav__link" href="#">Monthly drug collection</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="app-pane__main-content">
+        <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+                <h1>
+                    Monthly drug collection
+                </h1>
+            </div>
+        </div>
+        <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full" style="margin-bottom: 20px;">
+                <label class="nhsuk-heading-s" for="filter" style="margin: 5px;">Filter</label>
+                <input class="nhsuk-input" id="filter" type="text"/>
+            </div>
+            <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-full">
+                    <div class="nhsuk-grid-column-one-half">
+                        <a class="nhsuk-button nhsuk-button--secondary" href="#">Search</a>
+                        <a class="nhsuk-button nhsuk-button--secondary" href="#">Reset filter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="nhsuk-width-container" style="margin-top: 20px;">
+    <div class="nhsuk-grid-row">
+        <div class="nhsuk-table-responsive">
+            <table id="myTable" role="table" style="white-space: normal;">
+                <thead class="nhsuk-table__head" role="rowgroup" style="white-space: normal;">
+                <tr role="row">
+                    <th class="" role="columnheader" scope="col">
+                        Medicine name
+                    </th>
+                    <th class="" role="columnheader" scope="col">
+                        Purchase volume (number of packs)
+                    </th>
+                    <th class="" role="columnheader" scope="col">
+                        Net purchase cost (£)
+                    </th>
+                    <th class="" role="columnheader" scope="col">
+                        Sales volume (number of packs)
+                    </th>
+                    <th class="" role="columnheader" scope="col">
+                        Net sales value (£)
+                    </th>
+                    <th class="" role="columnheader" scope="col">
+                        Comments on price changes
+                    </th>
+                    <th class="" role="columnheader" scope="col">
+                        Average purchase price (£)
+                    </th>
+                    <th class="" role="columnheader" scope="col">
+                        Average sales price (£)
+                    </th>
+                    <th class="" role="columnheader" scope="col">
+                        Action
+                    </th>
+                </tr>
+                </thead>
+                <tbody class="nhsuk-table__body">
+                <tr class="nhsuk-table__row" role="row">
+                    <td class="nhsuk-table__cell" role="cell">Paracetamol</td>
+                    <td class="nhsuk-table__cell" role="cell">2</td>
+                    <td class="nhsuk-table__cell" role="cell">1</td>
+                    <td class="nhsuk-table__cell" role="cell">1</td>
+                    <td class="nhsuk-table__cell" role="cell">50</td>
+                    <td class="nhsuk-table__cell" role="cell">Commercial decision</td>
+                    <td class="nhsuk-table__cell" role="cell">0.50</td>
+                    <td class="nhsuk-table__cell" role="cell">50.00</td>
+                    <td class="nhsuk-table__cell" role="cell">
+                        <button class="button-looks-like-link" onclick="deleteRow(this)">Delete</button>
+                    </td>
+                </tr>
+                <tr class="nhsuk-table__row" role="row">
+                    <td class="nhsuk-table__cell" role="cell">Ibuprofen</td>
+                    <td class="nhsuk-table__cell" role="cell">3</td>
+                    <td class="nhsuk-table__cell" role="cell">9</td>
+                    <td class="nhsuk-table__cell" role="cell">2</td>
+                    <td class="nhsuk-table__cell" role="cell">8</td>
+                    <td class="nhsuk-table__cell" role="cell">Data corrected</td>
+                    <td class="nhsuk-table__cell" role="cell">3.00</td>
+                    <td class="nhsuk-table__cell" role="cell">4.00</td>
+                    <td class="nhsuk-table__cell" role="cell">
+                        <button class="button-looks-like-link" onclick="deleteRow(this)">Delete</button>
+                    </td>
+                </tr>
+                <tr class="nhsuk-table__row" role="row">
+                    <td class="nhsuk-table__cell" role="cell">Ibuprofen</td>
+                    <td class="nhsuk-table__cell" role="cell">3</td>
+                    <td class="nhsuk-table__cell" role="cell">9</td>
+                    <td class="nhsuk-table__cell" role="cell">2</td>
+                    <td class="nhsuk-table__cell" role="cell">8</td>
+                    <td class="nhsuk-table__cell" role="cell">Data corrected</td>
+                    <td class="nhsuk-table__cell" role="cell">3.00</td>
+                    <td class="nhsuk-table__cell" role="cell">4.00</td>
+                    <td class="nhsuk-table__cell" role="cell">
+                        <button class="button-looks-like-link" onclick="deleteRow(this)">Delete</button>
+                    </td>
+                </tr>
+                <tr class="nhsuk-table__row" role="row">
+                    <td class="nhsuk-table__cell" role="cell">Ibuprofen</td>
+                    <td class="nhsuk-table__cell" role="cell">3</td>
+                    <td class="nhsuk-table__cell" role="cell">9</td>
+                    <td class="nhsuk-table__cell" role="cell">2</td>
+                    <td class="nhsuk-table__cell" role="cell">8</td>
+                    <td class="nhsuk-table__cell" role="cell">Data corrected</td>
+                    <td class="nhsuk-table__cell" role="cell">3.00</td>
+                    <td class="nhsuk-table__cell" role="cell">4.00</td>
+                    <td class="nhsuk-table__cell" role="cell">
+                        <button class="button-looks-like-link" onclick="deleteRow(this)">Delete</button>
+                    </td>
+                </tr>
+                <tr class="nhsuk-table__row" role="row">
+                    <td class="nhsuk-table__cell" role="cell">Ibuprofen</td>
+                    <td class="nhsuk-table__cell" role="cell">3</td>
+                    <td class="nhsuk-table__cell" role="cell">9</td>
+                    <td class="nhsuk-table__cell" role="cell">2</td>
+                    <td class="nhsuk-table__cell" role="cell">8</td>
+                    <td class="nhsuk-table__cell" role="cell">Data corrected</td>
+                    <td class="nhsuk-table__cell" role="cell">3.00</td>
+                    <td class="nhsuk-table__cell" role="cell">4.00</td>
+                    <td class="nhsuk-table__cell" role="cell">
+                        <button class="button-looks-like-link" onclick="deleteRow(this)">Delete</button>
+                    </td>
+                </tr>
+                <tr class="nhsuk-table__row" role="row">
+                    <td class="nhsuk-table__cell" role="cell">Ibuprofen</td>
+                    <td class="nhsuk-table__cell" role="cell">3</td>
+                    <td class="nhsuk-table__cell" role="cell">9</td>
+                    <td class="nhsuk-table__cell" role="cell">2</td>
+                    <td class="nhsuk-table__cell" role="cell">8</td>
+                    <td class="nhsuk-table__cell" role="cell">Data corrected</td>
+                    <td class="nhsuk-table__cell" role="cell">3.00</td>
+                    <td class="nhsuk-table__cell" role="cell">4.00</td>
+                    <td class="nhsuk-table__cell" role="cell">
+                        <button class="button-looks-like-link" onclick="deleteRow(this)">Delete</button>
+                    </td>
+                </tr>
+                <tr class="nhsuk-table__row" role="row">
+                    <td class="nhsuk-table__cell" role="cell">Ibuprofen</td>
+                    <td class="nhsuk-table__cell" role="cell">3</td>
+                    <td class="nhsuk-table__cell" role="cell">9</td>
+                    <td class="nhsuk-table__cell" role="cell">2</td>
+                    <td class="nhsuk-table__cell" role="cell">8</td>
+                    <td class="nhsuk-table__cell" role="cell">Data corrected</td>
+                    <td class="nhsuk-table__cell" role="cell">3.00</td>
+                    <td class="nhsuk-table__cell" role="cell">4.00</td>
+                    <td class="nhsuk-table__cell" role="cell">
+                        <button class="button-looks-like-link" onclick="deleteRow(this)">Delete</button>
+                    </td>
+                </tr>
+                <tr class="nhsuk-table__row" role="row">
+                    <td class="nhsuk-table__cell" role="cell">Ibuprofen</td>
+                    <td class="nhsuk-table__cell" role="cell">3</td>
+                    <td class="nhsuk-table__cell" role="cell">9</td>
+                    <td class="nhsuk-table__cell" role="cell">2</td>
+                    <td class="nhsuk-table__cell" role="cell">8</td>
+                    <td class="nhsuk-table__cell" role="cell">Data corrected</td>
+                    <td class="nhsuk-table__cell" role="cell">3.00</td>
+                    <td class="nhsuk-table__cell" role="cell">4.00</td>
+                    <td class="nhsuk-table__cell" role="cell">
+                        <button class="button-looks-like-link" onclick="deleteRow(this)">Delete</button>
+                    </td>
+                </tr>
+                <tr class="nhsuk-table__row" role="row">
+                    <td class="nhsuk-table__cell" role="cell">
+                        <input id="medicine-name" list="medicines" style="width: 15ex"/>
+                        <label class="nhsuk-u-visually-hidden" for="medicine-name">Medicine name</label>
+                        <datalist id="medicines">
+                            <option>Paracetamol</option>
+                            <option>Ibuprofen</option>
+                            <option>Really really really long medicine name</option>
+                            <option selected="selected">Calpol</option>
+                        </datalist>
+                    </td>
+                    <td class="nhsuk-table__cell" role="cell">
+                        <input class="nhsuk-input--width-4" id="purchase-volume" type="text"/>
+                        <label class="nhsuk-u-visually-hidden" for="purchase-volume">Purchase volume</label>
+                    </td>
+                    <td class="nhsuk-table__cell" role="cell">
+                        <input class="nhsuk-input--width-4" id="net-purchase-cost" type="text"/>
+                        <label class="nhsuk-u-visually-hidden" for="net-purchase-cost">Net purchase cost</label>
+                    </td>
+                    <td class="nhsuk-table__cell" role="cell">
+                        <input class="nhsuk-input--width-4" id="sales-volume" type="text"/>
+                        <label class="nhsuk-u-visually-hidden" for="sales-volume">Sales volume</label>
+                    </td>
+                    <td class="nhsuk-table__cell" role="cell">
+                        <input class="nhsuk-input--width-4" id="net-sales-value" type="text"/>
+                        <label class="nhsuk-u-visually-hidden" for="net-sales-value">Net sales value</label>
+                    </td>
+                    <td class="nhsuk-table__cell" role="cell">
+                        <select id="comments-on-price-changes" style="width: 19ex">
+                            <option disabled selected>Select supplier</option>
+                            <option>Change of supplier</option>
+                            <option>Commercial decision</option>
+                            <option>Concessionary price product</option>
+                            <option>Customer mix</option>
+                            <option>Data corrected</option>
+                            <option>Not regular business</option>
+                        </select>
+                        <label class="nhsuk-u-visually-hidden" for="comments-on-price-changes">Comments</label>
+                    </td>
+                    <td class="nhsuk-table__cell" role="cell">
+                        <input class="nhsuk-input--width-4" disabled id="average-purchase-price" type="text"/>
+                        <label class="nhsuk-u-visually-hidden" for="average-purchase-price">Average purchase
+                            price</label>
+                    </td>
+                    <td class="nhsuk-table__cell" role="cell">
+                        <input class="nhsuk-input--width-4" disabled id="average-sales-price" type="text"/>
+                        <label class="nhsuk-u-visually-hidden" for="average-sales-price">Average sales price</label>
+                    </td>
+                    <td>
+                        <button class="button-looks-like-link" id="addLink" onclick="addRow()">Submit</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div>
+    <nav role="navigation">
+        <div class="nhsuk_body pagination__summary">Showing 1 - 10 of 24 results</div>
+        <ul class="pagination">
+            <li class="pagination__item" style="margin-left:-10px;">
+                <span aria-hidden="true" role="presentation">&laquo;</span> Previous
+            </li>
+            <li class="pagination__item">
+                <p class="pagination__link nhsuk-u-font-weight-bold">1</p></li>
+            <li class="pagination__item">
+                <a class="pagination__link" href="#">2</a>
+            </li>
+            <li class="pagination__item">
+                <a class="pagination__link" href="#">3</a>
+            </li>
+            <li class="pagination__item"><a class="pagination__link" href="#" id="nextButton">Next <span
+                    aria-hidden="true" role="presentation">&raquo;</span></a></li>
+        </ul>
+    </nav>
+</div>
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+        <a class="nhsuk-button" href="/quarterly-monthly-confirm">Submit table</a>
+    </div>
+</div>
+{% endblock %}

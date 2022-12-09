@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="grid-row">
+    <div class="column-two-thirds">
+        <a href="/" class="link-back">Back</a>
+        <h1 class="heading-large">
+            <span class="heading-secondary">Spinraza (5ml) solution for injection 12mg</span>
+            Product information
+        </h1>
+    </div>
+</div>
+
+<div class="grid-row">
+    <div class="column-two-thirds">
+
+        <div class="form-group">
+            <label for="max-price" class="heading-small">Max price</label>
+            <span class="form-hint">Price in pounds (&pound;)</span>
+            <input type="text" class="form-control" id="max-price" />
+        </div>
+
+        <div class="form-group">
+            <fieldset>
+                <legend>
+                    <span class="form-label-bold">Date from</span>
+                    <span class="form-hint" id="dob-hint">For example, 11 07 1987</span>
+                </legend>
+                <div class="form-date">
+                    <div class="form-group form-group-day">
+                        <label class="form-label" for="date-from-day">Day</label>
+                        <input class="form-control" id="date-from-day" name="date-from-day" type="text" pattern="[0-9]*" aria-describedby="date-from-day">
+                    </div>
+                    <div class="form-group form-group-month">
+                        <label class="form-label" for="date-from-month">Month</label>
+                        <input class="form-control" id="date-from-month" name="date-from-month" type="text" pattern="[0-9]*">
+                    </div>
+                    <div class="form-group form-group-year">
+                        <label class="form-label" for="date-from-year">Year</label>
+                        <input class="form-control" id="date-from-year" name="date-from-year" type="text" pattern="[0-9]*" min="0">
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="form-group">
+            <fieldset>
+                <legend>
+                    <span class="form-label-bold">Date to</span>
+                    <span class="form-hint" id="dob-hint">For example, 11 07 1987</span>
+                </legend>
+                <div class="form-date">
+                    <div class="form-group form-group-day">
+                        <label class="form-label" for="date-to-day">Day</label>
+                        <input class="form-control" id="date-to-day" name="date-to-day" type="text" pattern="[0-9]*" aria-describedby="date-to-day">
+                    </div>
+                    <div class="form-group form-group-month">
+                        <label class="form-label" for="date-to-month">Month</label>
+                        <input class="form-control" id="date-to-month" name="date-to-month" type="text" pattern="[0-9]*">
+                    </div>
+                    <div class="form-group form-group-year">
+                        <label class="form-label" for="date-to-year">Year</label>
+                        <input class="form-control" id="date-to-year" name="date-to-year" type="text" pattern="[0-9]*">
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+        <div class="form-group">
+            <fieldset class="inline">
+                <legend>
+                    <span class="form-label-bold">
+                        Publish on maximum price list?
+                    </span>
+                </legend>
+                <div class="multiple-choice">
+                    <input id="radio-inline-yes" type="radio" name="radio-inline-group" value="Yes">
+                    <label for="radio-inline-yes">Yes</label>
+                </div>
+                <div class="multiple-choice">
+                    <input id="radio-inline-no" type="radio" name="radio-inline-group" value="No">
+                    <label for="radio-inline-no">No</label>
+                </div>
+            </fieldset>
+        </div>
+        <div class="form-group">
+            <label for="comments" class="form-label-bold">Comments</label>
+            <textarea class="form-control" rows="5" maxlength="255" id="comments"></textarea>
+        </div>
+        <div class="form-group">
+            <a href="/register-prototype-NAS" class="button" role="button" id="next">Next</a>
+        </div>
+        <div class="form-group">
+            <a href="/" class="heading-small" id="cancel">Cancel</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

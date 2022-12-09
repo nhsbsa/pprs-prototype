@@ -1,0 +1,146 @@
+{% extends "base.html" %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+<div class="grid-row">
+    <div class="column-two-thirds">
+        <div class="breadcrumbs">
+            <ol>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="#">Prototype f2a</a>
+                </li>
+                <li>
+                    <a href="#">Manage products</a>
+                </li>
+                <li>Product XX</li>
+            </ol>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block content %}
+
+<div class="grid-row">
+    <div class="column-two-thirds">
+        <h1 class="heading-large">
+            <span class="heading-secondary">Yondelis 0.25mg powder for concentrate for solution for infusion vials</span>
+            Summary of totals
+        </h1>
+    </div>
+</div>
+<div class="grid-row">
+
+    <div class="column-two-thirds">
+        <div class="panel panel-border-wide" id="contact-by-text">
+            <div class="grid-row">
+                <div class="column-third">
+                    <h2 class="heading-small">Company</h2>
+                    <p>Test Parmacy</p>
+
+                </div>
+                <div class="column-third">
+                    <h2 class="heading-small">Year</h2>
+                    <p>2020</p>
+
+                </div>
+                <div class="column-third">
+
+                    <h2 class="heading-small">Reference</h2>
+                    <p>12345678</p>
+
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </div>
+</div>
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <h2 class="heading-medium">Total sales of scheme products</h2>
+        </div>
+        <div class="column-full">
+    
+            <div class="grid-row">
+    
+                <div class="column-full">
+                    <h3 class="heading-medium">Total sales of Primary Care products</h3>
+                    <dl class="summary-list mt-tab">
+                        <div class="summary-list__row">
+                            <dt class="summary-list__key">Total Primary Care Net sales</dt>
+                            <dd class="summary-list__value" id="firstName">£250</dd>
+                        </div>
+                        <div class="summary-list__row">
+                            <dt class="summary-list__key">Total Primary Care Gross sales</dt>
+                            <dd class="summary-list__value" id="dob">£250</dd>
+                        </div>
+                    </dl>
+    
+    
+    
+                </div>
+                <div class="column-full">
+                    <div class="heading-medium">Total sales of Homecare Products</div>
+                    <dl class="summary-list mt-tab">
+                        <div class="summary-list__row">
+                            <dt class="summary-list__key">Total homecare Net sales</dt>
+                            <dd class="summary-list__value" id="firstName">£250</dd>
+                        </div>
+                        <div class="summary-list__row">
+                            <dt class="summary-list__key">Total homecare Gross sales</dt>
+                            <dd class="summary-list__value" id="dob">£250</dd>
+                        </div>
+                    </dl>
+    
+                </div>
+            </div>
+    
+            <div class="grid-row">
+                <div class="column-full">
+                    <h3 class="heading-medium">Grand total all sales</h3>
+                    <div class="grid-row">
+            
+                        <div class="column-full">
+                            <dl class="summary-list mt-tab">
+                                <div class="summary-list__row">
+                                    <dt class="summary-list__key">Grand total net sales</dt>
+                                    <dd class="summary-list__value" id="firstName">£250</dd>
+                                </div>
+                                <div class="summary-list__row">
+                                    <dt class="summary-list__key">Grand total gross sales</dt>
+                                    <dd class="summary-list__value" id="dob">£250</dd>
+                                </div>
+                            </dl>
+            
+            
+                        </div>
+                    </div>
+            
+            
+                </div>
+            
+            </div>
+        </div>
+    
+    </div>
+
+<div class="grid-row">
+
+    <div class="column-two-thirds">
+
+        <div class="form-group">
+            <form action="presentation-level-report-done">
+                <button class="button" type="submit">Save and continue</button>
+            </form>
+
+        </div>
+        <a href="#" rel="noopener noreferrer">Cancel</a>
+    </div>
+</div>
+{% endblock %}
