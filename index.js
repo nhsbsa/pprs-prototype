@@ -141,9 +141,14 @@ app.get('/quarterly-new-table-horizontal', (req, res) => { res.render('quarterly
 app.get('/quarterly-multiple-screens', (req, res) => { res.render('quarterly-multiple-screens') });
 app.get('/quarterly-add-screen', (req, res) => { res.render('quarterly-add-screen') });
 app.get('/quarterly-edit-screen', (req, res) => { res.render('quarterly-edit-screen') });
-app.get('/quarterly-expander-list', (req, res) => { res.render('quarterly-expander-list') });
+app.get('/quarterly-expander-list', (req, res) => { res.render('quarterly-expander-list') })
 
+// PCP
 
+app.get('/pcp-prototype/homepage', (req, res) => { res.render('pcp-prototype/homepage') });
+app.get('/pcp-prototype/quarterly-multiple-screens', (req, res) => { res.render('quarterly-multiple-screens') });
+app.get('/pcp-prototype/quarterly-expander-list', (req, res) => { res.render('quarterly-expander-list') })
+app.get('/pcp-prototype/request-list', (req, res) => { res.render('pcp-prototype/request-list') });
 
 /**
  * Server Activation
