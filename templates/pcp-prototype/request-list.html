@@ -4,299 +4,75 @@
 Quarterly collection dropdown - expander list
 {% endblock %}
 
+{% block navContent %}
+
+        <ol class="nhsuk-breadcrumb__list">
+            <li class="nhsuk-breadcrumb__item">
+                <a class="nhsuk-breadcrumb__link" href="/pcp-prototype/homepage">Home</a>
+            </li>
+        </ol>
+        <p class="nhsuk-breadcrumb__back">
+            <a class="nhsuk-breadcrumb__backlink" href="/pcp-prototype/homepage">
+                <span class="nhsuk-u-visually-hidden">Home</span>
+                Home
+            </a>
+        </p>
+
+{% endblock %}
+
 {% block content %}
-<!--<div class="nhsuk-grid-row">-->
-<!--    <label for="expanderToggle">Expander/Accordion toggle</label>-->
-<!--    <input type="checkbox" id="expanderToggle" />-->
-<!--    <div class="nhsuk-grid-column-full">-->
-        <h1>
-            Request list
-        </h1>
 
 
-<ul class="nhsuk-grid-row">
+<div class="nhsuk-width-container ">
+    <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-full">
+            <h1>
+                Request list
+            </h1>
 
-    <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
 
-        <div class="nhsuk-card nhsuk-card--clickable">
-            <div class="nhsuk-card__content">
-                <h5 class="nhsuk-card__heading nhsuk-heading-xs">
-                    <a class="nhsuk-card__link" href="/pcp-prototype/request-list">Create request</a>
-                </h5>
+            <ul class="nhsuk-grid-row nhsuk-card-group">
 
-            </div>
+                <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+                    <div class="nhsuk-card nhsuk-card--clickable">
+                        <div class="nhsuk-card__content">
+                            <h5 class="nhsuk-card__heading nhsuk-heading-xs">
+                                <a class="nhsuk-card__link" href="/pcp-prototype/request-list">Create request</a>
+                            </h5>
+
+                        </div>
+                    </div>
+
+                </li>
+                <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+                    <div class="nhsuk-card nhsuk-card--clickable">
+                        <div class="nhsuk-card__content">
+                            <h5 class="nhsuk-card__heading nhsuk-heading-xs">
+                                <a class="nhsuk-card__link" href="#">On going requests</a>
+                            </h5>
+
+                        </div>
+                    </div>
+
+                </li>
+                <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+                    <div class="nhsuk-card nhsuk-card--clickable">
+                        <div class="nhsuk-card__content">
+                            <h5 class="nhsuk-card__heading nhsuk-heading-xs">
+                                <a class="nhsuk-card__link" href="/pcp-prototype/historical-requests">Historical requests</a>
+                            </h5>
+
+                        </div>
+                    </div>
+
+                </li>
+
+            </ul>
+
         </div>
-
-    </li>
-    <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-
-        <div class="nhsuk-card nhsuk-card--clickable">
-            <div class="nhsuk-card__content">
-                <h5 class="nhsuk-card__heading nhsuk-heading-xs">
-                    <a class="nhsuk-card__link" href="#">On going requests</a>
-                </h5>
-
-            </div>
-        </div>
-
-    </li>
-    <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-
-        <div class="nhsuk-card nhsuk-card--clickable">
-            <div class="nhsuk-card__content">
-                <h5 class="nhsuk-card__heading nhsuk-heading-xs">
-                    <a class="nhsuk-card__link" href="#">Historical requests</a>
-                </h5>
-
-            </div>
-        </div>
-
-    </li>
-
-</ul>
-<!--    </div>-->
-
-<!--    <div class="nhsuk-grid-column-full filterResults">-->
-<!--        <div class="nhsuk-grid-column-full" style="margin-bottom: 20px;">-->
-<!--            <label for="filter" class="nhsuk-heading-s" style="margin: 5px;">Filter</label>-->
-<!--            <input id="filter" class="nhsuk-u-width-full" type="text"/>-->
-<!--        </div>-->
-
-<!--        <div class="nhsuk-grid-column-full">-->
-<!--            <div class="nhsuk-grid-column-one-half">-->
-<!--                <a href="#" class="nhsuk-button">Search</a>-->
-<!--            </div>-->
-
-<!--            <div class="nhsuk-grid-column-one-half">-->
-<!--                <a href="#" class="nhsuk-button nhsuk-button&#45;&#45;secondary" style="float: right;">Reset filter</a>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-
-<!--    <div class="nhsuk-grid-column-full">-->
-<!--        <details class="nhsuk-details nhsuk-expander">-->
-<!--            <summary class="nhsuk-details__summary">-->
-<!--                <span class="nhsuk-details__summary-text">-->
-<!--                    Paracetamol-->
-<!--                </span>-->
-<!--            </summary>-->
-<!--            <div class="nhsuk-details__text">-->
-<!--                <dl class="nhsuk-summary-list">-->
-<!--                    <div class="nhsuk-summary-list__row">-->
-<!--                        <dt class="nhsuk-summary-list__key">-->
-<!--                            Medicine name-->
-<!--                        </dt>-->
-<!--                        <dd class="nhsuk-summary-list__value">-->
-<!--                            Paracetamol-->
-<!--                        </dd>-->
-<!--                    </div>-->
-
-<!--                    <div class="nhsuk-summary-list__row">-->
-<!--                        <dt class="nhsuk-summary-list__key">-->
-<!--                            Purchase volume (number of packs)-->
-<!--                        </dt>-->
-<!--                        <dd class="nhsuk-summary-list__value">-->
-<!--                            24-->
-<!--                        </dd>-->
-<!--                    </div>-->
-
-<!--                    <div class="nhsuk-summary-list__row">-->
-<!--                        <dt class="nhsuk-summary-list__key">-->
-<!--                            Net purchase cost (£)-->
-<!--                        </dt>-->
-<!--                        <dd class="nhsuk-summary-list__value">-->
-<!--                            12-->
-<!--                        </dd>-->
-<!--                    </div>-->
-
-<!--                    <div class="nhsuk-summary-list__row">-->
-<!--                        <dt class="nhsuk-summary-list__key">-->
-<!--                            Sales volume (number of packs)-->
-<!--                        </dt>-->
-<!--                        <dd class="nhsuk-summary-list__value">-->
-<!--                            4-->
-<!--                        </dd>-->
-<!--                    </div>-->
-
-<!--                    <div class="nhsuk-summary-list__row">-->
-<!--                        <dt class="nhsuk-summary-list__key">-->
-<!--                            Net sales value (£)-->
-<!--                        </dt>-->
-<!--                        <dd class="nhsuk-summary-list__value">-->
-<!--                            200-->
-<!--                        </dd>-->
-<!--                    </div>-->
-
-<!--                    <div class="nhsuk-summary-list__row">-->
-<!--                        <dt class="nhsuk-summary-list__key">-->
-<!--                            Additional comments-->
-<!--                        </dt>-->
-<!--                        <dd class="nhsuk-summary-list__value">-->
-<!--                            Test-->
-<!--                        </dd>-->
-<!--                    </div>-->
-
-<!--                    <div class="nhsuk-summary-list__row">-->
-<!--                        <dt class="nhsuk-summary-list__key">-->
-<!--                            Comments on price changes-->
-<!--                        </dt>-->
-<!--                        <dd class="nhsuk-summary-list__value">-->
-<!--                            Change of supplier-->
-<!--                        </dd>-->
-<!--                    </div>-->
-
-<!--                    <div class="nhsuk-summary-list__row">-->
-<!--                        <dt class="nhsuk-summary-list__key">-->
-<!--                            Average purchase price (£)-->
-<!--                        </dt>-->
-<!--                        <dd class="nhsuk-summary-list__value">-->
-<!--                            0.5-->
-<!--                        </dd>-->
-<!--                    </div>-->
-
-<!--                    <div class="nhsuk-summary-list__row">-->
-<!--                        <dt class="nhsuk-summary-list__key">-->
-<!--                            Average sales price (£)-->
-<!--                        </dt>-->
-<!--                        <dd class="nhsuk-summary-list__value">-->
-<!--                            50-->
-<!--                        </dd>-->
-<!--                    </div>-->
-
-<!--                    <div class="nhsuk-summary-list__row">-->
-<!--                        <dt class="nhsuk-summary-list__key">-->
-<!--                            Edit-->
-<!--                        </dt>-->
-<!--                        <dd class="nhsuk-summary-list__value">-->
-<!--                            <a href="/quarterly-edit-screen">Edit</a>-->
-<!--                        </dd>-->
-<!--                    </div>-->
-
-<!--                    <div class="nhsuk-summary-list__row">-->
-<!--                        <dt class="nhsuk-summary-list__key">-->
-<!--                            Delete-->
-<!--                        </dt>-->
-<!--                        <dd class="nhsuk-summary-list__value">-->
-<!--                            <a href="#">Delete</a>-->
-<!--                        </dd>-->
-<!--                    </div>-->
-<!--                </dl>-->
-<!--            </div>-->
-<!--        </details>-->
-
-<!--        <details class="nhsuk-details nhsuk-expander">-->
-<!--            <summary class="nhsuk-details__summary">-->
-<!--                <span class="nhsuk-details__summary-text">-->
-<!--                    Ibuprofen-->
-<!--                </span>-->
-<!--            </summary>-->
-<!--            <div class="nhsuk-details__text">-->
-<!--                <dl class="nhsuk-summary-list">-->
-<!--                    <div class="nhsuk-summary-list__row">-->
-<!--                        <dt class="nhsuk-summary-list__key">-->
-<!--                            Medicine name-->
-<!--                        </dt>-->
-<!--                        <dd class="nhsuk-summary-list__value">-->
-<!--                            Ibuprofen-->
-<!--                        </dd>-->
-<!--                    </div>-->
-
-<!--                    <div class="nhsuk-summary-list__row">-->
-<!--                        <dt class="nhsuk-summary-list__key">-->
-<!--                            Purchase volume (number of packs)-->
-<!--                        </dt>-->
-<!--                        <dd class="nhsuk-summary-list__value">-->
-<!--                            8-->
-<!--                        </dd>-->
-<!--                    </div>-->
-
-<!--                    <div class="nhsuk-summary-list__row">-->
-<!--                        <dt class="nhsuk-summary-list__key">-->
-<!--                            Net purchase cost (£)-->
-<!--                        </dt>-->
-<!--                        <dd class="nhsuk-summary-list__value">-->
-<!--                            160-->
-<!--                        </dd>-->
-<!--                    </div>-->
-
-<!--                    <div class="nhsuk-summary-list__row">-->
-<!--                        <dt class="nhsuk-summary-list__key">-->
-<!--                            Sales volume (number of packs)-->
-<!--                        </dt>-->
-<!--                        <dd class="nhsuk-summary-list__value">-->
-<!--                            100-->
-<!--                        </dd>-->
-<!--                    </div>-->
-
-<!--                    <div class="nhsuk-summary-list__row">-->
-<!--                        <dt class="nhsuk-summary-list__key">-->
-<!--                            Net sales value (£)-->
-<!--                        </dt>-->
-<!--                        <dd class="nhsuk-summary-list__value">-->
-<!--                            100-->
-<!--                        </dd>-->
-<!--                    </div>-->
-
-<!--                    <div class="nhsuk-summary-list__row">-->
-<!--                        <dt class="nhsuk-summary-list__key">-->
-<!--                            Additional comments-->
-<!--                        </dt>-->
-<!--                        <dd class="nhsuk-summary-list__value">-->
-<!--                            Test 1-->
-<!--                        </dd>-->
-<!--                    </div>-->
-
-<!--                    <div class="nhsuk-summary-list__row">-->
-<!--                        <dt class="nhsuk-summary-list__key">-->
-<!--                            Comments on price changes-->
-<!--                        </dt>-->
-<!--                        <dd class="nhsuk-summary-list__value">-->
-<!--                            Concessionary price product-->
-<!--                        </dd>-->
-<!--                    </div>-->
-
-<!--                    <div class="nhsuk-summary-list__row">-->
-<!--                        <dt class="nhsuk-summary-list__key">-->
-<!--                            Average purchase price (£)-->
-<!--                        </dt>-->
-<!--                        <dd class="nhsuk-summary-list__value">-->
-<!--                            20-->
-<!--                        </dd>-->
-<!--                    </div>-->
-
-<!--                    <div class="nhsuk-summary-list__row">-->
-<!--                        <dt class="nhsuk-summary-list__key">-->
-<!--                            Average sales price (£)-->
-<!--                        </dt>-->
-<!--                        <dd class="nhsuk-summary-list__value">-->
-<!--                            1-->
-<!--                        </dd>-->
-<!--                    </div>-->
-
-<!--                    <div class="nhsuk-summary-list__row">-->
-<!--                        <dt class="nhsuk-summary-list__key">-->
-<!--                            Edit-->
-<!--                        </dt>-->
-<!--                        <dd class="nhsuk-summary-list__value">-->
-<!--                            <a href="/quarterly-edit-screen">Edit</a>-->
-<!--                        </dd>-->
-<!--                    </div>-->
-
-<!--                    <div class="nhsuk-summary-list__row">-->
-<!--                        <dt class="nhsuk-summary-list__key">-->
-<!--                            Delete-->
-<!--                        </dt>-->
-<!--                        <dd class="nhsuk-summary-list__value">-->
-<!--                            <a href="#">Delete</a>-->
-<!--                        </dd>-->
-<!--                    </div>-->
-<!--                </dl>-->
-<!--            </div>-->
-<!--        </details>-->
-<!--    </div>-->
-
-<!--    <div class="nhsuk-grid-column-full nhsuk-u-margin-top-6">-->
-<!--        <a class="nhsuk-button nhsuk-button&#45;&#45;secondary" href="/quarterly-add-screen">Add new record</a>-->
-<!--    </div>-->
-<!--</div>-->
+    </div>
+</div>
 {% endblock %}

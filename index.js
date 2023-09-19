@@ -149,7 +149,10 @@ app.get('/pcp-prototype/homepage', (req, res) => { res.render('pcp-prototype/hom
 app.get('/pcp-prototype/quarterly-multiple-screens', (req, res) => { res.render('quarterly-multiple-screens') });
 app.get('/pcp-prototype/quarterly-expander-list', (req, res) => { res.render('quarterly-expander-list') })
 app.get('/pcp-prototype/request-list', (req, res) => { res.render('pcp-prototype/request-list') });
-
+app.get('/pcp-prototype/historical-requests', (req, res) => { res.render('pcp-prototype/historical-requests') });
+app.get('/pcp-prototype/historical-requests-months', (req, res) => { res.render('pcp-prototype/historical-requests-months') });
+app.get('/pcp-prototype/option-2-historical', (req, res) => { res.render('pcp-prototype/option-2-historical') });
+app.get('/pcp-prototype/historical-result', (req, res) => { res.render('pcp-prototype/historical-result') });
 /**
  * Server Activation
  */

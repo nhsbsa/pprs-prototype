@@ -45,6 +45,14 @@
 
       {% block beforeContent %}{% endblock %}
 
+{% block navigationItems %}
+    <nav class="nhsuk-breadcrumb " aria-label="Breadcrumb">
+      <div class="nhsuk-width-container nhsuk-u-margin-top-3 ">
+        {% block navContent %}{% endblock %}
+      </div>
+    </nav>
+    {% endblock %}
+
       {% block main %}
         <div class="nhsuk-width-container {{ containerClasses }}">
           <main class="nhsuk-main-wrapper {{ mainClasses }}" id="maincontent" role="main">
