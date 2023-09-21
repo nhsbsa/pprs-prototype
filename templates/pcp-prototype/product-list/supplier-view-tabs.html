@@ -1,0 +1,201 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Quarterly collection dropdown - expander list
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-back-link">
+
+    <a class="nhsuk-back-link__link nhsuk-u-margin-bottom-5" href="main-suppliers">
+        <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+            <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+        </svg>
+        Go back to main suppliers</a>
+</div>
+
+<!--<div class="nhsuk-grid-row">-->
+<!--    <label for="expanderToggle">Expander/Accordion toggle</label>-->
+<!--    <input type="checkbox" id="expanderToggle" />-->
+<!--    <div class="nhsuk-grid-column-full">-->
+        <h1><span class="nhsuk-caption-l">
+     2023 - 1st request
+     <span class="nhsuk-u-visually-hidden"> for </span>
+   </span>AAH Pharmaceuticals Ltd</h1>
+
+<div class="nhsuk-tabs" data-module="nhsuk-tabs">
+    <h2 class="nhsuk-tabs__title">Contents</h2>
+    <ul class="nhsuk-tabs__list">
+        <li class="nhsuk-tabs__list-item nhsuk-tabs__lt-item--selected"
+            id="heading-tab-submission"
+            role="presentation"><a class="nhsuk-tabs__tab" href="#tab-submission" role="tab"
+                                   id="submission-panel" aria-selected="true">Template</a>
+        </li>
+        <li class="nhsuk-tabs__list-item" id="heading-tab-messages" role="presentation"><a
+                class="nhsuk-tabs__tab" href="#tab-messages" role="tab" id="message-panel">Contact details</a></li>
+        <li class="nhsuk-tabs__list-item" id="heading-tab-summary" role="presentation"><a
+                class="nhsuk-tabs__tab" href="#tab-summary" role="tab" id="summary-panel">Supplier specific detail</a>
+        </li>
+        <li class="nhsuk-tabs__list-item" id="heading-tab-uploads" role="presentation"><a
+                class="nhsuk-tabs__tab" href="#tab-uploads" role="tab" id="uploads-panel">Correspondence</a>
+        </li>
+    </ul>
+
+    <div class="nhsuk-tabs__panel" id="tab-submission" role="tabpanel" tabindex="-1"
+         aria-labelledby="tab1">
+        <div class="nhsuk-tabs-panel-inner">
+            <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-two-thirds">
+                    <h2>Template</h2>
+                    <p>The main supplier template is ready to download. This needs to be sent, by email, to the supplier.</p>
+
+                    <a class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-bottom-9" href="#">Download main supplier template</a>
+                </div>
+
+                <!--                  <div class="" th:unless="submissionPage.getSubmissionTab()">-->
+                <!--                      <h2>Error displaying submission details</h2>-->
+                <!--                  </div>-->
+            </div>
+        </div>
+    </div>
+
+    <div class="nhsuk-tabs__panel" id="tab-messages" role="tabpanel" tabindex="-1"
+         aria-labelledby="tab2">
+        <div class="nhsuk-tabs-panel-inner">
+            <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-full">
+                    <h2>Contact details</h2>
+
+                    <table role="table" class="nhsuk-table-responsive primary-user-data nhsuk-u-margin-bottom-8" style="display: table;">
+                        <caption class="nhsuk-table__caption">Supplier contacts</caption>
+                        <thead role="rowgroup" class="nhsuk-table__head">
+                        <tr role="row">
+                            <th role="columnheader" class="" scope="col">
+                                Name
+                            </th>
+                            <th role="columnheader" class="" scope="col">
+                                Email
+                            </th>
+                            <th role="columnheader" class="" scope="col">
+                                Phone number
+                            </th>
+                            <th>Contact level</th>
+                        </tr>
+                        </thead>
+                        <tbody class="nhsuk-table__body">
+                        <tr role="row" class="nhsuk-table__row">
+                            <td role="cell" class="nhsuk-table__cell">
+                                <span class="nhsuk-table-responsive__heading">Name </span>Jane Smith
+                            </td>
+                            <td role="cell" class="nhsuk-table__cell">
+                                <span class="nhsuk-table-responsive__heading">Email </span>jane.smith@nhs.net
+                            </td>
+                            <td role="cell" class="nhsuk-table__cell">
+                                <span class="nhsuk-table-responsive__heading">Phone number </span>07700 900362
+                            </td>
+                            <td><strong class="nhsuk-tag nhsuk-tag--blue">
+                                Primary
+                            </strong></td>
+                        </tr>
+                        <tr role="row" class="nhsuk-table__row">
+                            <td role="cell" class="nhsuk-table__cell">
+                                <span class="nhsuk-table-responsive__heading">Name </span>David Jones
+                            </td>
+                            <td role="cell" class="nhsuk-table__cell">
+                                <span class="nhsuk-table-responsive__heading">Email </span>david.jones@nhs.net
+                            </td>
+                            <td role="cell" class="nhsuk-table__cell">
+                                <span class="nhsuk-table-responsive__heading">Phone number </span>07700 905456
+                            </td>
+                            <td><strong class="nhsuk-tag nhsuk-tag--grey">
+                                Secondary
+                            </strong></td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nhsuk-tabs__panel" id="tab-summary" role="tabpanel" tabindex="-1"
+         aria-labelledby="tab3">
+        <div class="nhsuk-tabs-panel-inner">
+            <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-three-quarters">
+                    <h2>Specific supplier detail</h2>
+                    <p>Specific notes relevant to the supplier goes here.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nhsuk-tabs__panel" id="tab-uploads" role="tabpanel" tabindex="-1"
+         aria-labelledby="tab4">
+        <div class="nhsuk-tabs-panel-inner">
+            <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-full">
+                    <h2 class="nhsuk-u-margin-bottom-6">Correspondence</h2>
+
+                    <div class="nhsuk-form-group">
+
+                        <fieldset class="nhsuk-fieldset">
+                            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+                                <h1 class="nhsuk-fieldset__heading">
+                                    Has the template been sent to the supplier?
+                                </h1>
+                            </legend>
+
+                            <div class="nhsuk-radios nhsuk-radios--inline">
+
+                                <div class="nhsuk-radios__item">
+                                    <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="yes">
+                                    <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
+                                        Yes
+                                    </label>
+                                </div>
+
+                                <div class="nhsuk-radios__item">
+                                    <input class="nhsuk-radios__input" id="example-inline-2" name="example-inline" type="radio" value="no">
+                                    <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
+                                        No
+                                    </label>
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="nhsuk-fieldset nhsuk-u-margin-top-5">
+                            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+                                <h1 class="nhsuk-fieldset__heading">
+                                    Has the main supplier sent a reply?
+                                </h1>
+                            </legend>
+
+                            <div class="nhsuk-radios nhsuk-radios--inline">
+
+                                <div class="nhsuk-radios__item">
+                                    <input class="nhsuk-radios__input" id="example-inline-3" name="example-inline-1" type="radio" value="yes">
+                                    <label class="nhsuk-label nhsuk-radios__label" for="example-inline-3">
+                                        Yes
+                                    </label>
+                                </div>
+
+                                <div class="nhsuk-radios__item">
+                                    <input class="nhsuk-radios__input" id="example-inline-4" name="example-inline-1" type="radio" value="no">
+                                    <label class="nhsuk-label nhsuk-radios__label" for="example-inline-4">
+                                        No
+                                    </label>
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+                    </div>
+                </div>
+            </div>
+            <a class="nhsuk-button nhsuk-button--primary nhsuk-u-margin-top-3" href="results-after-confirm">Update correspondence</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

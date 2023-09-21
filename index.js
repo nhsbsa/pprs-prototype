@@ -149,6 +149,13 @@ app.get('/pcp-prototype/homepage', (req, res) => { res.render('pcp-prototype/hom
 app.get('/pcp-prototype/quarterly-multiple-screens', (req, res) => { res.render('quarterly-multiple-screens') });
 app.get('/pcp-prototype/quarterly-expander-list', (req, res) => { res.render('quarterly-expander-list') })
 app.get('/pcp-prototype/request-list', (req, res) => { res.render('pcp-prototype/request-list') });
+app.get('/pcp-prototype/product-list/results', (req, res) => { res.render('pcp-prototype/product-list/results') });
+app.get('/pcp-prototype/product-list/product-list-results', (req, res) => { res.render('pcp-prototype/product-list/product-list-results') });
+app.get('/pcp-prototype/product-list/results-after-confirm', (req, res) => { res.render('pcp-prototype/product-list/results-after-confirm') });
+app.get('/pcp-prototype/product-list/product-view', (req, res) => { res.render('pcp-prototype/product-list/product-view') });
+app.get('/pcp-prototype/product-list/supplier-view', (req, res) => { res.render('pcp-prototype/product-list/supplier-view') });
+app.get('/pcp-prototype/product-list/supplier-view-tabs', (req, res) => { res.render('pcp-prototype/product-list/supplier-view-tabs') });
+app.get('/pcp-prototype/product-list/main-suppliers', (req, res) => { res.render('pcp-prototype/product-list/main-suppliers') });
 
 /**
  * Server Activation

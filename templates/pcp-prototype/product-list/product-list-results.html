@@ -1,0 +1,193 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Quarterly collection dropdown - expander list
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-back-link">
+
+    <a class="nhsuk-back-link__link nhsuk-u-margin-bottom-5" href="#">
+        <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+            <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+        </svg>
+        Go back to price concession upload</a>
+</div>
+
+        <h1><span class="nhsuk-caption-l">
+     2023 - 1st request
+     <span class="nhsuk-u-visually-hidden">: </span>
+   </span>
+            Product list
+        </h1>
+
+<div class="nhsuk-form-group">
+    <p class="">The Department of Health and Social Care (DHSC) product list displays all uploaded products from the latest request. All Common Drug Reference (CDR) queries have been performed on this list.</p>
+    <p>The product name, pack size and Virtual Medicinal Product (VMP) show in the table. To view each product in more detail, select the &#39;View&#39; link from the table.</p>
+
+
+    <h2>DHSC product list</h2>
+    <fieldset class="nhsuk-fieldset nhsuk-u-margin-bottom-3 nhsuk-u-margin-top-5">
+        <details class="nhsuk-details">
+            <summary class="nhsuk-details__summary">
+    <span class="nhsuk-details__summary-text">
+      Search for a specific attribute
+    </span>
+            </summary>
+
+            <div class="nhsuk-details__text">
+
+                <div class="nhsuk-form-group">
+                    <label class="nhsuk-label" for="example">
+                        Attribute search
+                    </label>
+                    <div class="nhsuk-hint" id="example-with-hint-text-hint">
+                        If required, you can refine the product list by searching for a specific attribute, such as product name.
+                    </div>
+                    <input class="nhsuk-input" id="example" name="example" type="text">
+                </div>
+
+            <a class="nhsuk-button nhsuk-u-margin-top-6"
+               id="continue-button" type="submit" href="#">
+                Refine search
+            </a>
+            <a href="#" class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-left-5 nhsuk-u-margin-top-6">Reset search</a>
+            </div>
+        </details>
+
+    </fieldset>
+
+</div>
+
+<div class="nhsuk-body-m flex--space-between" style="display: flex">
+    <div class="nhsuk-u-visually-hidden">Currently viewing</div>
+    <div id="pageAndResultCount">Page 1 of 1 (5 results)</div>
+</div>
+
+<table class="nhsuk-table">
+    <caption class="nhsuk-table__caption">DHSC product list</caption>
+    <thead role="rowgroup" class="nhsuk-table__head">
+    <tr role="row">
+        <th role="columnheader" class="" scope="col">
+            Product name
+        </th>
+        <th role="columnheader" class="" scope="col">
+            Pack size
+        </th>
+        <th role="columnheader" class="" scope="col">
+            VMP
+        </th>
+        <th role="columnheader" class="" scope="col">
+            Action
+        </th>
+
+    </tr>
+    </thead>
+    <tbody class="nhsuk-table__body">
+    <tr role="row" class="nhsuk-table__row">
+        <td class="nhsuk-table__cell">Atorvastatin 10mg tablets</td>
+        <td class="nhsuk-table__cell ">60</td>
+        <td class="nhsuk-table__cell">400645002
+    </td>
+        <td class="nhsuk-table__cell "><a href="product-view">View</a></td>
+    </tr>
+    <tr role="row" class="nhsuk-table__row">
+        <td class="nhsuk-table__cell">Benzoyl peroxide 5% / Cindamycin 1% gel</td>
+        <td class="nhsuk-table__cell ">30</td>
+        <td class="nhsuk-table__cell">397330011000001106
+        </td>
+        <td class="nhsuk-table__cell "><a class="nhsuk-link nhsuk-link--no-visited-state" href="#">View</a></td>
+    </tr>
+    <tr role="row" class="nhsuk-table__row">
+        <td class="nhsuk-table__cell">Calcipotrial 0.005% / Bethamethasone dispropionate 0.05% ointment</td>
+        <td class="nhsuk-table__cell ">30</td>
+        <td class="nhsuk-table__cell">400645002
+        </td>
+        <td class="nhsuk-table__cell "><a class="nhsuk-link nhsuk-link--no-visited-state" href="#">View</a></td>
+    </tr>
+    <tr role="row" class="nhsuk-table__row">
+        <td class="nhsuk-table__cell">Cyclizine 50mg/1ml solution for injection ampoules</td>
+        <td class="nhsuk-table__cell ">5</td>
+        <td class="nhsuk-table__cell">400645002
+        </td>
+        <td class="nhsuk-table__cell "><a class="nhsuk-link nhsuk-link--no-visited-state" href="#">View</a></td>
+    </tr>
+    <tr role="row" class="nhsuk-table__row">
+        <td class="nhsuk-table__cell">Isotretinoin 20mg capsules</td>
+        <td class="nhsuk-table__cell ">30</td>
+        <td class="nhsuk-table__cell">400645002
+        </td>
+        <td class="nhsuk-table__cell "><a class="nhsuk-link nhsuk-link--no-visited-state" href="#">View</a></td>
+    </tr>
+    </tbody>
+</table>
+
+<nav class="govuk-pagination nhsuk-u-margin-bottom-7" role="navigation" aria-label="results">
+    <div class="govuk-pagination__prev">
+        <a class="govuk-link govuk-pagination__link" href="#" rel="prev">
+            <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+                <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+            </svg>
+            <span class="govuk-pagination__link-title">Previous</span></a>
+    </div>
+    <ul class="govuk-pagination__list">
+        <li class="govuk-pagination__item">
+            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1">
+                1
+            </a>
+        </li>
+        <li class="govuk-pagination__item govuk-pagination__item--current">
+            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2" aria-current="page">
+                2
+            </a>
+        </li>
+        <li class="govuk-pagination__item">
+            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
+                3
+            </a>
+        </li>
+    </ul>
+    <div class="govuk-pagination__next">
+        <a class="govuk-link govuk-pagination__link" href="#" rel="next"> <span class="govuk-pagination__link-title">Next</span> <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+            <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+        </svg></a>
+    </div>
+</nav>
+
+<h2>Next steps</h2>
+
+<p class="nhsuk-u-margin-bottom-6">From this product list, you can create product templates to send to suppliers. You can choose to:</p>
+
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-one-half">
+        <div class="nhsuk-action-link">
+            <a class="nhsuk-action-link__link" href="main-suppliers">
+                <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
+                    <path d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+                </svg>
+                <span class="nhsuk-action-link__text">Go to main suppliers</span>
+            </a>
+        </div>
+    </div>
+    <div class="nhsuk-grid-column-one-half">
+        <div class="nhsuk-action-link">
+            <a class="nhsuk-action-link__link" href="#">
+                <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
+                    <path d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+                </svg>
+                <span class="nhsuk-action-link__text">Go to additional suppliers</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<p class="nhsuk-u-margin-bottom-6">However, if these options do not suit then you can <a href="#">create a bespoke supplier template</a>.</p>
+
+<script>
+    localStorage.clear();
+</script>
+
+{% endblock %}
