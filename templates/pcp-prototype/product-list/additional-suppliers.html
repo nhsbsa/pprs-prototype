@@ -18,7 +18,7 @@ Quarterly collection dropdown - expander list
      2023 - 1st request
      <span class="nhsuk-u-visually-hidden">: </span>
    </span>
-            Main suppliers
+            Additional suppliers
         </h1>
 
 <div class="nhsuk-form-group">
@@ -31,9 +31,9 @@ Quarterly collection dropdown - expander list
                 <div class="nhsuk-card__content">
                     <h2 class="nhsuk-card__heading nhsuk-heading-s">
                 <span class="nhsuk-card__link">
-                  <span class="nhsuk-u-font-size-48">50</span>
+                  <span class="nhsuk-u-font-size-48">84</span>
                   <br>
-                  Main suppliers
+                  Additional suppliers
                 </span>
                     </h2>
 
@@ -47,7 +47,7 @@ Quarterly collection dropdown - expander list
                 <div class="nhsuk-card__content">
                     <h2 class="nhsuk-card__heading nhsuk-heading-s">
                 <span class="nhsuk-card__link">
-                  <span class="nhsuk-u-font-size-48" id="templates-sent">0</span>
+                  <span class="nhsuk-u-font-size-48">0</span>
                   <br>
                   Templates sent
                 </span>
@@ -63,7 +63,7 @@ Quarterly collection dropdown - expander list
                 <div class="nhsuk-card__content">
                     <h2 class="nhsuk-card__heading nhsuk-heading-s">
                 <span class="nhsuk-card__link">
-                  <span class="nhsuk-u-font-size-48" id="replies-received">0</span>
+                  <span class="nhsuk-u-font-size-48">0</span>
                   <br>
                   Replies received
                 </span>
@@ -113,7 +113,7 @@ Quarterly collection dropdown - expander list
 </div>
 
 <table class="nhsuk-table nhsuk-table-responsive">
-    <caption class="nhsuk-table__caption">Main suppliers list</caption>
+    <caption class="nhsuk-table__caption">Additional suppliers list</caption>
     <thead role="rowgroup" class="nhsuk-table__head">
     <tr role="row">
         <th role="columnheader" class="" scope="col">
@@ -133,14 +133,14 @@ Quarterly collection dropdown - expander list
     </thead>
     <tbody class="nhsuk-table__body">
     <tr role="row" class="nhsuk-table__row">
-        <td class="nhsuk-table__cell align-middle">AAH Pharmaceuticals Ltd</td>
+        <td class="nhsuk-table__cell align-middle">Amgen Ltd</td>
         <td role="cell" class="nhsuk-table__cell" id="date-sent"><span class="nhsuk-u-visually-hidden" id="hidden-sent">Template has not been sent</span>
         </td>
         <td role="cell" class="nhsuk-table__cell" id="reply-in"><span class="nhsuk-u-visually-hidden" id="hidden-reply">Reply has not been received</span></td>
-        <td class="nhsuk-table__cell "><a class="nhsuk-link nhsuk-link--no-visited-state" href="supplier-view-tabs" id="supplier-update">Update</a></td>
+        <td class="nhsuk-table__cell "><a class="nhsuk-link nhsuk-link--no-visited-state" href="additional-supplier-view-tabs" id="supplier-update">Update</a></td>
     </tr>
     <tr role="row" class="nhsuk-table__row">
-        <td class="nhsuk-table__cell align-middle">Accord-UK Ltd</td>
+        <td class="nhsuk-table__cell align-middle">Boehringer Ingelheim Ltd</td>
         <td role="cell" class="nhsuk-table__cell ">
 <!--            <span class="nhsuk-table-responsive__heading select-tag">Select </span>-->
 <!--            <div class="nhsuk-checkboxes__item table-checkbox">-->
@@ -155,7 +155,7 @@ Quarterly collection dropdown - expander list
         <td class="nhsuk-table__cell ">Update</td>
     </tr>
     <tr role="row" class="nhsuk-table__row">
-        <td class="nhsuk-table__cell align-middle">Alliance Healthcare (Distributions) Ltd</td>
+        <td class="nhsuk-table__cell align-middle">Cambridge Healthcare Supplies Ltd</td>
         <td role="cell" class="nhsuk-table__cell"><span class="nhsuk-u-visually-hidden">Template has not been sent</span>
 <!--            <span class="nhsuk-table-responsive__heading select-tag">Select </span>-->
 <!--            <div class="nhsuk-checkboxes__item table-checkbox">-->
@@ -170,7 +170,7 @@ Quarterly collection dropdown - expander list
         <td class="nhsuk-table__cell ">Update</td>
     </tr>
     <tr role="row" class="nhsuk-table__row">
-        <td class="nhsuk-table__cell align-middle">Kent Pharmaceuticals Ltd</td>
+        <td class="nhsuk-table__cell align-middle">Ennogen Pharma Ltd</td>
         <td role="cell" class="nhsuk-table__cell"><span class="nhsuk-u-visually-hidden">Template has not been sent</span>
 <!--            <span class="nhsuk-table-responsive__heading select-tag">Select </span>-->
 <!--            <div class="nhsuk-checkboxes__item table-checkbox">-->
@@ -185,7 +185,7 @@ Quarterly collection dropdown - expander list
         <td class="nhsuk-table__cell ">Update</td>
     </tr>
     <tr role="row" class="nhsuk-table__row">
-        <td class="nhsuk-table__cell align-middle">Phoenix Healthcare Distributions Ltd</td>
+        <td class="nhsuk-table__cell align-middle">Indivior UK Ltd</td>
         <td role="cell" class="nhsuk-table__cell"><span class="nhsuk-u-visually-hidden">Template has not been sent</span>
 <!--            <span class="nhsuk-table-responsive__heading select-tag">Select </span>-->
 <!--            <div class="nhsuk-checkboxes__item table-checkbox">-->
@@ -254,7 +254,6 @@ Quarterly collection dropdown - expander list
 
     if (dateEmailSent == "yes") {
        document.getElementById("date-sent").innerHTML = currentDate;
-       document.getElementById("templates-sent").innerHTML = '1';
        if (document.getElementById("hidden-sent")) {
        document.getElementById("hidden-sent").style.display = "none";
        }
@@ -263,7 +262,6 @@ Quarterly collection dropdown - expander list
     if (dateReplyReceived == "yes") {
        document.getElementById("reply-in").innerHTML = currentDate;
        document.getElementById("supplier-update").innerHTML = 'View';
-       document.getElementById("replies-received").innerHTML = '1';
        if (document.getElementById("hidden-reply")) {
        document.getElementById("hidden-reply").style.display = "none";
        }
