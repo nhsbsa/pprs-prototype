@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="grid-row">
+
+  <div class="column-two-thirds">
+    <div class="nhsuk-card" style="color: #ffffff; background-color: #005eb8; text-align: center">
+      <div class="nhsuk-card__content">
+        <h1 class="nhsuk-card__heading">
+          Prototype 4 Portal dashboard
+        </h1>
+      </div>
+    </div>
+
+    <p>Create and track submissions through the portal dashboard.</p>
+    <p><a class="nhsuk-card__link nhsuk-link--no-visited-state" href="portfolio">Visit your portfolio </a>to view your products held on dictionary of medicines and devices (dm+d).</p>
+
+    <h2>Submission tasks</h2>
+
+    <ul class="nhsuk-grid-row nhsuk-card-group">
+      <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+
+        <div class="nhsuk-card nhsuk-card--clickable">
+          <div class="nhsuk-card__content">
+            <h2 class="nhsuk-card__heading nhsuk-heading-m">
+              <a class="nhsuk-card__link nhsuk-link--no-visited-state"
+                 href="/list-of-requests">New product</a>
+            </h2>
+            <p class="nhsuk-card__description">Uploaded product lists</p>
+          </div>
+        </div>
+
+
+      </li>
+      <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+
+        <div class="nhsuk-card nhsuk-card--clickable">
+          <div class="nhsuk-card__content">
+            <h2 class="nhsuk-card__heading nhsuk-heading-m">
+              <a class="nhsuk-card__link nhsuk-link--no-visited-state"
+                 href="view-prototype4/file-upload1">File upload</a>
+            </h2>
+            <p class="nhsuk-card__description">Uploaded product files</p>
+          </div>
+        </div>
+
+
+      </li>
+    </ul>
+
+  </div>
+</div>
+
+<script>
+  localStorage.clear();
+  console.log(localStorage);
+</script>
+{% endblock %}
