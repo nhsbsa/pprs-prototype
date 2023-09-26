@@ -55,9 +55,9 @@ app.get('/view-prototype-final2', (req, res) => { res.render('view-prototype-fin
 app.get('/view-prototype-final2a', (req, res) => { res.render('view-prototype-final2a') });
 
 app.get('/view-prototype4', (req, res) => { res.render('view-prototype4') });
-app.get('/view-prototype4/file-upload1', (req, res) => { res.render('file-upload1') });
-app.get('/view-prototype4/file-upload2', (req, res) => { res.render('file-upload2') });
-app.get('/view-prototype4/file-upload3', (req, res) => { res.render('file-upload3') });
+app.get('/file-upload1', (req, res) => { res.render('file-upload1') });
+app.get('/file-upload2', (req, res) => { res.render('file-upload2') });
+app.get('/file-upload3', (req, res) => { res.render('file-upload3') });
 app.get('/list-of-requests', (req, res) => { res.render('list-of-requests') });
 app.get('/list-of-requests__entry', (req, res) => { res.render('list-of-requests__entry') });
 

@@ -47,7 +47,7 @@ Quarterly collection dropdown - expander list
                 <div class="nhsuk-card__content">
                     <h2 class="nhsuk-card__heading nhsuk-heading-s">
                 <span class="nhsuk-card__link">
-                  <span class="nhsuk-u-font-size-48">0</span>
+                  <span class="nhsuk-u-font-size-48" id="templates-sent">0</span>
                   <br>
                   Templates sent
                 </span>
@@ -63,7 +63,7 @@ Quarterly collection dropdown - expander list
                 <div class="nhsuk-card__content">
                     <h2 class="nhsuk-card__heading nhsuk-heading-s">
                 <span class="nhsuk-card__link">
-                  <span class="nhsuk-u-font-size-48">0</span>
+                  <span class="nhsuk-u-font-size-48" id="replies-received">0</span>
                   <br>
                   Replies received
                 </span>
@@ -254,6 +254,7 @@ Quarterly collection dropdown - expander list
 
     if (dateEmailSent == "yes") {
        document.getElementById("date-sent").innerHTML = currentDate;
+       document.getElementById("templates-sent").innerHTML = '1';
        if (document.getElementById("hidden-sent")) {
        document.getElementById("hidden-sent").style.display = "none";
        }
@@ -262,6 +263,7 @@ Quarterly collection dropdown - expander list
     if (dateReplyReceived == "yes") {
        document.getElementById("reply-in").innerHTML = currentDate;
        document.getElementById("supplier-update").innerHTML = 'View';
+       document.getElementById("replies-received").innerHTML = '1';
        if (document.getElementById("hidden-reply")) {
        document.getElementById("hidden-reply").style.display = "none";
        }

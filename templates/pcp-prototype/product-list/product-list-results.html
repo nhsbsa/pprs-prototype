@@ -14,6 +14,24 @@ Quarterly collection dropdown - expander list
         Go back to price concession upload</a>
 </div>
 
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+    <div class="nhsuk-width-container">
+        <ol class="nhsuk-breadcrumb__list">
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/level-one">Level one</a></li>
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/level-one/level-two">Level two</a></li>
+
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/level-one/level-two/level-three">Level three</a></li>
+
+        </ol>
+        <p class="nhsuk-breadcrumb__back">
+            <a class="nhsuk-breadcrumb__backlink" href="/level-one/level-two/level-three">
+                <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+                Level three
+            </a>
+        </p>
+    </div>
+</nav>
+
         <h1><span class="nhsuk-caption-l">
      2023 - 1st request
      <span class="nhsuk-u-visually-hidden">: </span>
@@ -23,7 +41,7 @@ Quarterly collection dropdown - expander list
 
 <div class="nhsuk-form-group">
     <p class="">The Department of Health and Social Care (DHSC) product list displays all uploaded products from the latest request. All Common Drug Reference (CDR) queries have been performed on this list.</p>
-    <p>The product name, pack size and Virtual Medicinal Product (VMP) show in the table. To view each product in more detail, select the &#39;View&#39; link from the table.</p>
+    <p>The product name, pack size and Systemized Nomenclature of Medicine (SNOMED) show in the table. To view more detail, including the current drug tariff price and viewing all packs linked to the product, select the &#39;View&#39; link from the table.</p>
 
 
     <h2>DHSC product list</h2>
@@ -64,7 +82,7 @@ Quarterly collection dropdown - expander list
     <div id="pageAndResultCount">Page 1 of 1 (5 results)</div>
 </div>
 
-<table class="nhsuk-table">
+<table class="nhsuk-table-responsive" role="table">
     <caption class="nhsuk-table__caption">DHSC product list</caption>
     <thead role="rowgroup" class="nhsuk-table__head">
     <tr role="row">
@@ -72,10 +90,13 @@ Quarterly collection dropdown - expander list
             Product name
         </th>
         <th role="columnheader" class="" scope="col">
-            Pack size
+            Pack
         </th>
+<!--        <th role="columnheader" class="" scope="col">-->
+<!--            VMP-->
+<!--        </th>-->
         <th role="columnheader" class="" scope="col">
-            VMP
+            SNOMED
         </th>
         <th role="columnheader" class="" scope="col">
             Action
@@ -85,44 +106,75 @@ Quarterly collection dropdown - expander list
     </thead>
     <tbody class="nhsuk-table__body">
     <tr role="row" class="nhsuk-table__row">
-        <td class="nhsuk-table__cell">Atorvastatin 10mg tablets</td>
-        <td class="nhsuk-table__cell ">60</td>
-        <td class="nhsuk-table__cell">400645002
-    </td>
-        <td class="nhsuk-table__cell "><a class="nhsuk-link nhsuk-link--no-visited-state" href="product-view">View</a></td>
+        <td class="nhsuk-table__cell" role="cell">
+            <span class="nhsuk-table-responsive__heading">Product name </span>
+            Atorvastatin 10mg tablets</td>
+        <td class="nhsuk-table__cell ">
+            <span class="nhsuk-table-responsive__heading">Pack</span>
+            60</td>
+<!--        <td class="nhsuk-table__cell">400645002</td>-->
+        <td class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">SNOMED </span>
+            39695411000001103</td>
+        <td class="nhsuk-table__cell ">
+            <span class="nhsuk-table-responsive__heading">Action </span>
+            <a class="nhsuk-link nhsuk-link--no-visited-state" href="product-view">View</a></td>
     </tr>
     <tr role="row" class="nhsuk-table__row">
-        <td class="nhsuk-table__cell">Benzoyl peroxide 5% / Cindamycin 1% gel</td>
-        <td class="nhsuk-table__cell ">30</td>
-        <td class="nhsuk-table__cell">397330011000001106
-        </td>
-        <td class="nhsuk-table__cell ">View</td>
+        <td class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Product name </span>
+            Benzoyl peroxide 5% / Cindamycin 1% gel</td>
+        <td class="nhsuk-table__cell ">
+            <span class="nhsuk-table-responsive__heading">Pack</span>
+            30</td>
+<!--        <td class="nhsuk-table__cell">397330011000001106-->
+<!--        </td>-->
+        <td class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">SNOMED </span>
+            39695411000001103</td>
+        <td class="nhsuk-table__cell ">
+            <span class="nhsuk-table-responsive__heading">Action </span>View</td>
     </tr>
     <tr role="row" class="nhsuk-table__row">
-        <td class="nhsuk-table__cell">Calcipotrial 0.005% / Bethamethasone dispropionate 0.05% ointment</td>
-        <td class="nhsuk-table__cell ">30</td>
-        <td class="nhsuk-table__cell">400645002
-        </td>
-        <td class="nhsuk-table__cell ">View</td>
+        <td class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Product name </span>
+            Calcipotrial 0.005% / Bethamethasone dispropionate 0.05% ointment</td>
+        <td class="nhsuk-table__cell ">
+            <span class="nhsuk-table-responsive__heading">Pack</span>
+            30</td>
+<!--        <td class="nhsuk-table__cell">400645002-->
+<!--        </td>-->
+        <td class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">SNOMED </span>
+            39695411000001103</td>
+        <td class="nhsuk-table__cell "><span class="nhsuk-table-responsive__heading">Action </span>
+            View</td>
     </tr>
     <tr role="row" class="nhsuk-table__row">
-        <td class="nhsuk-table__cell">Cyclizine 50mg/1ml solution for injection ampoules</td>
-        <td class="nhsuk-table__cell ">5</td>
-        <td class="nhsuk-table__cell">400645002
-        </td>
-        <td class="nhsuk-table__cell ">View</td>
+        <td class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Product name </span>
+            Cyclizine 50mg/1ml solution for injection ampoules</td>
+        <td class="nhsuk-table__cell "><span class="nhsuk-table-responsive__heading">Pack</span>
+            5</td>
+<!--        <td class="nhsuk-table__cell">400645002-->
+<!--        </td>-->
+        <td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">SNOMED </span>
+            39695411000001103</td>
+        <td class="nhsuk-table__cell "><span class="nhsuk-table-responsive__heading">Action </span>View</td>
     </tr>
     <tr role="row" class="nhsuk-table__row">
-        <td class="nhsuk-table__cell">Isotretinoin 20mg capsules</td>
-        <td class="nhsuk-table__cell ">30</td>
-        <td class="nhsuk-table__cell">400645002
-        </td>
-        <td class="nhsuk-table__cell ">View</td>
+        <td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Product name </span>
+            Isotretinoin 20mg capsules</td>
+        <td class="nhsuk-table__cell "><span class="nhsuk-table-responsive__heading">Pack</span>30</td>
+<!--        <td class="nhsuk-table__cell">400645002-->
+<!--        </td>-->
+        <td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">SNOMED </span>39695411000001103</td>
+        <td class="nhsuk-table__cell "><span class="nhsuk-table-responsive__heading">Action </span>View</td>
     </tr>
     </tbody>
 </table>
 
-<nav class="govuk-pagination nhsuk-u-margin-bottom-7" role="navigation" aria-label="results">
+<nav class="govuk-pagination nhsuk-u-margin-bottom-7 nhsuk-u-margin-top-5" role="navigation" aria-label="results">
     <div class="govuk-pagination__prev">
         <a class="govuk-link govuk-pagination__link" href="#" rel="prev">
             <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
@@ -161,7 +213,7 @@ Quarterly collection dropdown - expander list
 <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-one-half">
         <div class="nhsuk-action-link">
-            <a class="nhsuk-action-link__link" href="main-suppliers">
+            <a class="nhsuk-action-link__link" href="main-suppliers" onclick="saveBackMainSupplier()">
                 <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
                     <path d="M0 0h24v24H0z" fill="none"></path>
                     <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
@@ -172,7 +224,7 @@ Quarterly collection dropdown - expander list
     </div>
     <div class="nhsuk-grid-column-one-half">
         <div class="nhsuk-action-link">
-            <a class="nhsuk-action-link__link" href="additional-suppliers">
+            <a class="nhsuk-action-link__link" href="additional-suppliers" onclick="saveBackAdditionalSupplier()">
                 <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
                     <path d="M0 0h24v24H0z" fill="none"></path>
                     <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
@@ -183,11 +235,19 @@ Quarterly collection dropdown - expander list
     </div>
 </div>
 
-
-<p class="nhsuk-u-margin-bottom-6">However, if these options do not suit then you can <a href="#">create a bespoke supplier template</a>.</p>
+<!--   do we need the ability to create a bespoke template? MPL 26SEP23   -->
+<!--<p class="nhsuk-u-margin-bottom-6">However, if these options do not suit then you can <a href="#">create a bespoke supplier template</a>.</p>-->
 
 <script>
     localStorage.clear();
+
+    function saveBackMainSupplier() {
+      localStorage.setItem("go-back-supplier", "main");
+    }
+
+    function saveBackAdditionalSupplier() {
+      localStorage.setItem("go-back-supplier", "additional");
+    }
 </script>
 
 {% endblock %}
