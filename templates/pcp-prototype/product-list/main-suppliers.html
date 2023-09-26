@@ -1,0 +1,274 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Quarterly collection dropdown - expander list
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-back-link">
+
+    <a class="nhsuk-back-link__link nhsuk-u-margin-bottom-5" href="product-list-results">
+        <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+            <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+        </svg>
+        Go back to product list</a>
+</div>
+
+        <h1><span class="nhsuk-caption-l">
+     2023 - 1st request
+     <span class="nhsuk-u-visually-hidden">: </span>
+   </span>
+            Main suppliers
+        </h1>
+
+<div class="nhsuk-form-group">
+    <p>From the table, select the &#39;Update&#39; link to generate a template to send to the supplier, as well as tracking the correspondence.</p>
+
+    <ul class="nhsuk-grid-row nhsuk-card-group">
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+            <div class="nhsuk-card">
+                <div class="nhsuk-card__content">
+                    <h2 class="nhsuk-card__heading nhsuk-heading-s">
+                <span class="nhsuk-card__link">
+                  <span class="nhsuk-u-font-size-48">50</span>
+                  <br>
+                  Main suppliers
+                </span>
+                    </h2>
+
+                </div>
+            </div>
+
+        </li>
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+            <div class="nhsuk-card">
+                <div class="nhsuk-card__content">
+                    <h2 class="nhsuk-card__heading nhsuk-heading-s">
+                <span class="nhsuk-card__link">
+                  <span class="nhsuk-u-font-size-48" id="templates-sent">0</span>
+                  <br>
+                  Templates sent
+                </span>
+                    </h2>
+
+                </div>
+            </div>
+
+        </li>
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+            <div class="nhsuk-card">
+                <div class="nhsuk-card__content">
+                    <h2 class="nhsuk-card__heading nhsuk-heading-s">
+                <span class="nhsuk-card__link">
+                  <span class="nhsuk-u-font-size-48" id="replies-received">0</span>
+                  <br>
+                  Replies received
+                </span>
+                    </h2>
+
+                </div>
+            </div>
+
+        </li>
+    </ul>
+    
+    <fieldset class="nhsuk-fieldset nhsuk-u-margin-bottom-3 nhsuk-u-margin-top-3">
+        <details class="nhsuk-details">
+            <summary class="nhsuk-details__summary">
+    <span class="nhsuk-details__summary-text">
+      Search for a specific supplier
+    </span>
+            </summary>
+
+            <div class="nhsuk-details__text">
+
+                <div class="nhsuk-form-group">
+                    <label class="nhsuk-label" for="example">
+                        Attribute search
+                    </label>
+                    <div class="nhsuk-hint" id="example-with-hint-text-hint">
+                        If required, you can refine the main suppliers list by searching for a specific supplier.
+                    </div>
+                    <input class="nhsuk-input" id="example" name="example" type="text">
+                </div>
+
+            <a class="nhsuk-button nhsuk-u-margin-top-6"
+               id="continue-button" type="submit" href="#">
+                Refine search
+            </a>
+            <a href="#" class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-left-5 nhsuk-u-margin-top-6">Reset search</a>
+            </div>
+        </details>
+
+    </fieldset>
+
+</div>
+
+<div class="nhsuk-body-m flex--space-between" style="display: flex">
+    <div class="nhsuk-u-visually-hidden">Currently viewing</div>
+    <div id="pageAndResultCount">Page 1 of 1 (5 results)</div>
+</div>
+
+<table class="nhsuk-table nhsuk-table-responsive">
+    <caption class="nhsuk-table__caption">Main suppliers list</caption>
+    <thead role="rowgroup" class="nhsuk-table__head">
+    <tr role="row">
+        <th role="columnheader" class="" scope="col">
+            Supplier name
+        </th>
+        <th role="columnheader" class="" scope="col">
+            Template sent
+        </th>
+        <th role="columnheader" class="" scope="col">
+            Reply received
+        </th>
+        <th role="columnheader" class="" scope="col">
+            Action
+        </th>
+
+    </tr>
+    </thead>
+    <tbody class="nhsuk-table__body">
+    <tr role="row" class="nhsuk-table__row">
+        <td class="nhsuk-table__cell align-middle">AAH Pharmaceuticals Ltd</td>
+        <td role="cell" class="nhsuk-table__cell" id="date-sent"><span class="nhsuk-u-visually-hidden" id="hidden-sent">Template has not been sent</span>
+        </td>
+        <td role="cell" class="nhsuk-table__cell" id="reply-in"><span class="nhsuk-u-visually-hidden" id="hidden-reply">Reply has not been received</span></td>
+        <td class="nhsuk-table__cell "><a class="nhsuk-link nhsuk-link--no-visited-state" href="supplier-view-tabs" id="supplier-update">Update</a></td>
+    </tr>
+    <tr role="row" class="nhsuk-table__row">
+        <td class="nhsuk-table__cell align-middle">Accord-UK Ltd</td>
+        <td role="cell" class="nhsuk-table__cell ">
+<!--            <span class="nhsuk-table-responsive__heading select-tag">Select </span>-->
+<!--            <div class="nhsuk-checkboxes__item table-checkbox">-->
+<!--                <input class="nhsuk-checkboxes__input" id="supplier-name-1" name="supplier-name-1" type="checkbox" value="hmrc">-->
+<!--                <label class="nhsuk-label nhsuk-checkboxes__label" for="supplier-name-1">-->
+<!--                    &lt;!&ndash;                label is hidden to save space YML 31/10/22 &ndash;&gt;-->
+<!--                    <span class="nhsuk-u-visually-hidden">Product name</span>-->
+<!--                </label>-->
+<!--            </div>-->
+        </td>
+        <td role="cell" class="nhsuk-table__cell"><span class="nhsuk-u-visually-hidden">Reply has not been received</span></td>
+        <td class="nhsuk-table__cell ">Update</td>
+    </tr>
+    <tr role="row" class="nhsuk-table__row">
+        <td class="nhsuk-table__cell align-middle">Alliance Healthcare (Distributions) Ltd</td>
+        <td role="cell" class="nhsuk-table__cell"><span class="nhsuk-u-visually-hidden">Template has not been sent</span>
+<!--            <span class="nhsuk-table-responsive__heading select-tag">Select </span>-->
+<!--            <div class="nhsuk-checkboxes__item table-checkbox">-->
+<!--                <input class="nhsuk-checkboxes__input" id="supplier-name-2" name="supplier-name-2" type="checkbox" value="hmrc">-->
+<!--                <label class="nhsuk-label nhsuk-checkboxes__label" for="supplier-name-2">-->
+<!--                    &lt;!&ndash;                label is hidden to save space YML 31/10/22 &ndash;&gt;-->
+<!--                    <span class="nhsuk-u-visually-hidden">Product name</span>-->
+<!--                </label>-->
+<!--            </div>-->
+        </td>
+        <td role="cell" class="nhsuk-table__cell"><span class="nhsuk-u-visually-hidden">Reply has not been received</span></td>
+        <td class="nhsuk-table__cell ">Update</td>
+    </tr>
+    <tr role="row" class="nhsuk-table__row">
+        <td class="nhsuk-table__cell align-middle">Kent Pharmaceuticals Ltd</td>
+        <td role="cell" class="nhsuk-table__cell"><span class="nhsuk-u-visually-hidden">Template has not been sent</span>
+<!--            <span class="nhsuk-table-responsive__heading select-tag">Select </span>-->
+<!--            <div class="nhsuk-checkboxes__item table-checkbox">-->
+<!--                <input class="nhsuk-checkboxes__input" id="supplier-name-3" name="supplier-name-3" type="checkbox" value="hmrc">-->
+<!--                <label class="nhsuk-label nhsuk-checkboxes__label" for="supplier-name-3">-->
+<!--                    &lt;!&ndash;                label is hidden to save space YML 31/10/22 &ndash;&gt;-->
+<!--                    <span class="nhsuk-u-visually-hidden">Product name</span>-->
+<!--                </label>-->
+<!--            </div>-->
+        </td>
+        <td role="cell" class="nhsuk-table__cell"><span class="nhsuk-u-visually-hidden">Reply has not been received</span></td>
+        <td class="nhsuk-table__cell ">Update</td>
+    </tr>
+    <tr role="row" class="nhsuk-table__row">
+        <td class="nhsuk-table__cell align-middle">Phoenix Healthcare Distributions Ltd</td>
+        <td role="cell" class="nhsuk-table__cell"><span class="nhsuk-u-visually-hidden">Template has not been sent</span>
+<!--            <span class="nhsuk-table-responsive__heading select-tag">Select </span>-->
+<!--            <div class="nhsuk-checkboxes__item table-checkbox">-->
+<!--                <input class="nhsuk-checkboxes__input" id="supplier-name-4" name="supplier-name-4" type="checkbox" value="hmrc">-->
+<!--                <label class="nhsuk-label nhsuk-checkboxes__label" for="supplier-name-4">-->
+<!--                    &lt;!&ndash;                label is hidden to save space YML 31/10/22 &ndash;&gt;-->
+<!--                    <span class="nhsuk-u-visually-hidden">Product name</span>-->
+<!--                </label>-->
+<!--            </div>-->
+        </td>
+        <td role="cell" class="nhsuk-table__cell"><span class="nhsuk-u-visually-hidden">Reply has not been received</span></td>
+        <td class="nhsuk-table__cell ">Update</td>
+    </tr>
+
+    </tbody>
+</table>
+
+<nav class="govuk-pagination nhsuk-u-margin-bottom-7 nhsuk-u-margin-top-5" role="navigation" aria-label="results">
+    <div class="govuk-pagination__prev">
+        <a class="govuk-link govuk-pagination__link" href="#" rel="prev">
+            <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+                <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+            </svg>
+            <span class="govuk-pagination__link-title">Previous</span></a>
+    </div>
+    <ul class="govuk-pagination__list">
+        <li class="govuk-pagination__item">
+            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1">
+                1
+            </a>
+        </li>
+        <li class="govuk-pagination__item govuk-pagination__item--current">
+            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2" aria-current="page">
+                2
+            </a>
+        </li>
+        <li class="govuk-pagination__item">
+            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
+                3
+            </a>
+        </li>
+    </ul>
+    <div class="govuk-pagination__next">
+        <a class="govuk-link govuk-pagination__link" href="#" rel="next"> <span class="govuk-pagination__link-title">Next</span> <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+            <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+        </svg></a>
+    </div>
+</nav>
+
+<script>
+    console.log(localStorage);
+
+    let dateEmailSent = localStorage.getItem("has-sent-email");
+    let dateReplyReceived = localStorage.getItem("supplier-has-replied");
+    let dateSent = new Date();
+
+    let day = dateSent.getDate();
+    let month = dateSent.getMonth() + 1;
+    let year = dateSent.getFullYear();
+
+    if (day < 10) day = '0' + day;
+    if (month < 10) month = '0' + month;
+
+    let currentDate = `${day}-${month}-${year}`;
+    console.log(currentDate);
+
+    if (dateEmailSent == "yes") {
+       document.getElementById("date-sent").innerHTML = currentDate;
+       document.getElementById("templates-sent").innerHTML = '1';
+       if (document.getElementById("hidden-sent")) {
+       document.getElementById("hidden-sent").style.display = "none";
+       }
+    }
+
+    if (dateReplyReceived == "yes") {
+       document.getElementById("reply-in").innerHTML = currentDate;
+       document.getElementById("supplier-update").innerHTML = 'View';
+       document.getElementById("replies-received").innerHTML = '1';
+       if (document.getElementById("hidden-reply")) {
+       document.getElementById("hidden-reply").style.display = "none";
+       }
+    }
+
+</script>
+
+{% endblock %}

@@ -1,0 +1,275 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Quarterly collection dropdown - expander list
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-back-link">
+
+    <a class="nhsuk-back-link__link nhsuk-u-margin-bottom-5" href="main-suppliers">
+        <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+            <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+        </svg>
+        Go back to main suppliers</a>
+</div>
+
+<!--<div class="nhsuk-grid-row">-->
+<!--    <label for="expanderToggle">Expander/Accordion toggle</label>-->
+<!--    <input type="checkbox" id="expanderToggle" />-->
+<!--    <div class="nhsuk-grid-column-full">-->
+        <h1><span class="nhsuk-caption-l">
+     2023 - 1st request
+     <span class="nhsuk-u-visually-hidden"> for </span>
+   </span>
+            Amgen Ltd</h1>
+
+<h2>Product list</h2>
+<p>As AAH Pharmaceuticals Ltd is a main supplier, every product in the product list will be present in the template. </p>
+
+
+<h2>Template</h2>
+<p>The main supplier template is ready to download. This needs to be sent, by email, to the supplier.</p>
+
+<a class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-bottom-9" href="#">Download main supplier template</a>
+
+<h2>Contact details</h2>
+
+<table role="table" class="nhsuk-table-responsive primary-user-data nhsuk-u-margin-bottom-8" style="display: table;">
+    <caption class="nhsuk-table__caption">Supplier contacts</caption>
+    <thead role="rowgroup" class="nhsuk-table__head">
+    <tr role="row">
+        <th role="columnheader" class="" scope="col">
+            Name
+        </th>
+        <th role="columnheader" class="" scope="col">
+            Email
+        </th>
+        <th role="columnheader" class="" scope="col">
+            Phone number
+        </th>
+        <th>Contact level</th>
+    </tr>
+    </thead>
+    <tbody class="nhsuk-table__body">
+    <tr role="row" class="nhsuk-table__row">
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Name </span>Jane Smith
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Email </span>jane.smith@nhs.net
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Phone number </span>07700 900362
+        </td>
+        <td><strong class="nhsuk-tag nhsuk-tag--blue">
+            Primary
+        </strong></td>
+    </tr>
+    <tr role="row" class="nhsuk-table__row">
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Name </span>David Jones
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Email </span>david.jones@nhs.net
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Phone number </span>07700 905456
+        </td>
+        <td><strong class="nhsuk-tag nhsuk-tag--grey">
+            Secondary
+        </strong></td>
+    </tr>
+    </tbody>
+</table>
+
+<h2>Supplier specific detail</h2>
+
+<p>Specific notes relevant to the supplier goes here.</p>
+
+<h2>Correspondence</h2>
+
+<details class="nhsuk-details nhsuk-expander hide-question" id="yes-first-question-expander">
+    <summary class="nhsuk-details__summary">
+    <span class="nhsuk-details__summary-text" id="yes-first-question">
+      Get your medical records
+    </span>
+    </summary>
+    <div class="nhsuk-details__text">
+        <p id="yes-first-question-detail">Template sent by Heather on 21 September 2023 at 2.20pm.</p>
+    </div>
+</details>
+
+<details class="nhsuk-details nhsuk-expander hide-question" id="yes-second-question-expander">
+    <summary class="nhsuk-details__summary">
+    <span class="nhsuk-details__summary-text" id="yes-second-question">
+      Get your medical records
+    </span>
+    </summary>
+    <div class="nhsuk-details__text">
+        <p id="yes-second-question-detail">Email received to Heather on 21 September 2023 at 2.20pm.</p>
+    </div>
+</details>
+
+<!--<p id="yes-first-question" class="hide-question">Template sent to the supplier on 21 September 2023.</p>-->
+<!--<p id="yes-second-question" class="hide-question">Email received from the supplier on 21 September 2023.</p>-->
+
+
+<div class="nhsuk-form-group">
+
+    <fieldset class="nhsuk-fieldset" id="first-question">
+        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+            <h1 class="nhsuk-fieldset__heading">
+                Has the template been sent to the supplier?
+            </h1>
+        </legend>
+
+        <div class="nhsuk-radios nhsuk-radios--inline">
+
+            <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="yes">
+                <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
+                    Yes
+                </label>
+            </div>
+
+            <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="example-inline-2" name="example-inline" type="radio" value="no">
+                <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
+                    No
+                </label>
+            </div>
+
+        </div>
+    </fieldset>
+
+    <fieldset class="nhsuk-fieldset nhsuk-u-margin-top-5 hide-question" id="second-question">
+        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+            <h1 class="nhsuk-fieldset__heading">
+                Has the main supplier sent a reply?
+            </h1>
+        </legend>
+
+        <div class="nhsuk-radios nhsuk-radios--inline">
+
+            <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="example-inline-3" name="example-inline-1" type="radio" value="yes">
+                <label class="nhsuk-label nhsuk-radios__label" for="example-inline-3">
+                    Yes
+                </label>
+            </div>
+
+            <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="example-inline-4" name="example-inline-1" type="radio" value="no">
+                <label class="nhsuk-label nhsuk-radios__label" for="example-inline-4">
+                    No
+                </label>
+            </div>
+
+        </div>
+    </fieldset>
+
+</div>
+
+<a class="nhsuk-button nhsuk-button--primary nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-6" id="update-button" href="main-suppliers"
+          onclick="storeUpdateCorrespondence()">Update correspondence</a>
+
+<a class="nhsuk-button nhsuk-button--primary nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-6 hide-question" id="reset-button"
+          onclick="resetCorrespondence()" href="#">Reset correspondence (not included in development)</a>
+
+
+<script>
+    console.log(localStorage);
+
+    var radioHasSentEmailButtons = document.getElementsByName("example-inline");
+    let sentEmail = localStorage.getItem("has-sent-email");
+
+    if (radioHasSentEmailButtons.length != 0) {
+
+
+    for (var radio of radioHasSentEmailButtons) {
+      if (sentEmail === radio.value) {
+        radio.checked = true;
+      }
+    }
+   }
+
+        var monthNames = ["January", "February", "March", "April", "May","June","July", "August", "September", "October", "November","December"];
+
+        var d = new Date();
+        var dayToday = d.getDate();
+        var monthToday = monthNames[d.getMonth()];
+        var yearToday = d.getFullYear();
+
+        replyDate = dayToday + ' ' + monthToday + ' ' + yearToday;
+
+   if (sentEmail == "yes") {
+
+      document.getElementById("second-question").classList.remove("hide-question");
+      document.getElementById("first-question").classList.add("hide-question");
+      document.getElementById("yes-first-question-detail").innerHTML = 'Template emailed by Heather (HEKIR) on ' + replyDate + ' at 2pm.';
+      document.getElementById("yes-first-question").innerHTML = 'Template sent to the supplier on ' + replyDate;
+      document.getElementById("yes-first-question-expander").classList.remove("hide-question");
+
+   }
+
+   var radioHasReceivedEmailButtons = document.getElementsByName("example-inline-1");
+    let emailReceived = localStorage.getItem("supplier-has-replied");
+
+    if (radioHasReceivedEmailButtons.length != 0) {
+
+
+    for (var radio of radioHasReceivedEmailButtons) {
+      if (emailReceived === radio.value) {
+        radio.checked = true;
+      }
+    }
+   }
+
+   if (emailReceived == "yes") {
+      document.getElementById("second-question").classList.add("hide-question");
+      document.getElementById("yes-second-question").innerHTML = 'Reply received from the supplier on ' + replyDate;
+      document.getElementById("yes-second-question-detail").innerHTML = 'Email received from the supplier by Heather (HEKIR) on ' + replyDate + ' at 3.30pm.';
+      document.getElementById("yes-second-question-expander").classList.remove("hide-question");
+      document.getElementById("update-button").classList.add("hide-question");
+      document.getElementById("reset-button").classList.remove("hide-question");
+   }
+
+  function storeUpdateCorrespondence() {
+
+  var radioHasSentEmailButtonsX = document.getElementsByName("example-inline");
+  var radioHasSentEmailButtonsY = document.getElementsByName("example-inline-1");
+
+  let today = new Date();
+
+    for (var radio of radioHasSentEmailButtonsX) {
+      if (radio.checked) {
+        localStorage.setItem("has-sent-email", radio.value);
+        localStorage.setItem("date-sent-email", today);
+       if (radio.value == 'no') {
+          localStorage.removeItem("date-sent-email");
+       }
+     }
+    }
+
+    for (var radio of radioHasSentEmailButtonsY) {
+      if (radio.checked) {
+        localStorage.setItem("supplier-has-replied", radio.value);
+        localStorage.setItem("date-supplier-replied", today);
+       if (radio.value == 'no') {
+          localStorage.removeItem("date-supplier-replied");
+       }
+     }
+    }
+   };
+
+   function resetCorrespondence() {
+   localStorage.clear();
+   location.reload();
+
+   }
+
+</script>
+
+{% endblock %}
+

@@ -2134,10 +2134,10 @@ b {
  * 7. Custom padding for the chevron separator icon.
  */
 .nhsuk-breadcrumb {
-  background-color: #ffffff;
-  padding-bottom: 12px;
+  background: none;
+  padding-bottom: 0px;
   /* [1] */
-  padding-top: 12px;
+  padding-top:0px;
   /* [1] */ }
   @media print {
     .nhsuk-breadcrumb {
@@ -2150,7 +2150,7 @@ b {
     width: 18px; }
     @media (min-width: 61.875em) {
       .nhsuk-breadcrumb .nhsuk-icon__chevron-right {
-        margin: 0 3px 0 5px; } }
+        margin: 0 3px 0 10px; } }
   .nhsuk-breadcrumb .nhsuk-icon__chevron-left {
     float: left;
     height: 24px;
