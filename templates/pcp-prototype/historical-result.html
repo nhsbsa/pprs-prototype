@@ -1,0 +1,103 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Quarterly collection dropdown - expander list
+{% endblock %}
+
+{% block navContent %}
+
+<ol class="nhsuk-breadcrumb__list">
+    <li class="nhsuk-breadcrumb__item">
+        <a class="nhsuk-breadcrumb__link" href="/pcp-prototype/option-2-historical">Historical request</a>
+    </li>
+</ol>
+<p class="nhsuk-breadcrumb__back">
+    <a class="nhsuk-breadcrumb__backlink" href="/pcp-prototype/homepage">
+        <span class="nhsuk-u-visually-hidden">Home</span>
+        Home
+    </a>
+</p>
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="nhsuk-width-container ">
+    <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-full">
+            <h1>
+                Historical results for March 2023 </h1>
+            <table role="table" class="nhsuk-table-responsive">
+                <caption class="nhsuk-table__caption">Results for March 2023</caption>
+                <thead role="rowgroup" class="nhsuk-table__head">
+                <tr role="row">
+                    <th role="columnheader" class="" scope="col">
+                        Requests
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                        product quantity
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                        Date returned
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                        Action
+                    </th>
+
+                </tr>
+                </thead>
+                <tbody class="nhsuk-table__body">
+
+                <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">1st request </span>1st request
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">how many items </span>84 items
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Date returned </span> 3 March 2023
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <a href="#">view</a>
+                    </td>
+                </tr>
+
+                <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">2nd request </span>2nd request
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">how many items </span>58 items
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Date returned </span> 9 March 2023
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <a href="#">view</a>
+                    </td>
+                </tr>
+
+                <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">3rd request </span>3rd request
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">how many items </span>82 items
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Date returned </span> 12 March 2023
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <a href="#">view</a>
+                    </td>
+                </tr>
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

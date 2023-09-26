@@ -54,6 +54,13 @@ app.get('/view-prototype-final1-first-version', (req, res) => { res.render('view
 app.get('/view-prototype-final2', (req, res) => { res.render('view-prototype-final2') });
 app.get('/view-prototype-final2a', (req, res) => { res.render('view-prototype-final2a') });
 
+app.get('/view-prototype4', (req, res) => { res.render('view-prototype4') });
+app.get('/view-prototype4/file-upload1', (req, res) => { res.render('file-upload1') });
+app.get('/view-prototype4/file-upload2', (req, res) => { res.render('file-upload2') });
+app.get('/view-prototype4/file-upload3', (req, res) => { res.render('file-upload3') });
+app.get('/list-of-requests', (req, res) => { res.render('list-of-requests') });
+app.get('/list-of-requests__entry', (req, res) => { res.render('list-of-requests__entry') });
+
 app.get('/view-prototype-final2a-h0', (req, res) => { res.render('view-prototype-final2a-h0') });
 app.get('/view-prototype-final2a-h1', (req, res) => { res.render('view-prototype-final2a-h1') });
 app.get('/view-prototype-final2a-h2', (req, res) => { res.render('view-prototype-final2a-h2') });
@@ -160,6 +167,10 @@ app.get('/pcp-prototype/product-list/additional-supplier-view-tabs', (req, res) 
 app.get('/pcp-prototype/product-list/main-suppliers', (req, res) => { res.render('pcp-prototype/product-list/main-suppliers') });
 app.get('/pcp-prototype/product-list/additional-suppliers', (req, res) => { res.render('pcp-prototype/product-list/additional-suppliers') });
 
+app.get('/pcp-prototype/historical-requests', (req, res) => { res.render('pcp-prototype/historical-requests') });
+app.get('/pcp-prototype/historical-requests-months', (req, res) => { res.render('pcp-prototype/historical-requests-months') });
+app.get('/pcp-prototype/option-2-historical', (req, res) => { res.render('pcp-prototype/option-2-historical') });
+app.get('/pcp-prototype/historical-result', (req, res) => { res.render('pcp-prototype/historical-result') });
 /**
  * Server Activation
  */
