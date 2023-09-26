@@ -1,22 +1,23 @@
 {% extends "layout.html" %}
 {% block content %}
-<main id="main" class="nhsuk-main-wrapper" role="main">
-  <div class="nhsuk-back-link">
-    <a class="nhsuk-back-link__link" href="../dashboard.html">
-      <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
-        <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
-      </svg>
-      Go back to dashboard</a>
-  </div>
-  <span class="nhsuk-caption-l">
-  2023
-</span>
-  <h1>Price concession upload</h1>
-  <div class="nhsuk-width-container">
-    <main class="nhsuk-main-wrapper" id="maincontent">
 
-      <div class="nhsuk-grid-row">
-        <div class="nhsuk-grid-column-two-thirds">
+<div class="nhsuk-back-link nhsuk-u-margin-bottom-5">
+  <a class="nhsuk-back-link__link" href="file-upload1">
+    <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+      <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+    </svg>
+    Go back to upload the product list</a>
+</div>
+
+
+
+  <h1><span class="nhsuk-caption-l">
+     September 2023 - 4th request
+     <span class="nhsuk-u-visually-hidden"> for </span>
+   </span>Product list upload</h1>
+  <div class="nhsuk-width-container">
+
+
 
           <table class="nhsuk-table">
             <caption class="nhsuk-table__caption">File upload</caption>
@@ -41,17 +42,8 @@
             </tr>
             </tbody>
           </table>
-          <a class="nhsuk-button nhsuk-u-margin-top-4" href="/view-prototype4/file-upload3">Continue</a>
+          <a class="nhsuk-button " href="../product-list/product-list-results">Continue to view product list</a>
 
         </div>
-      </div>
 
-    </main>
-  </div>
-</main>
-
-<script>
-  localStorage.clear();
-  console.log(localStorage);
-</script>
 {% endblock %}

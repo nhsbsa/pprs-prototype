@@ -54,10 +54,10 @@ app.get('/view-prototype-final1-first-version', (req, res) => { res.render('view
 app.get('/view-prototype-final2', (req, res) => { res.render('view-prototype-final2') });
 app.get('/view-prototype-final2a', (req, res) => { res.render('view-prototype-final2a') });
 
-app.get('/view-prototype4', (req, res) => { res.render('view-prototype4') });
-app.get('/file-upload1', (req, res) => { res.render('file-upload1') });
-app.get('/file-upload2', (req, res) => { res.render('file-upload2') });
-app.get('/file-upload3', (req, res) => { res.render('file-upload3') });
+//app.get('/view-prototype4', (req, res) => { res.render('view-prototype4') });
+//app.get('/file-upload1', (req, res) => { res.render('file-upload1') });
+//app.get('/file-upload2', (req, res) => { res.render('file-upload2') });
+//app.get('/file-upload3', (req, res) => { res.render('file-upload3') });
 app.get('/list-of-requests', (req, res) => { res.render('list-of-requests') });
 app.get('/list-of-requests__entry', (req, res) => { res.render('list-of-requests__entry') });
 
@@ -177,6 +177,10 @@ app.get('/pcp-prototype/historical-requests/option-1/historical-search', (req, r
 app.get('/pcp-prototype/historical-requests/option-3/option-3-historical-search', (req, res) => { res.render('pcp-prototype/historical-requests/option-3/option-3-historical-search') });
 app.get('/pcp-prototype/historical-requests/option-3/option-3-results', (req, res) => { res.render('pcp-prototype/historical-requests/option-3/option-3-results') });
 app.get('/pcp-prototype/historical-requests/option-page', (req, res) => { res.render('pcp-prototype/historical-requests/option-page') });
+app.get('/pcp-prototype/new-request/current-requests', (req, res) => { res.render('pcp-prototype/new-request/current-requests') });
+app.get('/pcp-prototype/new-request/file-upload', (req, res) => { res.render('pcp-prototype/new-request/file-upload') });
+app.get('/pcp-prototype/new-request/file-upload1', (req, res) => { res.render('pcp-prototype/new-request/file-upload1') });
+app.get('/pcp-prototype/new-request/file-upload2', (req, res) => { res.render('pcp-prototype/new-request/file-upload2') });
 /**
  * Server Activation
  */

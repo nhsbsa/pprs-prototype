@@ -1,0 +1,136 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Quarterly collection dropdown - expander list
+{% endblock %}
+
+{% block navContent %}
+
+<div class="nhsuk-back-link">
+
+    <a class="nhsuk-back-link__link" href="../request-list">
+        <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+            <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+        </svg>
+        Go back</a>
+</div>
+
+<!--<ol class="nhsuk-breadcrumb__list">-->
+<!--    <li class="nhsuk-breadcrumb__item">-->
+<!--        <a class="nhsuk-breadcrumb__link" href="/pcp-prototype/option-2-historical">Historical request</a>-->
+<!--    </li>-->
+<!--</ol>-->
+<!--<p class="nhsuk-breadcrumb__back">-->
+<!--    <a class="nhsuk-breadcrumb__backlink" href="/pcp-prototype/homepage">-->
+<!--        <span class="nhsuk-u-visually-hidden">Home</span>-->
+<!--        Home-->
+<!--    </a>-->
+<!--</p>-->
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="nhsuk-width-container ">
+    <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-full">
+            <h1>Ongoing requests </h1>
+
+<!--            <div class="nhsuk-inset-text">-->
+<!--                <span class="nhsuk-u-visually-hidden">Information: </span>-->
+<!--            </div>-->
+
+            <p class="nhsuk-u-margin-bottom-7">For this month, here are the current requests</p>
+
+            <div class="nhsuk-body-m flex--space-between" style="display: flex">
+                <div class="nhsuk-u-visually-hidden">Currently viewing</div>
+                <div id="pageAndResultCount">Page 1 of 1 (3 results)</div>
+            </div>
+
+            <table role="table" class="nhsuk-table-responsive nhsuk-u-margin-bottom-8">
+                <caption class="nhsuk-table__caption">Ongoing requests for September 2023</caption>
+                <thead role="rowgroup" class="nhsuk-table__head">
+                <tr role="row">
+                    <th role="columnheader" class="" scope="col">
+                        Requests
+                    </th>
+                    <th role="columnheader" class="" scope="col">Product quantity
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                        Date completed
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                        Action
+                    </th>
+
+                </tr>
+                </thead>
+                <tbody class="nhsuk-table__body">
+
+                <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">1st request </span>1st request
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">how many items </span>84 items
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Date completed </span> 3 September 2023
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <a href="#" class="nhsuk-link nhsuk-link--no-visited-state">View</a>
+                    </td>
+                </tr>
+
+                <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">2nd request </span>2nd request
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">how many items </span>58 items
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Date completed </span> 9 September 2023
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <a class="nhsuk-link nhsuk-link--no-visited-state" href="#">View</a>
+                    </td>
+                </tr>
+
+                <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">3rd request </span>3rd request
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">how many items </span>82 items
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Date completed </span> 12 September 2023
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <a class="nhsuk-link nhsuk-link--no-visited-state" href="#">View</a>
+                    </td>
+                </tr>
+
+                </tbody>
+            </table>
+
+            <div class="nhsuk-action-link">
+                <a class="nhsuk-action-link__link" href="file-upload1">
+                    <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+                    </svg>
+                    <span class="nhsuk-action-link__text">Create a new request</span>
+                </a>
+            </div>
+
+<!--            <a class="nhsuk-button" href="/pcp-prototype/option-page">-->
+<!--                <span class="nhsuk-u-visually-hidden">Home</span>-->
+<!--                Back-->
+<!--            </a>-->
+        </div>
+    </div>
+</div>
+{% endblock %}
