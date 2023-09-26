@@ -1,0 +1,265 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Quarterly collection dropdown - expander list
+{% endblock %}
+
+{% block navContent %}
+
+<ol class="nhsuk-breadcrumb__list">
+    <li class="nhsuk-breadcrumb__item">
+        <a class="nhsuk-breadcrumb__link" href="/pcp-prototype/option-2-historical">Historical request</a>
+    </li>
+</ol>
+<p class="nhsuk-breadcrumb__back">
+    <a class="nhsuk-breadcrumb__backlink" href="/pcp-prototype/homepage">
+        <span class="nhsuk-u-visually-hidden">Home</span>
+        Home
+    </a>
+</p>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="nhsuk-width-container ">
+    <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-full">
+            <h1>
+                Historical search
+            </h1>
+            <fieldset class="nhsuk-fieldset">
+                <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                    <h2 class="nhsuk-fieldset__heading">
+                        Select a year
+                    </h2>
+                </legend>
+
+                <div class="nhsuk-hint" id="year">
+                    Select an option that is relevant to your search.
+                </div>
+
+
+                <div class="nhsuk-form-group">
+                    <div class="nhsuk-grid-row nhsuk-u-margin-bottom-3">
+                        <div class="nhsuk-grid-column-one-quarter nhsuk-u-margin-bottom-3">
+                            <div  class="nhsuk-radios__item">
+                                <input class="nhsuk-radios__input"  id="year" name="year" type="radio"  value="yes">
+                                <label class="nhsuk-label nhsuk-radios__label" for="year">
+                                    2016
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="nhsuk-grid-column-one-quarter nhsuk-u-margin-bottom-3">
+                            <div  class="nhsuk-radios__item">
+                                <input class="nhsuk-radios__input"  id="year" name="year" type="radio"  value="yes">
+                                <label class="nhsuk-label nhsuk-radios__label" for="year">
+                                    2017
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="nhsuk-grid-column-one-quarter nhsuk-u-margin-bottom-3">
+                            <div  class="nhsuk-radios__item">
+                                <input class="nhsuk-radios__input"  id="year" name="year" type="radio"  value="yes">
+                                <label class="nhsuk-label nhsuk-radios__label" for="Year">
+                                    2018
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="nhsuk-grid-column-one-quarter nhsuk-u-margin-bottom-3">
+                            <div class="nhsuk-radios__item">
+                                <input class="nhsuk-radios__input" id="year" name="year" type="radio" value="yes">
+                                <label class="nhsuk-label nhsuk-radios__label" for="Year">
+                                    2019
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nhsuk-grid-row nhsuk-u-margin-bottom-3">
+                        <div class="nhsuk-grid-column-one-quarter nhsuk-u-margin-bottom-3">
+                            <div class="nhsuk-radios__item">
+                                <input class="nhsuk-radios__input" id="year" name="year" type="radio" value="2019">
+                                <label class="nhsuk-label nhsuk-radios__label" for="Year">
+                                    2020
+                                </label>
+                            </div>
+                        </div>
+
+
+                        <div class="nhsuk-grid-column-one-quarter nhsuk-u-margin-bottom-3">
+                            <div class="nhsuk-radios__item">
+                                <input class="nhsuk-radios__input" id="year" name="year" type="radio" value="2018">
+                                <label class="nhsuk-label nhsuk-radios__label" for="Year">
+                                    2021
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="nhsuk-grid-column-one-quarter nhsuk-u-margin-bottom-3">
+                            <div class="nhsuk-radios__item">
+                                <input class="nhsuk-radios__input" id="year" name="year" type="radio" value="2017">
+                                <label class="nhsuk-label nhsuk-radios__label" for="Year">
+                                    2022
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="nhsuk-grid-column-one-quarter nhsuk-u-margin-bottom-3">
+                            <div class="nhsuk-radios__item">
+                                <input class="nhsuk-radios__input" id="year" name="year" type="radio" value="2016">
+                                <label class="nhsuk-label nhsuk-radios__label" for="Year">
+                                    2023
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                </details>
+
+                <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                    <h2 class="nhsuk-fieldset__heading">
+                        Select a month
+                    </h2>
+                </legend>
+                <div class="nhsuk-hint" id="month">
+                    Select an option that is relevant to your search.
+                </div>
+
+                <div class="nhsuk-grid-row nhsuk-u-margin-bottom-3">
+                    <div class="nhsuk-grid-column-one-quarter nhsuk-u-margin-bottom-3">
+                        <div  class="nhsuk-radios__item">
+                            <input class="nhsuk-radios__input"  id="month" name="month" type="radio"  value="yes">
+                            <label class="nhsuk-label nhsuk-radios__label" for="month">
+                                January
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="nhsuk-grid-column-one-quarter nhsuk-u-margin-bottom-3">
+                        <div class="nhsuk-radios__item">
+                            <input class="nhsuk-radios__input" id="month-2" name="month" type="radio" value="no">
+                            <label class="nhsuk-label nhsuk-radios__label" for="month">
+                                February
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="nhsuk-grid-column-one-quarter nhsuk-u-margin-bottom-3">
+                        <div  class="nhsuk-radios__item">
+                            <input class="nhsuk-radios__input" id="month" name="month" type="radio" value="not sure">
+                            <label class="nhsuk-label nhsuk-radios__label" for="month">
+                                March
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="nhsuk-grid-column-one-quarter nhsuk-u-margin-bottom-3">
+                        <div  class="nhsuk-radios__item">
+                            <input class="nhsuk-radios__input" id="month" name="month" type="radio" value="not sure">
+                            <label class="nhsuk-label nhsuk-radios__label" for="month">
+                                April
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nhsuk-grid-row nhsuk-u-margin-bottom-3">
+                    <div class="nhsuk-grid-column-one-quarter nhsuk-u-margin-bottom-3">
+                        <div  class="nhsuk-radios__item">
+                            <input class="nhsuk-radios__input" id="month" name="month" type="radio" value="not sure">
+                            <label class="nhsuk-label nhsuk-radios__label" for="month">
+                                May
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="nhsuk-grid-column-one-quarter nhsuk-u-margin-bottom-3">
+                        <div  class="nhsuk-radios__item">
+                            <input class="nhsuk-radios__input" id="month-3" name="month" type="radio" value="not sure">
+                            <label class="nhsuk-label nhsuk-radios__label" for="month">
+                                June
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="nhsuk-grid-column-one-quarter nhsuk-u-margin-bottom-3">
+                        <div  class="nhsuk-radios__item">
+                            <input class="nhsuk-radios__input" id="month-3" name="month" type="radio" value="not sure">
+                            <label class="nhsuk-label nhsuk-radios__label" for="month">
+                                July
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="nhsuk-grid-column-one-quarter nhsuk-u-margin-bottom-3">
+                        <div  class="nhsuk-radios__item">
+                            <input class="nhsuk-radios__input" id="month" name="month" type="radio" value="not sure">
+                            <label class="nhsuk-label nhsuk-radios__label" for="month">
+                                August
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="nhsuk-grid-row nhsuk-u-margin-bottom-3">
+                    <div class="nhsuk-grid-column-one-quarter nhsuk-u-margin-bottom-3">
+                        <div  class="nhsuk-radios__item">
+                            <input class="nhsuk-radios__input" id="month" name="month" type="radio" value="not sure">
+                            <label class="nhsuk-label nhsuk-radios__label" for="month">
+                                September
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="nhsuk-grid-column-one-quarter nhsuk-u-margin-bottom-3">
+                        <div  class="nhsuk-radios__item">
+                            <input class="nhsuk-radios__input" id="month" name="month" type="radio" value="not sure">
+                            <label class="nhsuk-label nhsuk-radios__label" for="month">
+                                October
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="nhsuk-grid-column-one-quarter nhsuk-u-margin-bottom-3">
+                        <div  class="nhsuk-radios__item">
+                            <input class="nhsuk-radios__input" id="month" name="month" type="radio" value="not sure">
+                            <label class="nhsuk-label nhsuk-radios__label" for="month">
+                                November
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="nhsuk-grid-column-one-quarter">
+                        <div  class="nhsuk-radios__item">
+                            <input class="nhsuk-radios__input" id="month" name="month" type="radio" value="not sure">
+                            <label class="nhsuk-label nhsuk-radios__label" for="month">
+                                December
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <a class="nhsuk-button" href="/pcp-prototype/option-3-results">
+                <span class="nhsuk-u-visually-hidden">Home</span>
+                Search
+            </a>
+
+            <!--            <div class="nhsuk-inset-text">-->
+            <!--                <span class="nhsuk-u-visually-hidden">Information: </span>-->
+            <!--                <p>You can choose a new date by clicking the link at the top of the page or return to the <a href="/pcp-prototype/homepage" title="Homepage">Home page</a> here to go to the start-->
+            <!--                    .</p>-->
+            <!--            </div>-->
+
+            <!--            <a class="nhsuk-button" href="/pcp-prototype/historical-search">-->
+            <!--                <span class="nhsuk-u-visually-hidden">Home</span>-->
+            <!--                Alternative-->
+            <!--            </a>-->
+        </div>
+    </div>
+</div>
+{% endblock %}

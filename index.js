@@ -171,6 +171,10 @@ app.get('/pcp-prototype/historical-requests', (req, res) => { res.render('pcp-pr
 app.get('/pcp-prototype/historical-requests-months', (req, res) => { res.render('pcp-prototype/historical-requests-months') });
 app.get('/pcp-prototype/option-2-historical', (req, res) => { res.render('pcp-prototype/option-2-historical') });
 app.get('/pcp-prototype/historical-result', (req, res) => { res.render('pcp-prototype/historical-result') });
+app.get('/pcp-prototype/historical-search', (req, res) => { res.render('pcp-prototype/historical-search') });
+app.get('/pcp-prototype/option-3-historical-search', (req, res) => { res.render('pcp-prototype/option-3-historical-search') });
+app.get('/pcp-prototype/option-3-results', (req, res) => { res.render('pcp-prototype/option-3-results') });
+app.get('/pcp-prototype/option-page', (req, res) => { res.render('pcp-prototype/option-page') });
 /**
  * Server Activation
  */

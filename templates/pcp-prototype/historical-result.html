@@ -28,6 +28,12 @@ Quarterly collection dropdown - expander list
         <div class="nhsuk-grid-column-full">
             <h1>
                 Historical results for March 2023 </h1>
+
+            <div class="nhsuk-body-m flex--space-between" style="display: flex">
+                <div class="nhsuk-u-visually-hidden">Currently viewing</div>
+                <div id="pageAndResultCount">Page 1 of 1 (3 results)</div>
+            </div>
+
             <table role="table" class="nhsuk-table-responsive">
                 <caption class="nhsuk-table__caption">Results for March 2023</caption>
                 <thead role="rowgroup" class="nhsuk-table__head">
@@ -39,7 +45,7 @@ Quarterly collection dropdown - expander list
                         product quantity
                     </th>
                     <th role="columnheader" class="" scope="col">
-                        Date returned
+                        Date completed
                     </th>
                     <th role="columnheader" class="" scope="col">
                         Action
@@ -57,7 +63,7 @@ Quarterly collection dropdown - expander list
                         <span class="nhsuk-table-responsive__heading">how many items </span>84 items
                     </td>
                     <td role="cell" class="nhsuk-table__cell">
-                        <span class="nhsuk-table-responsive__heading">Date returned </span> 3 March 2023
+                        <span class="nhsuk-table-responsive__heading">Date completed </span> 3 March 2023
                     </td>
                     <td role="cell" class="nhsuk-table__cell">
                         <a href="#">view</a>
@@ -72,7 +78,7 @@ Quarterly collection dropdown - expander list
                         <span class="nhsuk-table-responsive__heading">how many items </span>58 items
                     </td>
                     <td role="cell" class="nhsuk-table__cell">
-                        <span class="nhsuk-table-responsive__heading">Date returned </span> 9 March 2023
+                        <span class="nhsuk-table-responsive__heading">Date completed </span> 9 March 2023
                     </td>
                     <td role="cell" class="nhsuk-table__cell">
                         <a href="#">view</a>
@@ -87,7 +93,7 @@ Quarterly collection dropdown - expander list
                         <span class="nhsuk-table-responsive__heading">how many items </span>82 items
                     </td>
                     <td role="cell" class="nhsuk-table__cell">
-                        <span class="nhsuk-table-responsive__heading">Date returned </span> 12 March 2023
+                        <span class="nhsuk-table-responsive__heading">Date completed </span> 12 March 2023
                     </td>
                     <td role="cell" class="nhsuk-table__cell">
                         <a href="#">view</a>
@@ -96,7 +102,16 @@ Quarterly collection dropdown - expander list
 
                 </tbody>
             </table>
+            <div class="nhsuk-inset-text">
+                <span class="nhsuk-u-visually-hidden">Information: </span>
+                <p>You can choose a new date by clicking the link at the top of the page or return to the <a href="/pcp-prototype/homepage" title="Homepage">Home page</a> here to go to the start
+                    .</p>
+            </div>
 
+            <a class="nhsuk-button" href="/pcp-prototype/option-page">
+                <span class="nhsuk-u-visually-hidden">Home</span>
+                Back
+            </a>
         </div>
     </div>
 </div>
