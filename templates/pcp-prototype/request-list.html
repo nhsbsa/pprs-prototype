@@ -6,17 +6,32 @@ Quarterly collection dropdown - expander list
 
 {% block navContent %}
 
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+    <div class="nhsuk-width-container">
         <ol class="nhsuk-breadcrumb__list">
-            <li class="nhsuk-breadcrumb__item">
-                <a class="nhsuk-breadcrumb__link" href="/pcp-prototype/homepage">Home</a>
-            </li>
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="homepage">Price concessions homepage</a></li>
+
         </ol>
         <p class="nhsuk-breadcrumb__back">
-            <a class="nhsuk-breadcrumb__backlink" href="/pcp-prototype/homepage">
-                <span class="nhsuk-u-visually-hidden">Home</span>
-                Home
+            <a class="nhsuk-breadcrumb__backlink" href="/level-one/level-two/level-three">
+                <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+                Level three
             </a>
         </p>
+    </div>
+</nav>
+
+<!--        <ol class="nhsuk-breadcrumb__list">-->
+<!--            <li class="nhsuk-breadcrumb__item">-->
+<!--                <a class="nhsuk-breadcrumb__link" href="/pcp-prototype/homepage">Home</a>-->
+<!--            </li>-->
+<!--        </ol>-->
+<!--        <p class="nhsuk-breadcrumb__back">-->
+<!--            <a class="nhsuk-breadcrumb__backlink" href="/pcp-prototype/homepage">-->
+<!--                <span class="nhsuk-u-visually-hidden">Home</span>-->
+<!--                Home-->
+<!--            </a>-->
+<!--        </p>-->
 
 {% endblock %}
 
@@ -32,14 +47,27 @@ Quarterly collection dropdown - expander list
 
 
             <ul class="nhsuk-grid-row nhsuk-card-group">
+                <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+                    <div class="nhsuk-card nhsuk-card--clickable">
+                        <div class="nhsuk-card__content">
+                            <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                                <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="#">New request</a>
+                            </h2>
+
+                        </div>
+                    </div>
+
+                </li>
 
                 <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
 
                     <div class="nhsuk-card nhsuk-card--clickable">
                         <div class="nhsuk-card__content">
-                            <h5 class="nhsuk-card__heading nhsuk-heading-xs">
-                                <a class="nhsuk-card__link" href="/pcp-prototype/request-list">Ongoing requests</a>
-                            </h5>
+                            <h2 class="nhsuk-card__heading nhsuk-heading-m">
+
+                                <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="/pcp-prototype/request-list">Ongoing requests</a>
+                            </h2>
 
                         </div>
                     </div>
@@ -49,21 +77,9 @@ Quarterly collection dropdown - expander list
 
                     <div class="nhsuk-card nhsuk-card--clickable">
                         <div class="nhsuk-card__content">
-                            <h5 class="nhsuk-card__heading nhsuk-heading-xs">
-                                <a class="nhsuk-card__link" href="#">Create new requests</a>
-                            </h5>
-
-                        </div>
-                    </div>
-
-                </li>
-                <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-
-                    <div class="nhsuk-card nhsuk-card--clickable">
-                        <div class="nhsuk-card__content">
-                            <h5 class="nhsuk-card__heading nhsuk-heading-xs">
-                                <a class="nhsuk-card__link" href="/pcp-prototype/option-page">Historical requests</a>
-                            </h5>
+                            <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                                <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="historical-requests/option-page">Historical requests</a>
+                            </h2>
 
                         </div>
                     </div>

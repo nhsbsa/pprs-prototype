@@ -6,17 +6,33 @@ Quarterly collection dropdown - expander list
 
 {% block navContent %}
 
-<ol class="nhsuk-breadcrumb__list">
-    <li class="nhsuk-breadcrumb__item">
-        <a class="nhsuk-breadcrumb__link" href="/pcp-prototype/option-2-historical">Historical request</a>
-    </li>
-</ol>
-<p class="nhsuk-breadcrumb__back">
-    <a class="nhsuk-breadcrumb__backlink" href="/pcp-prototype/homepage">
-        <span class="nhsuk-u-visually-hidden">Home</span>
-        Home
-    </a>
-</p>
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+    <div class="nhsuk-width-container">
+        <ol class="nhsuk-breadcrumb__list">
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../../homepage">Price concessions homepage</a></li>
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../../request-list">Requests homepage</a></li>
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../option-page">Options page</a></li>
+        </ol>
+        <p class="nhsuk-breadcrumb__back">
+            <a class="nhsuk-breadcrumb__backlink" href="/level-one/level-two/level-three">
+                <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+                Options page
+            </a>
+        </p>
+    </div>
+</nav>
+
+<!--<ol class="nhsuk-breadcrumb__list">-->
+<!--    <li class="nhsuk-breadcrumb__item">-->
+<!--        <a class="nhsuk-breadcrumb__link" href="/pcp-prototype/option-2-historical">Historical request</a>-->
+<!--    </li>-->
+<!--</ol>-->
+<!--<p class="nhsuk-breadcrumb__back">-->
+<!--    <a class="nhsuk-breadcrumb__backlink" href="/pcp-prototype/homepage">-->
+<!--        <span class="nhsuk-u-visually-hidden">Home</span>-->
+<!--        Home-->
+<!--    </a>-->
+<!--</p>-->
 
 {% endblock %}
 
@@ -25,8 +41,11 @@ Quarterly collection dropdown - expander list
 <div class="nhsuk-width-container ">
     <div class="nhsuk-grid-row">
         <div class="nhsuk-grid-column-full">
-            <h1>
-                Historical search
+            <h1><span class="nhsuk-caption-l">
+     Historical requests
+     <span class="nhsuk-u-visually-hidden">: </span>
+   </span>
+                Search for historical requests
             </h1>
             <fieldset class="nhsuk-fieldset">
                 <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
@@ -35,17 +54,14 @@ Quarterly collection dropdown - expander list
                     </h2>
                 </legend>
 
-                <div class="nhsuk-hint" id="year">
-                    Select an option that is relevant to your search.
-                </div>
 
+                <div class="nhsuk-form-group nhsuk-u-margin-bottom-5">
 
-                <div class="nhsuk-form-group">
                     <div class="nhsuk-grid-row nhsuk-u-margin-bottom-3">
                         <div class="nhsuk-grid-column-one-quarter nhsuk-u-margin-bottom-3">
                             <div  class="nhsuk-radios__item">
-                                <input class="nhsuk-radios__input"  id="year" name="year" type="radio"  value="yes">
-                                <label class="nhsuk-label nhsuk-radios__label" for="year">
+                                <input class="nhsuk-radios__input"  id="year-2016" name="year" type="radio"  value="yes">
+                                <label class="nhsuk-label nhsuk-radios__label" for="year-2016">
                                     2016
                                 </label>
                             </div>
@@ -53,8 +69,8 @@ Quarterly collection dropdown - expander list
 
                         <div class="nhsuk-grid-column-one-quarter nhsuk-u-margin-bottom-3">
                             <div  class="nhsuk-radios__item">
-                                <input class="nhsuk-radios__input"  id="year" name="year" type="radio"  value="yes">
-                                <label class="nhsuk-label nhsuk-radios__label" for="year">
+                                <input class="nhsuk-radios__input"  id="year-2017" name="year" type="radio"  value="yes">
+                                <label class="nhsuk-label nhsuk-radios__label" for="year-2017">
                                     2017
                                 </label>
                             </div>
@@ -62,8 +78,8 @@ Quarterly collection dropdown - expander list
 
                         <div class="nhsuk-grid-column-one-quarter nhsuk-u-margin-bottom-3">
                             <div  class="nhsuk-radios__item">
-                                <input class="nhsuk-radios__input"  id="year" name="year" type="radio"  value="yes">
-                                <label class="nhsuk-label nhsuk-radios__label" for="Year">
+                                <input class="nhsuk-radios__input"  id="year-2018" name="year" type="radio"  value="yes">
+                                <label class="nhsuk-label nhsuk-radios__label" for="year-2018">
                                     2018
                                 </label>
                             </div>
@@ -71,28 +87,28 @@ Quarterly collection dropdown - expander list
 
                         <div class="nhsuk-grid-column-one-quarter nhsuk-u-margin-bottom-3">
                             <div class="nhsuk-radios__item">
-                                <input class="nhsuk-radios__input" id="year" name="year" type="radio" value="yes">
-                                <label class="nhsuk-label nhsuk-radios__label" for="Year">
+                                <input class="nhsuk-radios__input" id="year-2019" name="year" type="radio" value="yes">
+                                <label class="nhsuk-label nhsuk-radios__label" for="year-2019">
                                     2019
                                 </label>
                             </div>
                         </div>
                     </div>
+
                     <div class="nhsuk-grid-row nhsuk-u-margin-bottom-3">
                         <div class="nhsuk-grid-column-one-quarter nhsuk-u-margin-bottom-3">
                             <div class="nhsuk-radios__item">
-                                <input class="nhsuk-radios__input" id="year" name="year" type="radio" value="2019">
-                                <label class="nhsuk-label nhsuk-radios__label" for="Year">
+                                <input class="nhsuk-radios__input" id="year-2020" name="year" type="radio" value="2019">
+                                <label class="nhsuk-label nhsuk-radios__label" for="year-2020">
                                     2020
                                 </label>
                             </div>
                         </div>
 
-
                         <div class="nhsuk-grid-column-one-quarter nhsuk-u-margin-bottom-3">
                             <div class="nhsuk-radios__item">
-                                <input class="nhsuk-radios__input" id="year" name="year" type="radio" value="2018">
-                                <label class="nhsuk-label nhsuk-radios__label" for="Year">
+                                <input class="nhsuk-radios__input" id="year-2021" name="year" type="radio" value="2018">
+                                <label class="nhsuk-label nhsuk-radios__label" for="year-2021">
                                     2021
                                 </label>
                             </div>
@@ -100,8 +116,8 @@ Quarterly collection dropdown - expander list
 
                         <div class="nhsuk-grid-column-one-quarter nhsuk-u-margin-bottom-3">
                             <div class="nhsuk-radios__item">
-                                <input class="nhsuk-radios__input" id="year" name="year" type="radio" value="2017">
-                                <label class="nhsuk-label nhsuk-radios__label" for="Year">
+                                <input class="nhsuk-radios__input" id="year-2022" name="year" type="radio" value="2017">
+                                <label class="nhsuk-label nhsuk-radios__label" for="year-2022">
                                     2022
                                 </label>
                             </div>
@@ -109,8 +125,8 @@ Quarterly collection dropdown - expander list
 
                         <div class="nhsuk-grid-column-one-quarter nhsuk-u-margin-bottom-3">
                             <div class="nhsuk-radios__item">
-                                <input class="nhsuk-radios__input" id="year" name="year" type="radio" value="2016">
-                                <label class="nhsuk-label nhsuk-radios__label" for="Year">
+                                <input class="nhsuk-radios__input" id="year-2023" name="year" type="radio" value="2016">
+                                <label class="nhsuk-label nhsuk-radios__label" for="year-2023">
                                     2023
                                 </label>
                             </div>
@@ -119,22 +135,17 @@ Quarterly collection dropdown - expander list
                 </div>
 
 
-                </details>
-
                 <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
                     <h2 class="nhsuk-fieldset__heading">
                         Select a month
                     </h2>
                 </legend>
-                <div class="nhsuk-hint" id="month">
-                    Select an option that is relevant to your search.
-                </div>
 
                 <div class="nhsuk-grid-row nhsuk-u-margin-bottom-3">
                     <div class="nhsuk-grid-column-one-quarter nhsuk-u-margin-bottom-3">
                         <div  class="nhsuk-radios__item">
-                            <input class="nhsuk-radios__input"  id="month" name="month" type="radio"  value="yes">
-                            <label class="nhsuk-label nhsuk-radios__label" for="month">
+                            <input class="nhsuk-radios__input"  id="month-jan" name="month" type="radio"  value="yes">
+                            <label class="nhsuk-label nhsuk-radios__label" for="month-jan">
                                 January
                             </label>
                         </div>
@@ -142,8 +153,8 @@ Quarterly collection dropdown - expander list
 
                     <div class="nhsuk-grid-column-one-quarter nhsuk-u-margin-bottom-3">
                         <div class="nhsuk-radios__item">
-                            <input class="nhsuk-radios__input" id="month-2" name="month" type="radio" value="no">
-                            <label class="nhsuk-label nhsuk-radios__label" for="month">
+                            <input class="nhsuk-radios__input" id="month-feb" name="month" type="radio" value="no">
+                            <label class="nhsuk-label nhsuk-radios__label" for="month-feb">
                                 February
                             </label>
                         </div>
@@ -151,8 +162,8 @@ Quarterly collection dropdown - expander list
 
                     <div class="nhsuk-grid-column-one-quarter nhsuk-u-margin-bottom-3">
                         <div  class="nhsuk-radios__item">
-                            <input class="nhsuk-radios__input" id="month" name="month" type="radio" value="not sure">
-                            <label class="nhsuk-label nhsuk-radios__label" for="month">
+                            <input class="nhsuk-radios__input" id="month-mar" name="month" type="radio" value="not sure">
+                            <label class="nhsuk-label nhsuk-radios__label" for="month-mar">
                                 March
                             </label>
                         </div>
@@ -160,8 +171,8 @@ Quarterly collection dropdown - expander list
 
                     <div class="nhsuk-grid-column-one-quarter nhsuk-u-margin-bottom-3">
                         <div  class="nhsuk-radios__item">
-                            <input class="nhsuk-radios__input" id="month" name="month" type="radio" value="not sure">
-                            <label class="nhsuk-label nhsuk-radios__label" for="month">
+                            <input class="nhsuk-radios__input" id="month-apr" name="month" type="radio" value="not sure">
+                            <label class="nhsuk-label nhsuk-radios__label" for="month-apr">
                                 April
                             </label>
                         </div>
@@ -171,8 +182,8 @@ Quarterly collection dropdown - expander list
                 <div class="nhsuk-grid-row nhsuk-u-margin-bottom-3">
                     <div class="nhsuk-grid-column-one-quarter nhsuk-u-margin-bottom-3">
                         <div  class="nhsuk-radios__item">
-                            <input class="nhsuk-radios__input" id="month" name="month" type="radio" value="not sure">
-                            <label class="nhsuk-label nhsuk-radios__label" for="month">
+                            <input class="nhsuk-radios__input" id="month-may" name="month" type="radio" value="not sure">
+                            <label class="nhsuk-label nhsuk-radios__label" for="month-may">
                                 May
                             </label>
                         </div>
@@ -180,8 +191,8 @@ Quarterly collection dropdown - expander list
 
                     <div class="nhsuk-grid-column-one-quarter nhsuk-u-margin-bottom-3">
                         <div  class="nhsuk-radios__item">
-                            <input class="nhsuk-radios__input" id="month-3" name="month" type="radio" value="not sure">
-                            <label class="nhsuk-label nhsuk-radios__label" for="month">
+                            <input class="nhsuk-radios__input" id="month-jun" name="month" type="radio" value="not sure">
+                            <label class="nhsuk-label nhsuk-radios__label" for="month-jun">
                                 June
                             </label>
                         </div>
@@ -189,8 +200,8 @@ Quarterly collection dropdown - expander list
 
                     <div class="nhsuk-grid-column-one-quarter nhsuk-u-margin-bottom-3">
                         <div  class="nhsuk-radios__item">
-                            <input class="nhsuk-radios__input" id="month-3" name="month" type="radio" value="not sure">
-                            <label class="nhsuk-label nhsuk-radios__label" for="month">
+                            <input class="nhsuk-radios__input" id="month-jul" name="month" type="radio" value="not sure">
+                            <label class="nhsuk-label nhsuk-radios__label" for="month-jul">
                                 July
                             </label>
                         </div>
@@ -198,8 +209,8 @@ Quarterly collection dropdown - expander list
 
                     <div class="nhsuk-grid-column-one-quarter nhsuk-u-margin-bottom-3">
                         <div  class="nhsuk-radios__item">
-                            <input class="nhsuk-radios__input" id="month" name="month" type="radio" value="not sure">
-                            <label class="nhsuk-label nhsuk-radios__label" for="month">
+                            <input class="nhsuk-radios__input" id="month-aug" name="month" type="radio" value="not sure">
+                            <label class="nhsuk-label nhsuk-radios__label" for="month-aug">
                                 August
                             </label>
                         </div>
@@ -208,8 +219,8 @@ Quarterly collection dropdown - expander list
                 <div class="nhsuk-grid-row nhsuk-u-margin-bottom-3">
                     <div class="nhsuk-grid-column-one-quarter nhsuk-u-margin-bottom-3">
                         <div  class="nhsuk-radios__item">
-                            <input class="nhsuk-radios__input" id="month" name="month" type="radio" value="not sure">
-                            <label class="nhsuk-label nhsuk-radios__label" for="month">
+                            <input class="nhsuk-radios__input" id="month-sep" name="month" type="radio" value="not sure">
+                            <label class="nhsuk-label nhsuk-radios__label" for="month-sep">
                                 September
                             </label>
                         </div>
@@ -217,8 +228,8 @@ Quarterly collection dropdown - expander list
 
                     <div class="nhsuk-grid-column-one-quarter nhsuk-u-margin-bottom-3">
                         <div  class="nhsuk-radios__item">
-                            <input class="nhsuk-radios__input" id="month" name="month" type="radio" value="not sure">
-                            <label class="nhsuk-label nhsuk-radios__label" for="month">
+                            <input class="nhsuk-radios__input" id="month-oct" name="month" type="radio" value="not sure">
+                            <label class="nhsuk-label nhsuk-radios__label" for="month-oct">
                                 October
                             </label>
                         </div>
@@ -226,8 +237,8 @@ Quarterly collection dropdown - expander list
 
                     <div class="nhsuk-grid-column-one-quarter nhsuk-u-margin-bottom-3">
                         <div  class="nhsuk-radios__item">
-                            <input class="nhsuk-radios__input" id="month" name="month" type="radio" value="not sure">
-                            <label class="nhsuk-label nhsuk-radios__label" for="month">
+                            <input class="nhsuk-radios__input" id="month-nov" name="month" type="radio" value="not sure">
+                            <label class="nhsuk-label nhsuk-radios__label" for="month-nov">
                                 November
                             </label>
                         </div>
@@ -235,16 +246,17 @@ Quarterly collection dropdown - expander list
 
                     <div class="nhsuk-grid-column-one-quarter">
                         <div  class="nhsuk-radios__item">
-                            <input class="nhsuk-radios__input" id="month" name="month" type="radio" value="not sure">
-                            <label class="nhsuk-label nhsuk-radios__label" for="month">
+                            <input class="nhsuk-radios__input" id="month-dec" name="month" type="radio" value="not sure">
+                            <label class="nhsuk-label nhsuk-radios__label" for="month-dec">
                                 December
                             </label>
                         </div>
                     </div>
                 </div>
+
             </fieldset>
 
-            <a class="nhsuk-button" href="/pcp-prototype/option-3-results">
+            <a class="nhsuk-button nhsuk-u-margin-top-4" href="option-3-results">
                 <span class="nhsuk-u-visually-hidden">Home</span>
                 Search
             </a>
@@ -262,4 +274,5 @@ Quarterly collection dropdown - expander list
         </div>
     </div>
 </div>
+
 {% endblock %}

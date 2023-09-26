@@ -6,17 +6,20 @@ Quarterly collection dropdown - expander list
 
 {% block navContent %}
 
-<ol class="nhsuk-breadcrumb__list">
-    <li class="nhsuk-breadcrumb__item">
-        <a class="nhsuk-breadcrumb__link" href="/pcp-prototype/homepage">Home</a>
-    </li>
-</ol>
-<p class="nhsuk-breadcrumb__back">
-    <a class="nhsuk-breadcrumb__backlink" href="/pcp-prototype/homepage">
-        <span class="nhsuk-u-visually-hidden">Home</span>
-        Home
-    </a>
-</p>
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+    <div class="nhsuk-width-container">
+        <ol class="nhsuk-breadcrumb__list">
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../homepage">Price concessions homepage</a></li>
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../request-list">Requests homepage</a></li>
+        </ol>
+        <p class="nhsuk-breadcrumb__back">
+            <a class="nhsuk-breadcrumb__backlink" href="/level-one/level-two/level-three">
+                <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+                Level three
+            </a>
+        </p>
+    </div>
+</nav>
 
 {% endblock %}
 
@@ -31,12 +34,12 @@ Quarterly collection dropdown - expander list
             </h1>
 
             <div class="nhsuk-warning-callout">
-                <h3 class="nhsuk-warning-callout__label">
+                <h2 class="nhsuk-warning-callout__label">
     <span role="text">
       <span class="nhsuk-u-visually-hidden">Important: </span>
       Page not for development
     </span>
-                </h3>
+                </h2>
                 <p>This page is only to navigate different designs for searching for historical requests. It is not to be used in development.</p>
             </div>
 
@@ -46,7 +49,7 @@ Quarterly collection dropdown - expander list
                     <div class="nhsuk-card nhsuk-card--clickable">
                         <div class="nhsuk-card__content">
                             <h2 class="nhsuk-card__heading nhsuk-heading-m">
-                                <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="/pcp-prototype/historical-requests">Option one</a>
+                                <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="/pcp-prototype/historical-requests/option-1/historical-request">Option one</a>
                             </h2>
                                 <p class="nhsuk-card__description">Using clickable cards to select the years and months. </p>
 
@@ -60,7 +63,7 @@ Quarterly collection dropdown - expander list
                     <div class="nhsuk-card nhsuk-card--clickable">
                         <div class="nhsuk-card__content">
                             <h2 class="nhsuk-card__heading nhsuk-heading-m">
-                                <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="/pcp-prototype/option-2-historical">Option two</a>
+                                <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="/pcp-prototype/historical-requests/option-2/option-2-historical">Option two</a>
                             </h2>
                                 <p class="nhsuk-card__description">Using radio buttons to select the year and month, with results on a separate page.  </p>
                         </div>
@@ -72,7 +75,7 @@ Quarterly collection dropdown - expander list
                     <div class="nhsuk-card nhsuk-card--clickable">
                         <div class="nhsuk-card__content">
                             <h2 class="nhsuk-card__heading nhsuk-heading-m">
-                                <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="/pcp-prototype/option-3-historical-search">Option three</a>
+                                <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="/pcp-prototype/historical-requests/option-3/option-3-historical-search">Option three</a>
                             </h2>
                                 <p>Using radio buttons to select the year and month, with results on the same page. </p>
 
