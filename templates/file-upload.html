@@ -1,0 +1,223 @@
+{% extends "base.html" %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+<div class="column-two-thirds">
+  <div class="breadcrumbs">
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <h1 class="heading-xlarge">
+      <span class="heading-secondary">Design prototype</span>
+      Branded Medicines</h1>
+  </div>
+</div>
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <h2 class="heading-large">View max price info</h2>
+    <p><a href="/view-prototype1">Prototype 1</a></p>
+    <p><a href="/view-prototype2">Prototype 2</a></p>
+    <p><a href="/view-prototype3">Prototype 3</a></p>
+    <p><a href="/view-prototype4">Prototype 4</a></p>
+    <p><a href="/view-prototype-final1">Prototype final 1</a></p>
+    <p><a href="/view-prototype-final2">Prototype final 2</a> - Option voted for by DH</p>
+    <p><a href="/view-prototype-final2a">Prototype final 2 edit journey</a> - DH to be asked</p>
+    <p><a href="/view-prototype-with-links">Prototype edit journey with links</a> </p>
+    <p><a href="/view-prototype-with-links2">Prototype edit journey with links2</a> </p>
+    <p><a href="/register-prototype-product-info">Prototype register product journey</a> </p>
+    <p><a href="/confirmation-page">Prototype register journey from confirmation page</a> </p>
+    <p><a href="/view-product-register-journey">Prototype view product register journey</a> </p>
+
+    <h3 class="heading-medium">Edit pages</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Description</th>
+          <th>link</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Edit produt links positoned</td>
+          <td><a href="/prototype-with-links-sc0">view product with links</a></td>
+        </tr>
+        <tr>
+          <td>Edit with links different take</td>
+
+          <td><a href="/prototype-with-links-sc">view product with links</a></td>
+        </tr>
+        <tr>
+          <td>Edit with links 2nd take</td>
+          <td><a href="/prototype-with-links-sc1">view product with links 2nd version</a></td>
+        </tr>
+        <tr>
+          <td>Edit prodcuct page</td>
+          <td><a href="/register-product-sc">Edit product page</a></td>
+        </tr>
+        <tr>
+          <td>Edit NAS</td>
+          <td><a href="/edit-prototype-NAS-sc">Edit NAS page</a></td>
+        </tr>
+        <tr>
+          <td>Edit temporary price</td>
+          <td><a href="/edit-prototype-temp-price-sc">Edit temporary price page</a></td>
+        </tr>
+        <tr>
+          <td>Edit HCP</td>
+          <td><a href="/edit-prototype-HCP-sc">Edit HCP page</a></td>
+        </tr>
+        <tr>
+          <td>Edit other info</td>
+          <td><a href="/edit-prototype-other-info-sc">Edit other info</a></td>
+        </tr>
+        <tr>
+          <td>Error handling</td>
+          <td><a href="/accessibleerrors">Accessible errors</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 class="heading-medium">PLR proposal</h3>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Description</th>
+          <th>Link</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Presentation level sales dashboard</td>
+          <td><a href="/sales-dashboard">First pass at sales dashboard</a></td>
+        </tr>
+        <tr>
+          <td>Presentation level sales report full</td>
+          <td><a href="/presentation-level-report-view-all">Full report view</a></td>
+        </tr>
+        <tr>
+          <td>Presentation level sales report submit form</td>
+          <td><a href="/presentation-level-report-form">First pass at submit product data for report form</a></td>
+        </tr>
+        <tr>
+          <td>Presentation level sales report view</td>
+          <td><a href="/presentation-level-report-view">Initial view of read only figures to confirm</a></td>
+        </tr>
+        <tr>
+          <td>Presentation level sales report done</td>
+          <td><a href="/presentation-level-report-done">Initial draft of done page once product is submitted</a></td>
+        </tr>
+        <tr>
+          <td>Submissions page 1</td>
+          <td><a href="/product-level-returns-submission">Version 1</a></td>
+        </tr>
+        <tr>
+          <td>Submissions page 2</td>
+          <td><a href="/annual-submissions">Version 2</a></td>
+        </tr>
+        <tr>
+
+            <td>Zero returns</td>
+            <td><a href="/zeroreturns">proto for zero returns</a></td>
+          </tr>
+          <tr>
+            <td>Sales dashboard with tabs</td>
+            <td><a href="/sales-dashboard-tabs">concept for tabbed view of dashboard</a></td>
+          </tr>
+
+          <td>Company Returns Submissions</td>
+          <td><a href="/company-submission">Product level returns by companies</a></td>
+        </tr>
+
+        <tr>
+            <td>Multiple annual submissions</td>
+            <td><a href="/multiple-annual-submissions">Multiple submissions</a></td>
+          </tr>
+
+      </tbody>
+    </table>
+
+    <h2 class="heading-large">Link product journey</h2>
+    <table>
+      <thead>
+      <tr>
+        <th>Description</th>
+        <th>Link</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Option to link another product to same company</td>
+        <td><a href="/link-journey-multiple-products">Link multiple products</a></td>
+      </tr>
+      </tbody>
+    </table>
+
+    <h2 class="heading-large">Quarterly drug collection</h2>
+    <table>
+      <thead>
+      <tr>
+        <th>Description</th>
+        <th>Link</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Adding and viewing as a table</td>
+        <td><a href="/quarterly-dropdown-table">Quarterly dropdown table</a></td>
+      </tr>
+      <tr>
+        <td>Navigate through cleaner screens for each step</td>
+        <td><a href="/quarterly-multiple-screens">Multiple screens journey</a></td>
+      </tr>
+      <tr>
+        <td>Viewing data in expander list</td>
+        <td><a href="/quarterly-expander-list">Quarterly expander list</a></td>
+      </tr>
+      <tr>
+        <td>Adding and viewing as a table</td>
+        <td><a href="/quarterly-dropdown-table-horizontal">Quarterly horizontal within table</a></td>
+      </tr>
+
+<!--  test push JHM 7SEP23    -->
+      </tbody>
+    </table>
+
+    <h2 class="heading-large">PCP</h2>
+    <table>
+      <thead>
+      <tr>
+        <th>Description</th>
+        <th>Link</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>PCP homepage</td>
+        <td><a href="/pcp-prototype/homepage">Access PCP homepage</a></td>
+      </tr>
+      <tr>
+<!--        <td>Navigate through cleaner screens for each step</td>-->
+<!--        <td><a href="/pcp-prototype/quarterly-multiple-screens">Multiple screens journey</a></td>-->
+<!--      </tr>-->
+<!--      <tr>-->
+<!--        <td>Viewing data in expander list</td>-->
+<!--        <td><a href="/pcp-prototype/quarterly-expander-list">Quarterly expander list</a></td>-->
+<!--      </tr>-->
+<!--      <tr>-->
+<!--        <td>Adding and viewing as a table</td>-->
+<!--        <td><a href="/pcp-prototype/quarterly-dropdown-table-horizontal">Quarterly horizontal within table</a></td>-->
+<!--      </tr>-->
+
+      <!--  test push JHM 7SEP23    -->
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+{% endblock %}
