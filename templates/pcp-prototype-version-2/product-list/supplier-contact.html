@@ -1,0 +1,168 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Quarterly collection dropdown - expander list
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-back-link">
+
+    <a class="nhsuk-back-link__link nhsuk-u-margin-bottom-5" href="product-list-results">
+        <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+            <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+        </svg>
+        Go back to product list</a>
+</div>
+
+        <h1><span class="nhsuk-caption-l">
+     September 2023 - 4th request
+     <span class="nhsuk-u-visually-hidden">: </span>
+   </span>
+            Supplier connection
+        </h1>
+
+<div class="nhsuk-form-group">
+    <p>In order to progress with this request, you must visit each supplier to download the request template. You can track the templates sent and replies received to ensure nothing is missed.</p>
+
+    <p><p class="nhsuk-u-margin-bottom-6">If the main or additional supplier template does not fit with the supplier  <a class="nhsuk-link nhsuk-link--no-visited-state" href="#">create a bespoke supplier template</a></p></p>
+    <h2>Main suppliers</h2>
+    <ul class="nhsuk-grid-row nhsuk-card-group">
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+            <div class="nhsuk-card nhsuk-card--clickable">
+                <div class="nhsuk-card__content">
+                    <h2 class="nhsuk-card__heading nhsuk-heading-s">
+                <span class="nhsuk-card__link">
+                  <span class="nhsuk-u-font-size-48">50</span>
+                  <br>
+                    <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="main-suppliers-without-dash">Main suppliers</a>
+                </span>
+                    </h2>
+
+                </div>
+            </div>
+
+        </li>
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+            <div class="nhsuk-card">
+                <div class="nhsuk-card__content">
+                    <h2 class="nhsuk-card__heading nhsuk-heading-s">
+                <span class="nhsuk-card__link">
+                  <span class="nhsuk-u-font-size-48" id="templates-sent">0</span>
+                  <br>
+                  Templates sent
+                </span>
+                    </h2>
+
+                </div>
+            </div>
+
+        </li>
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+            <div class="nhsuk-card">
+                <div class="nhsuk-card__content">
+                    <h2 class="nhsuk-card__heading nhsuk-heading-s">
+                <span class="nhsuk-card__link">
+                  <span class="nhsuk-u-font-size-48" id="replies-received">0</span>
+                  <br>
+                  Replies received
+                </span>
+                    </h2>
+
+                </div>
+            </div>
+
+        </li>
+    </ul>
+
+    <h2>Additional suppliers</h2>
+    <ul class="nhsuk-grid-row nhsuk-card-group">
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+            <div class="nhsuk-card nhsuk-card-clickable">
+                <div class="nhsuk-card__content">
+                    <h2 class="nhsuk-card__heading nhsuk-heading-s">
+                <span class="nhsuk-card__link">
+                  <span class="nhsuk-u-font-size-48">84</span>
+                  <br>
+                  <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="main-suppliers-without-dash">Additional suppliers</a>
+                </span>
+                    </h2>
+
+                </div>
+            </div>
+
+        </li>
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+            <div class="nhsuk-card">
+                <div class="nhsuk-card__content">
+                    <h2 class="nhsuk-card__heading nhsuk-heading-s">
+                <span class="nhsuk-card__link">
+                  <span class="nhsuk-u-font-size-48" id="templates-sent">0</span>
+                  <br>
+                  Templates sent
+                </span>
+                    </h2>
+
+                </div>
+            </div>
+
+        </li>
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+            <div class="nhsuk-card">
+                <div class="nhsuk-card__content">
+                    <h2 class="nhsuk-card__heading nhsuk-heading-s">
+                <span class="nhsuk-card__link">
+                  <span class="nhsuk-u-font-size-48" id="replies-received">0</span>
+                  <br>
+                  Replies received
+                </span>
+                    </h2>
+
+                </div>
+            </div>
+
+        </li>
+    </ul>
+
+<script>
+    console.log(localStorage);
+
+    let dateEmailSent = localStorage.getItem("has-sent-email");
+    let dateReplyReceived = localStorage.getItem("supplier-has-replied");
+    let dateSent = new Date();
+
+    let day = dateSent.getDate();
+    let month = dateSent.getMonth() + 1;
+    let year = dateSent.getFullYear();
+
+    if (day < 10) day = '0' + day;
+    if (month < 10) month = '0' + month;
+
+    let currentDate = `${day}-${month}-${year}`;
+    console.log(currentDate);
+
+    if (dateEmailSent == "yes") {
+       document.getElementById("date-sent").innerHTML = currentDate;
+       document.getElementById("templates-sent").innerHTML = '1';
+       if (document.getElementById("hidden-sent")) {
+       document.getElementById("hidden-sent").style.display = "none";
+       }
+    }
+
+    if (dateReplyReceived == "yes") {
+       document.getElementById("reply-in").innerHTML = currentDate;
+       document.getElementById("supplier-update").innerHTML = 'View';
+       document.getElementById("replies-received").innerHTML = '1';
+       if (document.getElementById("hidden-reply")) {
+       document.getElementById("hidden-reply").style.display = "none";
+       }
+    }
+
+</script>
+
+{% endblock %}
