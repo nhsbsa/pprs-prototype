@@ -192,6 +192,7 @@ app.get('/pcp-prototype-version-2/quarterly-expander-list', (req, res) => { res.
 app.get('/pcp-prototype-version-2/request-list', (req, res) => { res.render('pcp-prototype-version-2/request-list') });
 app.get('/pcp-prototype-version-2/product-list/results', (req, res) => { res.render('pcp-prototype-version-2/product-list/results') });
 app.get('/pcp-prototype-version-2/product-list/product-list-results', (req, res) => { res.render('pcp-prototype-version-2/product-list/product-list-results') });
+app.get('/pcp-prototype-version-2/product-list/product-list-results-master', (req, res) => { res.render('pcp-prototype-version-2/product-list/product-list-results-master') });
 app.get('/pcp-prototype-version-2/product-list/results-after-confirm', (req, res) => { res.render('pcp-prototype-version-2/product-list/results-after-confirm') });
 app.get('/pcp-prototype-version-2/product-list/product-view', (req, res) => { res.render('pcp-prototype-version-2/product-list/product-view') });
 app.get('/pcp-prototype-version-2/product-list/supplier-view', (req, res) => { res.render('pcp-prototype-version-2/product-list/supplier-view') });

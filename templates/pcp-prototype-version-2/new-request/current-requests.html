@@ -50,7 +50,10 @@ Quarterly collection dropdown - expander list
                     <th role="columnheader" class="" scope="col">Product quantity
                     </th>
                     <th role="columnheader" class="" scope="col">
-                        Date completed
+                        Date requested
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                        Status
                     </th>
                     <th role="columnheader" class="" scope="col">
                         Action
@@ -70,6 +73,13 @@ Quarterly collection dropdown - expander list
                     <td role="cell" class="nhsuk-table__cell">
                         <span class="nhsuk-table-responsive__heading">Date completed </span> 3 September 2023
                     </td>
+                    <td class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Status </span>
+                        <strong class="nhsuk-tag nhsuk-tag--green">
+                            Completed
+                        </strong>
+
+                    </td>
                     <td role="cell" class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Action </span>
                         <a href="#" class="nhsuk-link nhsuk-link--no-visited-state">View</a>
                     </td>
@@ -84,6 +94,13 @@ Quarterly collection dropdown - expander list
                     </td>
                     <td role="cell" class="nhsuk-table__cell">
                         <span class="nhsuk-table-responsive__heading">Date completed </span> 9 September 2023
+                    </td>
+                    <td class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Status </span>
+                        <strong class="nhsuk-tag nhsuk-tag--green">
+                            Completed
+                        </strong>
+
                     </td>
                     <td role="cell" class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Action </span>
                         <a class="nhsuk-link nhsuk-link--no-visited-state" href="#">View</a>
@@ -100,12 +117,19 @@ Quarterly collection dropdown - expander list
                     <td role="cell" class="nhsuk-table__cell">
                         <span class="nhsuk-table-responsive__heading">Date completed </span> 12 September 2023
                     </td>
+                    <td class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Status </span>
+                        <strong class="nhsuk-tag nhsuk-tag--green">
+                            Completed
+                        </strong>
+
+                    </td>
                     <td role="cell" class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Action </span>
                         <a class="nhsuk-link nhsuk-link--no-visited-state" href="#">View</a>
                     </td>
                 </tr>
 
-                <tr role="row" class="nhsuk-table__row">
+                <tr role="row" class="nhsuk-table__row hide-table-row" id="fourth-request">
                     <td role="cell" class="nhsuk-table__cell">
                         <span class="nhsuk-table-responsive__heading">Requests </span>4th request
                     </td>
@@ -113,11 +137,18 @@ Quarterly collection dropdown - expander list
                         <span class="nhsuk-table-responsive__heading">Product quantity</span>82 items
                     </td>
                     <td role="cell" class="nhsuk-table__cell">
-                        <span class="nhsuk-table-responsive__heading">Date completed </span><span class="nhsuk-u-visually-hidden">Not yet completed</span>
+                        <span class="nhsuk-table-responsive__heading">Date requested </span>28 September 2023
+                    </td>
+                    <td class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Status </span>
+                        <strong class="nhsuk-tag nhsuk-tag--orange" id="status-tag">
+                            Pending
+                        </strong>
+
                     </td>
                     <td role="cell" class="nhsuk-table__cell">
                         <span class="nhsuk-table-responsive__heading">Action </span>
-                        <a class="nhsuk-link nhsuk-link--no-visited-state" href="../product-list/supplier-contact">
+                        <a class="nhsuk-link nhsuk-link--no-visited-state" href="../product-list/product-list-results" id="edit-ref">
                             Edit</a>
                     </td>
                 </tr>
@@ -141,5 +172,21 @@ Quarterly collection dropdown - expander list
 <!--                <span class="nhsuk-u-visually-hidden">Home</span>-->
 <!--                Back-->
 <!--            </a>-->
+
+<script>
+    if (localStorage.getItem("save-and-exit") == "yes") {
+        document.getElementById("fourth-request").classList.remove("hide-table-row");
+    }
+
+    if (localStorage.getItem("save-and-exit-ongoing") == "yes") {
+        document.getElementById("fourth-request").classList.remove("hide-table-row");
+        document.getElementById("edit-ref").href = "../product-list/supplier-contact";
+        document.getElementById("status-tag").classList.remove("nhsuk-tag--orange");
+        document.getElementById("status-tag").classList.add("nhsuk-tag--blue");
+        document.getElementById("status-tag").innerHTML = "Ongoing";
+    }
+
+</script>
+
 
 {% endblock %}

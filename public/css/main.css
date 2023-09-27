@@ -7755,3 +7755,6 @@ ul[role="tree"] {
   opacity: 0.5;
   cursor: not-allowed;
 }
+.hide-table-row {
+   display: none !important;
+}
