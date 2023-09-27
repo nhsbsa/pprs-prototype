@@ -165,6 +165,8 @@ app.get('/pcp-prototype/product-list/additional-supplier-view', (req, res) => { 
 app.get('/pcp-prototype/product-list/supplier-view-tabs', (req, res) => { res.render('pcp-prototype/product-list/supplier-view-tabs') });
 app.get('/pcp-prototype/product-list/additional-supplier-view-tabs', (req, res) => { res.render('pcp-prototype/product-list/additional-supplier-view-tabs') });
 app.get('/pcp-prototype/product-list/main-suppliers', (req, res) => { res.render('pcp-prototype/product-list/main-suppliers') });
+app.get('/pcp-prototype/product-list/main-suppliers-without-dash', (req, res) => { res.render('pcp-prototype/product-list/main-suppliers-without-dash') });
+app.get('/pcp-prototype/product-list/supplier-contact', (req, res) => { res.render('pcp-prototype/product-list/supplier-contact') });
 app.get('/pcp-prototype/product-list/additional-suppliers', (req, res) => { res.render('pcp-prototype/product-list/additional-suppliers') });
 
 app.get('/pcp-prototype/historical-requests/option-1/historical-request', (req, res) => { res.render('pcp-prototype/historical-requests/option-1/historical-request') });
