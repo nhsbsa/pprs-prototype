@@ -19,7 +19,7 @@ Quarterly collection dropdown - expander list
 <!--    <input type="checkbox" id="expanderToggle" />-->
 <!--    <div class="nhsuk-grid-column-full">-->
         <h1><span class="nhsuk-caption-l">
-     2023 - 1st request
+     September 2023 - 4th request
      <span class="nhsuk-u-visually-hidden"> for </span>
    </span>Amgen Ltd</h1>
 
@@ -184,9 +184,9 @@ Quarterly collection dropdown - expander list
         <div class="nhsuk-tabs-panel-inner">
 
                     <h2>Template</h2>
-                    <p>The main supplier template is ready to download. This needs to be sent, by email, to the supplier.</p>
+                    <p>The additional supplier template is ready to download. This needs to be sent, by email, to the supplier.</p>
 
-                    <a class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-bottom-6" href="#">Download main supplier template</a>
+                    <a class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-bottom-6" href="#">Download additional supplier template</a>
 
             <p>Once this has been sent, you must <a class="nhsuk-link nhsuk-link--no-visited-state" href="#tab-correspondence">update the correspondence</a></p>
         </div>
@@ -358,13 +358,13 @@ Quarterly collection dropdown - expander list
     console.log(localStorage);
 
     var radioHasSentEmailButtons = document.getElementsByName("example-inline");
-    let sentEmail = localStorage.getItem("has-sent-email");
+    let sentEmailAdd = localStorage.getItem("has-sent-email-additional");
 
     if (radioHasSentEmailButtons.length != 0) {
 
 
     for (var radio of radioHasSentEmailButtons) {
-      if (sentEmail === radio.value) {
+      if (sentEmailAdd === radio.value) {
         radio.checked = true;
       }
     }
@@ -379,7 +379,7 @@ Quarterly collection dropdown - expander list
 
         replyDate = dayToday + ' ' + monthToday + ' ' + yearToday;
 
-   if (sentEmail == "yes") {
+   if (sentEmailAdd == "yes") {
 
       document.getElementById("second-question").classList.remove("hide-question");
       document.getElementById("first-question").classList.add("hide-question");
@@ -390,19 +390,19 @@ Quarterly collection dropdown - expander list
    }
 
    var radioHasReceivedEmailButtons = document.getElementsByName("example-inline-1");
-    let emailReceived = localStorage.getItem("supplier-has-replied");
+    let emailReceivedAdd = localStorage.getItem("supplier-has-replied-additional");
 
     if (radioHasReceivedEmailButtons.length != 0) {
 
 
     for (var radio of radioHasReceivedEmailButtons) {
-      if (emailReceived === radio.value) {
+      if (emailReceivedAdd === radio.value) {
         radio.checked = true;
       }
     }
    }
 
-   if (emailReceived == "yes") {
+   if (emailReceivedAdd == "yes") {
       document.getElementById("second-question").classList.add("hide-question");
 <!--      document.getElementById("yes-second-question").innerHTML = 'Reply received from the supplier on ' + replyDate;-->
       document.getElementById("yes-second-question-detail").innerHTML = 'Yes. An email has been received from the supplier by Heather (HEKIR) on ' + replyDate + ' at 3.30pm.';
@@ -420,7 +420,7 @@ Quarterly collection dropdown - expander list
 
     for (var radio of radioHasSentEmailButtonsX) {
       if (radio.checked) {
-        localStorage.setItem("has-sent-email", radio.value);
+        localStorage.setItem("has-sent-email-additional", radio.value);
         localStorage.setItem("date-sent-email", today);
        if (radio.value == 'no') {
           localStorage.removeItem("date-sent-email");
@@ -430,7 +430,7 @@ Quarterly collection dropdown - expander list
 
     for (var radio of radioHasSentEmailButtonsY) {
       if (radio.checked) {
-        localStorage.setItem("supplier-has-replied", radio.value);
+        localStorage.setItem("supplier-has-replied-additional", radio.value);
         localStorage.setItem("date-supplier-replied", today);
        if (radio.value == 'no') {
           localStorage.removeItem("date-supplier-replied");

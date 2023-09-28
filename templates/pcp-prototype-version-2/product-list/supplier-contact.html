@@ -21,6 +21,7 @@ Quarterly collection dropdown - expander list
             Request dashboard
         </h1>
 
+
 <div class="nhsuk-form-group">
 
     <h2>Product list</h2>
@@ -67,7 +68,7 @@ Quarterly collection dropdown - expander list
                 <span class="nhsuk-card__link">
                   <span class="nhsuk-u-font-size-48">50</span>
                   <br>
-                    <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="main-suppliers-without-dash">Main suppliers</a>
+                    <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="main-suppliers">Main suppliers</a>
                 </span>
                     </h2>
 
@@ -119,7 +120,7 @@ Quarterly collection dropdown - expander list
                 <span class="nhsuk-card__link">
                   <span class="nhsuk-u-font-size-48">84</span>
                   <br>
-                  <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="main-suppliers-without-dash">Additional suppliers</a>
+                  <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="additional-suppliers">Additional suppliers</a>
                 </span>
                     </h2>
 
@@ -174,6 +175,8 @@ Quarterly collection dropdown - expander list
 
     let dateEmailSent = localStorage.getItem("has-sent-email");
     let dateReplyReceived = localStorage.getItem("supplier-has-replied");
+    let dateEmailSentAdd = localStorage.getItem("has-sent-email-additional");
+    let dateReplyReceivedAdd = localStorage.getItem("supplier-has-replied-additional");
     let dateSent = new Date();
 
     let day = dateSent.getDate();
@@ -187,7 +190,7 @@ Quarterly collection dropdown - expander list
     console.log(currentDate);
 
     if (dateEmailSent == "yes") {
-       document.getElementById("date-sent").innerHTML = currentDate;
+<!--       document.getElementById("date-sent").innerHTML = currentDate;-->
        document.getElementById("templates-sent").innerHTML = '1';
        if (document.getElementById("hidden-sent")) {
        document.getElementById("hidden-sent").style.display = "none";
@@ -195,9 +198,26 @@ Quarterly collection dropdown - expander list
     }
 
     if (dateReplyReceived == "yes") {
-       document.getElementById("reply-in").innerHTML = currentDate;
-       document.getElementById("supplier-update").innerHTML = 'View';
+<!--       document.getElementById("reply-in").innerHTML = currentDate;-->
+<!--       document.getElementById("supplier-update").innerHTML = 'View';-->
        document.getElementById("replies-received").innerHTML = '1';
+       if (document.getElementById("hidden-reply")) {
+       document.getElementById("hidden-reply").style.display = "none";
+       }
+    }
+
+    if (dateEmailSentAdd == "yes") {
+<!--       document.getElementById("date-sent").innerHTML = currentDate;-->
+       document.getElementById("templates-sent-add").innerHTML = '1';
+       if (document.getElementById("hidden-sent")) {
+       document.getElementById("hidden-sent").style.display = "none";
+       }
+    }
+
+    if (dateReplyReceivedAdd == "yes") {
+<!--       document.getElementById("reply-in").innerHTML = currentDate;-->
+<!--       document.getElementById("supplier-update").innerHTML = 'View';-->
+       document.getElementById("replies-received-add").innerHTML = '1';
        if (document.getElementById("hidden-reply")) {
        document.getElementById("hidden-reply").style.display = "none";
        }

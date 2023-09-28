@@ -204,6 +204,7 @@ app.get('/pcp-prototype-version-2/product-list/main-suppliers-without-dash', (re
 app.get('/pcp-prototype-version-2/product-list/supplier-contact', (req, res) => { res.render('pcp-prototype-version-2/product-list/supplier-contact') });
 app.get('/pcp-prototype-version-2/product-list/additional-suppliers', (req, res) => { res.render('pcp-prototype-version-2/product-list/additional-suppliers') });
 app.get('/pcp-prototype-version-2/product-list/delete-product', (req, res) => { res.render('pcp-prototype-version-2/product-list/delete-product') });
+app.get('/pcp-prototype-version-2/product-list/loading-cdr-queries', (req, res) => { res.render('pcp-prototype-version-2/product-list/loading-cdr-queries') });
 
 app.get('/pcp-prototype-version-2/historical-requests/option-1/historical-request', (req, res) => { res.render('pcp-prototype-version-2/historical-requests/option-1/historical-request') });
 app.get('/pcp-prototype-version-2/historical-requests/option-1/historical-requests-months', (req, res) => { res.render('pcp-prototype-version-2/historical-requests/option-1/historical-requests-months') });
