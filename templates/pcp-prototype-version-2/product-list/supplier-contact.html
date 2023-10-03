@@ -31,7 +31,7 @@ Quarterly collection dropdown - expander list
         <div class="nhsuk-card nhsuk-card--clickable">
             <div class="nhsuk-card__content">
                 <h2 class="nhsuk-card__heading nhsuk-heading-m">
-                    <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="/pcp-prototype-version-2/new-request/current-requests">DHSC product list</a>
+                    <a class="nhsuk-card__link nhsuk-link--no-visited-state" onclick="saveFromDashboard()" href="/pcp-prototype-version-2/new-request/current-requests">DHSC product list</a>
                 </h2>
                 <p class="nhsuk-card__description">View the product list from DHSC.</p>
 
@@ -166,6 +166,11 @@ Quarterly collection dropdown - expander list
 <a class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-right-4" href="../new-request/current-requests" onclick="saveAndExit()">Save and exit</a>
 
 <script>
+
+    function saveFromDashboard() {
+      localStorage.setItem("save-from-dashboard", "yes");
+    }
+
     function saveAndExit() {
       localStorage.removeItem("save-and-exit", "yes");
       localStorage.setItem("save-and-exit-ongoing", "yes");
