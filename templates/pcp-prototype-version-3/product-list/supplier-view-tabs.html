@@ -77,8 +77,28 @@ Quarterly collection dropdown - expander list
             <!--    </summary>-->
             <!--    <div class="nhsuk-details__text">-->
             <div id="yes-first-question-expander" class="hide-question">
-                <h3>Has the template been sent to the supplier?</h3>
-                <p id="yes-first-question-detail">Yes, template sent by Heather on 21 September 2023 at 2.20pm.</p>
+<!--                <h3>Template sent</h3>-->
+                <dl class="nhsuk-summary-list nhsuk-summary-list--no-border">
+
+                    <div class="nhsuk-summary-list__row">
+                        <dt class="nhsuk-summary-list__key">
+                            Template sent by
+                        </dt>
+                        <dd class="nhsuk-summary-list__value">
+                            Heather Kirk (HEKIR)
+                        </dd>
+                    </div>
+
+                    <div class="nhsuk-summary-list__row" id="template-sent-list">
+                        <dt class="nhsuk-summary-list__key">
+                            Date template sent
+                        </dt>
+                        <dd class="nhsuk-summary-list__value">
+                            23 September 2023 at 2pm
+                        </dd>
+                    </div>
+                </dl>
+<!--                <p id="yes-first-question-detail">Yes, template sent by Heather on 21 September 2023 at 2.20pm.</p>-->
             </div>
 
             <!--    </div>-->
@@ -97,6 +117,8 @@ Quarterly collection dropdown - expander list
 
             <!--    </div>-->
             <!--</details>-->
+
+
 
             <div class="nhsuk-form-group">
 
@@ -126,31 +148,60 @@ Quarterly collection dropdown - expander list
                     </div>
                 </fieldset>
 
-                <fieldset class="nhsuk-fieldset nhsuk-u-margin-top-5 hide-question" id="second-question">
+                <div class="hide-question" id="second-question">
+                    <fieldset class="nhsuk-fieldset nhsuk-u-margin-top-5">
+                        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+                            <h1 class="nhsuk-fieldset__heading">
+                                Has the main supplier sent a reply?
+                            </h1>
+                        </legend>
+
+                        <div class="nhsuk-radios nhsuk-radios--inline">
+
+                            <div class="nhsuk-radios__item">
+                                <input class="nhsuk-radios__input" id="example-inline-3" name="example-inline-1" type="radio" value="yes">
+                                <label class="nhsuk-label nhsuk-radios__label" for="example-inline-3">
+                                    Yes
+                                </label>
+                            </div>
+
+                            <div class="nhsuk-radios__item">
+                                <input class="nhsuk-radios__input" id="example-inline-4" name="example-inline-1" type="radio" value="no">
+                                <label class="nhsuk-label nhsuk-radios__label" for="example-inline-4">
+                                    No
+                                </label>
+                            </div>
+
+                        </div>
+                    </fieldset>
+
+
+                <fieldset class="nhsuk-fieldset nhsuk-u-margin-top-5" id="third-question">
                     <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
                         <h1 class="nhsuk-fieldset__heading">
-                            Has the main supplier sent a reply?
+                            Have you sent a reminder to the supplier for a response?
                         </h1>
                     </legend>
 
                     <div class="nhsuk-radios nhsuk-radios--inline">
 
                         <div class="nhsuk-radios__item">
-                            <input class="nhsuk-radios__input" id="example-inline-3" name="example-inline-1" type="radio" value="yes">
-                            <label class="nhsuk-label nhsuk-radios__label" for="example-inline-3">
+                            <input class="nhsuk-radios__input" id="example-inline-5" name="example-inline-2" type="radio" value="yes">
+                            <label class="nhsuk-label nhsuk-radios__label" for="example-inline-5">
                                 Yes
                             </label>
                         </div>
 
                         <div class="nhsuk-radios__item">
-                            <input class="nhsuk-radios__input" id="example-inline-4" name="example-inline-1" type="radio" value="no">
-                            <label class="nhsuk-label nhsuk-radios__label" for="example-inline-4">
+                            <input class="nhsuk-radios__input" id="example-inline-6" name="example-inline-2" type="radio" value="no">
+                            <label class="nhsuk-label nhsuk-radios__label" for="example-inline-6">
                                 No
                             </label>
                         </div>
 
                     </div>
                 </fieldset>
+                </div>
 
             </div>
 
@@ -260,7 +311,7 @@ Quarterly collection dropdown - expander list
 
       document.getElementById("second-question").classList.remove("hide-question");
       document.getElementById("first-question").classList.add("hide-question");
-      document.getElementById("yes-first-question-detail").innerHTML = 'Yes. The template was emailed to the supplier by Heather (HEKIR) on ' + replyDate + ' at 2pm.';
+<!--      document.getElementById("yes-first-question-detail").innerHTML = 'Yes. The template was emailed to the supplier by Heather (HEKIR) on ' + replyDate + ' at 2pm.';-->
 <!--      document.getElementById("yes-first-question").innerHTML = 'Template sent to the supplier on ' + replyDate;-->
       document.getElementById("yes-first-question-expander").classList.remove("hide-question");
 
