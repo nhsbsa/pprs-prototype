@@ -11,18 +11,18 @@ Quarterly collection dropdown - expander list
         <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
             <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
         </svg>
-        Go back to product list upload</a>
+        Go back to product list</a>
 </div>
 
         <h1><span class="nhsuk-caption-l">
      October 2023 - 4th request
      <span class="nhsuk-u-visually-hidden"> for </span>
    </span>
-            Product list
+            Edit product list
         </h1>
 
 <div class="nhsuk-form-group">
-    <p>The product list contains all products from your uploaded file.</p>
+    <p>The product list contains all products from your uploaded file. Review these products and add, or remove, as required.</p>
 
     <fieldset class="nhsuk-fieldset nhsuk-u-margin-bottom-3 nhsuk-u-margin-top-5">
         <details class="nhsuk-details">
@@ -71,6 +71,9 @@ Quarterly collection dropdown - expander list
         <th role="columnheader" class="" scope="col">
             Pack
         </th>
+        <th role="columnheader" class="" scope="col">
+            Action
+        </th>
 
     </tr>
     </thead>
@@ -82,6 +85,10 @@ Quarterly collection dropdown - expander list
         <td class="nhsuk-table__cell ">
             <span class="nhsuk-table-responsive__heading">Pack</span>
             60</td>
+
+        <td class="nhsuk-table__cell ">
+            <span class="nhsuk-table-responsive__heading">Action </span>
+            <a class="nhsuk-link nhsuk-link--no-visited-state" href="delete-product">Remove</a></td>
     </tr>
     <tr role="row" class="nhsuk-table__row">
         <td class="nhsuk-table__cell">
@@ -90,6 +97,8 @@ Quarterly collection dropdown - expander list
         <td class="nhsuk-table__cell ">
             <span class="nhsuk-table-responsive__heading">Pack</span>
             30</td>
+        <td class="nhsuk-table__cell ">
+            <span class="nhsuk-table-responsive__heading">Action </span>Remove</td>
     </tr>
     <tr role="row" class="nhsuk-table__row">
         <td class="nhsuk-table__cell">
@@ -98,6 +107,8 @@ Quarterly collection dropdown - expander list
         <td class="nhsuk-table__cell ">
             <span class="nhsuk-table-responsive__heading">Pack</span>
             30</td>
+        <td class="nhsuk-table__cell "><span class="nhsuk-table-responsive__heading">Action </span>
+            Remove</td>
     </tr>
     <tr role="row" class="nhsuk-table__row">
         <td class="nhsuk-table__cell">
@@ -105,11 +116,13 @@ Quarterly collection dropdown - expander list
             Cyclizine 50mg/1ml solution for injection ampoules</td>
         <td class="nhsuk-table__cell "><span class="nhsuk-table-responsive__heading">Pack</span>
             5</td>
+        <td class="nhsuk-table__cell "><span class="nhsuk-table-responsive__heading">Action </span>Remove</td>
     </tr>
     <tr role="row" class="nhsuk-table__row">
         <td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Product name </span>
             Isotretinoin 20mg capsules</td>
         <td class="nhsuk-table__cell "><span class="nhsuk-table-responsive__heading">Pack</span>30</td>
+        <td class="nhsuk-table__cell "><span class="nhsuk-table-responsive__heading">Action </span>Remove</td>
     </tr>
     </tbody>
 </table>
@@ -146,6 +159,23 @@ Quarterly collection dropdown - expander list
     </div>
 </nav>
 
-<a class="nhsuk-button" href="product-list-results-edit">Save and continue</a>
+<div class="nhsuk-inset-text">
+    <span class="nhsuk-u-visually-hidden">Information: </span>
+    <p>If a product is missing from the list then <a href="https://yellowcard.mhra.gov.uk/" title="External website">add a product to the product list</a></p>
+</div>
+
+<a class="nhsuk-button nhsuk-button--primary nhsuk-u-margin-right-4" href="../new-request/current-requests" onclick="saveAndExit()">Save and return to requests</a>
+
+<script>
+    localStorage.clear();
+
+    function saveAndExit() {
+      localStorage.setItem("save-and-exit", "yes");
+    }
+
+    function saveBackAdditionalSupplier() {
+      localStorage.setItem("go-back-supplier", "additional");
+    }
+</script>
 
 {% endblock %}
