@@ -5,6 +5,7 @@ Quarterly collection dropdown - expander list
 {% endblock %}
 
 {% block content %}
+
 <div class="nhsuk-back-link">
 
     <a class="nhsuk-back-link__link nhsuk-u-margin-bottom-5" href="product-list-results">
@@ -15,10 +16,14 @@ Quarterly collection dropdown - expander list
 </div>
 
 <div class="nhsuk-form-group">
-    <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
-        <legend class="nhsuk-fieldset__legend nhsuk-label--xl">
-            <h1 class="nhsuk-fieldset__heading">
-                Do you want to remove Atorvastatin 10mg tablets (60 pack) from the product list?
+
+    <fieldset class="nhsuk-fieldset">
+        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl nhsuk-u-margin-bottom-7">
+            <h1 class="nhsuk-fieldset__heading"><span class="nhsuk-caption-l">
+     October 2023 - 4th request
+     <span class="nhsuk-u-visually-hidden"> for </span>
+   </span>
+                Do you need to amend the product list?
             </h1>
         </legend>
 
@@ -30,7 +35,7 @@ Quarterly collection dropdown - expander list
                     Yes
                 </label>
                 <div class="nhsuk-hint nhsuk-radios__hint" id="example-hints-1-item-hint">
-                    This will remove Atorvastatin 10mg tablets (60 pack) from the product list and cannot be undone.
+                    This will take you to the product list where you can add or remove products.
                 </div>
             </div>
 
@@ -40,32 +45,53 @@ Quarterly collection dropdown - expander list
                     No
                 </label>
                 <div class="nhsuk-hint nhsuk-radios__hint" id="example-hints-2-item-hint">
-                    Do not remove Atorvastatin 10mg tablets (60 pack) from the product list.
+                    This will save the list as it is and take you to the &#39;New and ongoing requests&#39; page.
                 </div>
             </div>
 
         </div>
     </fieldset>
+
 </div>
-<a class="nhsuk-button" href="product-list-results-edit" id="continue-button"
-   onclick="deleteProduct()">Save and continue</a>
+
+<a class="nhsuk-button nhsuk-u-margin-top-3" href="#" onclick="needToAmendList()"
+id="continue-button">Continue</a>
 
 <script>
 
-    function deleteProduct() {
-    let doesNeedRemovingRadioButtons = document.getElementsByName("example-hints");
+console.log(localStorage);
 
-    for (var radio of doesNeedRemovingRadioButtons) {
-      if (radio.checked) {
-       if (radio.value == 'yes') {
-          localStorage.setItem("remove-product", "yes");
-       }
-       if (radio.value == 'no') {
-          localStorage.setItem("remove-product", "no");
-       }
-      }
+      var radioButtons = document.getElementsByName("example-hints");
+
+if (radioButtons) {
+    var needToAmend = localStorage.getItem("need-to-amend");
+        for (var radio of radioButtons) {
+            if (needToAmend === radio.value) {
+                radio.checked = true;
+        }
     }
+};
+
+
+  function needToAmendList() {
+    let continueBtn = document.getElementById("continue-button")
+    var radioButtons = document.getElementsByName("example-hints");
+
+    localStorage.setItem("save-and-exit", "yes");
+
+    for (var radio of radioButtons) {
+        if (radio.checked) {
+            localStorage.setItem("need-to-amend", radio.value);
+            if (radio.value == 'yes') {
+                continueBtn.href = "product-list-results-edit";
+            } else if (radio.value == 'no') {
+                continueBtn.href = "../new-request/current-requests";
+            }
+        }
+     }
+
   };
+
 
 </script>
 
