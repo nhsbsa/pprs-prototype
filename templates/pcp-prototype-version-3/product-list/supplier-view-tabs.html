@@ -124,9 +124,9 @@ Quarterly collection dropdown - expander list
 
                 <fieldset class="nhsuk-fieldset" id="first-question">
                     <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
-                        <h1 class="nhsuk-fieldset__heading">
+                        <h3 class="nhsuk-fieldset__heading">
                             Has the template been sent to the supplier?
-                        </h1>
+                        </h3>
                     </legend>
 
                     <div class="nhsuk-radios nhsuk-radios--inline">
@@ -151,9 +151,9 @@ Quarterly collection dropdown - expander list
                 <div class="hide-question" id="second-question">
                     <fieldset class="nhsuk-fieldset nhsuk-u-margin-top-5">
                         <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
-                            <h1 class="nhsuk-fieldset__heading">
+                            <h3 class="nhsuk-fieldset__heading">
                                 Has the main supplier sent a reply?
-                            </h1>
+                            </h3>
                         </legend>
 
                         <div class="nhsuk-radios nhsuk-radios--inline">
@@ -178,7 +178,7 @@ Quarterly collection dropdown - expander list
 
                 <fieldset class="nhsuk-fieldset nhsuk-u-margin-top-5" id="third-question">
                     <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
-                        <h1 class="nhsuk-fieldset__heading">
+                        <h1 class="nhsuk-fieldset__heading" id="reminder-sent-question">
                             Have you sent a reminder to the supplier for a response?
                         </h1>
                     </legend>
@@ -332,17 +332,79 @@ Quarterly collection dropdown - expander list
 
    if (emailReceived == "yes") {
       document.getElementById("second-question").classList.add("hide-question");
+
+      document.getElementById("template-sent-list").insertAdjacentHTML("afterend",
+      '<div class="nhsuk-summary-list__row">'
+      +
+      '<dt class="nhsuk-summary-list__key">Reply received by</dt>'
+      +
+      '<dd class="nhsuk-summary-list__value">Laura Heslop (LAHES)</dd>'
+      +
+      '</div>'
+      +
+      '<div class="nhsuk-summary-list__row">'
+      +
+      '<dt class="nhsuk-summary-list__key">Date reply sent</dt>'
+      +
+      '<dd class="nhsuk-summary-list__value">12 October 2023 at 4pm</dd>'
+      +
+      '</div>');
+
 <!--      document.getElementById("yes-second-question").innerHTML = 'Reply received from the supplier on ' + replyDate;-->
-      document.getElementById("yes-second-question-detail").innerHTML = 'Yes. An email has been received from the supplier by Heather (HEKIR) on ' + replyDate + ' at 3.30pm.';
-      document.getElementById("yes-second-question-expander").classList.remove("hide-question");
+<!--      document.getElementById("yes-second-question-detail").innerHTML = 'Yes. An email has been received from the supplier by Heather (HEKIR) on ' + replyDate + ' at 3.30pm.';-->
+<!--      document.getElementById("yes-second-question-expander").classList.remove("hide-question");-->
       document.getElementById("update-button").classList.add("hide-question");
       document.getElementById("reset-button").classList.remove("hide-question");
    }
+
+   var radioHasSentReminderButtons = document.getElementsByName("example-inline-2");
+    let reminderSent = localStorage.getItem("reminder-sent");
+
+<!--    if (radioHasSentReminderButtons.length != 0) {-->
+
+<!--    for (var radio of radioHasSentReminderButtons) {-->
+<!--      if (reminderSent === radio.value) {-->
+<!--        radio.checked = true;-->
+<!--      }-->
+<!--    }-->
+<!--   }-->
+
+   if (reminderSent == "yes") {
+
+      document.getElementById("reminder-sent-question").innerHTML = "Have you sent another reminder to the supplier for a response?";
+
+
+
+      document.getElementById("template-sent-list").insertAdjacentHTML("afterend",
+      '<div class="nhsuk-summary-list__row">'
+      +
+      '<dt class="nhsuk-summary-list__key">Reminder sent by</dt>'
+      +
+      '<dd class="nhsuk-summary-list__value">Laura Heslop (LAHES)</dd>'
+      +
+      '</div>'
+      +
+      '<div class="nhsuk-summary-list__row">'
+      +
+      '<dt class="nhsuk-summary-list__key">Date reminder sent</dt>'
+      +
+      '<dd class="nhsuk-summary-list__value">12 October 2023 at 4pm</dd>'
+      +
+      '</div>');
+
+<!--      document.getElementById("yes-second-question").innerHTML = 'Reply received from the supplier on ' + replyDate;-->
+<!--      document.getElementById("yes-second-question-detail").innerHTML = 'Yes. An email has been received from the supplier by Heather (HEKIR) on ' + replyDate + ' at 3.30pm.';-->
+<!--      document.getElementById("yes-second-question-expander").classList.remove("hide-question");-->
+      document.getElementById("update-button").classList.add("hide-question");
+      document.getElementById("reset-button").classList.remove("hide-question");
+   }
+
 
   function storeUpdateCorrespondence() {
 
   var radioHasSentEmailButtonsX = document.getElementsByName("example-inline");
   var radioHasSentEmailButtonsY = document.getElementsByName("example-inline-1");
+  var radioHasSentEmailButtonsZ = document.getElementsByName("example-inline-2");
 
   let today = new Date();
 
@@ -362,6 +424,16 @@ Quarterly collection dropdown - expander list
         localStorage.setItem("date-supplier-replied", today);
        if (radio.value == 'no') {
           localStorage.removeItem("date-supplier-replied");
+       }
+     }
+    }
+
+    for (var radio of radioHasSentEmailButtonsZ) {
+      if (radio.checked) {
+        localStorage.setItem("reminder-sent", radio.value);
+        localStorage.setItem("date-reminder-sent", today);
+       if (radio.value == 'no') {
+          localStorage.removeItem("date-reminder-sent");
        }
      }
     }
