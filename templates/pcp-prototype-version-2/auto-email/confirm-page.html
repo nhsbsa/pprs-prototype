@@ -1,0 +1,87 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Quarterly collection - dropdown table
+{% endblock %}
+
+{% block content %}
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+    <div class="nhsuk-width-container">
+        <ol class="nhsuk-breadcrumb__list">
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/pcp-prototype-version-2/homepage">Price concessions homepage</a></li>
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/pcp-prototype-version-2/auto-email/choose-main-suppliers">Select main suppliers</a></li>
+        </ol>
+        <p class="nhsuk-breadcrumb__back">
+            <a class="nhsuk-breadcrumb__backlink" href="/level-one/level-two/level-three">
+                <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+                Select main suppliers
+            </a>
+        </p>
+    </div>
+</nav>
+
+<div class="nhsuk-width-container">
+
+    <main class="nhsuk-main-wrapper" id="maincontent" role="main">
+
+
+                    <div class="nhsuk-form-group">
+                        <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+                            <legend class="nhsuk-fieldset__legend nhsuk-label--xl">
+                                <h1 class="nhsuk-fieldset__heading">
+                                    Do you want to remove AAH Pharmaceuticals Ltd from the list?
+                                </h1>
+                            </legend>
+
+                            <div class="nhsuk-radios">
+
+                                <div class="nhsuk-radios__item">
+                                    <input class="nhsuk-radios__input" id="example-hints-1" name="example-hints" type="radio" value="yes" aria-describedby="example-hints-1-item-hint">
+                                    <label class="nhsuk-label nhsuk-radios__label" for="example-hints-1">
+                                        Yes
+                                    </label>
+                                    <div class="nhsuk-hint nhsuk-radios__hint" id="example-hints-1-item-hint">
+                                        This will remove AAH Pharmaceuticals Ltd from the list and cannot be undone.
+                                    </div>
+                                </div>
+
+                                <div class="nhsuk-radios__item">
+                                    <input class="nhsuk-radios__input" id="example-hints-2" name="example-hints" type="radio" value="no" aria-describedby="example-hints-2-item-hint">
+                                    <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
+                                        No
+                                    </label>
+                                    <div class="nhsuk-hint nhsuk-radios__hint" id="example-hints-2-item-hint">
+                                        Do not remove AAH Pharmaceuticals Ltd from the list.
+                                    </div>
+                                </div>
+
+                            </div>
+                        </fieldset>
+                    </div>
+                    <a class="nhsuk-button" href="/pcp-prototype-version-2/auto-email/card-2" id="continue-button"
+                       onclick="deleteProduct()">Save and continue</a>
+
+        </div>
+        </div>
+        </div>
+    </main>
+</div>
+<script>
+
+    function deleteProduct() {
+    let doesNeedRemovingRadioButtons = document.getElementsByName("example-hints");
+
+    for (var radio of doesNeedRemovingRadioButtons) {
+      if (radio.checked) {
+       if (radio.value == 'yes') {
+          localStorage.setItem("remove-product", "yes");
+       }
+       if (radio.value == 'no') {
+          localStorage.setItem("remove-product", "no");
+       }
+      }
+    }
+  };
+
+</script>
+{% endblock %}

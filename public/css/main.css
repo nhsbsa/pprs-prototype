@@ -7758,3 +7758,15 @@ ul[role="tree"] {
 .hide-table-row {
    display: none !important;
 }
+
+.nhsuk-u-display-block {
+display: inline-block !important;
+}
+
+.nhsuk-u-float-left {
+ float: left !important;
+}
+
+.nhsuk-u-float-right {
+ float: right !important;
+}
