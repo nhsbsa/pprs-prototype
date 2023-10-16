@@ -7,45 +7,90 @@ Quarterly collection dropdown - expander list
 {% block content %}
 <div class="nhsuk-back-link">
 
-    <a class="nhsuk-back-link__link nhsuk-u-margin-bottom-5" href="product-list-results">
+    <a class="nhsuk-back-link__link nhsuk-u-margin-bottom-5" href="../new-request/current-requests">
         <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
             <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
         </svg>
-        Go back to product list</a>
+        Go back to ongoing and new requests</a>
 </div>
 
         <h1><span class="nhsuk-caption-l">
-     September 2023 - 4th request
+     October 2023 - 4th request
      <span class="nhsuk-u-visually-hidden">: </span>
    </span>
             Request dashboard
         </h1>
 
+<h2>Summary</h2>
+
+<dl class="nhsuk-summary-list nhsuk-summary-list--no-border">
+
+    <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key">
+            Date requested
+        </dt>
+        <dd class="nhsuk-summary-list__value">
+            10 October 2023
+        </dd>
+    </div>
+
+    <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key">
+            Supplier deadline
+        </dt>
+        <dd class="nhsuk-summary-list__value">
+            12 October 2023 at 5pm
+        </dd>
+    </div>
+
+    <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key">
+            Request status
+        </dt>
+        <dd class="nhsuk-summary-list__value">
+            <strong class="nhsuk-tag nhsuk-tag--blue" id="status-tag">
+                Ongoing
+            </strong>
+        </dd>
+    </div>
+
+    <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key">
+            Common Drug Reference (CDR) queries complete
+        </dt>
+        <dd class="nhsuk-summary-list__value">
+            <span id="cdr-query">Yes </span>
+        </dd>
+    </div>
+</dl>
+
+<p id="pending-text"> To view suppliers and download templates you must first create the master product list. This is achieved by running CDR queries on the Department of Health and Social Care (DHSC) product list. </p>
 
 <div class="nhsuk-form-group">
 
-    <h2>Product list</h2>
+    <h2 class="nhsuk-u-margin-top-6">Product list</h2>
     <ul class="nhsuk-grid-row nhsuk-card-group">
     <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
 
         <div class="nhsuk-card nhsuk-card--clickable">
             <div class="nhsuk-card__content">
                 <h2 class="nhsuk-card__heading nhsuk-heading-m">
-                    <a class="nhsuk-card__link nhsuk-link--no-visited-state" onclick="saveFromDashboard()" href="/pcp-prototype-version-2/new-request/current-requests">DHSC product list</a>
+                    <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="product-list-results-edit" id="product-list-link">DHSC product list</a>
                 </h2>
-                <p class="nhsuk-card__description">View the product list from DHSC.</p>
+                <p class="nhsuk-card__description" id="product-list-text">View, add or remove items from the product list.</p>
 
             </div>
         </div>
 
-    </li><li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+    </li>
+        <li class="nhsuk-grid-column-one-half nhsuk-card-group__item hide-area" id="master-list-area">
 
         <div class="nhsuk-card nhsuk-card--clickable">
             <div class="nhsuk-card__content">
                 <h2 class="nhsuk-card__heading nhsuk-heading-m">
                     <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="product-list-results-master">Master product list</a>
                 </h2>
-                <p class="nhsuk-card__description">View the product list containing all information from Common Drug Reference (CDR).</p>
+                <p class="nhsuk-card__description">View the product list containing all information from the CDR queries.</p>
 
             </div>
         </div>
@@ -53,152 +98,188 @@ Quarterly collection dropdown - expander list
     </li>
     </ul>
 
-    <h2>Suppliers</h2>
-    <p>In order to progress with this request, you must visit each supplier to download the request template. You can track the templates sent and replies received to ensure nothing is missed.</p>
+    <div class="nhsuk-action-link nhsuk-u-margin-bottom-7" id="cdr-query-area">
+        <a class="nhsuk-action-link__link nhsuk-link--no-visited-state" href="loading-cdr-queries" onclick="runCDRQuery()">
+            <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
+                <path d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+            </svg>
+            <span class="nhsuk-action-link__text ">Run the CDR queries on the DHSC product list</span>
+        </a>
+    </div>
 
-    <p><p class="nhsuk-u-margin-bottom-6">If the main or additional supplier template does not fit with the supplier  <a class="nhsuk-link nhsuk-link--no-visited-state" href="#">create a bespoke supplier template</a></p></p>
+    <div class="hide-area" id="supplier-area">
+        <h2>Suppliers</h2>
+        <p>To progress with this request, you must send templates to all main and additional suppliers. This can be achieved in two ways. You can send the same template to a group of suppliers, or download the template and send to individual suppliers via email. </p>
+        <p>You can track the supplier correspondence in each section.</p>
 
-    <h3>Main suppliers</h3>
-    <ul class="nhsuk-grid-row nhsuk-card-group">
-        <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+<!--        <p class="nhsuk-u-margin-bottom-6">If the main or additional supplier template does not fit with the supplier  <a class="nhsuk-link nhsuk-link&#45;&#45;no-visited-state" href="#">create a bespoke supplier template</a></p>-->
 
-            <div class="nhsuk-card nhsuk-card--clickable">
-                <div class="nhsuk-card__content">
-                    <h2 class="nhsuk-card__heading nhsuk-heading-s">
+        <h3>Main suppliers</h3>
+        <ul class="nhsuk-grid-row nhsuk-card-group">
+            <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+
+                <div class="nhsuk-card nhsuk-card--clickable">
+                    <div class="nhsuk-card__content">
+                        <h2 class="nhsuk-card__heading nhsuk-heading-s">
                 <span class="nhsuk-card__link">
                   <span class="nhsuk-u-font-size-48">50</span>
                   <br>
                     <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="main-suppliers">Main suppliers</a>
                 </span>
-                    </h2>
+                        </h2>
 
+                    </div>
                 </div>
-            </div>
 
-        </li>
-        <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+            </li>
+            <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
 
-            <div class="nhsuk-card">
-                <div class="nhsuk-card__content">
-                    <h2 class="nhsuk-card__heading nhsuk-heading-s">
+                <div class="nhsuk-card">
+                    <div class="nhsuk-card__content">
+                        <h2 class="nhsuk-card__heading nhsuk-heading-s">
                 <span class="nhsuk-card__link">
                   <span class="nhsuk-u-font-size-48" id="templates-sent">0</span>
                   <br>
                   Templates sent
                 </span>
-                    </h2>
+                        </h2>
 
+                    </div>
                 </div>
-            </div>
 
-        </li>
-        <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+            </li>
+            <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
 
-            <div class="nhsuk-card">
-                <div class="nhsuk-card__content">
-                    <h2 class="nhsuk-card__heading nhsuk-heading-s">
+                <div class="nhsuk-card">
+                    <div class="nhsuk-card__content">
+                        <h2 class="nhsuk-card__heading nhsuk-heading-s">
                 <span class="nhsuk-card__link">
                   <span class="nhsuk-u-font-size-48" id="replies-received">0</span>
                   <br>
                   Replies received
                 </span>
-                    </h2>
+                        </h2>
 
+                    </div>
                 </div>
-            </div>
 
-        </li>
+            </li>
 
-        <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+            <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
 
-            <div class="nhsuk-card">
-                <div class="nhsuk-card__content">
-                    <h2 class="nhsuk-card__heading nhsuk-heading-s">
+                <div class="nhsuk-card">
+                    <div class="nhsuk-card__content">
+                        <h2 class="nhsuk-card__heading nhsuk-heading-s">
                 <span class="nhsuk-card__link">
                   <span class="nhsuk-u-font-size-48" id="reminders-sent">0</span>
                   <br>
                   Suppliers sent reminders
                 </span>
-                    </h2>
+                        </h2>
 
+                    </div>
                 </div>
-            </div>
 
-        </li>
-    </ul>
+            </li>
+        </ul>
 
-    <h3>Additional suppliers</h3>
-    <ul class="nhsuk-grid-row nhsuk-card-group">
-        <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+        <h3>Additional suppliers</h3>
+        <ul class="nhsuk-grid-row nhsuk-card-group">
+            <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
 
-            <div class="nhsuk-card nhsuk-card-clickable">
-                <div class="nhsuk-card__content">
-                    <h2 class="nhsuk-card__heading nhsuk-heading-s">
+                <div class="nhsuk-card nhsuk-card-clickable">
+                    <div class="nhsuk-card__content">
+                        <h2 class="nhsuk-card__heading nhsuk-heading-s">
                 <span class="nhsuk-card__link">
                   <span class="nhsuk-u-font-size-48">84</span>
                   <br>
                   <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="additional-suppliers">Additional suppliers</a>
                 </span>
-                    </h2>
+                        </h2>
 
+                    </div>
                 </div>
-            </div>
 
-        </li>
-        <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+            </li>
+            <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
 
-            <div class="nhsuk-card">
-                <div class="nhsuk-card__content">
-                    <h2 class="nhsuk-card__heading nhsuk-heading-s">
+                <div class="nhsuk-card">
+                    <div class="nhsuk-card__content">
+                        <h2 class="nhsuk-card__heading nhsuk-heading-s">
                 <span class="nhsuk-card__link">
                   <span class="nhsuk-u-font-size-48" id="templates-sent-add">0</span>
                   <br>
                   Templates sent
                 </span>
-                    </h2>
+                        </h2>
 
+                    </div>
                 </div>
-            </div>
 
-        </li>
-        <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+            </li>
+            <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
 
-            <div class="nhsuk-card">
-                <div class="nhsuk-card__content">
-                    <h2 class="nhsuk-card__heading nhsuk-heading-s">
+                <div class="nhsuk-card">
+                    <div class="nhsuk-card__content">
+                        <h2 class="nhsuk-card__heading nhsuk-heading-s">
                 <span class="nhsuk-card__link">
                   <span class="nhsuk-u-font-size-48" id="replies-received-add">0</span>
                   <br>
                   Replies received
                 </span>
-                    </h2>
+                        </h2>
 
+                    </div>
                 </div>
-            </div>
 
-        </li>
-        <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+            </li>
+            <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
 
-            <div class="nhsuk-card">
-                <div class="nhsuk-card__content">
-                    <h2 class="nhsuk-card__heading nhsuk-heading-s">
+                <div class="nhsuk-card">
+                    <div class="nhsuk-card__content">
+                        <h2 class="nhsuk-card__heading nhsuk-heading-s">
                 <span class="nhsuk-card__link">
-                  <span class="nhsuk-u-font-size-48" id="reminders-sent">0</span>
+                  <span class="nhsuk-u-font-size-48" id="reminders-sent-add">0</span>
                   <br>
                   Suppliers sent reminders
                 </span>
-                    </h2>
+                        </h2>
 
+                    </div>
                 </div>
-            </div>
 
-        </li>
-    </ul>
+            </li>
+        </ul>
+    </div>
+
 </div>
 
-<a class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-right-4" href="../new-request/current-requests" onclick="saveAndExit()">Save and exit</a>
+<!--<a class="nhsuk-button nhsuk-button&#45;&#45;secondary nhsuk-u-margin-right-4" href="../new-request/current-requests" onclick="saveAndExit()">Save and exit</a>-->
 
 <script>
+
+    if (localStorage.getItem("save-and-exit") == "yes") {
+       document.getElementById("status-tag").classList.remove("nhsuk-tag--blue");
+       document.getElementById("status-tag").classList.add("nhsuk-tag--orange");
+       document.getElementById("status-tag").innerHTML = "Pending";
+       document.getElementById("cdr-query").innerHTML = "No";
+
+    };
+
+    if (localStorage.getItem("save-and-exit-ongoing") == "yes") {
+       document.getElementById("status-tag").classList.add("nhsuk-tag--blue");
+       document.getElementById("status-tag").classList.remove("nhsuk-tag--orange");
+       document.getElementById("status-tag").innerHTML = "Ongoing";
+       document.getElementById("cdr-query").innerHTML = "Yes";
+       document.getElementById("product-list-text").innerHTML = "View items in the product list, including any amendments made.";
+       document.getElementById("product-list-link").href = "product-list-results";
+       document.getElementById("master-list-area").classList.remove("hide-area");
+       document.getElementById("supplier-area").classList.remove("hide-area");
+       document.getElementById("cdr-query-area").classList.add("hide-area");
+       document.getElementById("pending-text").classList.add("hide-area");
+
+    };
 
     function saveFromDashboard() {
       localStorage.setItem("save-from-dashboard", "yes");
@@ -207,6 +288,11 @@ Quarterly collection dropdown - expander list
     function saveAndExit() {
       localStorage.removeItem("save-and-exit", "yes");
       localStorage.setItem("save-and-exit-ongoing", "yes");
+    }
+
+    function runCDRQuery() {
+      localStorage.setItem("save-and-exit-ongoing", "yes");
+      localStorage.setItem("save-and-exit", "no");
     }
 
     console.log(localStorage);

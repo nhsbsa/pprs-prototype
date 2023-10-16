@@ -22,24 +22,25 @@ Quarterly collection dropdown - expander list
         </h1>
 
 <div class="nhsuk-form-group">
-    <p>The DHSC product list contains all items from your uploaded file, as well as items you have added manually. Added items will also appear in the &#39;Amendments to the product list&#39; section, as well as any items that were removed.</p>
+    <p>The product list contains all products from your uploaded file. Review these products and add, or remove, as required.</p>
 
     <details class="nhsuk-details nhsuk-expander nhsuk-u-margin-bottom-6">
-    <summary class="nhsuk-details__summary">
+        <summary class="nhsuk-details__summary">
     <span class="nhsuk-details__summary-text">
       Amendments to the product list
     </span>
-    </summary>
-    <div class="nhsuk-details__text">
-        <p id="removed-text">No amendments made.</p>
-        <!--        <ul>-->
-        <!--            <li>asking for them at your GP surgery </li>-->
-        <!--            <li>going online to see them (if you have signed up for <a href="/using-the-nhs/nhs-services/gps/gp-online-services/">GP online services</a>) </li>-->
-        <!--        </ul>-->
-    </div>
+        </summary>
+        <div class="nhsuk-details__text">
+            <p id="removed-text">No amendments made.</p>
+            <!--        <ul>-->
+            <!--            <li>asking for them at your GP surgery </li>-->
+            <!--            <li>going online to see them (if you have signed up for <a href="/using-the-nhs/nhs-services/gps/gp-online-services/">GP online services</a>) </li>-->
+            <!--        </ul>-->
+        </div>
     </details>
 
     <fieldset class="nhsuk-fieldset nhsuk-u-margin-bottom-3 nhsuk-u-margin-top-5">
+
         <details class="nhsuk-details">
             <summary class="nhsuk-details__summary">
     <span class="nhsuk-details__summary-text">
@@ -48,7 +49,6 @@ Quarterly collection dropdown - expander list
             </summary>
 
             <div class="nhsuk-details__text">
-
                 <div class="nhsuk-form-group">
                     <label class="nhsuk-label" for="example">
                         Attribute search
@@ -86,6 +86,9 @@ Quarterly collection dropdown - expander list
         <th role="columnheader" class="" scope="col">
             Pack
         </th>
+        <th role="columnheader" class="" scope="col">
+            Action
+        </th>
 
     </tr>
     </thead>
@@ -97,6 +100,10 @@ Quarterly collection dropdown - expander list
         <td class="nhsuk-table__cell ">
             <span class="nhsuk-table-responsive__heading">Pack</span>
             60</td>
+
+        <td class="nhsuk-table__cell ">
+            <span class="nhsuk-table-responsive__heading">Action </span>
+            <a class="nhsuk-link nhsuk-link--no-visited-state" href="delete-product">Remove</a></td>
     </tr>
     <tr role="row" class="nhsuk-table__row">
         <td class="nhsuk-table__cell">
@@ -105,6 +112,8 @@ Quarterly collection dropdown - expander list
         <td class="nhsuk-table__cell ">
             <span class="nhsuk-table-responsive__heading">Pack</span>
             30</td>
+        <td class="nhsuk-table__cell ">
+            <span class="nhsuk-table-responsive__heading">Action </span>Remove</td>
     </tr>
     <tr role="row" class="nhsuk-table__row">
         <td class="nhsuk-table__cell">
@@ -113,6 +122,8 @@ Quarterly collection dropdown - expander list
         <td class="nhsuk-table__cell ">
             <span class="nhsuk-table-responsive__heading">Pack</span>
             30</td>
+        <td class="nhsuk-table__cell "><span class="nhsuk-table-responsive__heading">Action </span>
+            Remove</td>
     </tr>
     <tr role="row" class="nhsuk-table__row">
         <td class="nhsuk-table__cell">
@@ -120,11 +131,13 @@ Quarterly collection dropdown - expander list
             Cyclizine 50mg/1ml solution for injection ampoules</td>
         <td class="nhsuk-table__cell "><span class="nhsuk-table-responsive__heading">Pack</span>
             5</td>
+        <td class="nhsuk-table__cell "><span class="nhsuk-table-responsive__heading">Action </span>Remove</td>
     </tr>
     <tr role="row" class="nhsuk-table__row">
         <td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Product name </span>
             Isotretinoin 20mg capsules</td>
         <td class="nhsuk-table__cell "><span class="nhsuk-table-responsive__heading">Pack</span>30</td>
+        <td class="nhsuk-table__cell "><span class="nhsuk-table-responsive__heading">Action </span>Remove</td>
     </tr>
     </tbody>
 </table>
@@ -161,15 +174,29 @@ Quarterly collection dropdown - expander list
     </div>
 </nav>
 
-<script>
-    console.log(localStorage);
+<div class="nhsuk-inset-text">
+    <span class="nhsuk-u-visually-hidden">Information: </span>
+    <p>If a product is missing from the list then <a href="https://yellowcard.mhra.gov.uk/" title="External website">add a product to the product list</a></p>
+</div>
 
-    if (localStorage.getItem("remove-product") == "yes") {
+<a class="nhsuk-button nhsuk-button--primary nhsuk-u-margin-right-4" href="supplier-contact">Save and return to request dashboard</a>
+
+<script>
+     console.log(localStorage);
+
+     if (localStorage.getItem("remove-product") == "yes") {
         document.getElementById("remove-row").classList.add("hide-area");
         document.getElementById("pageAndResultCount").innerHTML = "Page 1 of 1 (4 results)";
         document.getElementById("removed-text").innerHTML = "Removed Atorvastatin 10mg tablets 60 pack.";
      }
 
+    function saveAndExit() {
+      localStorage.setItem("save-and-exit", "yes");
+      }
+
+    function saveBackAdditionalSupplier() {
+      localStorage.setItem("go-back-supplier", "additional");
+      }
 </script>
 
 {% endblock %}
