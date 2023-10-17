@@ -40,7 +40,7 @@ Quarterly collection - dropdown table
                 </div>
 
 <!--              Table  -->
-                <table class="nhsuk-table-responsive">
+                <table class="nhsuk-table-responsive" id="table-view">
                     <caption class="nhsuk-table__caption">List of main suppliers</caption>
                     <thead role="rowgroup" class="nhsuk-table__head">
                     <tr role="row">
@@ -54,7 +54,7 @@ Quarterly collection - dropdown table
                     </thead>
                     <tbody class="nhsuk-table__body">
                     <tr role="row" class="nhsuk-table__row">
-                        <td class="nhsuk-table__cell align middle" role="cell">
+                        <td class="nhsuk-table__cell align-middle" role="cell">
                             <span class="nhsuk-table-responsive__heading">Supplier name</span>
                             AAH Pharmaceuticals Ltd</td>
                         <td>
@@ -70,7 +70,7 @@ Quarterly collection - dropdown table
                         </td>
                     </tr>
                     <tr role="row" class="nhsuk-table__row">
-                        <td class="nhsuk-table__cell">Accord-UK Ltd</td>
+                        <td class="nhsuk-table__cell align-middle">Accord-UK Ltd</td>
                         <td>
                             <div class="nhsuk-checkboxes">
                                 <div class="nhsuk-checkboxes__item table-checkbox">
@@ -84,7 +84,7 @@ Quarterly collection - dropdown table
                         </td>
                     </tr>
                     <tr role="row" class="nhsuk-table__row">
-                        <td class="nhsuk-table__cell">Advanz Pharma</td>
+                        <td class="nhsuk-table__cell align-middle">Advanz Pharma</td>
                         <td >  <div class="nhsuk-checkboxes">
                             <div class="nhsuk-checkboxes__item table-checkbox">
                                 <input class="nhsuk-checkboxes__input"name="select"
@@ -96,7 +96,7 @@ Quarterly collection - dropdown table
                         </div></td>
                     </tr>
                     <tr role="row" class="nhsuk-table__row">
-                        <td class="nhsuk-table__cell">AllianceHealthcare (distributions) Ltd</td>
+                        <td class="nhsuk-table__cell align-middle">AllianceHealthcare (distributions) Ltd</td>
                         <td >  <div class="nhsuk-checkboxes">
                             <div class="nhsuk-checkboxes__item table-checkbox">
                                 <input class="nhsuk-checkboxes__input"name="select"
@@ -108,7 +108,7 @@ Quarterly collection - dropdown table
                         </div></td>
                     </tr>
                     <tr role="row" class="nhsuk-table__row">
-                        <td class="nhsuk-table__cell">Aristo Pharma</td>
+                        <td class="nhsuk-table__cell align-middle">Aristo Pharma</td>
                         <td >  <div class="nhsuk-checkboxes">
                             <div class="nhsuk-checkboxes__item table-checkbox">
                                 <input class="nhsuk-checkboxes__input"name="select"
@@ -120,7 +120,7 @@ Quarterly collection - dropdown table
                         </div></td>
                     </tr>
                     <tr role="row" class="nhsuk-table__row">
-                        <td class="nhsuk-table__cell">Aspire Pharma</td>
+                        <td class="nhsuk-table__cell align-middle">Aspire Pharma</td>
                         <td >  <div class="nhsuk-checkboxes">
                             <div class="nhsuk-checkboxes__item table-checkbox">
                                 <input class="nhsuk-checkboxes__input"name="select"
@@ -132,7 +132,7 @@ Quarterly collection - dropdown table
                         </div></td>
                     </tr>
                     <tr role="row" class="nhsuk-table__row">
-                        <td class="nhsuk-table__cell">Aurobindo Pharma Ltd (Milpharm)</td>
+                        <td class="nhsuk-table__cell align-middle">Aurobindo Pharma Ltd (Milpharm)</td>
                         <td >  <div class="nhsuk-checkboxes">
                             <div class="nhsuk-checkboxes__item table-checkbox">
                                 <input class="nhsuk-checkboxes__input"name="select"
@@ -144,7 +144,7 @@ Quarterly collection - dropdown table
                         </div></td>
                     </tr>
                     <tr role="row" class="nhsuk-table__row">
-                        <td class="nhsuk-table__cell">Bausch and Lomb</td>
+                        <td class="nhsuk-table__cell align-middle">Bausch and Lomb</td>
                         <td >  <div class="nhsuk-checkboxes">
                             <div class="nhsuk-checkboxes__item table-checkbox">
                                 <input class="nhsuk-checkboxes__input"name="select"
@@ -156,7 +156,7 @@ Quarterly collection - dropdown table
                         </div></td>
                     </tr>
                     <tr role="row" class="nhsuk-table__row">
-                        <td class="nhsuk-table__cell">Bristol Laboritories Ltd</td>
+                        <td class="nhsuk-table__cell align-middle">Bristol Laboritories Ltd</td>
                         <td >  <div class="nhsuk-checkboxes">
                             <div class="nhsuk-checkboxes__item table-checkbox">
                                 <input class="nhsuk-checkboxes__input"name="select"
@@ -168,7 +168,7 @@ Quarterly collection - dropdown table
                         </div></td>
                     </tr>
                     <tr role="row" class="nhsuk-table__row">
-                        <td class="nhsuk-table__cell">Brown and Burke UK Ltd</td>
+                        <td class="nhsuk-table__cell align-middle">Brown and Burke UK Ltd</td>
                         <td >  <div class="nhsuk-checkboxes">
                             <div class="nhsuk-checkboxes__item table-checkbox">
                                 <input class="nhsuk-checkboxes__input"name="select"
@@ -231,7 +231,7 @@ Quarterly collection - dropdown table
      console.log(insetText);
 
   function checkAllBoxes() {
-     for (let i = 0; i < checkAll.length; i++) {
+    for (let i = 0; i < checkAll.length; i++) {
        checkAll[i].checked = true;
      }
      let insetText = document.getElementById("inset-text-input");
@@ -251,20 +251,6 @@ Quarterly collection - dropdown table
      '<span class="nhsuk-u-visually-hidden">Information: </span>'
      +
      '<p>Select suppliers individually or use this link to <a class="nhsuk-link nhsuk-link--no-visited-state" href="#" onclick="checkAllBoxes()">select all suppliers</a></p>';
-  }
-
-  let discontinueReason = localStorage.getItem("discontinue-reason");
-
-  let discontinueTitle = document.getElementById("discontinue-reason");
-
-  let mergerProductChange = localStorage.getItem("change-company-name");
-
-  if (discontinueReason || discontinueReason != null || discontinueReason != "") {
-    discontinueTitle.innerHTML = 'Discontinue submission' + ': ' + discontinueReason +'<span class="nhsuk-u-visually-hidden"> - </span>';
-  }
-
-  if (mergerProductChange) {
-     discontinueTitle.innerHTML = '<span class="nhsuk-caption-l" id="discontinue-reason">Company name change : company merger<span class="nhsuk-u-visually-hidden"> - </span></span>';
   }
 </script>
 
