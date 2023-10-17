@@ -1,0 +1,268 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Quarterly collection - dropdown table
+{% endblock %}
+
+{% block content %}
+
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+    <div class="nhsuk-width-container">
+        <ol class="nhsuk-breadcrumb__list">
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/pcp-prototype-version-2/homepage">Price concessions homepage</a></li>
+        </ol>
+        <p class="nhsuk-breadcrumb__back">
+            <a class="nhsuk-breadcrumb__backlink" href="/level-one/level-two/level-three">
+                <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+                Price concessions Homepage
+            </a>
+        </p>
+    </div>
+</nav>
+<div class="nhsuk-width-container">
+
+    <main class="nhsuk-main-wrapper" id="maincontent" role="main">
+
+        <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+
+                <h1>Select main suppliers </h1>
+
+                <P>The suppliers are logged in alphabetical order. check the box below to select
+                    Individual suppliers </P>
+
+<!--                Inset text-->
+                <div class="nhsuk-inset-text nhsuk-u-margin-top-4" id="inset-text-input">
+                    <span class="nhsuk-u-visually-hidden">Information: </span>
+                    <p>To select all suppliers on this page use this link to <a href="#" class="nhsuk-link nhsuk-link--no-visited-state" onclick="checkAllBoxes()">select all</a>.</p>
+
+                    <!--      not sure if we need this extra detail? MPL 20/10/2022  -->
+                </div>
+
+                <div class="nhsuk-body-m flex--space-between" style="display: flex">
+                    <div class="nhsuk-u-visually-hidden">Currently viewing</div>
+                    <div id="pageAndResultCount">Page 1 of 1 (10 results)</div>
+                </div>
+
+<!--              Table  -->
+                <table class="nhsuk-table">
+                    <caption class="nhsuk-table__caption">List of main suppliers</caption>
+                    <thead role="rowgroup" class="nhsuk-table__head">
+                    <tr role="row">
+                        <th role="columnheader" class="" scope="col">
+                            Supplier name
+                        </th>
+                        <th role="columnheader" class="" scope="col">
+                            Select
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody class="nhsuk-table__body">
+                    <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell"> AAH Pharmaceuticals Ltd</td>
+                        <td>
+                            <div class="nhsuk-checkboxes">
+                                <div class="nhsuk-checkboxes__item table-checkbox">
+                                    <input class="nhsuk-checkboxes__input"  name="select"
+                                           type="checkbox" value="email">
+                                    <label class="nhsuk-label nhsuk-checkboxes__label">
+                                        <span class="nhsuk-u-visually-hidden">Supplier name</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell">Accord-UK Ltd</td>
+                        <td>
+                            <div class="nhsuk-checkboxes">
+                                <div class="nhsuk-checkboxes__item table-checkbox">
+                                    <input class="nhsuk-checkboxes__input"name="select"
+                                           type="checkbox" value="email">
+                                    <label class="nhsuk-label nhsuk-checkboxes__label">
+                                        <span class="nhsuk-u-visually-hidden">Supplier name</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell">Advanz Pharma</td>
+                        <td >  <div class="nhsuk-checkboxes">
+                            <div class="nhsuk-checkboxes__item table-checkbox">
+                                <input class="nhsuk-checkboxes__input"name="select"
+                                       type="checkbox" value="email">
+                                <label class="nhsuk-label nhsuk-checkboxes__label">
+                                    <span class="nhsuk-u-visually-hidden">Supplier name</span>
+                                </label>
+                            </div>
+                        </div></td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell">AllianceHealthcare (distributions) Ltd</td>
+                        <td >  <div class="nhsuk-checkboxes">
+                            <div class="nhsuk-checkboxes__item table-checkbox">
+                                <input class="nhsuk-checkboxes__input"name="select"
+                                       type="checkbox" value="email">
+                                <label class="nhsuk-label nhsuk-checkboxes__label">
+                                    <span class="nhsuk-u-visually-hidden">Supplier name</span>
+                                </label>
+                            </div>
+                        </div></td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell">Aristo Pharma</td>
+                        <td >  <div class="nhsuk-checkboxes">
+                            <div class="nhsuk-checkboxes__item table-checkbox">
+                                <input class="nhsuk-checkboxes__input"name="select"
+                                       type="checkbox" value="email">
+                                <label class="nhsuk-label nhsuk-checkboxes__label">
+                                    <span class="nhsuk-u-visually-hidden">Supplier name</span>
+                                </label>
+                            </div>
+                        </div></td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell">Aspire Pharma</td>
+                        <td >  <div class="nhsuk-checkboxes">
+                            <div class="nhsuk-checkboxes__item table-checkbox">
+                                <input class="nhsuk-checkboxes__input"name="select"
+                                       type="checkbox" value="email">
+                                <label class="nhsuk-label nhsuk-checkboxes__label">
+                                    <span class="nhsuk-u-visually-hidden">Supplier name</span>
+                                </label>
+                            </div>
+                        </div></td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell">Aurobindo Pharma Ltd (Milpharm)</td>
+                        <td >  <div class="nhsuk-checkboxes">
+                            <div class="nhsuk-checkboxes__item table-checkbox">
+                                <input class="nhsuk-checkboxes__input"name="select"
+                                       type="checkbox" value="email">
+                                <label class="nhsuk-label nhsuk-checkboxes__label">
+                                    <span class="nhsuk-u-visually-hidden">Supplier name</span>
+                                </label>
+                            </div>
+                        </div></td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell">Bausch and Lomb</td>
+                        <td >  <div class="nhsuk-checkboxes">
+                            <div class="nhsuk-checkboxes__item table-checkbox">
+                                <input class="nhsuk-checkboxes__input"name="select"
+                                       type="checkbox" value="email">
+                                <label class="nhsuk-label nhsuk-checkboxes__label">
+                                    <span class="nhsuk-u-visually-hidden">Supplier name</span>
+                                </label>
+                            </div>
+                        </div></td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell">Bristol Laboritories Ltd</td>
+                        <td >  <div class="nhsuk-checkboxes">
+                            <div class="nhsuk-checkboxes__item table-checkbox">
+                                <input class="nhsuk-checkboxes__input"name="select"
+                                       type="checkbox" value="email">
+                                <label class="nhsuk-label nhsuk-checkboxes__label">
+                                    <span class="nhsuk-u-visually-hidden">Supplier name</span>
+                                </label>
+                            </div>
+                        </div></td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell">Brown and Burke UK Ltd</td>
+                        <td >  <div class="nhsuk-checkboxes">
+                            <div class="nhsuk-checkboxes__item table-checkbox">
+                                <input class="nhsuk-checkboxes__input"name="select"
+                                       type="checkbox" value="email">
+                                <label class="nhsuk-label nhsuk-checkboxes__label">
+                                    <span class="nhsuk-u-visually-hidden">Supplier name</span>
+                                </label>
+                            </div>
+                        </div></td>
+                    </tr>
+
+                    </tbody>
+                </table>
+                <nav class="nhsuk-pagination" role="navigation" aria-label="Pagination">
+                    <ul class="nhsuk-list nhsuk-pagination__list">
+                        <li class="nhsuk-pagination-item--previous">
+                            <a class="nhsuk-pagination__link nhsuk-pagination__link--prev" href="#">
+                                <span class="nhsuk-pagination__title">Previous</span>
+                                <span class="nhsuk-u-visually-hidden">:</span>
+                                <span class="nhsuk-pagination__page">page 1</span>
+                                <svg class="nhsuk-icon nhsuk-icon__arrow-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="34" height="34">
+                                    <path d="M4.1 12.3l2.7 3c.2.2.5.2.7 0 .1-.1.1-.2.1-.3v-2h11c.6 0 1-.4 1-1s-.4-1-1-1h-11V9c0-.2-.1-.4-.3-.5h-.2c-.1 0-.3.1-.4.2l-2.7 3c0 .2 0 .4.1.6z"></path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="nhsuk-pagination-item--next">
+                            <a class="nhsuk-pagination__link nhsuk-pagination__link--next" href="#">
+                                <span class="nhsuk-pagination__title">Next</span>
+                                <span class="nhsuk-u-visually-hidden">:</span>
+                                <span class="nhsuk-pagination__page">Page 2</span>
+                                <svg class="nhsuk-icon nhsuk-icon__arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="34" height="34">
+                                    <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+        </div>
+        <a class="nhsuk-button" data-module="nhsuk-button" type="submit" href="/pcp-prototype-version-2/auto-email/card-1">
+            View list
+        </a>
+    </main>
+</div>
+
+<script>
+    console.log(localStorage);
+
+    let checkAll = document.getElementsByClassName("nhsuk-checkboxes__input");
+
+    let insetText = document.getElementById("inset-text-input");
+     console.log(insetText);
+
+  function checkAllBoxes() {
+     for (let i = 0; i < checkAll.length; i++) {
+       checkAll[i].checked = true;
+     }
+     let insetText = document.getElementById("inset-text-input");
+     console.log(insetText);
+     insetText.innerHTML =
+     '<span class="nhsuk-u-visually-hidden">Information: </span>'
+     +
+     '<p>To deselect all suppliers on this page use this link to <a href="#" class="nhsuk-link nhsuk-link--no-visited-state" onclick="removeAllBoxes()">deselect all</a>.</p>';
+  }
+
+  function removeAllBoxes() {
+     for (let i = 0; i < checkAll.length; i++) {
+       checkAll[i].checked = false;
+     }
+     let insetText = document.getElementById("inset-text-input");
+     insetText.innerHTML =
+     '<span class="nhsuk-u-visually-hidden">Information: </span>'
+     +
+     '<p>Select single packs from the search results or use this link to <a class="nhsuk-link nhsuk-link--no-visited-state" href="#" onclick="checkAllBoxes()">select all</a>.</p>';
+  }
+
+  let discontinueReason = localStorage.getItem("discontinue-reason");
+
+  let discontinueTitle = document.getElementById("discontinue-reason");
+
+  let mergerProductChange = localStorage.getItem("change-company-name");
+
+  if (discontinueReason || discontinueReason != null || discontinueReason != "") {
+    discontinueTitle.innerHTML = 'Discontinue submission' + ': ' + discontinueReason +'<span class="nhsuk-u-visually-hidden"> - </span>';
+  }
+
+  if (mergerProductChange) {
+     discontinueTitle.innerHTML = '<span class="nhsuk-caption-l" id="discontinue-reason">Company name change : company merger<span class="nhsuk-u-visually-hidden"> - </span></span>';
+  }
+</script>
+
+
+{% endblock %}
