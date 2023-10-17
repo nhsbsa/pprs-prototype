@@ -7557,6 +7557,11 @@ ul[role="tree"] {
            padding: 16px 0; } }
 
 
+.align-middle {
+  vertical-align: middle !important;
+}
+
+
 // TABS
 
 .tabs {
