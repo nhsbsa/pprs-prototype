@@ -21,7 +21,7 @@ Quarterly collection - dropdown table
         <div class="nhsuk-card nhsuk-card--clickable">
             <div class="nhsuk-card__content">
                 <h2 class="nhsuk-card__heading nhsuk-heading-m">
-                    <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="homepage-dh">DHSC login</a>
+                    <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="homepage" onclick="setDHLogin()">DHSC login</a>
                 </h2>
             </div>
         </div>
@@ -32,7 +32,7 @@ Quarterly collection - dropdown table
         <div class="nhsuk-card nhsuk-card--clickable">
             <div class="nhsuk-card__content">
                 <h2 class="nhsuk-card__heading nhsuk-heading-m">
-                    <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="homepage">NHS BSA login</a>
+                    <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="homepage" onclick="setMedsLogin()">NHS BSA login</a>
                 </h2>
             </div>
         </div>
@@ -41,4 +41,18 @@ Quarterly collection - dropdown table
 </ul>
 
         </div>
+
+<script>
+    localStorage.clear()
+
+    function setDHLogin() {
+      localStorage.setItem("dh-login", "yes");
+      localStorage.removeItem("meds-login");
+    }
+
+    function setMedsLogin() {
+      localStorage.setItem("meds-login", "yes");
+      localStorage.removeItem("dh-login");
+    }
+</script>
 {% endblock %}

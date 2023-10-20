@@ -7,7 +7,7 @@ Quarterly collection dropdown - expander list
 {% block content %}
 <div class="nhsuk-back-link">
 
-    <a class="nhsuk-back-link__link nhsuk-u-margin-bottom-5" href="../new-request/current-requests">
+    <a class="nhsuk-back-link__link nhsuk-u-margin-bottom-5" href="../new-request/current-requests" id="back-link">
         <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
             <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
         </svg>
@@ -54,7 +54,7 @@ Quarterly collection dropdown - expander list
         </dd>
     </div>
 
-    <div class="nhsuk-summary-list__row">
+    <div class="nhsuk-summary-list__row" id="cdr-yes-or-no">
         <dt class="nhsuk-summary-list__key">
             Common Drug Reference (CDR) queries complete
         </dt>
@@ -64,7 +64,7 @@ Quarterly collection dropdown - expander list
     </div>
 </dl>
 
-<p id="pending-text"> To view suppliers and download templates you must first create the master product list. This is achieved by running CDR queries on the Department of Health and Social Care (DHSC) product list. </p>
+<p id="pending-text"> To view suppliers and download templates you must first create the master product list. This is achieved by running CDR queries on the Department of Health and Social Care (DHSC) product list. Any amendments to the DHSC product list must be made prior to running the CDR queries.</p>
 
 <div class="nhsuk-form-group">
 
@@ -255,9 +255,25 @@ Quarterly collection dropdown - expander list
 
 </div>
 
+<a class="nhsuk-button" href="../new-request/current-requests" id="save-and-exit">Save and exit</a>
+
 <!--<a class="nhsuk-button nhsuk-button&#45;&#45;secondary nhsuk-u-margin-right-4" href="../new-request/current-requests" onclick="saveAndExit()">Save and exit</a>-->
 
 <script>
+
+    window.onload = function() {
+    if (localStorage.getItem("upload-confirmation") == "yes") {
+    document.getElementById("back-link").setAttribute('href', "../new-request/file-upload3");
+    document.getElementById("back-link").innerHTML = "<svg class='nhsuk-icon nhsuk-icon__chevron-left' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden='true' height='24' width='24'><path d='M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z'></path></svg>Go back to upload confirmation";
+      }
+    }
+
+    if (localStorage.getItem("dh-login") == "yes") {
+        document.getElementById("cdr-query-area").classList.add("hide-from-dh");
+        document.getElementById("pending-text").classList.add("hide-from-dh");
+        document.getElementById("cdr-yes-or-no").classList.add("hide-from-dh");
+        document.getElementById("save-and-exit").innerHTML = "Save and notify NHS BSA";
+    }
 
     if (localStorage.getItem("save-and-exit") == "yes") {
        document.getElementById("status-tag").classList.remove("nhsuk-tag--blue");
