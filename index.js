@@ -266,6 +266,7 @@ app.get('/pcp-prototype-version-3/new-request/current-requests', (req, res) => {
 app.get('/pcp-prototype-version-3/new-request/file-upload', (req, res) => { res.render('pcp-prototype-version-3/new-request/file-upload') });
 app.get('/pcp-prototype-version-3/new-request/file-upload1', (req, res) => { res.render('pcp-prototype-version-3/new-request/file-upload1') });
 app.get('/pcp-prototype-version-3/new-request/file-upload2', (req, res) => { res.render('pcp-prototype-version-3/new-request/file-upload2') });
+app.get('/pcp-prototype-version-3/new-request/file-upload3', (req, res) => { res.render('pcp-prototype-version-3/new-request/file-upload3') });
 app.get('/pcp-prototype-version-3/auto-email/choose-main-suppliers', (req, res) => { res.render('pcp-prototype-version-3/auto-email/choose-main-suppliers') });
 app.get('/pcp-prototype-version-3/auto-email/card-1', (req, res) => { res.render('pcp-prototype-version-3/auto-email/card-1') });
 app.get('/pcp-prototype-version-3/auto-email/confirm-page', (req, res) => { res.render('pcp-prototype-version-3/auto-email/confirm-page') });

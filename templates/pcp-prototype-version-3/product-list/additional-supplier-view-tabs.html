@@ -68,7 +68,7 @@ Quarterly collection dropdown - expander list
                     <!--            VMP-->
                     <!--        </th>-->
                     <th role="columnheader" class="" scope="col">
-                        SNOMED
+                        Category
                     </th>
                     <th role="columnheader" class="" scope="col">
                         Action
@@ -86,11 +86,11 @@ Quarterly collection dropdown - expander list
                         60</td>
                     <!--        <td class="nhsuk-table__cell">400645002</td>-->
                     <td class="nhsuk-table__cell">
-                        <span class="nhsuk-table-responsive__heading">SNOMED </span>
-                        39695411000001103</td>
+                        <span class="nhsuk-table-responsive__heading">Category </span>
+                        M</td>
                     <td class="nhsuk-table__cell ">
                         <span class="nhsuk-table-responsive__heading">Action </span>
-                        <a class="nhsuk-link nhsuk-link--no-visited-state" href="product-view">View</a></td>
+                        <a class="nhsuk-link nhsuk-link--no-visited-state" href="product-view" onclick="comingFromAddSupp()">View</a></td>
                 </tr>
                 <tr role="row" class="nhsuk-table__row">
                     <td class="nhsuk-table__cell">
@@ -102,8 +102,8 @@ Quarterly collection dropdown - expander list
                     <!--        <td class="nhsuk-table__cell">397330011000001106-->
                     <!--        </td>-->
                     <td class="nhsuk-table__cell">
-                        <span class="nhsuk-table-responsive__heading">SNOMED </span>
-                        39695411000001103</td>
+                        <span class="nhsuk-table-responsive__heading">Category </span>
+                        A</td>
                     <td class="nhsuk-table__cell ">
                         <span class="nhsuk-table-responsive__heading">Action </span>View</td>
                 </tr>
@@ -117,8 +117,8 @@ Quarterly collection dropdown - expander list
                     <!--        <td class="nhsuk-table__cell">400645002-->
                     <!--        </td>-->
                     <td class="nhsuk-table__cell">
-                        <span class="nhsuk-table-responsive__heading">SNOMED </span>
-                        39695411000001103</td>
+                        <span class="nhsuk-table-responsive__heading">Category </span>
+                        M</td>
                     <td class="nhsuk-table__cell "><span class="nhsuk-table-responsive__heading">Action </span>
                         View</td>
                 </tr>
@@ -130,8 +130,8 @@ Quarterly collection dropdown - expander list
                         5</td>
                     <!--        <td class="nhsuk-table__cell">400645002-->
                     <!--        </td>-->
-                    <td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">SNOMED </span>
-                        39695411000001103</td>
+                    <td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Category </span>
+                        M</td>
                     <td class="nhsuk-table__cell "><span class="nhsuk-table-responsive__heading">Action </span>View</td>
                 </tr>
                 <tr role="row" class="nhsuk-table__row">
@@ -140,7 +140,7 @@ Quarterly collection dropdown - expander list
                     <td class="nhsuk-table__cell "><span class="nhsuk-table-responsive__heading">Pack</span>30</td>
                     <!--        <td class="nhsuk-table__cell">400645002-->
                     <!--        </td>-->
-                    <td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">SNOMED </span>39695411000001103</td>
+                    <td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Category </span>M</td>
                     <td class="nhsuk-table__cell "><span class="nhsuk-table-responsive__heading">Action </span>View</td>
                 </tr>
                 </tbody>
@@ -183,7 +183,7 @@ Quarterly collection dropdown - expander list
          aria-labelledby="tab1">
         <div class="nhsuk-tabs-panel-inner">
 
-                    <h2>Template</h2>
+             c       <h2>Template</h2>
                     <p>The additional supplier template is ready to download. This needs to be sent, by email, to the supplier.</p>
 
                     <a class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-bottom-6" href="#">Download additional supplier template</a>
@@ -443,6 +443,10 @@ Quarterly collection dropdown - expander list
    localStorage.clear();
    location.reload();
 
+   }
+
+   function comingFromAddSupp() {
+     localStorage.setItem("coming-from-add-supp", "yes");
    }
 
 </script>

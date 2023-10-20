@@ -109,7 +109,7 @@ Quarterly collection dropdown - expander list
 <!--            39695411000001103</td>-->
         <td class="nhsuk-table__cell ">
             <span class="nhsuk-table-responsive__heading">Action </span>
-            <a class="nhsuk-link nhsuk-link--no-visited-state" href="product-view">View</a></td>
+            <a class="nhsuk-link nhsuk-link--no-visited-state" href="product-view" onclick="comingFromAddSupp()">View</a></td>
     </tr>
     <tr role="row" class="nhsuk-table__row">
         <td class="nhsuk-table__cell">
@@ -210,6 +210,10 @@ Quarterly collection dropdown - expander list
     function saveBackAdditionalSupplier() {
       localStorage.setItem("go-back-supplier", "additional");
     }
+    function comingFromAddSupp() {
+     localStorage.setItem("coming-from-add-supp", "no");
+   }
+
 </script>
 
 {% endblock %}

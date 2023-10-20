@@ -22,9 +22,8 @@ Quarterly collection dropdown - expander list
         </h1>
 
 <div class="nhsuk-form-group">
-    <p>The product list contains all products from your uploaded file. Review these products and add, or remove, as required.</p>
-
-    <details class="nhsuk-details nhsuk-expander nhsuk-u-margin-bottom-6">
+    <p id="product-list-detail">The product list contains all products from your uploaded file. Review these products and add, or remove, as required.</p>
+        <details class="nhsuk-details nhsuk-expander nhsuk-u-margin-bottom-6">
         <summary class="nhsuk-details__summary">
     <span class="nhsuk-details__summary-text">
       Amendments to the product list
@@ -179,7 +178,7 @@ Quarterly collection dropdown - expander list
     <p>If a product is missing from the list then <a href="https://yellowcard.mhra.gov.uk/" title="External website">add a product to the product list</a></p>
 </div>
 
-<a class="nhsuk-button nhsuk-button--primary nhsuk-u-margin-right-4" href="supplier-contact">Save and return to request dashboard</a>
+<a class="nhsuk-button nhsuk-button--primary nhsuk-u-margin-right-4" href="supplier-contact" id="save-button">Save and return to request dashboard</a>
 
 <script>
      console.log(localStorage);
@@ -187,7 +186,7 @@ Quarterly collection dropdown - expander list
      if (localStorage.getItem("remove-product") == "yes") {
         document.getElementById("remove-row").classList.add("hide-area");
         document.getElementById("pageAndResultCount").innerHTML = "Page 1 of 1 (4 results)";
-        document.getElementById("removed-text").innerHTML = "Removed Atorvastatin 10mg tablets 60 pack.";
+        document.getElementById("removed-text").innerHTML = '<strong class="nhsuk-tag nhsuk-tag--red nhsuk-u-margin-right-1">Removed</strong> Atorvastatin 10mg tablets 60 pack.';
      }
 
     function saveAndExit() {
@@ -196,6 +195,12 @@ Quarterly collection dropdown - expander list
 
     function saveBackAdditionalSupplier() {
       localStorage.setItem("go-back-supplier", "additional");
+      }
+
+      if (localStorage.getItem("dh-login") == "yes") {
+         document.getElementById("product-list-detail").innerHTML = "The product list contains all products from your uploaded file. Review these products and add, or remove, as required. Once complete, you must save which will notify the NHS Business Services Authority (BSA) that the product list is ready."
+         document.getElementById("save-button").innerHTML = "Save and notify NSA BSA";
+         document.getElementById("save-button").href = "../new-request/current-requests";
       }
 </script>
 
