@@ -64,7 +64,7 @@ Quarterly collection dropdown - expander list
     </div>
 </dl>
 
-<p id="pending-text"> To view suppliers and download templates you must first create the master product list. This is achieved by running CDR queries on the Department of Health and Social Care (DHSC) product list. Any amendments to the DHSC product list must be made prior to running the CDR queries.</p>
+<p id="pending-text"> To view suppliers and download templates you must first create the main product list. This is achieved by running CDR queries on the Department of Health and Social Care (DHSC) product list. Any amendments to the DHSC product list must be made prior to running the CDR queries.</p>
 
 <div class="nhsuk-form-group">
 
@@ -83,12 +83,12 @@ Quarterly collection dropdown - expander list
         </div>
 
     </li>
-        <li class="nhsuk-grid-column-one-half nhsuk-card-group__item hide-area" id="master-list-area">
+        <li class="nhsuk-grid-column-one-half nhsuk-card-group__item hide-area" id="main-list-area">
 
         <div class="nhsuk-card nhsuk-card--clickable">
             <div class="nhsuk-card__content">
                 <h2 class="nhsuk-card__heading nhsuk-heading-m">
-                    <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="product-list-results-master">Master product list</a>
+                    <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="product-list-results-main">Main product list</a>
                 </h2>
                 <p class="nhsuk-card__description">View the product list containing all information from the CDR queries.</p>
 
@@ -104,7 +104,7 @@ Quarterly collection dropdown - expander list
                 <path d="M0 0h24v24H0z" fill="none"></path>
                 <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
             </svg>
-            <span class="nhsuk-action-link__text ">Run the CDR queries on the DHSC product list</span>
+            <span class="nhsuk-action-link__text ">Run CDR queries to create main product list</span>
         </a>
     </div>
 
@@ -290,7 +290,7 @@ Quarterly collection dropdown - expander list
        document.getElementById("cdr-query").innerHTML = "Yes";
        document.getElementById("product-list-text").innerHTML = "View items in the product list, including any amendments made.";
        document.getElementById("product-list-link").href = "product-list-results";
-       document.getElementById("master-list-area").classList.remove("hide-area");
+       document.getElementById("main-list-area").classList.remove("hide-area");
        document.getElementById("supplier-area").classList.remove("hide-area");
        document.getElementById("cdr-query-area").classList.add("hide-area");
        document.getElementById("pending-text").classList.add("hide-area");
