@@ -27,6 +27,16 @@
           </span>
         </a>
       </div>
+      <div class="header-sub-links">
+          <span class="header-sub-links--content">
+              <span class="nhsuk-u-visually-hidden">Logged in as </span>
+            <span id="user-name">not logged in</span>
+          </span>
+        <strong aria-hidden="true"> | </strong>
+        <span class="header-sub-links--content">
+        <a href="/pcp-prototype-version-3/choose-option" class="header-sub-links--content-body header-sub-links--content-link" id="account-logout" tabindex="0"> Log out </a>
+      </span>
+      </div>
     </div>
     <div class="nhsuk-width-container">
     <ul class="nhsuk-header__navigation-list" style="padding-left: 5%; padding-right: 5%" id="tabs">
@@ -84,6 +94,19 @@
 
   <script src="/js/govuk-template.js"></script>
   <script src="/js/show-hide-content.js"></script>
+
+<script defer="defer">
+
+  if (localStorage.getItem("dh-login") == "yes") {
+     console.log(document.getElementById("user-name").innerHTML );
+     document.getElementById("user-name").innerHTML = "DHSC user";
+     document.getElementById("logout").classList.add("hide-from-dh");
+  }
+  if (localStorage.getItem("meds-login") == "yes") {
+     document.getElementById("user-name").innerHTML = "NHSBSA Meds user";
+     document.getElementById("logout").classList.add("hide-from-dh");
+  }
+</script>
 
 {% endblock %}
 
