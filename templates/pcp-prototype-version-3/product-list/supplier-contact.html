@@ -30,7 +30,7 @@ Quarterly collection dropdown - expander list
             Date requested
         </dt>
         <dd class="nhsuk-summary-list__value">
-            10 October 2023
+            24 October 2023
         </dd>
     </div>
 
@@ -39,7 +39,7 @@ Quarterly collection dropdown - expander list
             Supplier deadline
         </dt>
         <dd class="nhsuk-summary-list__value">
-            12 October 2023 at 5pm
+            26 October 2023 at 5pm
         </dd>
     </div>
 
@@ -272,7 +272,9 @@ Quarterly collection dropdown - expander list
         document.getElementById("cdr-query-area").classList.add("hide-from-dh");
         document.getElementById("pending-text").classList.add("hide-from-dh");
         document.getElementById("cdr-yes-or-no").classList.add("hide-from-dh");
-        document.getElementById("save-and-exit").innerHTML = "Save and notify NHS BSA";
+        document.getElementById("save-and-exit").classList.add("hide-from-dh");
+        document.getElementById("pending-text").classList.remove("hide-from-dh");
+        document.getElementById("pending-text").innerHTML = "You must access the DHSC product list in order to review all items on the request. From there you will be able to notify the NHS Business Services Authority (NHS BSA) that the product list is ready for action.";
     }
 
     if (localStorage.getItem("save-and-exit") == "yes") {
