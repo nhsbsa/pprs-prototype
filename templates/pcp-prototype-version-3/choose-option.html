@@ -21,7 +21,7 @@ Quarterly collection - dropdown table
         <div class="nhsuk-card nhsuk-card--clickable">
             <div class="nhsuk-card__content">
                 <h2 class="nhsuk-card__heading nhsuk-heading-m">
-                    <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="homepage-dh">DHSC login</a>
+                    <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="homepage" onclick="setDHLogin()">DHSC login</a>
                 </h2>
             </div>
         </div>
@@ -32,7 +32,18 @@ Quarterly collection - dropdown table
         <div class="nhsuk-card nhsuk-card--clickable">
             <div class="nhsuk-card__content">
                 <h2 class="nhsuk-card__heading nhsuk-heading-m">
-                    <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="homepage">NHS BSA login</a>
+                    <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="homepage" onclick="setMedsLoginNew()">NHS BSA login - new request</a>
+                </h2>
+            </div>
+        </div>
+
+    </li>
+    <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+        <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+                <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                    <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="homepage" onclick="setMedsLoginEdit()">NHS BSA login - edit request</a>
                 </h2>
             </div>
         </div>
@@ -41,4 +52,25 @@ Quarterly collection - dropdown table
 </ul>
 
         </div>
+
+<script>
+
+
+    function setDHLogin() {
+      localStorage.clear()
+      localStorage.setItem("dh-login", "yes");
+      localStorage.removeItem("meds-login");
+    }
+
+    function setMedsLoginNew() {
+      localStorage.clear()
+      localStorage.setItem("meds-login", "yes");
+      localStorage.removeItem("dh-login");
+    }
+
+    function setMedsLoginEdit() {
+      localStorage.setItem("meds-login", "yes");
+      localStorage.removeItem("dh-login");
+    }
+</script>
 {% endblock %}

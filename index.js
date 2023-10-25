@@ -220,6 +220,10 @@ app.get('/pcp-prototype-version-2/new-request/current-requests', (req, res) => {
 app.get('/pcp-prototype-version-2/new-request/file-upload', (req, res) => { res.render('pcp-prototype-version-2/new-request/file-upload') });
 app.get('/pcp-prototype-version-2/new-request/file-upload1', (req, res) => { res.render('pcp-prototype-version-2/new-request/file-upload1') });
 app.get('/pcp-prototype-version-2/new-request/file-upload2', (req, res) => { res.render('pcp-prototype-version-2/new-request/file-upload2') });
+app.get('/pcp-prototype-version-2/auto-email/choose-main-suppliers', (req, res) => { res.render('pcp-prototype-version-2/auto-email/choose-main-suppliers') });
+app.get('/pcp-prototype-version-2/auto-email/card-1', (req, res) => { res.render('pcp-prototype-version-2/auto-email/card-1') });
+app.get('/pcp-prototype-version-2/auto-email/confirm-page', (req, res) => { res.render('pcp-prototype-version-2/auto-email/confirm-page') });
+app.get('/pcp-prototype-version-2/auto-email/card-2', (req, res) => { res.render('pcp-prototype-version-2/auto-email/card-2') });
 
 // PCP prototype version 3
 
@@ -249,6 +253,7 @@ app.get('/pcp-prototype-version-3/product-list/supplier-contact-pending', (req, 
 app.get('/pcp-prototype-version-3/product-list/additional-suppliers', (req, res) => { res.render('pcp-prototype-version-3/product-list/additional-suppliers') });
 app.get('/pcp-prototype-version-3/product-list/delete-product', (req, res) => { res.render('pcp-prototype-version-3/product-list/delete-product') });
 app.get('/pcp-prototype-version-3/product-list/loading-cdr-queries', (req, res) => { res.render('pcp-prototype-version-3/product-list/loading-cdr-queries') });
+app.get('/pcp-prototype-version-3/product-list/need-to-amend', (req, res) => { res.render('pcp-prototype-version-3/product-list/need-to-amend') });
 
 app.get('/pcp-prototype-version-3/historical-requests/option-1/historical-request', (req, res) => { res.render('pcp-prototype-version-3/historical-requests/option-1/historical-request') });
 app.get('/pcp-prototype-version-3/historical-requests/option-1/historical-requests-months', (req, res) => { res.render('pcp-prototype-version-3/historical-requests/option-1/historical-requests-months') });
@@ -264,6 +269,12 @@ app.get('/pcp-prototype-version-3/new-request/current-requests', (req, res) => {
 app.get('/pcp-prototype-version-3/new-request/file-upload', (req, res) => { res.render('pcp-prototype-version-3/new-request/file-upload') });
 app.get('/pcp-prototype-version-3/new-request/file-upload1', (req, res) => { res.render('pcp-prototype-version-3/new-request/file-upload1') });
 app.get('/pcp-prototype-version-3/new-request/file-upload2', (req, res) => { res.render('pcp-prototype-version-3/new-request/file-upload2') });
+app.get('/pcp-prototype-version-3/new-request/file-upload3', (req, res) => { res.render('pcp-prototype-version-3/new-request/file-upload3') });
+app.get('/pcp-prototype-version-3/auto-email/choose-main-suppliers', (req, res) => { res.render('pcp-prototype-version-3/auto-email/choose-main-suppliers') });
+app.get('/pcp-prototype-version-3/auto-email/card-1', (req, res) => { res.render('pcp-prototype-version-3/auto-email/card-1') });
+app.get('/pcp-prototype-version-3/auto-email/confirm-page', (req, res) => { res.render('pcp-prototype-version-3/auto-email/confirm-page') });
+app.get('/pcp-prototype-version-3/auto-email/card-2', (req, res) => { res.render('pcp-prototype-version-3/auto-email/card-2') });
+app.get('/pcp-prototype-version-3/auto-email/confirmation', (req, res) => { res.render('pcp-prototype-version-3/auto-email/confirmation') });
 
 /**
  * Server Activation

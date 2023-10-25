@@ -1,0 +1,141 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Quarterly collection - dropdown table
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-back-link nhsuk-u-margin-bottom-8">
+    <a class="nhsuk-back-link__link" href="choose-main-suppliers">
+        <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+            <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+        </svg>
+        Go back to select main suppliers</a>
+</div>
+
+<div class="nhsuk-width-container">
+
+        <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+
+                <h1><span class="nhsuk-caption-l">
+     October 2023 - 4th request
+     <span class="nhsuk-u-visually-hidden">: </span>
+   </span> Main suppliers list</h1>
+
+                <p>Review the chosen suppliers, and remove as required, before sending the group email. If any suppliers are missing then go back to the select main suppliers page.</p>
+                <hr aria-hidden="true" />
+                <!--                Inset text-->
+                <!--                <div class="nhsuk-inset-text nhsuk-u-margin-top-4" id="inset-text-input">-->
+                <!--                    <span class="nhsuk-u-visually-hidden">Information: </span>-->
+                <!--                    <p>To remove all suppliers on this page use this link to <a href="#" class="nhsuk-link nhsuk-link&#45;&#45;no-visited-state" onclick="checkAllBoxes()">select all</a>.</p>-->
+                <!--                </div>-->
+
+                <div class="nhsuk-body-m flex--space-between" style="display: flex">
+                    <div class="nhsuk-u-visually-hidden">Currently viewing</div>
+                    <div id="pageAndResultCount">Page 1 of 1 (10 results)</div>
+                </div>
+
+                <!--              Table  -->
+                <table class="nhsuk-table-responsive">
+                    <caption class="nhsuk-table__caption">List of main suppliers</caption>
+                    <thead role="rowgroup" class="nhsuk-table__head">
+                    <tr role="row">
+                        <th role="columnheader" class="" scope="col">
+                            Supplier name
+                        </th>
+                        <th role="columnheader" class="" scope="col">
+                            Action
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody class="nhsuk-table__body">
+                    <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Supplier name</span>Accord-UK Ltd</td>
+
+                        <td class="nhsuk-table__cell "><span class="nhsuk-table-responsive__heading">Action</span>Remove</td>
+
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Supplier name</span>
+                            Advanz Pharma</td>
+                        <td class="nhsuk-table__cell "><span class="nhsuk-table-responsive__heading">Action</span>Remove</td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Supplier name</span>
+                            AllianceHealthcare (distributions) Ltd</td>
+                        <td class="nhsuk-table__cell "><span class="nhsuk-table-responsive__heading">Action</span>Remove</td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Supplier name</span>
+                            Aristo Pharma</td>
+                        <td class="nhsuk-table__cell "><span class="nhsuk-table-responsive__heading">Action</span>Remove</td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Supplier name</span>
+                            Aspire Pharma</td>
+                        <td class="nhsuk-table__cell "><span class="nhsuk-table-responsive__heading">Action</span>Remove</td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Supplier name</span>
+                            Aurobindo Pharma Ltd (Milpharm)</td>
+                        <td class="nhsuk-table__cell "><span class="nhsuk-table-responsive__heading">Action</span>Remove</td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Supplier name</span>
+                            Bausch and Lomb</td>
+                        <td class="nhsuk-table__cell "><span class="nhsuk-table-responsive__heading">Action</span>Remove</td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Supplier name</span>
+                            Bristol Laboritories Ltd</td>
+                        <td class="nhsuk-table__cell "><span class="nhsuk-table-responsive__heading">Action</span>Remove</td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Supplier name</span>
+                            Brown and Burke UK Ltd</td>
+                        <td class="nhsuk-table__cell "><span class="nhsuk-table-responsive__heading">Action</span>Remove</td>
+                    </tr>
+
+                    </tbody>
+                </table>
+                <nav class="govuk-pagination nhsuk-u-margin-bottom-7 nhsuk-u-margin-top-5" role="navigation" aria-label="results">
+                    <div class="govuk-pagination__prev">
+                        <a class="govuk-link govuk-pagination__link" href="#" rel="prev">
+                            <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+                                <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+                            </svg>
+                            <span class="govuk-pagination__link-title">Previous</span></a>
+                    </div>
+                    <ul class="govuk-pagination__list">
+                        <li class="govuk-pagination__item">
+                            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1">
+                                1
+                            </a>
+                        </li>
+                        <li class="govuk-pagination__item govuk-pagination__item--current">
+                            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2" aria-current="page">
+                                2
+                            </a>
+                        </li>
+                        <li class="govuk-pagination__item">
+                            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
+                                3
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="govuk-pagination__next">
+                        <a class="govuk-link govuk-pagination__link" href="#" rel="next"> <span class="govuk-pagination__link-title">Next</span> <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+                            <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                        </svg></a>
+                    </div>
+                </nav>
+
+            </div>
+        </div>
+        <a class="nhsuk-button" href="confirmation">
+            Send email to chosen suppliers
+        </a>
+</div>
+
+{% endblock %}

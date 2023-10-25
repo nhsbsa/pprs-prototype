@@ -10,7 +10,7 @@ Quarterly collection dropdown - expander list
         <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
             <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
         </svg>
-        Go back to master product list</a>
+        Go back to processed product list</a>
 </div>
 
 <!--<div class="nhsuk-grid-row">-->
@@ -18,7 +18,7 @@ Quarterly collection dropdown - expander list
 <!--    <input type="checkbox" id="expanderToggle" />-->
 <!--    <div class="nhsuk-grid-column-full">-->
         <h1><span class="nhsuk-caption-l">
-     September 2023 - 4th request
+     October 2023 - 4th request
      <span class="nhsuk-u-visually-hidden">: </span>
    </span>
             Atorvastatin 10mg tablets
@@ -55,6 +55,26 @@ Quarterly collection dropdown - expander list
         </dd>
     </div>
 
+    <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key">
+            Product notes
+        </dt>
+        <dd class="nhsuk-summary-list__value">
+            <details class="nhsuk-details">
+                <summary class="nhsuk-details__summary">
+    <span class="nhsuk-details__summary-text">
+      View notes
+    </span>
+                </summary>
+                <div class="nhsuk-details__text">
+                    <p>Notes added </p>
+                    <p>More notes added</p>
+                    <p>A few more notes </p>
+
+                </div>
+            </details>
+        </dd>
+    </div>
 </dl>
 
 <h2>Pack listed on requested product list</h2>
@@ -127,9 +147,7 @@ Quarterly collection dropdown - expander list
         <dd class="nhsuk-summary-list__value">
            tablet
         </dd>
-
     </div>
-
 </dl>
 
 <h2>Additional pack sizes</h2>
@@ -308,13 +326,12 @@ Quarterly collection dropdown - expander list
 <!--        <a class="nhsuk-button nhsuk-button&#45;&#45;primary nhsuk-u-margin-top-5" href="results-after-confirm">Confirm ready for download</a>-->
 
 <script>
+    console.log(localStorage);
+
     window.onload = function() {
-    if (localStorage.getItem("go-back-supplier") == "additional") {
+    if (localStorage.getItem("coming-from-add-supp") == "yes") {
     document.getElementById("back-link").setAttribute('href', "additional-supplier-view-tabs");
     document.getElementById("back-link").innerHTML = "<svg class='nhsuk-icon nhsuk-icon__chevron-left' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden='true' height='24' width='24'><path d='M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z'></path></svg>Go back to Amgen Ltd";
-      } else if (localStorage.getItem("go-back-supplier") == "main") {
-       document.getElementById("back-link").setAttribute('href', "supplier-view-tabs");
-       document.getElementById("back-link").innerHTML = "<svg class='nhsuk-icon nhsuk-icon__chevron-left' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden='true' height='24' width='24'><path d='M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z'></path></svg>Go back to main suppliers";
       }
     };
 </script>
