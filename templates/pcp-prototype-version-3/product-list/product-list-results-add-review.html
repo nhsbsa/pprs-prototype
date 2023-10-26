@@ -62,6 +62,12 @@ Quarterly collection dropdown - expander list
     </dl>
 </div>
 
-<a class="nhsuk-button nhsuk-u-margin-top-4" href="product-list-results-edit">Save and return to product list</a>
+<a class="nhsuk-button nhsuk-u-margin-top-4" href="product-list-results-edit" onclick="saveNewProduct()">Save and return to product list</a>
+
+<script>
+    function saveNewProduct() {
+        localStorage.setItem("added-product", "Paracetamol 200mg tablets 24 pack");
+    }
+</script>
 
 {% endblock %}
