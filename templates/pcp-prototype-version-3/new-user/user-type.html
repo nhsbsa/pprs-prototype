@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Quarterly collection - dropdown table
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-width-container">
+<!--    <div class="nhsuk-grid-row">-->
+<!--        <div class="nhsuk-grid-column-full">-->
+<a href="surname">< Go back to add surname</a>
+<h1>
+    Add user
+</h1>
+
+
+    <p>Select a user type</p>
+            <div class="nhsuk-radios">
+
+                <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios__input" id="user" name="user" type="radio" value="user">
+                    <label class="nhsuk-label nhsuk-radios__label" for="user">
+                        User
+                    </label>
+                </div>
+
+                <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios__input" id="administrator" name="administrator" type="radio" value="admin">
+                    <label class="nhsuk-label nhsuk-radios__label" for="administrator">
+                        Administrator
+                    </label>
+                </div></div>
+    <div class="nhsuk-u-padding-top-4">
+        <a class="nhsuk-button" href="confirm">Confirm</a>
+    </div>
+</div>
+    </div>
+<script>
+    console.log(localStorage);
+</script>
+{% endblock %}

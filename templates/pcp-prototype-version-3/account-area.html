@@ -1,0 +1,155 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Quarterly collection - dropdown table
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-width-container">
+    <!--    <div class="nhsuk-grid-row">-->
+    <!--        <div class="nhsuk-grid-column-full">-->
+
+    <div class="nhsuk-grid-row">
+        <a href="log-out">< Log out</a>
+    </div>
+
+    <h1>
+        Account area
+    </h1>
+
+
+    <table role="table" class="nhsuk-table-responsive">
+        <caption class="nhsuk-table__caption">Users</caption>
+        <thead role="rowgroup" class="nhsuk-table__head">
+        <tr role="row">
+            <th role="columnheader" class="" scope="col">
+                Forename
+            </th>
+            <th role="columnheader" class="" scope="col">
+                Surname
+            </th>
+            <th role="columnheader" class="" scope="col">
+                Email
+            </th>
+            <th role="columnheader" class="" scope="col">
+                role
+            </th>
+            <th role="columnheader" class="" scope="col">
+                Status
+            </th>
+            <th role="columnheader" class="" scope="col">
+                Action
+            </th>
+        </tr>
+        </thead>
+        <tbody class="nhsuk-table__body">
+
+        <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Forename </span>John
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Surname </span>Smith
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Email </span>johnsmith@nhs.net
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Role </span>User
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Status </span><strong class="nhsuk-tag">Active</strong>
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Email </span><a>Edit</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Action </span>
+            </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Forename </span>Micky
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Surname </span>Mouse
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Email </span>mickymouse@nhs.net
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Role </span>User
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Status </span><strong class="nhsuk-tag--grey nhsuk-tag">Inactive</strong>
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Email </span><a>Edit</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Action </span>
+            </td>
+        </tr>
+
+
+        <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Forename </span>Jake
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Surname </span>Appleseed
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Email </span>jakeappleseed@nhs.net
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Role </span>Administrator
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Status </span><strong class="nhsuk-tag nhsuk-tag--grey">Inactive</strong>
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Email </span><a>Edit</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Action </span>
+            </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Forename </span>Lauren
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Surname </span>Jones
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Email </span>laurenjones@nhs.net
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Role </span>Administrator
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Status </span><strong class="nhsuk-tag">Active</strong>
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Email </span><a>Edit</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Action </span>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="nhsuk-grid-row">
+        <a class="nhsuk-button nhsuk-u-margin-top-4" href="new-user/forename">Add user</a>
+    </div>
+
+</div>
+
+
+<script>
+    console.log(localStorage);
+</script>
+{% endblock %}

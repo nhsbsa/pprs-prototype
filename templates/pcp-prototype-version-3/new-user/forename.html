@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Quarterly collection - dropdown table
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-width-container">
+<!--    <div class="nhsuk-grid-row">-->
+<!--        <div class="nhsuk-grid-column-full">-->
+<a href="../account-area">< Go back to account area</a>
+<h1>
+    Add user
+</h1>
+    <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="forename">
+            Forename
+        </label>
+        <input class="nhsuk-input" id="forename" name="forename" type="text">
+    </div>
+    <a class="nhsuk-button" href="surname">Next</a>
+</div>
+<script>
+    console.log(localStorage);
+</script>
+{% endblock %}
