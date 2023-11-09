@@ -1,0 +1,95 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Quarterly collection - dropdown table
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-width-container">
+<!--    <div class="nhsuk-grid-row">-->
+<!--        <div class="nhsuk-grid-column-full">-->
+<a href="../account-area">< Go back to acount dashboard</a>
+<h1>
+    Edit user
+</h1>
+    <dl class="nhsuk-summary-list">
+
+        <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+                Forename
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+                Karen
+            </dd>
+
+            <dd class="nhsuk-summary-list__actions">
+
+                <a href="forename">
+                    Change<span class="nhsuk-u-visually-hidden"> surname</span>
+                </a>
+
+            </dd>
+
+        </div>
+
+        <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+                Surname
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+                White
+            </dd>
+
+            <dd class="nhsuk-summary-list__actions">
+
+                <a href="surname">
+                    Change<span class="nhsuk-u-visually-hidden"> forename</span>
+                </a>
+
+            </dd>
+
+        </div>
+
+        <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+                Email
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+                karenwhite@nhs.net
+            </dd>
+
+            <dd class="nhsuk-summary-list__actions">
+
+                <a href="email">
+                    Change<span class="nhsuk-u-visually-hidden"> email</span>
+                </a>
+
+            </dd>
+
+        </div>
+
+        <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+                User type
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+                Administrator
+            </dd>
+
+            <dd class="nhsuk-summary-list__actions">
+
+                <a href="user-type">
+                    Change<span class="nhsuk-u-visually-hidden"> user type</span>
+                </a>
+
+            </dd>
+
+        </div>
+
+    </dl>
+    <a class="nhsuk-button" href="../account-area">Save and return</a>
+</div>
+<script>
+    console.log(localStorage);
+</script>
+{% endblock %}
