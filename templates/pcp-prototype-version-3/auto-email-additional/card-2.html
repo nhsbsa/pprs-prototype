@@ -6,28 +6,26 @@ Quarterly collection - dropdown table
 
 {% block content %}
 <div class="nhsuk-back-link nhsuk-u-margin-bottom-8">
-    <a class="nhsuk-back-link__link" href="choose-main-suppliers">
+    <a class="nhsuk-back-link__link" href="choose-additional-suppliers">
         <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
             <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
         </svg>
-        Go back to select main suppliers</a>
+        Go back to select additional suppliers</a>
 </div>
 
+<div class="nhsuk-width-container">
+
+        <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
 
                 <h1><span class="nhsuk-caption-l">
      October 2023 - 4th request
      <span class="nhsuk-u-visually-hidden">: </span>
-   </span>
-                    Review chosen suppliers</h1>
+   </span> Review chosen suppliers</h1>
 
-                <p>Review the chosen suppliers, and remove as required, before sending the group email. If any suppliers are missing then go back to the select main suppliers page.</p>
-                <p>Please note that the email will be sent to all contacts for each selected supplier. If you do not want to send to every contact then go back to main suppliers list and send the template individually.</p>
-<hr aria-hidden="true" />
-                <!--                Inset text-->
-<!--                <div class="nhsuk-inset-text nhsuk-u-margin-top-4" id="inset-text-input">-->
-<!--                    <span class="nhsuk-u-visually-hidden">Information: </span>-->
-<!--                    <p>To remove all suppliers on this page use this link to <a href="#" class="nhsuk-link nhsuk-link&#45;&#45;no-visited-state" onclick="checkAllBoxes()">select all</a>.</p>-->
-<!--                </div>-->
+                <p>Review the chosen suppliers, and remove as required, before sending the group email. If any suppliers are missing then go back to the select additional suppliers page.</p>
+                <p>Please note that the email will be sent to all contacts for each selected supplier. If you do not want to send to every contact then go back to additional suppliers list and send the template individually.</p>
+                <hr aria-hidden="true" />
 
                 <div class="nhsuk-body-m flex--space-between" style="display: flex">
                     <div class="nhsuk-u-visually-hidden">Currently viewing</div>
@@ -51,30 +49,30 @@ Quarterly collection - dropdown table
                     <tr role="row" class="nhsuk-table__row">
                         <td class="nhsuk-table__cell">
                             <span class="nhsuk-table-responsive__heading">Supplier name</span>
-                            AAH Pharmaceuticals Ltd</td>
+                            Amgen Ltd</td>
 
-                        <td class="nhsuk-table__cell "><span class="nhsuk-table-responsive__heading">Action</span><a class="nhsuk-link nhsuk-link--no-visited-state" href="/pcp-prototype-version-3/auto-email/confirm-page">Remove</a></td>
+                        <td class="nhsuk-table__cell "><span class="nhsuk-table-responsive__heading">Action</span><a class="nhsuk-link nhsuk-link--no-visited-state" href="confirm-page">Remove</a></td>
 
                     </tr>
                     <tr role="row" class="nhsuk-table__row">
-                        <td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Supplier name</span>Accord-UK Ltd</td>
+                        <td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Supplier name</span>Boehringer Ingelheim Ltd</td>
 
                         <td class="nhsuk-table__cell "><span class="nhsuk-table-responsive__heading">Action</span>Remove</td>
 
                     </tr>
                     <tr role="row" class="nhsuk-table__row">
                         <td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Supplier name</span>
-                            Alliance Healthcare (Distributions) Ltd</td>
+                            Cambridge Healthcare Supplies Ltd</td>
                         <td class="nhsuk-table__cell "><span class="nhsuk-table-responsive__heading">Action</span>Remove</td>
                     </tr>
                     <tr role="row" class="nhsuk-table__row">
                         <td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Supplier name</span>
-                            Kent Pharmaceuticals Ltd</td>
+                            Ennogen Pharma Ltd</td>
                         <td class="nhsuk-table__cell "><span class="nhsuk-table-responsive__heading">Action</span>Remove</td>
                     </tr>
                     <tr role="row" class="nhsuk-table__row">
                         <td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Supplier name</span>
-                            Phoenix Healthcare Distributions Ltd</td>
+                            Indivior UK Ltd</td>
                         <td class="nhsuk-table__cell "><span class="nhsuk-table-responsive__heading">Action</span>Remove</td>
                     </tr>
 
@@ -112,68 +110,11 @@ Quarterly collection - dropdown table
                     </div>
                 </nav>
 
-        <a class="nhsuk-button" href="confirmation" onclick="sendGroupEmail()">
+            </div>
+        </div>
+        <a class="nhsuk-button" href="confirmation">
             Send email to chosen suppliers
         </a>
-
-
-<script>
-    console.log(localStorage);
-
-    function sendGroupEmail() {
-       localStorage.setItem("group-email-sent", "yes");
-    }
-
-
-<!--    let checkAll = document.getElementsByClassName("nhsuk-checkboxes__input");-->
-
-    let insetText = document.getElementById("inset-text-input");
-     console.log(insetText);
-
-    window.onload = function ()  {
-      let checkAll = document.getElementsByClassName("nhsuk-checkboxes__input");
-       for (let i = 0; i < checkAll.length; i++) {
-       checkAll[i].checked = true;
-     }
-    }
-  function checkAllBoxes() {
-     for (let i = 0; i < checkAll.length; i++) {
-       checkAll[i].checked = true;
-     }
-     let insetText = document.getElementById("inset-text-input");
-     console.log(insetText);
-     insetText.innerHTML =
-     '<span class="nhsuk-u-visually-hidden">Information: </span>'
-     +
-     '<p>To deselect all suppliers on this page use this link to <a href="#" class="nhsuk-link nhsuk-link--no-visited-state" onclick="removeAllBoxes()">deselect all</a>.</p>';
-  }
-
-  function removeAllBoxes() {
-     for (let i = 0; i < checkAll.length; i++) {
-       checkAll[i].checked = false;
-     }
-     let insetText = document.getElementById("inset-text-input");
-     insetText.innerHTML =
-     '<span class="nhsuk-u-visually-hidden">Information: </span>'
-     +
-     '<p>Select single packs from the search results or use this link to <a class="nhsuk-link nhsuk-link--no-visited-state" href="#" onclick="checkAllBoxes()">select all</a>.</p>';
-  }
-
-  let discontinueReason = localStorage.getItem("discontinue-reason");
-
-  let discontinueTitle = document.getElementById("discontinue-reason");
-
-  let mergerProductChange = localStorage.getItem("change-company-name");
-
-  if (discontinueReason || discontinueReason != null || discontinueReason != "") {
-    discontinueTitle.innerHTML = 'Discontinue submission' + ': ' + discontinueReason +'<span class="nhsuk-u-visually-hidden"> - </span>';
-  }
-
-  if (mergerProductChange) {
-     discontinueTitle.innerHTML = '<span class="nhsuk-caption-l" id="discontinue-reason">Company name change : company merger<span class="nhsuk-u-visually-hidden"> - </span></span>';
-  }
-
-</script>
-
+</div>
 
 {% endblock %}

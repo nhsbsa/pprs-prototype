@@ -8,11 +8,12 @@ Quarterly collection - dropdown table
 
 <div class="nhsuk-back-link">
 
-    <a class="nhsuk-back-link__link" href="../product-list/main-suppliers">
-        <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+    <a class="nhsuk-back-link__link" href="../product-list/additional-suppliers">
+        <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+             aria-hidden="true" height="24" width="24">
             <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
         </svg>
-        Go back to main suppliers</a>
+        Go back to additional suppliers</a>
 </div>
 <div class="nhsuk-width-container">
 
@@ -24,14 +25,18 @@ Quarterly collection - dropdown table
                 <h1><span class="nhsuk-caption-l">
      October 2023 - 4th request
      <span class="nhsuk-u-visually-hidden">: </span>
-   </span>Select main suppliers </h1>
-                <p>Before selecting which suppliers are to be included in the group email, you can review which products are included in the main supplier template by downloading it. If any item on the list should not be sent to a specific supplier then then go back to main suppliers list and send the template individually. </p>
-                <a class="nhsuk-button nhsuk-button--secondary" href="#">Download main supplier template</a>
-                <hr class="nhsuk-u-margin-top-4" aria-hidden="true" />
-<!--                Inset text-->
+   </span>Select additional suppliers </h1>
+                <p>Each supplier has their own, bespoke template containing only products that are both on the processed
+                    product list and their portfolio. Each supplier selected for the group email will only receive their
+                    own template. </p>
+                <hr class="nhsuk-u-margin-top-4" aria-hidden="true"/>
+                <!--                Inset text-->
                 <div class="nhsuk-inset-text nhsuk-u-margin-top-4" id="inset-text-input">
                     <span class="nhsuk-u-visually-hidden">Information: </span>
-                    <p>Select suppliers individually or use this link to <a href="#" class="nhsuk-link nhsuk-link--no-visited-state" onclick="checkAllBoxes()">select all suppliers</a></p>
+                    <p>Select suppliers individually or use this link to <a href="#"
+                                                                            class="nhsuk-link nhsuk-link--no-visited-state"
+                                                                            onclick="checkAllBoxes()">select all
+                        suppliers</a></p>
                 </div>
 
                 <div class="nhsuk-body-m flex--space-between" style="display: flex">
@@ -39,7 +44,7 @@ Quarterly collection - dropdown table
                     <div id="pageAndResultCount">Page 1 of 1 (5 results)</div>
                 </div>
 
-<!--              Table  -->
+                <!--              Table  -->
                 <table class="nhsuk-table-responsive" id="table-view">
                     <caption class="nhsuk-table__caption">List of main suppliers</caption>
                     <thead role="rowgroup" class="nhsuk-table__head">
@@ -56,12 +61,13 @@ Quarterly collection - dropdown table
                     <tr role="row" class="nhsuk-table__row">
                         <td class="nhsuk-table__cell align-middle" role="cell">
                             <span class="nhsuk-table-responsive__heading">Supplier name</span>
-                            AAH Pharmaceuticals Ltd</td>
+                            Amgen Ltd
+                        </td>
                         <td>
                             <span class="nhsuk-table-responsive__heading">Select</span>
                             <div class="nhsuk-checkboxes">
                                 <div class="nhsuk-checkboxes__item table-checkbox">
-                                    <input class="nhsuk-checkboxes__input"  name="select"
+                                    <input class="nhsuk-checkboxes__input" name="select"
                                            type="checkbox" value="email">
                                     <label class="nhsuk-label nhsuk-checkboxes__label">
                                         <span class="nhsuk-u-visually-hidden">Supplier name</span>
@@ -72,12 +78,13 @@ Quarterly collection - dropdown table
                     </tr>
                     <tr role="row" class="nhsuk-table__row">
                         <td class="nhsuk-table__cell align-middle">
-                            <span class="nhsuk-table-responsive__heading">Supplier name</span> Accord-UK Ltd</td>
+                            <span class="nhsuk-table-responsive__heading">Supplier name</span> Boehringer Ingelheim Ltd
+                        </td>
                         <td>
                             <span class="nhsuk-table-responsive__heading">Select</span>
                             <div class="nhsuk-checkboxes">
                                 <div class="nhsuk-checkboxes__item table-checkbox">
-                                    <input class="nhsuk-checkboxes__input"name="select"
+                                    <input class="nhsuk-checkboxes__input" name="select"
                                            type="checkbox" value="email">
                                     <label class="nhsuk-label nhsuk-checkboxes__label">
                                         <span class="nhsuk-u-visually-hidden">Supplier name</span>
@@ -88,56 +95,65 @@ Quarterly collection - dropdown table
                     </tr>
                     <tr role="row" class="nhsuk-table__row">
                         <td class="nhsuk-table__cell align-middle">
-                            <span class="nhsuk-table-responsive__heading">Supplier name</span>Alliance Healthcare (distributions) Ltd</td>
-                        <td >
+                            <span class="nhsuk-table-responsive__heading">Supplier name</span>Cambridge Healthcare Supplies Ltd
+                        </td>
+                        <td>
                             <span class="nhsuk-table-responsive__heading">Select</span>
                             <div class="nhsuk-checkboxes">
-                            <div class="nhsuk-checkboxes__item table-checkbox">
-                                <input class="nhsuk-checkboxes__input"name="select"
-                                       type="checkbox" value="email">
-                                <label class="nhsuk-label nhsuk-checkboxes__label">
-                                    <span class="nhsuk-u-visually-hidden">Supplier name</span>
-                                </label>
+                                <div class="nhsuk-checkboxes__item table-checkbox">
+                                    <input class="nhsuk-checkboxes__input" name="select"
+                                           type="checkbox" value="email">
+                                    <label class="nhsuk-label nhsuk-checkboxes__label">
+                                        <span class="nhsuk-u-visually-hidden">Supplier name</span>
+                                    </label>
+                                </div>
                             </div>
-                        </div></td>
+                        </td>
                     </tr>
                     <tr role="row" class="nhsuk-table__row">
                         <td class="nhsuk-table__cell align-middle"><span class="nhsuk-table-responsive__heading">Supplier name</span>
-                            Kent Pharmaceuticals Ltd</td>
-                        <td >
+                            Ennogen Pharma Ltd
+                        </td>
+                        <td>
                             <span class="nhsuk-table-responsive__heading">Select</span>
                             <div class="nhsuk-checkboxes">
-                            <div class="nhsuk-checkboxes__item table-checkbox">
-                                <input class="nhsuk-checkboxes__input"name="select"
-                                       type="checkbox" value="email">
-                                <label class="nhsuk-label nhsuk-checkboxes__label">
-                                    <span class="nhsuk-u-visually-hidden">Supplier name</span>
-                                </label>
+                                <div class="nhsuk-checkboxes__item table-checkbox">
+                                    <input class="nhsuk-checkboxes__input" name="select"
+                                           type="checkbox" value="email">
+                                    <label class="nhsuk-label nhsuk-checkboxes__label">
+                                        <span class="nhsuk-u-visually-hidden">Supplier name</span>
+                                    </label>
+                                </div>
                             </div>
-                        </div></td>
+                        </td>
                     </tr>
                     <tr role="row" class="nhsuk-table__row">
                         <td class="nhsuk-table__cell align-middle"><span class="nhsuk-table-responsive__heading">Supplier name</span>
-                            Phoenix Healthcare Distributions Ltd</td>
-                        <td >
+                            Indivior UK Ltd
+                        </td>
+                        <td>
                             <span class="nhsuk-table-responsive__heading">Select</span>
                             <div class="nhsuk-checkboxes">
-                            <div class="nhsuk-checkboxes__item table-checkbox">
-                                <input class="nhsuk-checkboxes__input"name="select"
-                                       type="checkbox" value="email">
-                                <label class="nhsuk-label nhsuk-checkboxes__label">
-                                    <span class="nhsuk-u-visually-hidden">Supplier name</span>
-                                </label>
+                                <div class="nhsuk-checkboxes__item table-checkbox">
+                                    <input class="nhsuk-checkboxes__input" name="select"
+                                           type="checkbox" value="email">
+                                    <label class="nhsuk-label nhsuk-checkboxes__label">
+                                        <span class="nhsuk-u-visually-hidden">Supplier name</span>
+                                    </label>
+                                </div>
                             </div>
-                        </div></td>
+                        </td>
                     </tr>
 
                     </tbody>
                 </table>
-                <nav class="govuk-pagination nhsuk-u-margin-bottom-7 nhsuk-u-margin-top-5" role="navigation" aria-label="results">
+                <nav class="govuk-pagination nhsuk-u-margin-bottom-7 nhsuk-u-margin-top-5" role="navigation"
+                     aria-label="results">
                     <div class="govuk-pagination__prev">
                         <a class="govuk-link govuk-pagination__link" href="#" rel="prev">
-                            <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+                            <svg class="govuk-pagination__icon govuk-pagination__icon--prev"
+                                 xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true"
+                                 focusable="false" viewBox="0 0 15 13">
                                 <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
                             </svg>
                             <span class="govuk-pagination__link-title">Previous</span></a>
@@ -149,7 +165,8 @@ Quarterly collection - dropdown table
                             </a>
                         </li>
                         <li class="govuk-pagination__item govuk-pagination__item--current">
-                            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2" aria-current="page">
+                            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2"
+                               aria-current="page">
                                 2
                             </a>
                         </li>
@@ -160,9 +177,14 @@ Quarterly collection - dropdown table
                         </li>
                     </ul>
                     <div class="govuk-pagination__next">
-                        <a class="govuk-link govuk-pagination__link" href="#" rel="next"> <span class="govuk-pagination__link-title">Next</span> <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
-                            <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
-                        </svg></a>
+                        <a class="govuk-link govuk-pagination__link" href="#" rel="next"> <span
+                                class="govuk-pagination__link-title">Next</span>
+                            <svg class="govuk-pagination__icon govuk-pagination__icon--next"
+                                 xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true"
+                                 focusable="false" viewBox="0 0 15 13">
+                                <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                            </svg>
+                        </a>
                     </div>
                 </nav>
 
@@ -204,6 +226,7 @@ Quarterly collection - dropdown table
      +
      '<p>Select suppliers individually or use this link to <a class="nhsuk-link nhsuk-link--no-visited-state" href="#" onclick="checkAllBoxes()">select all suppliers</a></p>';
   }
+
 </script>
 
 

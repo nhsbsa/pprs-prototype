@@ -208,7 +208,7 @@ Quarterly collection dropdown - expander list
                     <div class="nhsuk-card__content">
                         <h2 class="nhsuk-card__heading nhsuk-heading-s">
                 <span class="nhsuk-card__link">
-                  <span class="nhsuk-u-font-size-48" id="templates-sent-add">0</span>
+                  <span class="nhsuk-u-font-size-48" id="templates-sent-additional">0</span>
                   <br>
                   Templates sent
                 </span>
@@ -256,8 +256,6 @@ Quarterly collection dropdown - expander list
 </div>
 
 <a class="nhsuk-button" href="../new-request/current-requests" id="save-and-exit">Save and exit</a>
-
-<!--<a class="nhsuk-button nhsuk-button&#45;&#45;secondary nhsuk-u-margin-right-4" href="../new-request/current-requests" onclick="saveAndExit()">Save and exit</a>-->
 
 <script>
 
@@ -317,8 +315,11 @@ Quarterly collection dropdown - expander list
 
     let dateEmailSent = localStorage.getItem("has-sent-email");
     let dateReplyReceived = localStorage.getItem("supplier-has-replied");
+    let dateReplyReceivedManual = localStorage.getItem("supplier-has-replied-manual");
+
     let dateEmailSentAdd = localStorage.getItem("has-sent-email-additional");
     let dateReplyReceivedAdd = localStorage.getItem("supplier-has-replied-additional");
+    let dateReplyReceivedManualAdd = localStorage.getItem("supplier-has-replied-manual-additional");
     let dateSent = new Date();
 
     let day = dateSent.getDate();
@@ -332,24 +333,34 @@ Quarterly collection dropdown - expander list
     console.log(currentDate);
 
     if (dateEmailSent == "yes") {
-<!--       document.getElementById("date-sent").innerHTML = currentDate;-->
        document.getElementById("templates-sent").innerHTML = '1';
        if (document.getElementById("hidden-sent")) {
        document.getElementById("hidden-sent").style.display = "none";
        }
     }
 
-    if (dateReplyReceived == "yes") {
-<!--       document.getElementById("reply-in").innerHTML = currentDate;-->
-<!--       document.getElementById("supplier-update").innerHTML = 'View';-->
+    if (dateReplyReceived == "yes" && (!dateReplyReceivedManual || dateReplyReceivedManual == "no")) {
        document.getElementById("replies-received").innerHTML = '1';
+       if (document.getElementById("hidden-reply")) {
+       document.getElementById("hidden-reply").style.display = "none";
+       }
+    } else if (dateReplyReceivedManual == "yes" && (!dateReplyReceived || dateReplyReceived == "no")) {
+      document.getElementById("replies-received").innerHTML = '1';
+       if (document.getElementById("hidden-reply")) {
+       document.getElementById("hidden-reply").style.display = "none";
+       }
+    } else if (dateReplyReceivedManual == "yes" && dateReplyReceived == "yes") {
+      document.getElementById("replies-received").innerHTML = '2';
        if (document.getElementById("hidden-reply")) {
        document.getElementById("hidden-reply").style.display = "none";
        }
     }
 
+    if (localStorage.getItem("reminder-one-sent")) {
+       document.getElementById("reminders-sent").innerHTML = '1';
+    }
+
     if (dateEmailSentAdd == "yes") {
-<!--       document.getElementById("date-sent").innerHTML = currentDate;-->
        document.getElementById("templates-sent-add").innerHTML = '1';
        if (document.getElementById("hidden-sent")) {
        document.getElementById("hidden-sent").style.display = "none";
@@ -357,13 +368,51 @@ Quarterly collection dropdown - expander list
     }
 
     if (dateReplyReceivedAdd == "yes") {
-<!--       document.getElementById("reply-in").innerHTML = currentDate;-->
-<!--       document.getElementById("supplier-update").innerHTML = 'View';-->
        document.getElementById("replies-received-add").innerHTML = '1';
        if (document.getElementById("hidden-reply")) {
        document.getElementById("hidden-reply").style.display = "none";
        }
     }
+
+    if (dateReplyReceivedAdd == "yes" && (!dateReplyReceivedManualAdd || dateReplyReceivedManualAdd == "no")) {
+       document.getElementById("replies-received-add").innerHTML = '1';
+       if (document.getElementById("hidden-reply")) {
+       document.getElementById("hidden-reply").style.display = "none";
+       }
+    } else if (dateReplyReceivedManualAdd == "yes" && (!dateReplyReceivedAdd || dateReplyReceivedAdd == "no")) {
+      document.getElementById("replies-received-add").innerHTML = '1';
+       if (document.getElementById("hidden-reply")) {
+       document.getElementById("hidden-reply").style.display = "none";
+       }
+    } else if (dateReplyReceivedManualAdd == "yes" && dateReplyReceivedAdd == "yes") {
+      document.getElementById("replies-received-add").innerHTML = '2';
+       if (document.getElementById("hidden-reply")) {
+       document.getElementById("hidden-reply").style.display = "none";
+       }
+    }
+
+    if (localStorage.getItem("reminder-one-sent-additional")) {
+       document.getElementById("reminders-sent-add").innerHTML = '1';
+    }
+
+
+    if (localStorage.getItem("group-email-sent") == "yes" && !localStorage.getItem("has-sent-email-manual")) {
+       document.getElementById("templates-sent").innerHTML = '4';
+    } else if (localStorage.getItem("group-email-sent") == "yes" && localStorage.getItem("has-sent-email-manual") == "yes") {
+       document.getElementById("templates-sent").innerHTML = '5';
+    } else if (!localStorage.getItem("group-email-sent") && localStorage.getItem("has-sent-email-manual") == "yes") {
+       document.getElementById("templates-sent").innerHTML = '1';
+    }
+
+    if (localStorage.getItem("group-email-sent-additional") == "yes" && !localStorage.getItem("has-sent-email-manual-additional")) {
+       document.getElementById("templates-sent-additional").innerHTML = '4';
+    } else if (localStorage.getItem("group-email-sent-additional") == "yes" && localStorage.getItem("has-sent-email-manual-additional") == "yes") {
+       document.getElementById("templates-sent-additional").innerHTML = '5';
+    } else if (!localStorage.getItem("group-email-sent-additional") && localStorage.getItem("has-sent-email-manual-additional") == "yes") {
+       document.getElementById("templates-sent-additional").innerHTML = '1';
+    }
+
+
 
 </script>
 

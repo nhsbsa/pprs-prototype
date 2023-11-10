@@ -230,7 +230,7 @@ Quarterly collection dropdown - expander list
                 <tr role="row" class="nhsuk-table__row" id="template-sent-list">
                     <td class="nhsuk-table__cell">
                         <span class="nhsuk-table-responsive__heading">Type of email</span>
-                        Group</td>
+                        Manual</td>
                     <td class="nhsuk-table__cell">
                         <span class="nhsuk-table-responsive__heading">Correspondence method</span>
                         Template sent</td>
@@ -412,15 +412,19 @@ Quarterly collection dropdown - expander list
        }
     };
 
-    if (localStorage.getItem("group-email-sent-additional") == "yes") {
-        document.getElementById("third-question").classList.add("hide-question");
-        document.getElementById("group-email-hint").innerHTML = "For suppliers contacted with a group email, an automatic reminder will be sent.";
+    if (localStorage.getItem("reminder-one-sent-additional") == "yes") {
+        document.getElementById("example-inline-5").setAttribute("name", "example-inline-3");
+        document.getElementById("example-inline-6").setAttribute("name", "example-inline-3");
+    }
+    if (localStorage.getItem("reminder-two-sent-additional") == "yes") {
+        document.getElementById("example-inline-5").setAttribute("name", "example-inline-4");
+        document.getElementById("example-inline-6").setAttribute("name", "example-inline-4");
     }
 
     console.log(localStorage);
 
     var radioHasSentEmailButtons = document.getElementsByName("example-inline");
-    let sentEmail = localStorage.getItem("has-sent-email-additional");
+    let sentEmail = localStorage.getItem("has-sent-email-manual-additional");
 
     if (radioHasSentEmailButtons.length != 0) {
 
@@ -441,18 +445,18 @@ Quarterly collection dropdown - expander list
 
         replyDate = dayToday + ' ' + monthToday + ' ' + yearToday;
 
-   if (sentEmail == "yes" || localStorage.getItem("group-email-sent-additional") == "yes") {
+   if (sentEmail == "yes") {
 
       document.getElementById("second-question").classList.remove("hide-question");
       document.getElementById("first-question").classList.add("hide-question");
-<!--      document.getElementById("yes-first-question-detail").innerHTML = 'Yes. The template was emailed to the supplier by Heather (HEKIR) on ' + replyDate + ' at 2pm.';-->
-<!--      document.getElementById("yes-first-question").innerHTML = 'Template sent to the supplier on ' + replyDate;-->
       document.getElementById("yes-first-question-expander").classList.remove("hide-question");
 
    }
 
    var radioHasReceivedEmailButtons = document.getElementsByName("example-inline-1");
-    let emailReceived = localStorage.getItem("supplier-has-replied-additional");
+    let emailReceived = localStorage.getItem("supplier-has-replied-manual-additional");
+    let reminderSent = localStorage.getItem("reminder-one-sent-additional");
+    let reminderTwoSent = localStorage.getItem("reminder-two-sent-additional");
 
     if (radioHasReceivedEmailButtons.length != 0) {
 
@@ -470,7 +474,7 @@ Quarterly collection dropdown - expander list
       document.getElementById("template-sent-list").insertAdjacentHTML("afterend",
       '<tr role="row" class="nhsuk-table__row">'
       +
-      '<td class="nhsuk-table__cell"> <span class="nhsuk-table-responsive__heading">Type of email</span>Group</td>'
+      '<td class="nhsuk-table__cell"> <span class="nhsuk-table-responsive__heading">Type of email</span>Manual</td>'
       +
       '<td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Correspondence method</span>Reply received</td>'
       +
@@ -485,31 +489,44 @@ Quarterly collection dropdown - expander list
    }
 
    var radioHasSentReminderButtons = document.getElementsByName("example-inline-2");
-    let reminderSent = localStorage.getItem("reminder-sent-additional");
+
 
    if (reminderSent == "yes") {
 
       document.getElementById("reminder-sent-question").innerHTML = "Have you sent another reminder to the supplier for a response?";
 
       document.getElementById("template-sent-list").insertAdjacentHTML("afterend",
-      '<div class="nhsuk-summary-list__row">'
+      '<tr role="row" class="nhsuk-table__row" id="template-sent-list-method">'
       +
-      '<dt class="nhsuk-summary-list__key">Reminder sent by</dt>'
+      '<td class="nhsuk-table__cell"> <span class="nhsuk-table-responsive__heading">Type of email</span>Manual</td>'
       +
-      '<dd class="nhsuk-summary-list__value">Laura Heslop (LAHES)</dd>'
+      '<td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Correspondence method</span>Reminder sent</td>'
       +
-      '</div>'
+      '<td role="cell" class="nhsuk-table__cell" id="date-sent-1"><span class="nhsuk-table-responsive__heading">Date and time</span><span>04 November 2023 at 1pm</span></td>'
       +
-      '<div class="nhsuk-summary-list__row">'
+      '<td role="cell" class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">User</span>Laura Heslop (LAHES)</td>'
       +
-      '<dt class="nhsuk-summary-list__key">Date reminder sent</dt>'
-      +
-      '<dd class="nhsuk-summary-list__value">12 October 2023 at 4pm</dd>'
-      +
-      '</div>');
+      '</tr>');
+   }
 
-      document.getElementById("update-button").classList.add("hide-question");
-      document.getElementById("reset-button").classList.remove("hide-question");
+   if (reminderTwoSent == "yes") {
+
+      document.getElementById("reminder-sent-question").innerHTML = "Have you sent another reminder to the supplier for a response?";
+
+
+
+      document.getElementById("template-sent-list-method").insertAdjacentHTML("afterend",
+      '<tr role="row" class="nhsuk-table__row" id="template-sent-list-method-two">'
+      +
+      '<td class="nhsuk-table__cell"> <span class="nhsuk-table-responsive__heading">Type of email</span>Manual</td>'
+      +
+      '<td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Correspondence method</span>Reminder sent</td>'
+      +
+      '<td role="cell" class="nhsuk-table__cell" id="date-sent-1"><span class="nhsuk-table-responsive__heading">Date and time</span><span>06 November 2023 at 9am</span></td>'
+      +
+      '<td role="cell" class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">User</span>Laura Heslop (LAHES)</td>'
+      +
+      '</tr>');
    }
 
 
@@ -518,45 +535,51 @@ Quarterly collection dropdown - expander list
   var radioHasSentEmailButtonsX = document.getElementsByName("example-inline");
   var radioHasSentEmailButtonsY = document.getElementsByName("example-inline-1");
   var radioHasSentEmailButtonsZ = document.getElementsByName("example-inline-2");
+  var radioHasSentEmailButtonsZZ = document.getElementsByName("example-inline-3");
 
   let today = new Date();
 
     for (var radio of radioHasSentEmailButtonsX) {
       if (radio.checked) {
-        localStorage.setItem("has-sent-email-additional", radio.value);
+        localStorage.setItem("has-sent-email-manual-additional", radio.value);
         localStorage.setItem("date-sent-email", today);
        if (radio.value == 'no') {
           localStorage.removeItem("date-sent-email");
        }
      }
-    }
+    };
 
     for (var radio of radioHasSentEmailButtonsY) {
       if (radio.checked) {
-        localStorage.setItem("supplier-has-replied-additional", radio.value);
+        localStorage.setItem("supplier-has-replied-manual-additional", radio.value);
         localStorage.setItem("date-supplier-replied", today);
        if (radio.value == 'no') {
           localStorage.removeItem("date-supplier-replied");
        }
      }
-    }
+    };
 
     for (var radio of radioHasSentEmailButtonsZ) {
       if (radio.checked) {
-        localStorage.setItem("reminder-sent-additional", radio.value);
+        localStorage.setItem("reminder-one-sent-additional", radio.value);
         localStorage.setItem("date-reminder-sent", today);
-       if (radio.value == 'no') {
-          localStorage.removeItem("date-reminder-sent");
        }
-     }
+     };
+
+    if (radioHasSentEmailButtonsZZ) {
+      for (var radio of radioHasSentEmailButtonsZZ) {
+      if (radio.checked) {
+        localStorage.setItem("reminder-two-sent-additional", radio.value);
+        localStorage.setItem("date-reminder-sent", today);
+       }
+      }
     }
    };
 
    function resetCorrespondence() {
    localStorage.clear();
    location.reload();
-
-   }
+   };
 
 </script>
 

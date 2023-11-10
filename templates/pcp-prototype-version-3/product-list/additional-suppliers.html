@@ -22,7 +22,21 @@ Quarterly collection dropdown - expander list
         </h1>
 
 <div class="nhsuk-form-group">
-    <p>From the table, select the &#39;Update&#39; link to generate a template to send to the supplier, as well as tracking the correspondence.</p>
+    <p>Each supplier's template only includes products that are in their own portfolio. You are required to send this template to the supplier, and repeat this for all suppliers in the list. This can be achieved by either:</p>
+    <ul class="nhsuk-list nhsuk-list--bullet">
+        <li>sending the supplier's individual template to all of their contacts, via the &#39;Send a group email&#39; link.</li>
+        <li>downloading the supplier's individual template, amending it and sending from your own email through the &#39;Update&#39; link from the table. This is only required if you need to amend a supplier's template.</li>
+    </ul>
+
+    <div class="nhsuk-action-link nhsuk-u-margin-top-5">
+        <a class="nhsuk-action-link__link nhsuk-link--no-visited-state" href="../auto-email-additional/choose-additional-suppliers">
+            <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
+                <path d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+            </svg>
+            <span class="nhsuk-action-link__text">Send a group email</span>
+        </a>
+    </div>
     
     <fieldset class="nhsuk-fieldset nhsuk-u-margin-bottom-3 nhsuk-u-margin-top-3">
         <details class="nhsuk-details">
@@ -72,13 +86,13 @@ Quarterly collection dropdown - expander list
             Template sent
         </th>
         <th role="columnheader" class="" scope="col">
-            Reply received
-        </th>
-        <th role="columnheader" class="" scope="col">
             Reminders
         </th>
         <th role="columnheader" class="" scope="col">
             Last reminder
+        </th>
+        <th role="columnheader" class="" scope="col">
+            Reply received
         </th>
         <th role="columnheader" class="" scope="col">
             Action
@@ -93,14 +107,15 @@ Quarterly collection dropdown - expander list
             <span class="nhsuk-table-responsive__heading">Template sent</span>
             <span class="nhsuk-u-visually-hidden" id="hidden-sent">Template has not been sent</span>
         </td>
-        <td role="cell" class="nhsuk-table__cell" id="reply-in">
-            <span class="nhsuk-table-responsive__heading">Reply received</span>
-            <span class="nhsuk-u-visually-hidden" id="hidden-reply">Reply has not been received</span></td>
         <td role="cell" class="nhsuk-table__cell">
             <span class="nhsuk-table-responsive__heading">Reminders</span>0</td>
         <td role="cell" class="nhsuk-table__cell" id="reminder-sent">
             <span class="nhsuk-table-responsive__heading">Last reminder</span>
             <span class="nhsuk-u-visually-hidden" id="hidden-reminder">Reminder has not been sent</span></td>
+        <td role="cell" class="nhsuk-table__cell" id="reply-in">
+            <span class="nhsuk-table-responsive__heading">Reply received</span>
+            <span class="nhsuk-u-visually-hidden" id="hidden-reply">Reply has not been received</span></td>
+
         <td class="nhsuk-table__cell ">
             <span class="nhsuk-table-responsive__heading">Action</span>
             <a class="nhsuk-link nhsuk-link--no-visited-state" href="additional-supplier-view-tabs" id="supplier-update">Update</a></td>
@@ -110,16 +125,16 @@ Quarterly collection dropdown - expander list
             Boehringer Ingelheim Ltd</td>
         <td role="cell" class="nhsuk-table__cell" id="date-sent-1">
             <span class="nhsuk-table-responsive__heading">Template sent</span>
-            <span class="nhsuk-u-visually-hidden" id="hidden-sent-1">Template has not been sent</span>
+            <span class="nhsuk-u-visually-hidden" id="hidden-sent-2">Template has not been sent</span>
         </td>
-        <td role="cell" class="nhsuk-table__cell" id="reply-in-1">
-            <span class="nhsuk-table-responsive__heading">Reply received</span>
-            <span class="nhsuk-u-visually-hidden" id="hidden-reply-1">Reply has not been received</span></td>
         <td role="cell" class="nhsuk-table__cell">
             <span class="nhsuk-table-responsive__heading">Reminders</span>0</td>
         <td role="cell" class="nhsuk-table__cell" id="reminder-sent-1">
             <span class="nhsuk-table-responsive__heading">Last reminder</span>
             <span class="nhsuk-u-visually-hidden" id="hidden-reminder-1">Reminder has not been sent</span></td>
+        <td role="cell" class="nhsuk-table__cell" id="reply-in-1">
+            <span class="nhsuk-table-responsive__heading">Reply received</span>
+            <span class="nhsuk-u-visually-hidden" id="hidden-reply-1">Reply has not been received</span></td>
         <td class="nhsuk-table__cell ">
             <span class="nhsuk-table-responsive__heading">Action</span>
             Update</td>
@@ -128,16 +143,16 @@ Quarterly collection dropdown - expander list
         <td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Supplier name</span>Cambridge Healthcare Supplies Ltd</td>
         <td role="cell" class="nhsuk-table__cell" id="date-sent-2">
             <span class="nhsuk-table-responsive__heading">Template sent</span>
-            <span class="nhsuk-u-visually-hidden" id="hidden-sent-2">Template has not been sent</span>
+            <span class="nhsuk-u-visually-hidden" id="hidden-sent-3">Template has not been sent</span>
         </td>
-        <td role="cell" class="nhsuk-table__cell" id="reply-in-2">
-            <span class="nhsuk-table-responsive__heading">Reply received</span>
-            <span class="nhsuk-u-visually-hidden" id="hidden-reply-2">Reply has not been received</span></td>
         <td role="cell" class="nhsuk-table__cell">
             <span class="nhsuk-table-responsive__heading">Reminders</span>0</td>
         <td role="cell" class="nhsuk-table__cell" id="reminder-sent-2">
             <span class="nhsuk-table-responsive__heading">Last reminder</span>
             <span class="nhsuk-u-visually-hidden" id="hidden-reminder-2">Reminder has not been sent</span></td>
+        <td role="cell" class="nhsuk-table__cell" id="reply-in-2">
+            <span class="nhsuk-table-responsive__heading">Reply received</span>
+            <span class="nhsuk-u-visually-hidden" id="hidden-reply-2">Reply has not been received</span></td>
         <td class="nhsuk-table__cell ">
             <span class="nhsuk-table-responsive__heading">Action</span>
             Update</td>
@@ -146,16 +161,16 @@ Quarterly collection dropdown - expander list
         <td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Supplier name</span>Ennogen Pharma Ltd</td>
         <td role="cell" class="nhsuk-table__cell" id="date-sent-3">
             <span class="nhsuk-table-responsive__heading">Template sent</span>
-            <span class="nhsuk-u-visually-hidden" id="hidden-sent-3">Template has not been sent</span>
+            <span class="nhsuk-u-visually-hidden" id="hidden-sent-4">Template has not been sent</span>
         </td>
-        <td role="cell" class="nhsuk-table__cell" id="reply-in-3">
-            <span class="nhsuk-table-responsive__heading">Reply received</span>
-            <span class="nhsuk-u-visually-hidden" id="hidden-reply-3">Reply has not been received</span></td>
         <td role="cell" class="nhsuk-table__cell">
             <span class="nhsuk-table-responsive__heading">Reminders</span>0</td>
         <td role="cell" class="nhsuk-table__cell" id="reminder-sent-3">
             <span class="nhsuk-table-responsive__heading">Last reminder</span>
             <span class="nhsuk-u-visually-hidden" id="hidden-reminder-3">Reminder has not been sent</span></td>
+        <td role="cell" class="nhsuk-table__cell" id="reply-in-3">
+            <span class="nhsuk-table-responsive__heading">Reply received</span>
+            <span class="nhsuk-u-visually-hidden" id="hidden-reply-3">Reply has not been received</span></td>
         <td class="nhsuk-table__cell ">
             <span class="nhsuk-table-responsive__heading">Action</span>
             Update</td>
@@ -164,21 +179,22 @@ Quarterly collection dropdown - expander list
         <td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Supplier name</span>Indivior UK Ltd</td>
         <td role="cell" class="nhsuk-table__cell" id="date-sent-4">
             <span class="nhsuk-table-responsive__heading">Template sent</span>
-            <span class="nhsuk-u-visually-hidden" id="hidden-sent-4">Template has not been sent</span>
+            <span class="nhsuk-u-visually-hidden" id="hidden-sent-5">Template has not been sent</span>
         </td>
-        <td role="cell" class="nhsuk-table__cell" id="reply-in-4">
-            <span class="nhsuk-table-responsive__heading">Reply received</span>
-            <span class="nhsuk-u-visually-hidden" id="hidden-reply-4">Reply has not been received</span></td>
         <td role="cell" class="nhsuk-table__cell">
-            <span class="nhsuk-table-responsive__heading">Reminders</span>0</td>
+            <span class="nhsuk-table-responsive__heading">Reminders</span>
+            <span id="reminder-number">0</span></td>
         <td role="cell" class="nhsuk-table__cell" id="reminder-sent-4">
             <span class="nhsuk-table-responsive__heading">Last reminder</span>
-            <span class="nhsuk-u-visually-hidden" id="hidden-reminder-4">Reminder has not been sent</span></td>
+            <span class="nhsuk-u-visually-hidden" id="hidden-reminder-4">Reminder has not been sent</span>
+            <span id="last-reminder"></span></td>
+        <td role="cell" class="nhsuk-table__cell" id="reply-in-manual">
+            <span class="nhsuk-table-responsive__heading">Reply received</span>
+            <span class="nhsuk-u-visually-hidden" id="hidden-reply-4">Reply has not been received</span></td>
         <td class="nhsuk-table__cell ">
             <span class="nhsuk-table-responsive__heading">Action</span>
-            Update</td>
+            <a class="nhsuk-link nhsuk-link--no-visited-state" href="additional-supplier-view-tabs-manual" id="supplier-update-manual">Update</a></td>
     </tr>
-
     </tbody>
 </table>
 
@@ -217,8 +233,9 @@ Quarterly collection dropdown - expander list
 <script>
     console.log(localStorage);
 
-    let dateEmailSentAdd = localStorage.getItem("has-sent-email-additional");
-    let dateReplyReceivedAdd = localStorage.getItem("supplier-has-replied-additional");
+    let dateEmailSent = localStorage.getItem("has-sent-email-additional");
+    let dateReplyReceived = localStorage.getItem("supplier-has-replied-additional");
+    let dateReplyReceivedManual = localStorage.getItem("supplier-has-replied-manual-additional");
     let dateSent = new Date();
 
     let day = dateSent.getDate();
@@ -231,21 +248,44 @@ Quarterly collection dropdown - expander list
     let currentDate = `${day}-${month}-${year}`;
     console.log(currentDate);
 
-    if (dateEmailSentAdd == "yes") {
-       document.getElementById("date-sent").innerHTML = currentDate;
-<!--       document.getElementById("templates-sent").innerHTML = '1';-->
-       if (document.getElementById("hidden-sent")) {
-       document.getElementById("hidden-sent").style.display = "none";
-       }
-    }
-
-    if (dateReplyReceivedAdd == "yes") {
+    if (dateReplyReceived == "yes") {
        document.getElementById("reply-in").innerHTML = currentDate;
        document.getElementById("supplier-update").innerHTML = 'View';
-<!--       document.getElementById("replies-received").innerHTML = '1';-->
        if (document.getElementById("hidden-reply")) {
        document.getElementById("hidden-reply").style.display = "none";
        }
+    }
+
+    if (dateReplyReceivedManual == "yes") {
+       document.getElementById("reply-in-manual").innerHTML = currentDate;
+       document.getElementById("supplier-update-manual").innerHTML = 'View';
+       if (document.getElementById("hidden-reply-5")) {
+       document.getElementById("hidden-reply-5").style.display = "none";
+       }
+    }
+
+    if (localStorage.getItem("group-email-sent-additional") == "yes") {
+        document.getElementById("hidden-sent").textContent = currentDate;
+        document.getElementById("hidden-sent-3").textContent = currentDate;
+        document.getElementById("hidden-sent-4").textContent = currentDate;
+        document.getElementById("hidden-sent-2").textContent = currentDate;
+        document.getElementById("hidden-sent").classList.remove("nhsuk-u-visually-hidden");
+        document.getElementById("hidden-sent-3").classList.remove("nhsuk-u-visually-hidden");
+        document.getElementById("hidden-sent-4").classList.remove("nhsuk-u-visually-hidden");
+        document.getElementById("hidden-sent-2").classList.remove("nhsuk-u-visually-hidden");
+    }
+
+    if (localStorage.getItem("has-sent-email-manual-additional") == "yes") {
+        document.getElementById("hidden-sent-5").textContent = currentDate;
+        document.getElementById("hidden-sent-5").classList.remove("nhsuk-u-visually-hidden");
+    }
+
+    if (localStorage.getItem("reminder-one-sent-additional") == "yes" && (!localStorage.getItem("reminder-two-sent-additional") || localStorage.getItem("reminder-two-sent-additional") == "no")) {
+       document.getElementById("reminder-number").textContent = "1";
+       document.getElementById("last-reminder").textContent = currentDate;
+    } else if (localStorage.getItem("reminder-one-sent-additional") == "yes" && localStorage.getItem("reminder-two-sent-additional") == "yes") {
+       document.getElementById("reminder-number").textContent = "2";
+       document.getElementById("last-reminder").textContent = currentDate;
     }
 
 </script>
