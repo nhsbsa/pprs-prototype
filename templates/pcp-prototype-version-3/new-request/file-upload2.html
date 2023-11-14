@@ -12,7 +12,7 @@
 
 
   <h1><span class="nhsuk-caption-l">
-     October 2023 - 4th request
+     <span id="request-date">October 2023</span> - 4th request
      <span class="nhsuk-u-visually-hidden"> for </span>
    </span>Product list upload</h1>
   <div class="nhsuk-width-container">
@@ -46,5 +46,17 @@
           <a class="nhsuk-button nhsuk-u-margin" href="file-upload3" onclick="saveAndExit()">Upload file and continue</a>
 <!--          <a class="nhsuk-button nhsuk-button&#45;&#45;secondary" href="current-requests" onclick="saveAndExit()">Save and exit</a>-->
         </div>
+
+<script>
+        let requestDate = document.getElementById("request-date");
+        var monthNames = ["January", "February", "March", "April", "May","June","July", "August", "September", "October", "November","December"];
+
+        var d = new Date();
+        var dayToday = d.getDate();
+        var monthToday = monthNames[d.getMonth()];
+        var yearToday = d.getFullYear();
+
+        requestDate.innerHTML = monthToday + ' ' + yearToday;
+</script>
 
 {% endblock %}

@@ -48,7 +48,7 @@ Quarterly collection dropdown - expander list
             </div>
 
             <table role="table" class="nhsuk-table-responsive nhsuk-u-margin-bottom-8">
-                <caption class="nhsuk-table__caption">Ongoing requests for October 2023</caption>
+                <caption class="nhsuk-table__caption">Ongoing requests for <span id="table-date">October 2023</span></caption>
                 <thead role="rowgroup" class="nhsuk-table__head">
                 <tr role="row">
                     <th role="columnheader" class="" scope="col">
@@ -78,7 +78,7 @@ Quarterly collection dropdown - expander list
                         <span class="nhsuk-table-responsive__heading">Product quantity</span>84 items
                     </td>
                     <td role="cell" class="nhsuk-table__cell">
-                        <span class="nhsuk-table-responsive__heading">Date completed </span> 3 October 2023
+                        <span class="nhsuk-table-responsive__heading">Date completed </span> 03 <span id="first-request">October 2023</span>
                     </td>
                     <td class="nhsuk-table__cell">
                         <span class="nhsuk-table-responsive__heading">Status </span>
@@ -100,7 +100,7 @@ Quarterly collection dropdown - expander list
                         <span class="nhsuk-table-responsive__heading">Product quantity</span>58 items
                     </td>
                     <td role="cell" class="nhsuk-table__cell">
-                        <span class="nhsuk-table-responsive__heading">Date completed </span> 6 October 2023
+                        <span class="nhsuk-table-responsive__heading">Date completed </span> 06 <span id="second-request">October 2023</span>
                     </td>
                     <td class="nhsuk-table__cell">
                         <span class="nhsuk-table-responsive__heading">Status </span>
@@ -122,7 +122,7 @@ Quarterly collection dropdown - expander list
                         <span class="nhsuk-table-responsive__heading">Product quantity</span>82 items
                     </td>
                     <td role="cell" class="nhsuk-table__cell">
-                        <span class="nhsuk-table-responsive__heading">Date completed </span> 8 October 2023
+                        <span class="nhsuk-table-responsive__heading">Date completed </span> 08 <span id="third-request">October 2023</span>
                     </td>
                     <td class="nhsuk-table__cell">
                         <span class="nhsuk-table-responsive__heading">Status </span>
@@ -144,7 +144,7 @@ Quarterly collection dropdown - expander list
                         <span class="nhsuk-table-responsive__heading">Product quantity</span>82 items
                     </td>
                     <td role="cell" class="nhsuk-table__cell">
-                        <span class="nhsuk-table-responsive__heading">Date requested </span>24 October 2023
+                        <span class="nhsuk-table-responsive__heading">Date requested </span>14 <span id="fourth-request-date">October 2023</span>
                     </td>
                     </td>
                     <td class="nhsuk-table__cell">
@@ -202,6 +202,25 @@ Quarterly collection dropdown - expander list
         document.getElementById("status-tag").classList.add("nhsuk-tag--blue");
         document.getElementById("status-tag").innerHTML = "Ongoing";
     }
+
+        let firstRequest = document.getElementById("first-request");
+        let secondRequest = document.getElementById("second-request");
+        let thirdRequest = document.getElementById("third-request");
+        let fourthRequest = document.getElementById("fourth-request-date");
+        let tableDate = document.getElementById("table-date");
+        var monthNames = ["January", "February", "March", "April", "May","June","July", "August", "September", "October", "November","December"];
+
+        var d = new Date();
+        var dayToday = d.getDate();
+        var monthToday = monthNames[d.getMonth()];
+        var yearToday = d.getFullYear();
+
+        firstRequest.innerHTML = monthToday + ' ' + yearToday;
+        secondRequest.innerHTML = monthToday + ' ' + yearToday;
+        thirdRequest.innerHTML = monthToday + ' ' + yearToday;
+        fourthRequest.innerHTML = monthToday + ' ' + yearToday;
+        tableDate.innerHTML = monthToday + ' ' + yearToday;
+
 
 </script>
 

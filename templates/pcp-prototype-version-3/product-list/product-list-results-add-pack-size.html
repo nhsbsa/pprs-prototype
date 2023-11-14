@@ -15,7 +15,7 @@ Quarterly collection dropdown - expander list
 </div>
 
         <h1><span class="nhsuk-caption-l">
-     October 2023 - 4th request
+     <span id="request-date">October 2023</span> - 4th request
      <span class="nhsuk-u-visually-hidden"> for </span>
    </span>
             Add the pack size
@@ -52,5 +52,17 @@ Quarterly collection dropdown - expander list
 </div>
 
 <a class="nhsuk-button nhsuk-u-margin-top-4" href="product-list-results-add-review">Save and continue to review</a>
+
+<script>
+        let requestDate = document.getElementById("request-date");
+        var monthNames = ["January", "February", "March", "April", "May","June","July", "August", "September", "October", "November","December"];
+
+        var d = new Date();
+        var dayToday = d.getDate();
+        var monthToday = monthNames[d.getMonth()];
+        var yearToday = d.getFullYear();
+
+        requestDate.innerHTML = monthToday + ' ' + yearToday;
+</script>
 
 {% endblock %}

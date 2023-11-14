@@ -19,7 +19,7 @@ Quarterly collection dropdown - expander list
 <!--    <input type="checkbox" id="expanderToggle" />-->
 <!--    <div class="nhsuk-grid-column-full">-->
         <h1><span class="nhsuk-caption-l">
-     October 2023 - 4th request
+     <span id="request-date">October 2023</span> - 4th request
      <span class="nhsuk-u-visually-hidden">: </span>
    </span>Amgen Ltd</h1>
 
@@ -557,6 +557,16 @@ Quarterly collection dropdown - expander list
    location.reload();
 
    }
+
+   let requestDate = document.getElementById("request-date");
+       var monthNamesTitle = ["January", "February", "March", "April", "May","June","July", "August", "September", "October", "November","December"];
+
+        var dt = new Date();
+        var dayTodayt = dt.getDate();
+        var monthTodayt = monthNamesTitle[dt.getMonth()];
+        var yearTodayt = dt.getFullYear();
+
+        requestDate.innerHTML = monthTodayt + ' ' + yearTodayt;
 
 </script>
 

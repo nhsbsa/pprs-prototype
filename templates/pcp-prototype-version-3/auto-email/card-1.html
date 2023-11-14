@@ -15,7 +15,7 @@ Quarterly collection - dropdown table
 
 
                 <h1><span class="nhsuk-caption-l">
-     October 2023 - 4th request
+     <span id="request-date">October 2023</span> - 4th request
      <span class="nhsuk-u-visually-hidden">: </span>
    </span>
                     Review chosen suppliers</h1>
@@ -159,19 +159,15 @@ Quarterly collection - dropdown table
      '<p>Select single packs from the search results or use this link to <a class="nhsuk-link nhsuk-link--no-visited-state" href="#" onclick="checkAllBoxes()">select all</a>.</p>';
   }
 
-  let discontinueReason = localStorage.getItem("discontinue-reason");
+  let requestDate = document.getElementById("request-date");
+        var monthNames = ["January", "February", "March", "April", "May","June","July", "August", "September", "October", "November","December"];
 
-  let discontinueTitle = document.getElementById("discontinue-reason");
+        var d = new Date();
+        var dayToday = d.getDate();
+        var monthToday = monthNames[d.getMonth()];
+        var yearToday = d.getFullYear();
 
-  let mergerProductChange = localStorage.getItem("change-company-name");
-
-  if (discontinueReason || discontinueReason != null || discontinueReason != "") {
-    discontinueTitle.innerHTML = 'Discontinue submission' + ': ' + discontinueReason +'<span class="nhsuk-u-visually-hidden"> - </span>';
-  }
-
-  if (mergerProductChange) {
-     discontinueTitle.innerHTML = '<span class="nhsuk-caption-l" id="discontinue-reason">Company name change : company merger<span class="nhsuk-u-visually-hidden"> - </span></span>';
-  }
+        requestDate.innerHTML = monthToday + ' ' + yearToday;
 
 </script>
 

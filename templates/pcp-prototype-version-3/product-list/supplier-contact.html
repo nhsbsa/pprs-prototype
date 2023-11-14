@@ -15,7 +15,7 @@ Quarterly collection dropdown - expander list
 </div>
 
         <h1><span class="nhsuk-caption-l">
-     October 2023 - 4th request
+     <span id="request-date">October 2023</span> - 4th request
      <span class="nhsuk-u-visually-hidden">: </span>
    </span>
             Request dashboard
@@ -30,7 +30,7 @@ Quarterly collection dropdown - expander list
             Date requested
         </dt>
         <dd class="nhsuk-summary-list__value">
-            24 October 2023
+            <span id="requested-date">24 October 2023</span>
         </dd>
     </div>
 
@@ -39,7 +39,7 @@ Quarterly collection dropdown - expander list
             Supplier deadline
         </dt>
         <dd class="nhsuk-summary-list__value">
-            26 October 2023 at 5pm
+            16 <span id="deadline-date">October 2023</span> at 5pm
         </dd>
     </div>
 
@@ -332,6 +332,7 @@ Quarterly collection dropdown - expander list
     let currentDate = `${day}-${month}-${year}`;
     console.log(currentDate);
 
+
     if (dateEmailSent == "yes") {
        document.getElementById("templates-sent").innerHTML = '1';
        if (document.getElementById("hidden-sent")) {
@@ -412,6 +413,20 @@ Quarterly collection dropdown - expander list
        document.getElementById("templates-sent-additional").innerHTML = '1';
     }
 
+        let requestDate = document.getElementById("request-date");
+        let dateRequested = document.getElementById("requested-date");
+        let deadlineDate = document.getElementById("deadline-date");
+        var monthNames = ["January", "February", "March", "April", "May","June","July", "August", "September", "October", "November","December"];
+
+        var d = new Date();
+        var dayToday = d.getDate();
+        var dayTodayPlus2 = d.setDate(d.getDate() + 2);
+        var monthToday = monthNames[d.getMonth()];
+        var yearToday = d.getFullYear();
+
+        requestDate.innerHTML = monthToday + ' ' + yearToday;
+        dateRequested.innerHTML = dayToday + ' ' + monthToday + ' ' + yearToday;
+        deadlineDate.innerHTML = monthToday + ' ' + yearToday;
 
 
 </script>

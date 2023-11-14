@@ -15,7 +15,7 @@ Quarterly collection dropdown - expander list
 </div>
 
         <h1><span class="nhsuk-caption-l">
-     October 2023 - 4th request
+     <span id="request-date">October 2023</span> - 4th request
      <span class="nhsuk-u-visually-hidden">: </span>
    </span>
             Additional suppliers
@@ -287,6 +287,16 @@ Quarterly collection dropdown - expander list
        document.getElementById("reminder-number").textContent = "2";
        document.getElementById("last-reminder").textContent = currentDate;
     }
+
+    let requestDate = document.getElementById("request-date");
+       var monthNamesTitle = ["January", "February", "March", "April", "May","June","July", "August", "September", "October", "November","December"];
+
+        var dt = new Date();
+        var dayTodayt = dt.getDate();
+        var monthTodayt = monthNamesTitle[dt.getMonth()];
+        var yearTodayt = dt.getFullYear();
+
+        requestDate.innerHTML = monthTodayt + ' ' + yearTodayt;
 
 </script>
 

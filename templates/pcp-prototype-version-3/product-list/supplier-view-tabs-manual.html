@@ -14,7 +14,7 @@ Quarterly collection dropdown - expander list
         Go back to main suppliers</a>
 </div>
         <h1><span class="nhsuk-caption-l">
-     October 2023 - 4th request
+     <span id="request-date">October 2023</span>- 4th request
      <span class="nhsuk-u-visually-hidden">: </span>
    </span>Phoenix Healthcare Distributions Ltd</h1>
 
@@ -439,6 +439,16 @@ Quarterly collection dropdown - expander list
    localStorage.clear();
    location.reload();
    };
+
+   let requestDate = document.getElementById("request-date");
+        var monthNames = ["January", "February", "March", "April", "May","June","July", "August", "September", "October", "November","December"];
+
+        var d = new Date();
+        var dayToday = d.getDate();
+        var monthToday = monthNames[d.getMonth()];
+        var yearToday = d.getFullYear();
+
+        requestDate.innerHTML = monthToday + ' ' + yearToday;
 
 </script>
 

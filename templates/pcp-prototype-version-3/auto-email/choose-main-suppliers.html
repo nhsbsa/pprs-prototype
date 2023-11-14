@@ -22,7 +22,7 @@ Quarterly collection - dropdown table
             <div class="nhsuk-grid-column-full">
 
                 <h1><span class="nhsuk-caption-l">
-     October 2023 - 4th request
+     <span id="request-date">October 2023</span> - 4th request
      <span class="nhsuk-u-visually-hidden">: </span>
    </span>Select main suppliers </h1>
                 <p>Before selecting which suppliers are to be included in the group email, you can review which products are included in the main supplier template by downloading it. If any item on the list should not be sent to a specific supplier then then go back to main suppliers list and send the template individually. </p>
@@ -204,6 +204,16 @@ Quarterly collection - dropdown table
      +
      '<p>Select suppliers individually or use this link to <a class="nhsuk-link nhsuk-link--no-visited-state" href="#" onclick="checkAllBoxes()">select all suppliers</a></p>';
   }
+
+  let requestDate = document.getElementById("request-date");
+        var monthNames = ["January", "February", "March", "April", "May","June","July", "August", "September", "October", "November","December"];
+
+        var d = new Date();
+        var dayToday = d.getDate();
+        var monthToday = monthNames[d.getMonth()];
+        var yearToday = d.getFullYear();
+
+        requestDate.innerHTML = monthToday + ' ' + yearToday;
 </script>
 
 

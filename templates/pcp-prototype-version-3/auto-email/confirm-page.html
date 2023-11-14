@@ -19,7 +19,7 @@ Quarterly collection - dropdown table
                             <legend class="nhsuk-fieldset__legend nhsuk-label--xl">
                                 <h1 class="nhsuk-fieldset__heading">
                                     <span class="nhsuk-caption-l">
-     October 2023 - 4th request
+     <span id="request-date">October 2023</span> - 4th request
      <span class="nhsuk-u-visually-hidden">: </span>
    </span>
                                     Do you want to remove AAH Pharmaceuticals Ltd from the list?
@@ -71,6 +71,17 @@ Quarterly collection - dropdown table
       }
     }
   };
+
+  let requestDate = document.getElementById("request-date");
+        var monthNames = ["January", "February", "March", "April", "May","June","July", "August", "September", "October", "November","December"];
+
+        var d = new Date();
+        var dayToday = d.getDate();
+        var monthToday = monthNames[d.getMonth()];
+        var yearToday = d.getFullYear();
+
+        requestDate.innerHTML = monthToday + ' ' + yearToday;
+
 
 </script>
 {% endblock %}
