@@ -1,0 +1,74 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Quarterly collection - dropdown table
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-back-link">
+
+    <a class="nhsuk-back-link__link" href="/pcp-prototype-version-3/supplier-area/edit-main-suppliers">
+        <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+            <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+        </svg>
+        Go back to edit main supplier details</a>
+</div>
+
+<div class="nhsuk-width-container">
+    <!--    <div class="nhsuk-grid-row">-->
+    <!--        <div class="nhsuk-grid-column-full">-->
+
+    <h1>
+
+    </h1>
+
+
+    <main class="nhsuk-main-wrapper" id="maincontent" role="main">
+        <div class="nhsuk-width-container">
+
+            <div class="nhsuk-form-group">
+                <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+                    <legend class="nhsuk-fieldset__legend nhsuk-label--xl">
+                        <h1 class="nhsuk-fieldset__heading">
+                            Do you want to delete this user?
+                        </h1>
+                    </legend>
+
+                    <div class="nhsuk-radios">
+
+                        <div class="nhsuk-radios__item">
+                            <input class="nhsuk-radios__input" id="example-hints-1" name="example-hints" type="radio" value="yes" aria-describedby="example-hints-1-item-hint">
+                            <label class="nhsuk-label nhsuk-radios__label" for="example-hints-1">
+                                Yes
+                            </label>
+                            <div class="nhsuk-hint nhsuk-radios__hint" id="example-hints-1-item-hint">
+                                This will delete the user and cannot be undone.
+                            </div>
+                        </div>
+
+                        <div class="nhsuk-radios__item">
+                            <input class="nhsuk-radios__input" id="example-hints-2" name="example-hints" type="radio" value="no" aria-describedby="example-hints-2-item-hint">
+                            <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
+                                No
+                            </label>
+                            <div class="nhsuk-hint nhsuk-radios__hint" id="example-hints-2-item-hint">
+                                Do not delete this user and return to edit main supplier details.
+                            </div>
+                        </div>
+
+                    </div>
+                </fieldset>
+            </div>
+            <a class="nhsuk-button" href="/pcp-prototype-version-3/supplier-area/supplier-info" id="continue-button"
+               onclick="deleteUser()">Save and continue</a>
+
+        </div>
+    </main>
+
+
+</div>
+
+<script>
+    console.log(localStorage);
+</script>
+{% endblock %}
