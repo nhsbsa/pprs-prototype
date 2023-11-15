@@ -238,12 +238,16 @@ app.get('/pcp-prototype-version-3/new-user/surname', (req, res) => { res.render(
 app.get('/pcp-prototype-version-3/new-user/email', (req, res) => { res.render('pcp-prototype-version-3/new-user/email') });
 app.get('/pcp-prototype-version-3/new-user/user-type', (req, res) => { res.render('pcp-prototype-version-3/new-user/user-type') });
 app.get('/pcp-prototype-version-3/new-user/confirm', (req, res) => { res.render('pcp-prototype-version-3/new-user/confirm') });
+app.get('/pcp-prototype-version-3/new-user/status', (req, res) => { res.render('pcp-prototype-version-3/new-user/status') });
 
 app.get('/pcp-prototype-version-3/edit-user/forename', (req, res) => { res.render('pcp-prototype-version-3/edit-user/forename') });
 app.get('/pcp-prototype-version-3/edit-user/surname', (req, res) => { res.render('pcp-prototype-version-3/edit-user/surname') });
 app.get('/pcp-prototype-version-3/edit-user/email', (req, res) => { res.render('pcp-prototype-version-3/edit-user/email') });
 app.get('/pcp-prototype-version-3/edit-user/user-type', (req, res) => { res.render('pcp-prototype-version-3/edit-user/user-type') });
 app.get('/pcp-prototype-version-3/edit-user/summary', (req, res) => { res.render('pcp-prototype-version-3/edit-user/summary') });
+app.get('/pcp-prototype-version-3/edit-user/remove-options', (req, res) => { res.render('pcp-prototype-version-3/edit-user/remove-options') });
+app.get('/pcp-prototype-version-3/edit-user/user-deleted', (req, res) => { res.render('pcp-prototype-version-3/edit-user/user-deleted') });
+app.get('/pcp-prototype-version-3/edit-user/status', (req, res) => { res.render('pcp-prototype-version-3/edit-user/status') });
 
 app.get('/pcp-prototype-version-3/homepage-dh', (req, res) => { res.render('pcp-prototype-version-3/homepage-dh') });
 app.get('/pcp-prototype-version-3/quarterly-multiple-screens', (req, res) => { res.render('quarterly-multiple-screens') });
