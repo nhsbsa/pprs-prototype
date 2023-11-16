@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Quarterly collection - dropdown table
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-width-container">
+<!--    <div class="nhsuk-grid-row">-->
+<!--        <div class="nhsuk-grid-column-full">-->
+
+<h1>
+    Login
+</h1>
+
+        <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="username">
+                Email
+            </label>
+            <input class="nhsuk-input" id="username" name="username" type="email">
+        </div><div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="password">
+            Password
+        </label>
+        <input class="nhsuk-input" id="password" name="password" type="password">
+
+        <!--in a form it will just be button but in prototype it is a link-->
+        <a href="account-area"><button class="nhsuk-button nhsuk-u-margin-top-4">Continue</button></a>
+    </div>
+
+
+</div>
+
+
+<script>
+    console.log(localStorage);
+</script>
+{% endblock %}
