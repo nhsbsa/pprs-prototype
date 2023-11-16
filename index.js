@@ -232,6 +232,7 @@ app.get('/pcp-prototype-version-3/homepage', (req, res) => { res.render('pcp-pro
 
 app.get('/pcp-prototype-version-3/login', (req, res) => { res.render('pcp-prototype-version-3/login') });
 app.get('/pcp-prototype-version-3/account-area', (req, res) => { res.render('pcp-prototype-version-3/account-area') });
+app.get('/pcp-prototype-version-3/account-area-all', (req, res) => { res.render('pcp-prototype-version-3/account-area-all') });
 app.get('/pcp-prototype-version-3/log-out', (req, res) => { res.render('pcp-prototype-version-3/log-out') });
 app.get('/pcp-prototype-version-3/new-user/forename', (req, res) => { res.render('pcp-prototype-version-3/new-user/forename') });
 app.get('/pcp-prototype-version-3/new-user/surname', (req, res) => { res.render('pcp-prototype-version-3/new-user/surname') });
