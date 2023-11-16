@@ -39,7 +39,7 @@ Quarterly collection dropdown - expander list
             Supplier deadline
         </dt>
         <dd class="nhsuk-summary-list__value">
-            16 <span id="deadline-date">October 2023</span> at 5pm
+            <span id="deadline-date">October 2023</span> at 5pm
         </dd>
     </div>
 
@@ -419,14 +419,15 @@ Quarterly collection dropdown - expander list
         var monthNames = ["January", "February", "March", "April", "May","June","July", "August", "September", "October", "November","December"];
 
         var d = new Date();
+
         var dayToday = d.getDate();
-        var dayTodayPlus2 = d.setDate(d.getDate() + 2);
+        var dplus2 = new Date(d.setDate(d.getDate() + 2));
         var monthToday = monthNames[d.getMonth()];
         var yearToday = d.getFullYear();
 
         requestDate.innerHTML = monthToday + ' ' + yearToday;
         dateRequested.innerHTML = dayToday + ' ' + monthToday + ' ' + yearToday;
-        deadlineDate.innerHTML = monthToday + ' ' + yearToday;
+        deadlineDate.innerHTML = dplus2.getDate() + ' ' + monthToday + ' ' + yearToday;
 
 
 </script>
