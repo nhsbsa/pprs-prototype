@@ -347,7 +347,7 @@ app.get('/pcp-prototype-version-3/supplier-area-additional/add-new-suppliers-con
 app.get('/pcp-prototype-version-3/supplier-area-additional/supplier-info-updated', (req, res) => { res.render('pcp-prototype-version-3/supplier-area-additional/supplier-info-updated') });
 app.get('/pcp-prototype-version-3/supplier-area-additional/additional-supplier-added', (req, res) => { res.render('pcp-prototype-version-3/supplier-area-additional/additional-supplier-added') });
 app.get('/pcp-prototype-version-3/supplier-area-additional/confirmation-page', (req, res) => { res.render('pcp-prototype-version-3/supplier-area-additional/confirmation-page') });
-
+app.get('/pcp-prototype-version-3/supplier-area-additional/edit-new-added-supplier', (req, res) => { res.render('pcp-prototype-version-3/supplier-area-additional/edit-new-added-supplier') });
 
 
 
