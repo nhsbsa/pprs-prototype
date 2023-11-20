@@ -250,6 +250,15 @@ app.get('/pcp-prototype-version-3/edit-user/remove-options', (req, res) => { res
 app.get('/pcp-prototype-version-3/edit-user/user-deleted', (req, res) => { res.render('pcp-prototype-version-3/edit-user/user-deleted') });
 app.get('/pcp-prototype-version-3/edit-user/status', (req, res) => { res.render('pcp-prototype-version-3/edit-user/status') });
 
+app.get('/pcp-prototype-version-3/edit-all-users/forename', (req, res) => { res.render('pcp-prototype-version-3/edit-all-users/forename') });
+app.get('/pcp-prototype-version-3/edit-all-users/surname', (req, res) => { res.render('pcp-prototype-version-3/edit-all-users/surname') });
+app.get('/pcp-prototype-version-3/edit-all-users/email', (req, res) => { res.render('pcp-prototype-version-3/edit-all-users/email') });
+app.get('/pcp-prototype-version-3/edit-all-users/user-type', (req, res) => { res.render('pcp-prototype-version-3/edit-all-users/user-type') });
+app.get('/pcp-prototype-version-3/edit-all-users/summary', (req, res) => { res.render('pcp-prototype-version-3/edit-all-users/summary') });
+app.get('/pcp-prototype-version-3/edit-all-users/remove-options', (req, res) => { res.render('pcp-prototype-version-3/edit-all-users/remove-options') });
+app.get('/pcp-prototype-version-3/edit-all-users/user-deleted', (req, res) => { res.render('pcp-prototype-version-3/edit-all-users/user-deleted') });
+app.get('/pcp-prototype-version-3/edit-all-users/status', (req, res) => { res.render('pcp-prototype-version-3/edit-all-users/status') });
+
 app.get('/pcp-prototype-version-3/homepage-dh', (req, res) => { res.render('pcp-prototype-version-3/homepage-dh') });
 app.get('/pcp-prototype-version-3/quarterly-multiple-screens', (req, res) => { res.render('quarterly-multiple-screens') });
 app.get('/pcp-prototype-version-3/quarterly-expander-list', (req, res) => { res.render('quarterly-expander-list') })
