@@ -21,47 +21,34 @@ Quarterly collection - dropdown table
   <span class="nhsuk-caption-l">
   Add a new additional supplier
 </span>
-            <h1>Confirm main supplier details</h1>
+            <h1>Confirm contact details</h1>
             <p>Ensure the contact details you have added are correct before proceeding to save the supplier to the main
                 supplier directory.</p>
-            <dl class="nhsuk-summary-list">
+            <div class="nhsuk-inset-text">
+                <span class="nhsuk-u-visually-hidden">Information: </span>
+                <p>If you need to remove this supplier from the list <a
+                        href="/pcp-prototype-version-3/supplier-area/confirmation-page" title="External website">you can
+                    do that here</a>.</p>
+            </div>
 
-                <div class="nhsuk-summary-list__row">
-                    <dt class="nhsuk-summary-list__key">
-                        Supplier name
-                    </dt>
-                    <dd class="nhsuk-summary-list__value">
-                        A new supplier
-                    </dd>
+            <table class="nhsuk-table">
+                <caption class="nhsuk-table__caption"></caption>
+                <thead role="rowgroup" class="nhsuk-table__head">
+                <tr role="row">
+                    <h2></h2>
+                    <th role="columnheader" class="" scope="col">
+                        Suppliers name
+                    </th>
+                </tr>
+                </thead>
+                <tbody class="nhsuk-table__body">
+                <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell">A new supplier</td>
 
-                    <dd class="nhsuk-summary-list__actions">
+                </tr>
 
-                        <a class="nhsuk-link nhsuk-link--no-visited-state" href="/pcp-prototype-version-3/supplier-area/edit-supplier-name">
-                            Edit<span class="nhsuk-u-visually-hidden"> user</span></a>
-
-                    </dd>
-
-                </div>
-
-                <div class="nhsuk-summary-list__row">
-                    <dt class="nhsuk-summary-list__key">
-                        Email type
-                    </dt>
-                    <dd class="nhsuk-summary-list__value">
-                        Group
-                    </dd>
-
-                    <dd class="nhsuk-summary-list__actions">
-
-                        <a class="nhsuk-link nhsuk-link--no-visited-state" href="/pcp-prototype-version-3/supplier-area/edit-email-group-type">
-                            Edit<span class="nhsuk-u-visually-hidden"> user</span></a>
-
-                    </dd>
-
-                </div>
-
-            </dl>
-
+                </tbody>
+            </table>
 
             <table class="nhsuk-table">
                 <caption class="nhsuk-table__caption">Contacts</caption>
@@ -97,11 +84,7 @@ Quarterly collection - dropdown table
                 </tr>
                 </tbody>
             </table>
-            <div class="nhsuk-inset-text">
-                <span class="nhsuk-u-visually-hidden">Information: </span>
-                <p>If you no longer need to save the supplier then you can  <a
-                        href="/pcp-prototype-version-3/supplier-area/main-supplier-directory" title="External website">return to main supplier directory</a>.</p>
-            </div>
+
             <a class="nhsuk-button" data-module="nhsuk-button" type="submit"
                href="/pcp-prototype-version-3/supplier-area/main-supplier-added">
                 Save supplier to list

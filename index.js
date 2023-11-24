@@ -335,6 +335,14 @@ app.get('/pcp-prototype-version-3/supplier-area/supplier-info-updated', (req, re
 app.get('/pcp-prototype-version-3/supplier-area/add-new-suppliers-confirm', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/add-new-suppliers-confirm') });
 app.get('/pcp-prototype-version-3/supplier-area/main-supplier-added', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/main-supplier-added') });
 app.get('/pcp-prototype-version-3/supplier-area/edit-new-added-supplier', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/edit-new-added-supplier') });
+app.get('/pcp-prototype-version-3/supplier-area/supplier-add-contact-update', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/supplier-add-contact-update') });
+app.get('/pcp-prototype-version-3/supplier-area/add-new-contact-details', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/add-new-contact-details') });
+app.get('/pcp-prototype-version-3/supplier-area/edit-supplier-name', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/edit-supplier-name') });
+app.get('/pcp-prototype-version-3/supplier-area/edit-email-group-type', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/edit-email-group-type') });
+app.get('/pcp-prototype-version-3/supplier-area/new-supplier-info-updated', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/new-supplier-info-updated') });
+app.get('/pcp-prototype-version-3/supplier-area/supplier-info-contact-updated', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/supplier-info-contact-updated') });
+app.get('/pcp-prototype-version-3/supplier-area/add-email-group-type', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/add-email-group-type') });
+
 
 app.get('/pcp-prototype-version-3/supplier-area-additional/add-supplier-directory', (req, res) => { res.render('pcp-prototype-version-3/supplier-area-additional/add-supplier-directory') });
 app.get('/pcp-prototype-version-3/supplier-area-additional/add-suppliers-info', (req, res) => { res.render('pcp-prototype-version-3/supplier-area-additional/add-suppliers-info') });
@@ -357,6 +365,10 @@ app.get('/pcp-prototype-version-3/supplier-area-additional/supplier-info-updated
 app.get('/pcp-prototype-version-3/supplier-area-additional/additional-supplier-added', (req, res) => { res.render('pcp-prototype-version-3/supplier-area-additional/additional-supplier-added') });
 app.get('/pcp-prototype-version-3/supplier-area-additional/confirmation-page', (req, res) => { res.render('pcp-prototype-version-3/supplier-area-additional/confirmation-page') });
 app.get('/pcp-prototype-version-3/supplier-area-additional/edit-new-added-supplier', (req, res) => { res.render('pcp-prototype-version-3/supplier-area-additional/edit-new-added-supplier') });
+app.get('/pcp-prototype-version-3/supplier-area-additional/add-email-group-type', (req, res) => { res.render('pcp-prototype-version-3/supplier-area-additional/add-email-group-type') });
+app.get('/pcp-prototype-version-3/supplier-area-additional/add-new-contact-details', (req, res) => { res.render('pcp-prototype-version-3/supplier-area-additional/add-new-contact-details') });
+app.get('/pcp-prototype-version-3/supplier-area-additional/edit-new-additional-supplier-name', (req, res) => { res.render('pcp-prototype-version-3/supplier-area-additional/edit-new-additional-supplier-name') });
+app.get('/pcp-prototype-version-3/supplier-area-additional/edit-add-email-group-type', (req, res) => { res.render('pcp-prototype-version-3/supplier-area-additional/edit-add-email-group-type') });
 
 
 
