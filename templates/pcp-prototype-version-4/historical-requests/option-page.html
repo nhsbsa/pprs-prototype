@@ -1,0 +1,93 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Quarterly collection dropdown - expander list
+{% endblock %}
+
+{% block navContent %}
+
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+    <div class="nhsuk-width-container">
+        <ol class="nhsuk-breadcrumb__list">
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../homepage">Price concessions homepage</a></li>
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../request-list">Requests</a></li>
+        </ol>
+        <p class="nhsuk-breadcrumb__back">
+            <a class="nhsuk-breadcrumb__backlink" href="/level-one/level-two/level-three">
+                <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+                Level three
+            </a>
+        </p>
+    </div>
+</nav>
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="nhsuk-width-container ">
+    <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-full">
+            <h1>
+                Options page
+            </h1>
+
+            <div class="nhsuk-warning-callout">
+                <h2 class="nhsuk-warning-callout__label">
+    <span role="text">
+      <span class="nhsuk-u-visually-hidden">Important: </span>
+      Page not for development
+    </span>
+                </h2>
+                <p>This page is only to navigate different designs for searching for historical requests. It is not to be used in development.</p>
+            </div>
+
+            <ul class="nhsuk-grid-row nhsuk-card-group">
+                <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+                    <div class="nhsuk-card nhsuk-card--clickable">
+                        <div class="nhsuk-card__content">
+                            <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                                <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="/pcp-prototype-version-2/historical-requests/option-1/historical-request">Option one</a>
+                            </h2>
+                                <p class="nhsuk-card__description">Using clickable cards to select the years and months. </p>
+
+
+                        </div>
+                    </div>
+
+                </li>
+                <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+                    <div class="nhsuk-card nhsuk-card--clickable">
+                        <div class="nhsuk-card__content">
+                            <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                                <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="/pcp-prototype-version-2/historical-requests/option-2/option-2-historical">Option two</a>
+                            </h2>
+                                <p class="nhsuk-card__description">Using radio buttons to select the year and month, with results on a separate page.  </p>
+                        </div>
+                    </div>
+
+                </li>
+                <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+                    <div class="nhsuk-card nhsuk-card--clickable">
+                        <div class="nhsuk-card__content">
+                            <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                                <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="/pcp-prototype-version-2/historical-requests/option-3/option-3-historical-search">Option three</a>
+                            </h2>
+                                <p>Using radio buttons to select the year and month, with results on the same page. </p>
+
+
+                        </div>
+                    </div>
+
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

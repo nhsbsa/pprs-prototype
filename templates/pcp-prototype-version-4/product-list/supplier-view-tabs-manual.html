@@ -1,0 +1,455 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Quarterly collection dropdown - expander list
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-back-link">
+
+    <a class="nhsuk-back-link__link nhsuk-u-margin-bottom-5" href="main-suppliers" id="back-link">
+        <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+            <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+        </svg>
+        Go back to main suppliers</a>
+</div>
+        <h1><span class="nhsuk-caption-l">
+     <span id="request-date">October 2023</span>- fourth request
+     <span class="nhsuk-u-visually-hidden">: </span>
+   </span>Phoenix Healthcare Distributions Ltd</h1>
+
+<div class="nhsuk-tabs" data-module="nhsuk-tabs">
+    <h2 class="nhsuk-tabs__title">Contents</h2>
+    <ul class="nhsuk-tabs__list">
+        <li class="nhsuk-tabs__list-item nhsuk-tabs__lt-item--selected"
+            id="heading-tab-products"
+            role="presentation"><a class="nhsuk-tabs__tab" href="#tab-products" role="tab"
+                                   id="products-panel" aria-selected="true">Requested products</a>
+        </li>
+        <li class="nhsuk-tabs__list-item" id="heading-tab-template" role="presentation"><a
+                class="nhsuk-tabs__tab" href="#tab-template" role="tab" id="template-panel">Download template</a></li>
+        <li class="nhsuk-tabs__list-item" id="heading-tab-correspondence" role="presentation"><a
+                class="nhsuk-tabs__tab" href="#tab-correspondence" role="tab" id="correspondence-panel">Correspondence</a>
+        </li>
+        <li class="nhsuk-tabs__list-item" id="heading-tab-contact" role="presentation"><a
+                class="nhsuk-tabs__tab" href="#tab-contact" role="tab" id="contact-panel">Contact details</a>
+        </li>
+    </ul>
+
+    <div class="nhsuk-tabs__panel" id="tab-products" role="tabpanel" tabindex="-1"
+         aria-labelledby="tab1">
+        <div class="nhsuk-tabs-panel-inner">
+
+                    <h2>Requested products</h2>
+                    <p>As Phoenix Healthcare Distributions Ltd is a main supplier, every product in the product list will be present in the template. </p>
+            <p><a class="nhsuk-link nhsuk-link--no-visited-state" href="#tab-template">Go to download template</a></p>
+        </div>
+    </div>
+    <div class="nhsuk-tabs__panel" id="tab-template" role="tabpanel" tabindex="-1"
+         aria-labelledby="tab1">
+        <div class="nhsuk-tabs-panel-inner">
+
+                    <h2>Download template</h2>
+                    <p>If you have not included this supplier in the group email then you will need to send this manually. This involves downloading the main supplier template, making changes and sending via your own email.</p>
+
+                    <a class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-bottom-6" href="#">Download main supplier template</a>
+
+            <p>After the initial email has been sent, you must <a class="nhsuk-link nhsuk-link--no-visited-state" href="#tab-correspondence">track the correspondence</a></p>
+        </div>
+    </div>
+
+    <div class="nhsuk-tabs__panel" id="tab-correspondence" role="tabpanel" tabindex="-1"
+         aria-labelledby="tab2">
+        <div class="nhsuk-tabs-panel-inner">
+
+                            <h2 class="nhsuk-u-margin-bottom-6">Correspondence</h2>
+
+            <p>If the template has been sent by a group email the tracking of sending the template, as well as any reminder, is automatic. If the template has been sent manually then you must track these elements manually. </p>
+            <p class="nhsuk-u-margin-bottom-6">In both cases, you must update the correspondence when the supplier replies.</p>
+            <table class="nhsuk-table nhsuk-table-responsive hide-question" id="yes-first-question-expander">
+                <caption class="nhsuk-table__caption">Record of correspondence</caption>
+                <thead role="rowgroup" class="nhsuk-table__head">
+                <tr role="row">
+                    <th role="columnheader" class="" scope="col">
+                        Type of email
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                        Correspondence method
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                        Date and time
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                        User
+                    </th>
+                </tr>
+                </thead>
+                <tbody class="nhsuk-table__body">
+                <tr role="row" class="nhsuk-table__row" id="template-sent-list">
+                    <td class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type of email</span>
+                        Manual</td>
+                    <td class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Correspondence method</span>
+                        Template sent</td>
+                    <td role="cell" class="nhsuk-table__cell" id="date-sent">
+                        <span class="nhsuk-table-responsive__heading">Date and time</span>
+                        <span>02 November 2023 at 3pm</span>
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">User</span>Laura Heslop (LAHES)</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <div class="hide-question" id="yes-second-question-expander">
+                <h3>Has the main supplier replied?</h3>
+                <p id="yes-second-question-detail">Email received to Heather on 21 September 2023 at 2.20pm.</p>
+            </div>
+
+
+            <div class="nhsuk-form-group">
+
+                <fieldset class="nhsuk-fieldset" id="first-question">
+                    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+                        <h3 class="nhsuk-fieldset__heading">
+                            Has the template been sent to the supplier?
+                        </h3>
+                    </legend>
+
+                    <div class="nhsuk-hint nhsuk-u-margin-bottom-3">
+                        If you have included this supplier in the group email then you do not need to answer this question.
+                    </div>
+
+                    <div class="nhsuk-radios nhsuk-radios--inline">
+
+                        <div class="nhsuk-radios__item">
+                            <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="yes">
+                            <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
+                                Yes
+                            </label>
+                        </div>
+
+                        <div class="nhsuk-radios__item">
+                            <input class="nhsuk-radios__input" id="example-inline-2" name="example-inline" type="radio" value="no">
+                            <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
+                                No
+                            </label>
+                        </div>
+
+                    </div>
+                </fieldset>
+
+                <div class="hide-question" id="second-question">
+                    <fieldset class="nhsuk-fieldset nhsuk-u-margin-top-5">
+                        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+                            <h3 class="nhsuk-fieldset__heading">
+                                Has the main supplier sent a reply?
+                            </h3>
+                        </legend>
+
+                        <div class="nhsuk-hint" id="group-email-hint">
+                        </div>
+
+                        <div class="nhsuk-radios nhsuk-radios--inline">
+
+                            <div class="nhsuk-radios__item">
+                                <input class="nhsuk-radios__input" id="example-inline-3" name="example-inline-1" type="radio" value="yes">
+                                <label class="nhsuk-label nhsuk-radios__label" for="example-inline-3">
+                                    Yes
+                                </label>
+                            </div>
+
+                            <div class="nhsuk-radios__item">
+                                <input class="nhsuk-radios__input" id="example-inline-4" name="example-inline-1" type="radio" value="no">
+                                <label class="nhsuk-label nhsuk-radios__label" for="example-inline-4">
+                                    No
+                                </label>
+                            </div>
+
+                        </div>
+                    </fieldset>
+
+
+                <fieldset class="nhsuk-fieldset nhsuk-u-margin-top-5" id="third-question">
+                    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+                        <h1 class="nhsuk-fieldset__heading" id="reminder-sent-question">
+                            Have you sent a reminder to the supplier for a response?
+                        </h1>
+                    </legend>
+
+                    <div class="nhsuk-radios nhsuk-radios--inline">
+
+                        <div class="nhsuk-radios__item">
+                            <input class="nhsuk-radios__input" id="example-inline-5" name="example-inline-2" type="radio" value="yes">
+                            <label class="nhsuk-label nhsuk-radios__label" for="example-inline-5">
+                                Yes
+                            </label>
+                        </div>
+
+                        <div class="nhsuk-radios__item">
+                            <input class="nhsuk-radios__input" id="example-inline-6" name="example-inline-2" type="radio" value="no">
+                            <label class="nhsuk-label nhsuk-radios__label" for="example-inline-6">
+                                No
+                            </label>
+                        </div>
+
+                    </div>
+                </fieldset>
+                </div>
+
+            </div>
+
+            <a class="nhsuk-button nhsuk-button--primary nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-6" id="update-button" href="main-suppliers"
+               onclick="storeUpdateCorrespondence()">Update correspondence</a>
+
+            <a class="nhsuk-button nhsuk-button--primary nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-6 hide-question" id="reset-button"
+               onclick="resetCorrespondence()" href="#">Reset correspondence (not included in development)</a>
+                        </div>
+                    </div>
+
+
+
+    <div class="nhsuk-tabs__panel" id="tab-contact" role="tabpanel" tabindex="-1"
+         aria-labelledby="tab2">
+        <div class="nhsuk-tabs-panel-inner">
+                    <h2>Contact details</h2>
+
+                    <table role="table" class="nhsuk-table-responsive primary-user-data nhsuk-u-margin-bottom-8" style="display: table;">
+                        <caption class="nhsuk-table__caption">Supplier contacts</caption>
+                        <thead role="rowgroup" class="nhsuk-table__head">
+                        <tr role="row">
+                            <th role="columnheader" class="" scope="col">
+                                Name
+                            </th>
+                            <th role="columnheader" class="" scope="col">
+                                Email
+                            </th>
+                            <th role="columnheader" class="" scope="col">
+                                Phone number
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody class="nhsuk-table__body">
+                        <tr role="row" class="nhsuk-table__row">
+                            <td role="cell" class="nhsuk-table__cell">
+                                <span class="nhsuk-table-responsive__heading">Name </span>Jane Smith
+                            </td>
+                            <td role="cell" class="nhsuk-table__cell">
+                                <span class="nhsuk-table-responsive__heading">Email </span>jane.smith@nhs.net
+                            </td>
+                            <td role="cell" class="nhsuk-table__cell">
+                                <span class="nhsuk-table-responsive__heading">Phone number </span>07700 900362
+                            </td>
+                        </tr>
+                        <tr role="row" class="nhsuk-table__row">
+                            <td role="cell" class="nhsuk-table__cell">
+                                <span class="nhsuk-table-responsive__heading">Name </span>David Jones
+                            </td>
+                            <td role="cell" class="nhsuk-table__cell">
+                                <span class="nhsuk-table-responsive__heading">Email </span>david.jones@nhs.net
+                            </td>
+                            <td role="cell" class="nhsuk-table__cell">
+                                <span class="nhsuk-table-responsive__heading">Phone number </span>07700 905456
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <h3>Specific supplier detail</h3>
+                    <p>Specific notes relevant to the supplier goes here.</p>
+
+                            </div>
+                        </div>
+                    </div>
+
+<script>
+    window.onload = function() {
+    if (localStorage.getItem("go-back-supplier") == "main") {
+    document.getElementById("back-link").setAttribute('href', "main-suppliers");
+    document.getElementById("back-link").innerHTML = "<svg class='nhsuk-icon nhsuk-icon__chevron-left' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden='true' height='24' width='24'><path d='M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z'></path></svg>Go back to main suppliers";
+       }
+    };
+
+    if (localStorage.getItem("reminder-one-sent") == "yes") {
+        document.getElementById("example-inline-5").setAttribute("name", "example-inline-3");
+        document.getElementById("example-inline-6").setAttribute("name", "example-inline-3");
+    }
+    if (localStorage.getItem("reminder-two-sent") == "yes") {
+        document.getElementById("example-inline-5").setAttribute("name", "example-inline-4");
+        document.getElementById("example-inline-6").setAttribute("name", "example-inline-4");
+    }
+
+    console.log(localStorage);
+
+    var radioHasSentEmailButtons = document.getElementsByName("example-inline");
+    let sentEmail = localStorage.getItem("has-sent-email-manual");
+
+    if (radioHasSentEmailButtons.length != 0) {
+
+
+    for (var radio of radioHasSentEmailButtons) {
+      if (sentEmail === radio.value) {
+        radio.checked = true;
+      }
+    }
+   }
+
+        var monthNames = ["January", "February", "March", "April", "May","June","July", "August", "September", "October", "November","December"];
+
+        var d = new Date();
+        var dayToday = d.getDate();
+        var monthToday = monthNames[d.getMonth()];
+        var yearToday = d.getFullYear();
+
+        replyDate = dayToday + ' ' + monthToday + ' ' + yearToday;
+
+   if (sentEmail == "yes") {
+
+      document.getElementById("second-question").classList.remove("hide-question");
+      document.getElementById("first-question").classList.add("hide-question");
+      document.getElementById("yes-first-question-expander").classList.remove("hide-question");
+
+   }
+
+   var radioHasReceivedEmailButtons = document.getElementsByName("example-inline-1");
+    let emailReceived = localStorage.getItem("supplier-has-replied-manual");
+    let reminderSent = localStorage.getItem("reminder-one-sent");
+    let reminderTwoSent = localStorage.getItem("reminder-two-sent");
+
+    if (radioHasReceivedEmailButtons.length != 0) {
+
+
+    for (var radio of radioHasReceivedEmailButtons) {
+      if (emailReceived === radio.value) {
+        radio.checked = true;
+      }
+    }
+   }
+
+   if (emailReceived == "yes") {
+      document.getElementById("second-question").classList.add("hide-question");
+
+      document.getElementById("template-sent-list").insertAdjacentHTML("afterend",
+      '<tr role="row" class="nhsuk-table__row">'
+      +
+      '<td class="nhsuk-table__cell"> <span class="nhsuk-table-responsive__heading">Type of email</span>Manual</td>'
+      +
+      '<td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Correspondence method</span>Reply received</td>'
+      +
+      '<td role="cell" class="nhsuk-table__cell" id="date-sent-1"><span class="nhsuk-table-responsive__heading">Date and time</span><span>08 November 2023 at 1pm</span></td>'
+      +
+      '<td role="cell" class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">User</span>Laura Heslop (LAHES)</td>'
+      +
+      '</tr>');
+
+      document.getElementById("update-button").classList.add("hide-question");
+      document.getElementById("reset-button").classList.remove("hide-question");
+   }
+
+   var radioHasSentReminderButtons = document.getElementsByName("example-inline-2");
+
+
+   if (reminderSent == "yes") {
+
+      document.getElementById("reminder-sent-question").innerHTML = "Have you sent another reminder to the supplier for a response?";
+
+      document.getElementById("template-sent-list").insertAdjacentHTML("afterend",
+      '<tr role="row" class="nhsuk-table__row" id="template-sent-list-method">'
+      +
+      '<td class="nhsuk-table__cell"> <span class="nhsuk-table-responsive__heading">Type of email</span>Manual</td>'
+      +
+      '<td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Correspondence method</span>Reminder sent</td>'
+      +
+      '<td role="cell" class="nhsuk-table__cell" id="date-sent-1"><span class="nhsuk-table-responsive__heading">Date and time</span><span>04 November 2023 at 1pm</span></td>'
+      +
+      '<td role="cell" class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">User</span>Laura Heslop (LAHES)</td>'
+      +
+      '</tr>');
+   }
+
+   if (reminderTwoSent == "yes") {
+
+      document.getElementById("reminder-sent-question").innerHTML = "Have you sent another reminder to the supplier for a response?";
+
+
+
+      document.getElementById("template-sent-list-method").insertAdjacentHTML("afterend",
+      '<tr role="row" class="nhsuk-table__row" id="template-sent-list-method-two">'
+      +
+      '<td class="nhsuk-table__cell"> <span class="nhsuk-table-responsive__heading">Type of email</span>Manual</td>'
+      +
+      '<td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Correspondence method</span>Reminder sent</td>'
+      +
+      '<td role="cell" class="nhsuk-table__cell" id="date-sent-1"><span class="nhsuk-table-responsive__heading">Date and time</span><span>06 November 2023 at 9am</span></td>'
+      +
+      '<td role="cell" class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">User</span>Laura Heslop (LAHES)</td>'
+      +
+      '</tr>');
+   }
+
+
+  function storeUpdateCorrespondence() {
+
+  var radioHasSentEmailButtonsX = document.getElementsByName("example-inline");
+  var radioHasSentEmailButtonsY = document.getElementsByName("example-inline-1");
+  var radioHasSentEmailButtonsZ = document.getElementsByName("example-inline-2");
+  var radioHasSentEmailButtonsZZ = document.getElementsByName("example-inline-3");
+
+  let today = new Date();
+
+    for (var radio of radioHasSentEmailButtonsX) {
+      if (radio.checked) {
+        localStorage.setItem("has-sent-email-manual", radio.value);
+        localStorage.setItem("date-sent-email", today);
+       if (radio.value == 'no') {
+          localStorage.removeItem("date-sent-email");
+       }
+     }
+    };
+
+    for (var radio of radioHasSentEmailButtonsY) {
+      if (radio.checked) {
+        localStorage.setItem("supplier-has-replied-manual", radio.value);
+        localStorage.setItem("date-supplier-replied", today);
+       if (radio.value == 'no') {
+          localStorage.removeItem("date-supplier-replied");
+       }
+     }
+    };
+
+    for (var radio of radioHasSentEmailButtonsZ) {
+      if (radio.checked) {
+        localStorage.setItem("reminder-one-sent", radio.value);
+        localStorage.setItem("date-reminder-sent", today);
+       }
+     };
+
+    if (radioHasSentEmailButtonsZZ) {
+      for (var radio of radioHasSentEmailButtonsZZ) {
+      if (radio.checked) {
+        localStorage.setItem("reminder-two-sent", radio.value);
+        localStorage.setItem("date-reminder-sent", today);
+       }
+      }
+    }
+   };
+
+   function resetCorrespondence() {
+   localStorage.clear();
+   location.reload();
+   };
+
+   let requestDate = document.getElementById("request-date");
+        var monthNames = ["January", "February", "March", "April", "May","June","July", "August", "September", "October", "November","December"];
+
+        var d = new Date();
+        var dayToday = d.getDate();
+        var monthToday = monthNames[d.getMonth()];
+        var yearToday = d.getFullYear();
+
+        requestDate.innerHTML = monthToday + ' ' + yearToday;
+
+</script>
+
+{% endblock %}

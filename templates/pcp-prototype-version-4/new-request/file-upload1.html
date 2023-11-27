@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+{% block content %}
+
+  <div class="nhsuk-back-link nhsuk-u-margin-bottom-5">
+    <a class="nhsuk-back-link__link" href="current-requests">
+      <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+        <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+      </svg>
+      Go back to ongoing and new requests</a>
+  </div>
+
+  <h1><span class="nhsuk-caption-l">
+    <span id="request-date">October 2023</span> - fourth request
+     <span class="nhsuk-u-visually-hidden"> for </span>
+   </span>Choose a product list to upload</h1>
+
+<!--  <p>The product list is the file that the Department of Heath and Social Care (DHSC) have sent. </p>-->
+  <p>To provide the price concessions document, you will need to upload a product list. This must be in excel format. The maximum file size is 10 megabytes (MB).</p>
+
+
+<!--    <label class="govuk-label" for="myFile">Upload a file</label>-->
+<!--    <input class="govuk-file-upload" type="file" id="myFile" name="filename">-->
+
+<div class="govuk-form-group">
+  <label class="nhsuk-label" for="file-upload-1">
+    Upload a file
+  </label>
+  <input class="govuk-file-upload" id="file-upload-1" name="fileUpload1" type="file">
+</div>
+
+  <a class="nhsuk-button nhsuk-u-margin-top-6" href="file-upload2">Choose file and continue</a>
+
+<script>
+        let requestDate = document.getElementById("request-date");
+        var monthNames = ["January", "February", "March", "April", "May","June","July", "August", "September", "October", "November","December"];
+
+        var d = new Date();
+        var dayToday = d.getDate();
+        var monthToday = monthNames[d.getMonth()];
+        var yearToday = d.getFullYear();
+
+        requestDate.innerHTML = monthToday + ' ' + yearToday;
+</script>
+
+{% endblock %}

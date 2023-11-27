@@ -1,0 +1,43 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Quarterly collection - dropdown table
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-panel govuk-panel--confirmation nhsuk-u-margin-bottom-5">
+    <h1 class="govuk-panel__title" id="submission-detail">
+        Emails successfully sent
+    </h1>
+    <div class="govuk-panel__body">
+        5 additional suppliers have been sent an email with their own supplier template.
+    </div>
+</div>
+
+<h2>Next Steps</h2>
+<p id="next-steps">Continue to send out templates from the <a class="nhsuk-link nhsuk-link--no-visited-state" href="../product-list/additional-suppliers">additional suppliers page</a> or <a class="nhsuk-link nhsuk-link--no-visited-state" href="../product-list/supplier-contact">return to the request dashboard</a></p>
+
+<script>
+console.log(localStorage);
+
+var getProductName = localStorage.getItem("product-name");
+var getAssocProductName = localStorage.getItem("associated-product-name");
+var getProductStrength = localStorage.getItem("product-strength");
+var getProductMeasurement = localStorage.getItem("product-measurement");
+
+if (getProductName != null) {
+    document.getElementById("submission-detail").innerHTML = 'We have received your new product submission for review';
+    document.getElementById("next-steps").innerHTML = 'You will receive a response via email once we have reviewed your submission. It can take up to 2 weeks to accept the new product submission. The Meds team may be in contact with you through email to verify imagery or contents.';
+} else if (getAssocProductName != null) {
+    document.getElementById("submission-detail").innerHTML = 'We have received your new pack submission for review';
+    document.getElementById("next-steps").innerHTML = 'You will receive a response via email once we have reviewed your submission. It can take up to 2 weeks to accept the new pack submission. The Meds team may be in contact with you through email to verify imagery or contents.';
+}
+
+
+
+
+</script>
+
+
+{% endblock %}

@@ -1,0 +1,87 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Quarterly collection - dropdown table
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-back-link nhsuk-u-margin-bottom-8">
+    <a class="nhsuk-back-link__link" href="card-1">
+        <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+            <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+        </svg>
+        Go back to review chosen suppliers</a>
+</div>
+
+
+                    <div class="nhsuk-form-group">
+                        <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+                            <legend class="nhsuk-fieldset__legend nhsuk-label--xl">
+                                <h1 class="nhsuk-fieldset__heading">
+                                    <span class="nhsuk-caption-l">
+     <span id="request-date">October 2023</span> - fourth request
+     <span class="nhsuk-u-visually-hidden">: </span>
+   </span>
+                                    Do you want to remove AAH Pharmaceuticals Ltd from the list?
+                                </h1>
+                            </legend>
+
+                            <div class="nhsuk-radios">
+
+                                <div class="nhsuk-radios__item">
+                                    <input class="nhsuk-radios__input" id="example-hints-1" name="example-hints" type="radio" value="yes" aria-describedby="example-hints-1-item-hint">
+                                    <label class="nhsuk-label nhsuk-radios__label" for="example-hints-1">
+                                        Yes
+                                    </label>
+                                    <div class="nhsuk-hint nhsuk-radios__hint" id="example-hints-1-item-hint">
+                                        This will remove AAH Pharmaceuticals Ltd from the list and cannot be undone.
+                                    </div>
+                                </div>
+
+                                <div class="nhsuk-radios__item">
+                                    <input class="nhsuk-radios__input" id="example-hints-2" name="example-hints" type="radio" value="no" aria-describedby="example-hints-2-item-hint">
+                                    <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
+                                        No
+                                    </label>
+                                    <div class="nhsuk-hint nhsuk-radios__hint" id="example-hints-2-item-hint">
+                                        Do not remove AAH Pharmaceuticals Ltd from the list.
+                                    </div>
+                                </div>
+
+                            </div>
+                        </fieldset>
+                    </div>
+                    <a class="nhsuk-button" href="#" id="continue-button"
+                       onclick="deleteProduct()">Save and continue</a>
+<script>
+
+    function deleteProduct() {
+    let doesNeedRemovingRadioButtons = document.getElementsByName("example-hints");
+
+    for (var radio of doesNeedRemovingRadioButtons) {
+      if (radio.checked) {
+       if (radio.value == 'yes') {
+          localStorage.setItem("remove-product", "yes");
+          document.getElementById("continue-button").href = "card-2";
+       }
+       if (radio.value == 'no') {
+          localStorage.setItem("remove-product", "no");
+          document.getElementById("continue-button").href = "card-1";
+       }
+      }
+    }
+  };
+
+  let requestDate = document.getElementById("request-date");
+        var monthNames = ["January", "February", "March", "April", "May","June","July", "August", "September", "October", "November","December"];
+
+        var d = new Date();
+        var dayToday = d.getDate();
+        var monthToday = monthNames[d.getMonth()];
+        var yearToday = d.getFullYear();
+
+        requestDate.innerHTML = monthToday + ' ' + yearToday;
+
+
+</script>
+{% endblock %}
