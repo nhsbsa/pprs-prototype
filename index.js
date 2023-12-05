@@ -342,7 +342,13 @@ app.get('/pcp-prototype-version-3/supplier-area/edit-email-group-type', (req, re
 app.get('/pcp-prototype-version-3/supplier-area/new-supplier-info-updated', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/new-supplier-info-updated') });
 app.get('/pcp-prototype-version-3/supplier-area/supplier-info-contact-updated', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/supplier-info-contact-updated') });
 app.get('/pcp-prototype-version-3/supplier-area/add-email-group-type', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/add-email-group-type') });
-
+app.get('/pcp-prototype-version-3/supplier-area/supplier-type-select', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/supplier-type-select') });
+app.get('/pcp-prototype-version-3/supplier-area/moved-main-supplier', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/moved-main-supplier') });
+app.get('/pcp-prototype-version-3/supplier-area/supplier-info-notes', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/supplier-info-notes') });
+app.get('/pcp-prototype-version-3/supplier-area/supplier-info-add-notes', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/supplier-info-add-notes') });
+app.get('/pcp-prototype-version-3/supplier-area/edit-note-page', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/edit-note-page') });
+app.get('/pcp-prototype-version-3/supplier-area/add-additional-notes', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/add-additional-notes') });
+app.get('/pcp-prototype-version-3/supplier-area/Supplier-info-second-note', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/Supplier-info-second-note') });
 
 app.get('/pcp-prototype-version-3/supplier-area-additional/add-supplier-directory', (req, res) => { res.render('pcp-prototype-version-3/supplier-area-additional/add-supplier-directory') });
 app.get('/pcp-prototype-version-3/supplier-area-additional/add-suppliers-info', (req, res) => { res.render('pcp-prototype-version-3/supplier-area-additional/add-suppliers-info') });
@@ -369,6 +375,13 @@ app.get('/pcp-prototype-version-3/supplier-area-additional/add-email-group-type'
 app.get('/pcp-prototype-version-3/supplier-area-additional/add-new-contact-details', (req, res) => { res.render('pcp-prototype-version-3/supplier-area-additional/add-new-contact-details') });
 app.get('/pcp-prototype-version-3/supplier-area-additional/edit-new-additional-supplier-name', (req, res) => { res.render('pcp-prototype-version-3/supplier-area-additional/edit-new-additional-supplier-name') });
 app.get('/pcp-prototype-version-3/supplier-area-additional/edit-add-email-group-type', (req, res) => { res.render('pcp-prototype-version-3/supplier-area-additional/edit-add-email-group-type') });
+app.get('/pcp-prototype-version-3/supplier-area-additional/Additional-supplier-type-select', (req, res) => { res.render('pcp-prototype-version-3/supplier-area-additional/Additional-supplier-type-select') });
+app.get('/pcp-prototype-version-3/supplier-area-additional/moved-add-supplier', (req, res) => { res.render('pcp-prototype-version-3/supplier-area-additional/moved-add-supplier') });
+app.get('/pcp-prototype-version-3/supplier-area-additional/additional-add-notes', (req, res) => { res.render('pcp-prototype-version-3/supplier-area-additional/additional-add-notes') });
+app.get('/pcp-prototype-version-3/supplier-area-additional/add-suppliers-added-notes', (req, res) => { res.render('pcp-prototype-version-3/supplier-area-additional/add-suppliers-added-notes') });
+app.get('/pcp-prototype-version-3/supplier-area-additional/additional-info-second-note', (req, res) => { res.render('pcp-prototype-version-3/supplier-area-additional/additional-info-second-note.html') });
+app.get('/pcp-prototype-version-3/supplier-area-additional/add-additional-notes', (req, res) => { res.render('pcp-prototype-version-3/supplier-area-additional/add-additional-notes') });
+app.get('/pcp-prototype-version-3/supplier-area-additional/additional-edit-notes-page', (req, res) => { res.render('pcp-prototype-version-3/supplier-area-additional/additional-edit-notes-page') });
 
 
 

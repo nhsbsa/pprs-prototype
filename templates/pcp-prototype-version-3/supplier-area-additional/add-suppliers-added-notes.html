@@ -7,7 +7,7 @@ Quarterly collection - dropdown table
 {% block content %}
 <div class="nhsuk-back-link">
 
-    <a class="nhsuk-back-link__link" href="/pcp-prototype-version-3/supplier-area-additional/add-supplier-directory">
+    <a class="nhsuk-back-link__link" href="/pcp-prototype-version-3/supplier-area-additional/add-suppliers-info">
         <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
             <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
         </svg>
@@ -124,20 +124,42 @@ Quarterly collection - dropdown table
             <hr aria-hidden="true">
 
             <h2 Class="nhsuk-u-margin-bottom-5">Supplier notes</h2>
-            <P Class="nhsuk-u-margin-bottom-5"  >There are currently no notes added to this supplier </P>
+            <details class="nhsuk-details nhsuk-expander">
+                <summary class="nhsuk-details__summary">
+    <span class="nhsuk-details__summary-text">
+      Supplier contact away
+    </span>
+                </summary>
+                <div class="nhsuk-details__text">
+                    <ul>
+                        <li>Joe Bloggs will be OOO from friday 10th April 2023</li>
+                        <li>John Smith will be providing cover till there return 20th April 2023
+                            <!--              <a href=>Edit Notes</a>-->
+                        </li>
+                    </ul>
+                    <hr aria-hidden="true">
+                    <p>This note was added on the 10th april 2023 by JHM:</p>
+                    <div class="nhsuk-action-link">
+                        <a class="nhsuk-action-link__link" href="/pcp-prototype-version-3/supplier-area-additional/additional-edit-notes-page">
+                            <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+                            </svg>
+                            <span class="nhsuk-action-link__text">Edit note</span>
+                        </a>
+                    </div>
+                </div>
+
+            </details>
             <div class="nhsuk-action-link">
-                <a class="nhsuk-action-link__link" href="/pcp-prototype-version-3/supplier-area-additional/additional-add-notes">
+                <a class="nhsuk-action-link__link" href="/pcp-prototype-version-3/supplier-area-additional/add-additional-notes">
                     <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
                         <path d="M0 0h24v24H0z" fill="none"></path>
                         <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
                     </svg>
-                    <span class="nhsuk-action-link__text">Add new notes</span>
+                    <span class="nhsuk-action-link__text">Add another note</span>
                 </a>
             </div>
-
-
-
-
         </div>
     </main>
 
