@@ -1,0 +1,60 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Quarterly collection - dropdown table
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-back-link">
+
+    <a class="nhsuk-back-link__link" href="/pcp-prototype-version-3/homepage">
+        <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+            <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+        </svg>
+        Go back to Homepage</a>
+</div>
+
+<div class="nhsuk-width-container">
+    <!--    <div class="nhsuk-grid-row">-->
+    <!--        <div class="nhsuk-grid-column-full">-->
+
+    <h1>
+        Select Suppliers
+    </h1>
+
+
+    <ul class="nhsuk-grid-row nhsuk-card-group">
+
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+            <div class="nhsuk-card nhsuk-card--clickable">
+                <div class="nhsuk-card__content">
+                    <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                        <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="/pcp-prototype-version-3/supplier-area/main-supplier-directory">Main Suppliers </a>
+                    </h2>
+                    <p class="nhsuk-card__description">View, edit or delete main suppliers.</p>
+                </div>
+            </div>
+
+        </li>
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+            <div class="nhsuk-card nhsuk-card--clickable">
+                <div class="nhsuk-card__content">
+                    <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                        <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="/pcp-prototype-version-3/supplier-area/add-supplier-directory">Additional suppliers</a>
+                    </h2>
+                    <p class="nhsuk-card__description">View, edit or delete additional suppliers.</p>
+                </div>
+            </div>
+
+        </li>
+
+    </ul>
+
+</div>
+
+<script>
+    console.log(localStorage);
+</script>
+{% endblock %}
