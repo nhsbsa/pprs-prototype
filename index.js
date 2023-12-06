@@ -415,6 +415,8 @@ app.get('/pcp-prototype-version-4/product-list/main-suppliers', (req, res) => { 
 app.get('/pcp-prototype-version-4/product-list/main-suppliers-after-group', (req, res) => { res.render('pcp-prototype-version-4/product-list/main-suppliers-after-group') });
 app.get('/pcp-prototype-version-4/product-list/main-suppliers-without-dash', (req, res) => { res.render('pcp-prototype-version-4/product-list/main-suppliers-without-dash') });
 app.get('/pcp-prototype-version-4/product-list/supplier-contact', (req, res) => { res.render('pcp-prototype-version-4/product-list/supplier-contact') });
+app.get('/pcp-prototype-version-4/product-list/supplier-deadline-date', (req, res) => { res.render('pcp-prototype-version-4/product-list/supplier-deadline-date') });
+app.get('/pcp-prototype-version-4/product-list/supplier-deadline-time', (req, res) => { res.render('pcp-prototype-version-4/product-list/supplier-deadline-time') });
 app.get('/pcp-prototype-version-4/product-list/supplier-contact-pending', (req, res) => { res.render('pcp-prototype-version-4/product-list/supplier-contact-pending') });
 app.get('/pcp-prototype-version-4/product-list/additional-suppliers', (req, res) => { res.render('pcp-prototype-version-4/product-list/additional-suppliers') });
 app.get('/pcp-prototype-version-4/product-list/delete-product', (req, res) => { res.render('pcp-prototype-version-4/product-list/delete-product') });
@@ -422,6 +424,8 @@ app.get('/pcp-prototype-version-4/product-list/loading-cdr-queries', (req, res) 
 app.get('/pcp-prototype-version-4/product-list/need-to-amend', (req, res) => { res.render('pcp-prototype-version-4/product-list/need-to-amend') });
 app.get('/pcp-prototype-version-4/product-list/send-template', (req, res) => { res.render('pcp-prototype-version-4/product-list/send-template') });
 app.get('/pcp-prototype-version-4/product-list/send-template-confirmation', (req, res) => { res.render('pcp-prototype-version-4/product-list/send-template-confirmation') });
+app.get('/pcp-prototype-version-4/product-list/complete-request', (req, res) => { res.render('pcp-prototype-version-4/product-list/complete-request') });
+app.get('/pcp-prototype-version-4/product-list/reason-for-completing-request', (req, res) => { res.render('pcp-prototype-version-4/product-list/reason-for-completing-request') });
 
 app.get('/pcp-prototype-version-4/historical-requests/option-1/historical-request', (req, res) => { res.render('pcp-prototype-version-4/historical-requests/option-1/historical-request') });
 app.get('/pcp-prototype-version-4/historical-requests/option-1/historical-requests-months', (req, res) => { res.render('pcp-prototype-version-4/historical-requests/option-1/historical-requests-months') });

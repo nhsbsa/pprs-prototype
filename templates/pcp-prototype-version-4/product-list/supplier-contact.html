@@ -14,16 +14,16 @@ Quarterly collection dropdown - expander list
         Go back to ongoing and new requests</a>
 </div>
 
-        <h1><span class="nhsuk-caption-l">
-     <span id="request-date">October 2023</span> - fourth request
+<h1><span class="nhsuk-caption-l">
+     <span id="request-date">October 2023</span> - 4th request
      <span class="nhsuk-u-visually-hidden">: </span>
    </span>
-            Request dashboard
-        </h1>
+    Request dashboard
+</h1>
 
 <h2>Summary</h2>
 
-<dl class="nhsuk-summary-list nhsuk-summary-list--no-border">
+<dl class="nhsuk-summary-list nhsuk-u-margin-bottom-8">
 
     <div class="nhsuk-summary-list__row">
         <dt class="nhsuk-summary-list__key">
@@ -31,6 +31,9 @@ Quarterly collection dropdown - expander list
         </dt>
         <dd class="nhsuk-summary-list__value">
             <span id="requested-date">24 October 2023</span>
+        </dd>
+        <dd class="nhsuk-summary-list__actions">
+            <span class="nhsuk-u-visually-hidden">Not able to change the date requested</span>
         </dd>
     </div>
 
@@ -40,6 +43,13 @@ Quarterly collection dropdown - expander list
         </dt>
         <dd class="nhsuk-summary-list__value">
             <span id="deadline-date">October 2023</span> at 5pm
+        </dd>
+        <dd class="nhsuk-summary-list__actions">
+
+            <a href="supplier-deadline-date">
+                Change<span class="nhsuk-u-visually-hidden"> supplier deadline</span>
+            </a>
+
         </dd>
     </div>
 
@@ -52,6 +62,9 @@ Quarterly collection dropdown - expander list
                 Ongoing
             </strong>
         </dd>
+        <dd class="nhsuk-summary-list__actions">
+            <span class="nhsuk-u-visually-hidden">Not able to change the request status</span>
+        </dd>
     </div>
 
     <div class="nhsuk-summary-list__row" id="cdr-yes-or-no">
@@ -60,6 +73,9 @@ Quarterly collection dropdown - expander list
         </dt>
         <dd class="nhsuk-summary-list__value">
             <span id="cdr-query">Yes </span>
+        </dd>
+        <dd class="nhsuk-summary-list__actions">
+            <span class="nhsuk-u-visually-hidden">Not able to change whether the Common Drug Reference (CDR) queries are complete</span>
         </dd>
     </div>
 </dl>
@@ -70,32 +86,32 @@ Quarterly collection dropdown - expander list
 
     <h2 class="nhsuk-u-margin-top-6">Product list</h2>
     <ul class="nhsuk-grid-row nhsuk-card-group">
-    <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+        <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
 
-        <div class="nhsuk-card nhsuk-card--clickable">
-            <div class="nhsuk-card__content">
-                <h2 class="nhsuk-card__heading nhsuk-heading-m">
-                    <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="product-list-results-edit" id="product-list-link">DHSC product list</a>
-                </h2>
-                <p class="nhsuk-card__description" id="product-list-text">View, add or remove items from the product list.</p>
+            <div class="nhsuk-card nhsuk-card--clickable">
+                <div class="nhsuk-card__content">
+                    <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                        <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="product-list-results-edit" id="product-list-link">DHSC product list</a>
+                    </h2>
+                    <p class="nhsuk-card__description" id="product-list-text">View, add or remove items from the product list.</p>
 
+                </div>
             </div>
-        </div>
 
-    </li>
+        </li>
         <li class="nhsuk-grid-column-one-half nhsuk-card-group__item hide-area" id="main-list-area">
 
-        <div class="nhsuk-card nhsuk-card--clickable">
-            <div class="nhsuk-card__content">
-                <h2 class="nhsuk-card__heading nhsuk-heading-m">
-                    <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="product-list-results-master">Processed product list</a>
-                </h2>
-                <p class="nhsuk-card__description">View the product list containing all information from the CDR queries.</p>
+            <div class="nhsuk-card nhsuk-card--clickable">
+                <div class="nhsuk-card__content">
+                    <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                        <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="product-list-results-master">Processed product list</a>
+                    </h2>
+                    <p class="nhsuk-card__description">View the product list containing all information from the CDR queries.</p>
 
+                </div>
             </div>
-        </div>
 
-    </li>
+        </li>
     </ul>
 
     <div class="nhsuk-action-link nhsuk-u-margin-bottom-7" id="cdr-query-area">
@@ -110,17 +126,10 @@ Quarterly collection dropdown - expander list
 
     <div class="hide-area" id="supplier-area">
         <h2>Suppliers</h2>
-        <p>To continue with this request, send templates to all main and additional
-            suppliers. To do this, visit each supplier area and either:</p>
-        <ul class="nhsuk-list nhsuk-list--bullet">
-            <li>send the template to a group of suppliers</li>
-            <li>or download the template and send to individual suppliers using your own
-                email</li>
-        </ul>
-
+        <p>To progress with this request, you must send templates to all main and additional suppliers. This can be achieved in two ways. You can send the same template to a group of suppliers, or download the template and send to individual suppliers via email. </p>
         <p>You can track the supplier correspondence in each section.</p>
 
-<!--        <p class="nhsuk-u-margin-bottom-6">If the main or additional supplier template does not fit with the supplier  <a class="nhsuk-link nhsuk-link&#45;&#45;no-visited-state" href="#">create a bespoke supplier template</a></p>-->
+        <!--        <p class="nhsuk-u-margin-bottom-6">If the main or additional supplier template does not fit with the supplier  <a class="nhsuk-link nhsuk-link&#45;&#45;no-visited-state" href="#">create a bespoke supplier template</a></p>-->
 
         <h3>Main suppliers</h3>
         <ul class="nhsuk-grid-row nhsuk-card-group">
@@ -262,7 +271,12 @@ Quarterly collection dropdown - expander list
 
 </div>
 
-<a class="nhsuk-button" href="../new-request/current-requests" id="save-and-exit">Save and exit</a>
+<div class="nhsuk-inset-text">
+    <span class="nhsuk-u-visually-hidden">Information: </span>
+    <p>If not all suppliers have responded, but you need to close this request you can <a class="nhsuk-link nhsuk-link--no-visited-state" href="reason-for-completing-request" > complete the request </a></p>
+</div>
+
+<a class="nhsuk-button" href="../new-request/current-requests" id="save-and-exit">Save and exit to ongoing and new requests</a>
 
 <script>
 
@@ -429,13 +443,17 @@ Quarterly collection dropdown - expander list
 
         var dayToday = d.getDate();
         var dplus2 = new Date(d.setDate(d.getDate() + 2));
-        var monthToday = monthNames[d.getMonth()];
+        var monthToday = monthNames[d.getMonth() -1];
+        var dateRequestedMonth = monthNames[dplus2.getMonth()]
         var yearToday = d.getFullYear();
+
+        console.log('dplus2', dplus2.getDate() );
+        console.log('monthToday', monthToday);
+        console.log('dplus2', dplus2.getFullYear() );
 
         requestDate.innerHTML = monthToday + ' ' + yearToday;
         dateRequested.innerHTML = dayToday + ' ' + monthToday + ' ' + yearToday;
-        deadlineDate.innerHTML = dplus2.getDate() + ' ' + monthToday + ' ' + yearToday;
-
+        deadlineDate.innerHTML = (dplus2.getDate() < 10 ? '0' : '') + dplus2.getDate() + ' ' + dateRequestedMonth + ' ' + yearToday;
 
 </script>
 
