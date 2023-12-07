@@ -48,7 +48,7 @@ Quarterly collection - dropdown table
             <th role="columnheader" class="" scope="col">
                 Status
             </th>
-            <th role="columnheader" class="" scope="col">
+            <th role="columnheader" class="hide-from-users" scope="col">
                 Action
             </th>
         </tr>
@@ -71,7 +71,7 @@ Quarterly collection - dropdown table
             <td role="cell" class="nhsuk-table__cell">
                 <span class="nhsuk-table-responsive__heading">Status </span><strong class="nhsuk-tag">Active</strong>
             </td>
-            <td role="cell" class="nhsuk-table__cell">
+            <td role="cell" class="nhsuk-table__cell hide-from-users">
                 <span class="nhsuk-table-responsive__heading">Action </span><a href="edit-all-users/summary">Edit</a>
             </td>
         </tr>
@@ -92,7 +92,7 @@ Quarterly collection - dropdown table
             <td role="cell" class="nhsuk-table__cell">
                 <span class="nhsuk-table-responsive__heading">Status </span><strong class="nhsuk-tag--grey nhsuk-tag">Inactive</strong>
             </td>
-            <td role="cell" class="nhsuk-table__cell">
+            <td role="cell" class="nhsuk-table__cell hide-from-users">
                 <span class="nhsuk-table-responsive__heading">Action </span><a>Edit</a>
             </td>
         </tr>
@@ -114,7 +114,7 @@ Quarterly collection - dropdown table
             <td role="cell" class="nhsuk-table__cell">
                 <span class="nhsuk-table-responsive__heading">Status </span><strong class="nhsuk-tag nhsuk-tag--grey">Inactive</strong>
             </td>
-            <td role="cell" class="nhsuk-table__cell">
+            <td role="cell" class="nhsuk-table__cell hide-from-users">
                 <span class="nhsuk-table-responsive__heading">Action </span><a>Edit</a>
             </td>
         </tr>
@@ -135,14 +135,14 @@ Quarterly collection - dropdown table
             <td role="cell" class="nhsuk-table__cell">
                 <span class="nhsuk-table-responsive__heading">Status </span><strong class="nhsuk-tag">Active</strong>
             </td>
-            <td role="cell" class="nhsuk-table__cell">
+            <td role="cell" class="nhsuk-table__cell hide-from-users">
                 <span class="nhsuk-table-responsive__heading">Action </span><a>Edit</a>
             </td>
         </tr>
         </tbody>
     </table>
 
-    <div class="nhsuk-action-link">
+    <div class="nhsuk-action-link" id="add-user-account">
         <a class="nhsuk-action-link__link" href="new-user/forename">
             <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
                 <path d="M0 0h24v24H0z" fill="none"></path>
@@ -157,5 +157,22 @@ Quarterly collection - dropdown table
 
 <script>
     console.log(localStorage);
+
+    let actionColumn = document.getElementsByClassName("hide-from-users");
+    console.log(actionColumn);
+
+    if (localStorage.getItem("admin-user") === "no") {
+        document.getElementById("add-user-account").classList.add("nhsuk-u-visually-hidden");
+
+    for (let i = 0; i < actionColumn.length; i++) {
+        // actionColumn[i].style.display = "none";
+        actionColumn[i].classList.add("nhsuk-u-visually-hidden");
+      }
+    } else if (localStorage.getItem("admin-user") === "yes") {
+        document.getElementById("add-user-account").classList.remove("nhsuk-u-visually-hidden");
+        for (let i = 0; i < actionColumn.length; i++) {
+            actionColumn[i].classList.remove("nhsuk-u-visually-hidden");
+        }
+    }
 </script>
 {% endblock %}
