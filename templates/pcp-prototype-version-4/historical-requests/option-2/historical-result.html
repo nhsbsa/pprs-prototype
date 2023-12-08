@@ -5,49 +5,23 @@ Quarterly collection dropdown - expander list
 {% endblock %}
 
 {% block navContent %}
-
-<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
-    <div class="nhsuk-width-container">
-        <ol class="nhsuk-breadcrumb__list">
-            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../../homepage">Price concessions homepage</a></li>
-            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../../request-list">Requests</a></li>
-            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="option-2-historical">Select the time frame</a></li>
-
-        </ol>
-        <p class="nhsuk-breadcrumb__back">
-            <a class="nhsuk-breadcrumb__backlink" href="/level-one/level-two/level-three">
-                <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
-                Select the time frame
-            </a>
-        </p>
-    </div>
-</nav>
-
-<!--<ol class="nhsuk-breadcrumb__list">-->
-<!--    <li class="nhsuk-breadcrumb__item">-->
-<!--        <a class="nhsuk-breadcrumb__link" href="/pcp-prototype/option-2-historical">Historical request</a>-->
-<!--    </li>-->
-<!--</ol>-->
-<!--<p class="nhsuk-breadcrumb__back">-->
-<!--    <a class="nhsuk-breadcrumb__backlink" href="/pcp-prototype/homepage">-->
-<!--        <span class="nhsuk-u-visually-hidden">Home</span>-->
-<!--        Home-->
-<!--    </a>-->
-<!--</p>-->
-
 {% endblock %}
 
 {% block content %}
 
-
 <div class="nhsuk-width-container ">
-    <div class="nhsuk-grid-row">
-        <div class="nhsuk-grid-column-full">
-            <h1>Requests for March 2023</h1>
+    <div class="nhsuk-back-link">
 
-<!--            <div class="nhsuk-inset-text">-->
-<!--                <span class="nhsuk-u-visually-hidden">Information: </span>-->
-<!--            </div>-->
+        <a class="nhsuk-back-link__link nhsuk-u-margin-bottom-5" href="option-2-historical">
+            <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+                <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+            </svg>
+            Go back to Select a year and month to search for requests</a>
+    </div>
+
+            <h1><span class="nhsuk-caption-l">Historical requests
+     <span class="nhsuk-u-visually-hidden">: </span>
+   </span>Requests for March 2023</h1>
 
             <div class="nhsuk-body-m flex--space-between" style="display: flex">
                 <div class="nhsuk-u-visually-hidden">Currently viewing</div>
@@ -169,12 +143,7 @@ Quarterly collection dropdown - expander list
 
                 </tbody>
             </table>
-
-<!--            <a class="nhsuk-button" href="/pcp-prototype/option-page">-->
-<!--                <span class="nhsuk-u-visually-hidden">Home</span>-->
-<!--                Back-->
-<!--            </a>-->
+    <p>If you are finished browsing this historical request you can <a href="#">return to the Price Concessions homepage</a></p>
         </div>
-    </div>
-</div>
+
 {% endblock %}
