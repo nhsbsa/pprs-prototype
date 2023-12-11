@@ -210,7 +210,7 @@
       </tr>
       <tr>
         <td>PCP homepage version 4</td>
-        <td><a href="/pcp-prototype-version-4/choose-option">Access PCP homepage version 4</a></td>
+        <td><a href="/pcp-prototype-version-4/choose-option" onclick="saveVersionFour()">Access PCP homepage version 4</a></td>
       </tr>
 <!--        <td>Navigate through cleaner screens for each step</td>-->
 <!--        <td><a href="/pcp-prototype/quarterly-multiple-screens">Multiple screens journey</a></td>-->
@@ -231,4 +231,10 @@
 
 
 </div>
+
+<script>
+  function saveVersionFour() {
+     localStorage.setItem("version-four", "yes");
+  }
+</script>
 {% endblock %}

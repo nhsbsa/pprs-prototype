@@ -57,13 +57,11 @@ Quarterly collection - dropdown table
 
 
     function setDHLogin() {
-      localStorage.clear()
       localStorage.setItem("dh-login", "yes");
       localStorage.removeItem("meds-login");
     }
 
     function setMedsLoginNew() {
-      localStorage.clear()
       localStorage.setItem("meds-login", "yes");
       localStorage.removeItem("dh-login");
     }
