@@ -180,6 +180,7 @@ Quarterly collection - dropdown table
 
     if (localStorage.getItem("new-user-added") === "yes") {
        document.getElementById("remove-hidden").classList.remove("nhsuk-u-visually-hidden");
+       document.getElementById("pageAndResultCount").innerHTML = "Page 1 of 1 (5 results)";
     }
 </script>
 {% endblock %}

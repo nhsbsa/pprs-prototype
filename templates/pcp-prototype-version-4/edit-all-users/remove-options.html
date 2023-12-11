@@ -13,6 +13,7 @@ Quarterly collection - dropdown table
         </svg>
         Go back to edit user details</a>
 </div>
+
 <div class="nhsuk-width-container">
 <h1>
     Do you want to delete this user?
@@ -41,13 +42,27 @@ Quarterly collection - dropdown table
             </div>
 
     <div class="nhsuk-u-padding-top-4">
-        <a class="nhsuk-button" href="user-deleted">Save</a>
+        <a class="nhsuk-button" href="#" id="save-button" onclick="radioQuestion()">Save</a>
     </div>
-
-
 </div>
-    </div>
+
 <script>
-    console.log(localStorage);
+
+    function radioQuestion() {
+    let radioButtons = document.getElementsByName("example-hints");
+    let saveButton = document.getElementById("save-button");
+     console.log('radioButtons', radioButtons);
+
+     for (let i = 0; i < radioButtons.length; i++) {
+         if (radioButtons[i].checked) {
+            if (radioButtons[i].value == "no") {
+                saveButton.href = "summary";
+            } else {
+                saveButton.href = "../account-area-all";
+            }
+         }
+     }
+   }
+
 </script>
 {% endblock %}
