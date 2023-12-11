@@ -19,8 +19,8 @@ Quarterly collection - dropdown table
     <!--    <div class="nhsuk-grid-row">-->
     <!--        <div class="nhsuk-grid-column-full">-->
 
-    <h1>
-        User accounts (administrator)
+    <h1 id="heading-user-accounts">
+        User accounts
     </h1>
 
     <div class="nhsuk-body-m flex--space-between" style="display: flex">
@@ -124,7 +124,7 @@ Quarterly collection - dropdown table
                 <span class="nhsuk-table-responsive__heading">Action </span>Edit 
             </td>
         </tr>
-        <tr role="row" class="nhsuk-table__row">
+        <tr role="row" class="nhsuk-table__row nhsuk-u-visually-hidden" id="remove-hidden">
             <td role="cell" class="nhsuk-table__cell">
                 <span class="nhsuk-table-responsive__heading">First name </span>Matthew Proctor-Leake
             </td>
@@ -172,9 +172,14 @@ Quarterly collection - dropdown table
       }
     } else if (localStorage.getItem("admin-user") === "yes") {
         document.getElementById("add-user-account").classList.remove("nhsuk-u-visually-hidden");
+        document.getElementById("heading-user-accounts").innerHTML = "User accounts (administrator)";
         for (let i = 0; i < actionColumn.length; i++) {
             actionColumn[i].classList.remove("nhsuk-u-visually-hidden");
         }
+    }
+
+    if (localStorage.getItem("new-user-added") === "yes") {
+       document.getElementById("remove-hidden").classList.remove("nhsuk-u-visually-hidden");
     }
 </script>
 {% endblock %}
