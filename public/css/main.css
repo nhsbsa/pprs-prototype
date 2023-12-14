@@ -7824,3 +7824,13 @@ display: inline-block !important;
   text-decoration: underline !important;
 }
 
+@media (min-width: 40.0625em) {
+  .remove-button {
+    float: right;
+  }
+}
+
+.remove-button {
+   width: auto !important;
+}
+

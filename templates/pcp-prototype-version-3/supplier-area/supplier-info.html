@@ -7,11 +7,11 @@ Quarterly collection - dropdown table
 {% block content %}
 <div class="nhsuk-back-link">
 
-    <a class="nhsuk-back-link__link" href="/pcp-prototype-version-3/supplier-area/main-supplier-directory">
+    <a class="nhsuk-back-link__link" href="main-supplier-directory">
         <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
             <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
         </svg>
-        Go back to Main supplier directory</a>
+        Go back to Main suppliers directory</a>
 </div>
 
 <div class="nhsuk-width-container">
@@ -21,15 +21,18 @@ Quarterly collection - dropdown table
    <main class="nhsuk-main-wrapper" id="maincontent" role="main">
         <div class="nhsuk-width-container">
 
-            <h1>Main supplier details
-            </h1>
+            <h1><span class="nhsuk-caption-l">
+  Main supplier
+</span>AAH Pharmaceuticals Ltd</h1>
 
             <div class="nhsuk-inset-text">
                 <span class="nhsuk-u-visually-hidden">Information: </span>
-                <p>If the supplier is not needed you can <a href="/pcp-prototype-version-3/supplier-area/confirmation-page" class="nhsuk-link nhsuk-link--no-visited-state">remove the supplier</a></p>
+                <p>If the supplier is not needed you can <a href="main-suppliers/view/confirmation-page" class="nhsuk-link nhsuk-link--no-visited-state">remove the supplier</a></p>
             </div>
 
-            <dl class="nhsuk-summary-list">
+            <h2>Supplier details</h2>
+
+            <dl class="nhsuk-summary-list nhsuk-u-margin-bottom-8">
 
                 <div class="nhsuk-summary-list__row">
                     <dt class="nhsuk-summary-list__key">
@@ -41,7 +44,7 @@ Quarterly collection - dropdown table
 
                     <dd class="nhsuk-summary-list__actions">
 
-                        <a class="nhsuk-link nhsuk-link--no-visited-state" href="/pcp-prototype-version-3/supplier-area/edit-supplier-name">
+                        <a class="nhsuk-link nhsuk-link--no-visited-state" href="main-suppliers/view/edit-supplier-name">
                             Edit<span class="nhsuk-u-visually-hidden"> user</span></a>
 
                     </dd>
@@ -58,7 +61,7 @@ Quarterly collection - dropdown table
 
                     <dd class="nhsuk-summary-list__actions">
 
-                        <a class="nhsuk-link nhsuk-link--no-visited-state" href="/pcp-prototype-version-3/supplier-area/supplier-type-select">
+                        <a class="nhsuk-link nhsuk-link--no-visited-state" href="main-suppliers/view/supplier-type-select">
                             Edit<span class="nhsuk-u-visually-hidden"> user</span></a>
 
                     </dd>
@@ -67,11 +70,12 @@ Quarterly collection - dropdown table
 
             </dl>
 
+            <h2>Contacts</h2>
 
+            <p class="nhsuk-u-margin-bottom-5">If any of the contact information is incorrect, or you need to remove a contact then you can <a class="nhsuk-link nhsuk-link--no-visited-state" href="main-suppliers/view/edit-contacts"> edit the supplier contacts</a></p>
 
-
-            <table class="nhsuk-table">
-                <caption class="nhsuk-table__caption">Supplier contacts</caption>
+            <table class="nhsuk-table nhsuk-table-responsive nhsuk-u-margin-bottom-5">
+                <caption class="nhsuk-table__caption">Contact information for AAH Pharmaceuticals Ltd</caption>
                 <thead role="rowgroup" class="nhsuk-table__head">
                 <tr role="row">
                     <th role="columnheader" class="" scope="col">
@@ -86,53 +90,75 @@ Quarterly collection - dropdown table
                     <th role="columnheader" class="" scope="col">
                         Status
                     </th>
-                    <th role="columnheader" class="" scope="col">
-                        Action
-                    </th>
+<!--                    <th role="columnheader" class="" scope="col">-->
+<!--                        Action-->
+<!--                    </th>-->
                 </tr>
                 </thead>
                 <tbody class="nhsuk-table__body">
                 <tr role="row" class="nhsuk-table__row">
-                    <td class="nhsuk-table__cell">John Smith</td>
-                    <td class="nhsuk-table__cell ">john.smith@nhs.net</td>
-                    <td class="nhsuk-table__cell ">0800 123456</td>
-                    <td class="nhsuk-table__cell"><strong class="nhsuk-tag">Active</strong></td>
-                    <td class="nhsuk-table__cell "><a class="nhsuk-link nhsuk-link--no-visited-state" href="/pcp-prototype-version-3/supplier-area/edit-main-suppliers">
-                            Edit or remove<span class="nhsuk-u-visually-hidden"> user</span></a>
-                    </td>
+                    <td class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Name </span>
+                        John Smith</td>
+                    <td class="nhsuk-table__cell ">
+                        <span class="nhsuk-table-responsive__heading">Email</span>
+                        john.smith@nhs.net</td>
+                    <td class="nhsuk-table__cell ">
+                        <span class="nhsuk-table-responsive__heading">Phone number</span>
+                        0800 1234567</td>
+                    <td class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Status</span>
+                        <strong class="nhsuk-tag">Active</strong></td>
+<!--                    <td class="nhsuk-table__cell "><a class="nhsuk-link nhsuk-link&#45;&#45;no-visited-state" href="/pcp-prototype-version-3/supplier-area/edit-main-suppliers">-->
+<!--                            Edit or remove<span class="nhsuk-u-visually-hidden"> user</span></a>-->
+<!--                    </td>-->
                 </tr>
                 <tr role="row" class="nhsuk-table__row">
-                    <td class="nhsuk-table__cell">Ann Other</td>
-                    <td class="nhsuk-table__cell ">ann.other@nhs.net</td>
-                    <td class="nhsuk-table__cell ">12345 678910</td>
-                    <td class="nhsuk-table__cell"><strong class="nhsuk-tag">Active</strong></td>
-                    <td class="nhsuk-table__cell "><a class="nhsuk-link nhsuk-link--no-visited-state" href="#">
-                        Edit or remove<span class="nhsuk-u-visually-hidden"> user</span></a>
+                    <td class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Name </span>
+                        Ann Other</td>
+                    <td class="nhsuk-table__cell "><span class="nhsuk-table-responsive__heading">Email</span>
+                        ann.other@nhs.net</td>
+                    <td class="nhsuk-table__cell ">
+                        <span class="nhsuk-table-responsive__heading">Phone number</span>
+                        <span class="nhsuk-u-visually-hidden">No phone number exists</span>
                     </td>
+                    <td class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Status</span>
+                        <strong class="nhsuk-tag">Active</strong></td>
+<!--                    <td class="nhsuk-table__cell "><a class="nhsuk-link nhsuk-link&#45;&#45;no-visited-state" href="#">-->
+<!--                        Edit or remove<span class="nhsuk-u-visually-hidden"> user</span></a>-->
+<!--                    </td>-->
                 </tr>
                 <tr role="row" class="nhsuk-table__row">
-                    <td class="nhsuk-table__cell">Sam Wannelse</td>
-                    <td class="nhsuk-table__cell ">sam.wannelse@.net</td>
-                    <td class="nhsuk-table__cell ">01234 567899</td>
-                    <td class="nhsuk-table__cell"><strong class="nhsuk-tag nhsuk-tag--grey">Inactive</strong></td>
-                    <td class="nhsuk-table__cell "><a class="nhsuk-link nhsuk-link--no-visited-state" href="#">
-                        Edit or remove
-                        <span class="nhsuk-u-visually-hidden"> user</span></a>
-                    </td>
+                    <td class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Name </span>
+                        Sam Wannelse</td>
+                    <td class="nhsuk-table__cell ">
+                        <span class="nhsuk-table-responsive__heading">Email</span>
+                        sam.wannelse@nhsbsa.nhs.uk</td>
+                    <td class="nhsuk-table__cell ">
+                        <span class="nhsuk-table-responsive__heading">Phone number</span>
+                        01234 567899</td>
+                    <td class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Status</span>
+                        <strong class="nhsuk-tag nhsuk-tag--grey">Inactive</strong></td>
+<!--                    <td class="nhsuk-table__cell "><a class="nhsuk-link nhsuk-link&#45;&#45;no-visited-state" href="#">-->
+<!--                        Edit or remove-->
+<!--                        <span class="nhsuk-u-visually-hidden"> user</span></a>-->
+<!--                    </td>-->
                 </tr>
                 </tbody>
             </table>
-            <div class="nhsuk-action-link">
-                <a class="nhsuk-action-link__link" href="/pcp-prototype-version-3/supplier-area/add-new-contact-details">
+            <div class="nhsuk-action-link nhsuk-u-margin-bottom-9">
+                <a class="nhsuk-action-link__link" href="main-suppliers/view/add-contact-first-name">
                     <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
                         <path d="M0 0h24v24H0z" fill="none"></path>
                         <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
                     </svg>
-                    <span class="nhsuk-action-link__text">Add new contact</span>
+                    <span class="nhsuk-action-link__text">Add a supplier contact</span>
                 </a>
             </div>
-
-            <hr aria-hidden="true">
 
 <h2 Class="nhsuk-u-margin-bottom-5">Supplier notes</h2>
             <P Class="nhsuk-u-margin-bottom-5"  >There are currently no notes added to this supplier </P>
@@ -171,5 +197,7 @@ Quarterly collection - dropdown table
 
 <script>
     console.log(localStorage);
+
+    localStorage.removeItem("added-from-list");
 </script>
 {% endblock %}

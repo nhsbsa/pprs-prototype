@@ -1,0 +1,77 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Quarterly collection - dropdown table
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-back-link nhsuk-u-margin-bottom-9">
+
+    <a class="nhsuk-back-link__link" href="add-new-suppliers-confirm">
+        <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+             aria-hidden="true" height="24" width="24">
+            <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+        </svg>
+        Go back to review supplier contact information</a>
+</div>
+
+
+    <div class="nhsuk-width-container">
+
+ <span class="nhsuk-caption-l">
+  Add a new main supplier
+</span>
+            <h1>
+                Do you need to add notes for this supplier?
+            </h1>
+            <div class="nhsuk-form-group">
+
+                    <div class="nhsuk-hint" id="contact-hint">
+                        Select one option
+                    </div>
+
+                    <div class="nhsuk-radios">
+
+                        <div class="nhsuk-radios__item">
+                            <input class="nhsuk-radios__input" id="contact-1" name="contact" type="radio" value="yes" aria-controls="conditional-contact-1" aria-expanded="false">
+                            <label class="nhsuk-label nhsuk-radios__label" for="contact-1">
+                                Yes
+                            </label>
+                        </div>
+
+                        <div class="nhsuk-radios__item">
+                            <input class="nhsuk-radios__input" id="contact-2" name="contact" type="radio" value="no" aria-controls="conditional-contact-2" aria-expanded="false">
+                            <label class="nhsuk-label nhsuk-radios__label" for="contact-2">
+                                No
+                            </label>
+                        </div>
+                    </div>
+            </div>
+
+            <a class="nhsuk-button nhsuk-u-margin-top-4" href="add-notes" onclick="redirectToSummary()" id="continue-button">
+                Save and continue
+            </a>
+    </div>
+
+
+
+<script>
+    console.log(localStorage);
+
+    function redirectToSummary() {
+    let radioButtons = document.getElementsByName("contact");
+
+    for (var radio of radioButtons) {
+      if (radio.checked) {
+       if (radio.value == 'yes') {
+          document.getElementById("continue-button").href = "add-notes";
+       }
+       if (radio.value == 'no') {
+          document.getElementById("continue-button").href = "supplier-info-updated";
+       }
+      }
+    }
+  };
+
+</script>
+{% endblock %}
