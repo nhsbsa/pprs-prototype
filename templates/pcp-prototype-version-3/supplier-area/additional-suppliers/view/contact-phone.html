@@ -7,22 +7,18 @@ Quarterly collection - dropdown table
 {% block content %}
 <div class="nhsuk-back-link nhsuk-u-margin-bottom-9">
 
-    <a class="nhsuk-back-link__link" href="add-contact-email">
+    <a class="nhsuk-back-link__link" href="edit-contacts">
         <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
              aria-hidden="true" height="24" width="24">
             <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
         </svg>
-        Go back to add a supplier contact - email address</a>
+        Go back to edit supplier contact information</a>
 </div>
 
     <div class="nhsuk-width-container">
 
- <span class="nhsuk-caption-l">
-  Add a new main supplier
-</span>
-            <h1>
-                Add a supplier contact - phone number
-            </h1>
+            <h1>Edit supplier contact - phone number</h1>
+
             <div class="nhsuk-form-group">
 
                 <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
@@ -67,18 +63,19 @@ Quarterly collection - dropdown table
 
             </div>
 
-            <a class="nhsuk-button nhsuk-u-margin-top-3" data-module="nhsuk-button" id="continue-button" href="add-contact-status">
+            <a class="nhsuk-button nhsuk-u-margin-top-4" data-module="nhsuk-button" id="continue-button" href="edit-contacts">
                 Save and continue
             </a>
+
     </div>
+
 
 <script>
     console.log(localStorage);
 
-    if (localStorage.getItem("phone") === "07700 900362") {
-           document.getElementById("email").value = "07700 900362";
+    if (localStorage.getItem("phone") === "0800 1234567") {
+           document.getElementById("email").value = "0800 1234567";
            document.getElementById("contact-1").checked = "checked";
-           document.getElementById("continue-button").href = "add-new-suppliers-confirm";
         }
 
 </script>

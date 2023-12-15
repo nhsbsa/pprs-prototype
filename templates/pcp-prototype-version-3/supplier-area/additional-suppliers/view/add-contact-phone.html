@@ -15,11 +15,8 @@ Quarterly collection - dropdown table
         Go back to add a supplier contact - email address</a>
 </div>
 
-    <div class="nhsuk-width-container">
 
- <span class="nhsuk-caption-l">
-  Add a new main supplier
-</span>
+    <div class="nhsuk-width-container">
             <h1>
                 Add a supplier contact - phone number
             </h1>
@@ -67,19 +64,9 @@ Quarterly collection - dropdown table
 
             </div>
 
-            <a class="nhsuk-button nhsuk-u-margin-top-3" data-module="nhsuk-button" id="continue-button" href="add-contact-status">
+            <a class="nhsuk-button nhsuk-u-margin-top-4" data-module="nhsuk-button" id="continue-button" href="edit-contacts">
                 Save and continue
             </a>
     </div>
 
-<script>
-    console.log(localStorage);
-
-    if (localStorage.getItem("phone") === "07700 900362") {
-           document.getElementById("email").value = "07700 900362";
-           document.getElementById("contact-1").checked = "checked";
-           document.getElementById("continue-button").href = "add-new-suppliers-confirm";
-        }
-
-</script>
 {% endblock %}

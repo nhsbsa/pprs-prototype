@@ -1,0 +1,67 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Quarterly collection - dropdown table
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-back-link nhsuk-u-margin-bottom-9">
+
+    <a class="nhsuk-back-link__link" href="add-contact-phone">
+        <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+             aria-hidden="true" height="24" width="24">
+            <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+        </svg>
+        Go back to add a supplier contact - phone number</a>
+</div>
+
+<div class="nhsuk-width-container">
+
+    <span class="nhsuk-caption-l">
+  Add a new additional supplier
+</span>
+    <h1>
+        Add a supplier contact - status
+    </h1>
+
+    <div class="nhsuk-form-group">
+
+        <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                <h1 class="nhsuk-fieldset__heading nhsuk-u-margin-bottom-5">
+                    What is the status of the contact?
+                </h1>
+            </legend>
+
+            <div class="nhsuk-radios nhsuk-u-margin-bottom-5">
+
+                <div class="nhsuk-radios__item nhsuk-u-margin-bottom-3">
+                    <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="active">
+                    <label class="nhsuk-label nhsuk-radios__label" for="example-1">
+                        Active
+                    </label>
+                </div>
+
+                <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="inactive">
+                    <label class="nhsuk-label nhsuk-radios__label" for="example-2">
+                        Inactive
+                    </label>
+                </div>
+
+            </div>
+        </fieldset>
+
+    </div>
+
+    <a class="nhsuk-button" data-module="nhsuk-button" id="redirectButton"
+       type="submit" href="add-new-suppliers-confirm">
+        Save and continue
+    </a>
+
+</div>
+
+<script>
+    console.log(localStorage);
+</script>
+{% endblock %}

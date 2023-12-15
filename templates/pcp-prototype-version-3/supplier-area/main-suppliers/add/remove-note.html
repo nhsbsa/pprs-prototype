@@ -1,0 +1,102 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Quarterly collection - dropdown table
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-back-link nhsuk-u-margin-bottom-9">
+
+    <a class="nhsuk-back-link__link" href="../../supplier-info" id="back-link">
+        <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+            <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+        </svg>
+        Go back to AAH Pharmaceuticals Ltd</a>
+</div>
+
+<div class="nhsuk-width-container">
+    <div class="nhsuk-form-group">
+                <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+                    <legend class="nhsuk-fieldset__legend nhsuk-label--xl">
+                        <h1 class="nhsuk-fieldset__heading">
+                            Do you want to remove the supplier note?
+                        </h1>
+                    </legend>
+
+                    <div class="nhsuk-radios">
+
+                        <div class="nhsuk-radios__item nhsuk-u-margin-bottom-4">
+                            <input class="nhsuk-radios__input" id="example-hints-1" name="example-hints" type="radio" value="yes" aria-describedby="example-hints-1-item-hint">
+                            <label class="nhsuk-label nhsuk-radios__label" for="example-hints-1">
+                                Yes
+                            </label>
+                            <div class="nhsuk-hint nhsuk-radios__hint" id="example-hints-1-item-hint">
+                                <span id="yes-hint">This will remove the note titled &#39;Supplier contact away&#39; and cannot be undone.</span>
+                            </div>
+                        </div>
+
+                        <div class="nhsuk-radios__item">
+                            <input class="nhsuk-radios__input" id="example-hints-2" name="example-hints" type="radio" value="no" aria-describedby="example-hints-2-item-hint">
+                            <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
+                                No
+                            </label>
+                            <div class="nhsuk-hint nhsuk-radios__hint" id="example-hints-2-item-hint">
+                                Do not remove the note titled &#39;Supplier contact away&#39; and return to review supplier contact information.
+                            </div>
+                        </div>
+
+                    </div>
+                </fieldset>
+            </div>
+            <a class="nhsuk-button" href="supplier-info-updated" id="redirectButton" onclick="removeNote()">Save and continue</a>
+        </div>
+
+<script>
+    console.log(localStorage);
+    console.log('!localStorage.getItem("remove-second-note"', !localStorage.getItem("remove-second-note"));
+    console.log('localStorage.getItem("remove-second-note") === "yes"', localStorage.getItem("remove-second-note") === "yes");
+
+    if (localStorage.getItem("remove-second-note") === "yes" && (localStorage.getItem("second-note-removed") === "no" || !localStorage.getItem("second-note-removed"))) {
+       document.getElementById("yes-hint").innerHTML = "This will remove the note titled &#39;Company not contactable on specific dates&#39; and cannot be undone." ;
+    }
+
+    function removeNote() {
+    let radioButtons = document.getElementsByName("example-hints");
+
+    for (var radio of radioButtons) {
+      if (radio.checked) {
+       if (radio.value == 'yes' && localStorage.getItem("remove-second-note") === "yes" && (!localStorage.getItem("remove-last-note") || localStorage.getItem("remove-last-note") === "no")) {
+          localStorage.setItem("second-note-removed", "yes");
+          localStorage.removeItem("second-note-saved");
+          localStorage.removeItem("remove-second-note");
+       } else if (radio.value == 'yes' && (localStorage.getItem("remove-second-note") === "no" || !localStorage.getItem("remove-second-note") || localStorage.getItem("remove-last-note") === "yes")) {
+          localStorage.setItem("note-removed", "yes");
+          localStorage.removeItem("note-saved");
+       }
+       if (radio.value == 'no') {
+          localStorage.setItem("note-removed", "no");
+          localStorage.removeItem("remove-second-note");
+       }
+      }
+    }
+  };
+
+  function removeSecondNote() {
+    let radioButtons = document.getElementsByName("example-hints");
+
+    for (var radio of radioButtons) {
+      if (radio.checked) {
+       if (radio.value == 'yes') {
+          localStorage.setItem("second-note-removed", "yes");
+       }
+       if (radio.value == 'no') {
+          localStorage.setItem("second-note-removed", "no");
+          localStorage.removeItem("remove-second-note");
+       }
+      }
+    }
+  };
+</script>
+
+
+{% endblock %}

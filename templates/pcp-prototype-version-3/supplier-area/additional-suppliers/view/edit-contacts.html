@@ -5,31 +5,25 @@ Quarterly collection - dropdown table
 {% endblock %}
 
 {% block content %}
-<div class="nhsuk-back-link nhsuk-u-margin-bottom-9">
+<div class="nhsuk-back-link">
 
-    <a class="nhsuk-back-link__link" href="add-contact-status" id="back-link">
+    <a class="nhsuk-back-link__link" href="../../supplier-info" id="back-link">
         <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
             <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
         </svg>
-        Go back to add a supplier contact - status</a>
+        Go back to AAH Pharmaceuticals Ltd</a>
 </div>
 
 <div class="nhsuk-width-container">
 
-            <div class="nhsuk-form-group">
-                <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
-                    <legend class="nhsuk-fieldset__legend nhsuk-label--xl">
-                        <span class="nhsuk-caption-l">
-  Add a new main supplier
-</span>
-                        <h1 class="nhsuk-fieldset__heading">
-                            Review supplier contact information
+    <main class="nhsuk-main-wrapper" id="maincontent" role="main">
+                        <h1>
+                            Edit supplier contact information
                         </h1>
-                    </legend>
 
                     <div class="nhsuk-grid-row">
                         <div class="nhsuk-grid-column-three-quarters">
-                            <h2>Joe Bloggs</h2>
+                            <h2>John Smith</h2>
                         </div>
                         <div class="nhsuk-grid-column-one-quarter nhsuk-u-padding-right-0" >
                             <a class="govuk-button govuk-button--warning remove-button" href="remove-contact">
@@ -38,8 +32,6 @@ Quarterly collection - dropdown table
                         </div>
                     </div>
 
-
-
                     <dl class="nhsuk-summary-list nhsuk-u-margin-bottom-9">
 
                         <div class="nhsuk-summary-list__row">
@@ -47,12 +39,12 @@ Quarterly collection - dropdown table
                                 First name
                             </dt>
                             <dd class="nhsuk-summary-list__value">
-                                Joe
+                                John
                             </dd>
 
                             <dd class="nhsuk-summary-list__actions">
 
-                                <a href="add-contact" onclick="addJoe()">
+                                <a href="contact-first-name" onclick="addJohn()">
                                     Edit <span class="nhsuk-u-visually-hidden"> first name</span>
                                 </a>
 
@@ -65,12 +57,12 @@ Quarterly collection - dropdown table
                                 Last name
                             </dt>
                             <dd class="nhsuk-summary-list__value">
-                                Bloggs
+                                Smith
                             </dd>
 
                             <dd class="nhsuk-summary-list__actions">
 
-                                <a href="add-contact-last-name" onclick="addBloggs()">
+                                <a href="contact-last-name" onclick="addSmith()">
                                     Edit <span class="nhsuk-u-visually-hidden"> last name</span>
                                 </a>
 
@@ -83,12 +75,12 @@ Quarterly collection - dropdown table
                                 Email
                             </dt>
                             <dd class="nhsuk-summary-list__value">
-                                joe.bloggs@nhs.net
+                                john.smith@nhs.net
                             </dd>
 
                             <dd class="nhsuk-summary-list__actions">
 
-                                <a href="add-contact-email" onclick="addEmail()">
+                                <a href="contact-email" onclick="addEmail()">
                                     Edit <span class="nhsuk-u-visually-hidden"> email</span>
                                 </a>
 
@@ -101,17 +93,16 @@ Quarterly collection - dropdown table
                                 Phone number
                             </dt>
                             <dd class="nhsuk-summary-list__value">
-                                <p>07700 900362</p>
+                                <p>0800 1234567</p>
                             </dd>
 
                             <dd class="nhsuk-summary-list__actions">
 
-                                <a href="add-contact-phone" onclick="addPhone()">
+                                <a href="contact-phone" onclick="addPhone()">
                                     Edit <span class="nhsuk-u-visually-hidden"> phone number</span>
                                 </a>
 
                             </dd>
-
                         </div>
 
                         <div class="nhsuk-summary-list__row">
@@ -124,8 +115,8 @@ Quarterly collection - dropdown table
 
                             <dd class="nhsuk-summary-list__actions">
 
-                                <a href="add-contact-status">
-                                    Edit <span class="nhsuk-u-visually-hidden"> status</span>
+                                <a href="contact-status" onclick="addStatus()">
+                                    Edit <span class="nhsuk-u-visually-hidden"> status </span>
                                 </a>
 
                             </dd>
@@ -135,11 +126,11 @@ Quarterly collection - dropdown table
                     </dl>
 
 
-                    <div class="nhsuk-u-visually-hidden" id="second-contact">
+                    <div id="second-contact">
 
                         <div class="nhsuk-grid-row">
                             <div class="nhsuk-grid-column-three-quarters">
-                                <h2>Jane Smith</h2>
+                                <h2>Ann Other</h2>
                             </div>
                             <div class="nhsuk-grid-column-one-quarter nhsuk-u-padding-right-0" >
                                 <a class="govuk-button govuk-button--warning remove-button">
@@ -221,7 +212,6 @@ Quarterly collection - dropdown table
                                 </dd>
 
                             </div>
-
                             <div class="nhsuk-summary-list__row">
                                 <dt class="nhsuk-summary-list__key">
                                     Status
@@ -232,8 +222,8 @@ Quarterly collection - dropdown table
 
                                 <dd class="nhsuk-summary-list__actions">
 
-                                    <a href="add-contact-status">
-                                        Edit <span class="nhsuk-u-visually-hidden"> status</span>
+                                    <a href="add-contact-phone" onclick="addPhone()">
+                                        Edit <span class="nhsuk-u-visually-hidden"> status </span>
                                     </a>
 
                                 </dd>
@@ -243,12 +233,118 @@ Quarterly collection - dropdown table
                         </dl>
                     </div>
 
+                    <div id="third-contact">
 
-                     <p>If you need to increase the number of contacts then you can <a href="add-contact" onclick="addAnotherContact()">add a supplier contact</a></p>
-                </fieldset>
-            </div>
-            <a class="nhsuk-button" href="need-supplier-notes" id="continue-button"
-             onclick="redirectToNewContact()" >Save and continue</a>
+                        <div class="nhsuk-grid-row">
+                            <div class="nhsuk-grid-column-three-quarters">
+                                <h2>Sam Wannelse</h2>
+                            </div>
+                            <div class="nhsuk-grid-column-one-quarter nhsuk-u-padding-right-0" >
+                                <a class="govuk-button govuk-button--warning remove-button">
+                                    Remove contact
+                                </a>
+                            </div>
+                        </div>
+
+                        <dl class="nhsuk-summary-list">
+
+                            <div class="nhsuk-summary-list__row">
+                                <dt class="nhsuk-summary-list__key">
+                                    First name
+                                </dt>
+                                <dd class="nhsuk-summary-list__value">
+                                    Sam
+                                </dd>
+
+                                <dd class="nhsuk-summary-list__actions">
+
+                                    <a href="#">
+                                        Edit <span class="nhsuk-u-visually-hidden"> first name</span>
+                                    </a>
+
+                                </dd>
+
+                            </div>
+
+                            <div class="nhsuk-summary-list__row">
+                                <dt class="nhsuk-summary-list__key">
+                                    Last name
+                                </dt>
+                                <dd class="nhsuk-summary-list__value">
+                                    Wannelse
+                                </dd>
+
+                                <dd class="nhsuk-summary-list__actions">
+
+                                    <a href="#">
+                                        Edit <span class="nhsuk-u-visually-hidden"> last name</span>
+                                    </a>
+
+                                </dd>
+
+                            </div>
+
+                            <div class="nhsuk-summary-list__row">
+                                <dt class="nhsuk-summary-list__key">
+                                    Email
+                                </dt>
+                                <dd class="nhsuk-summary-list__value">
+                                    sam.wannelse@nhsbsa.nhs.uk
+                                </dd>
+
+                                <dd class="nhsuk-summary-list__actions">
+
+                                    <a href="#">
+                                        Edit <span class="nhsuk-u-visually-hidden"> email</span>
+                                    </a>
+
+                                </dd>
+
+                            </div>
+
+                            <div class="nhsuk-summary-list__row">
+                                <dt class="nhsuk-summary-list__key">
+                                    Phone number
+                                </dt>
+                                <dd class="nhsuk-summary-list__value">
+                                    <p>	01234 567899</p>
+                                </dd>
+
+                                <dd class="nhsuk-summary-list__actions">
+
+                                    <a href="#">
+                                        Edit <span class="nhsuk-u-visually-hidden"> phone number</span>
+                                    </a>
+
+                                </dd>
+
+                            </div>
+                            <div class="nhsuk-summary-list__row">
+                                <dt class="nhsuk-summary-list__key">
+                                    Status
+                                </dt>
+                                <dd class="nhsuk-summary-list__value">
+                                    <strong class="nhsuk-tag nhsuk-tag--grey">Inactive</strong>
+                                </dd>
+
+                                <dd class="nhsuk-summary-list__actions">
+
+                                    <a href="add-contact-phone" onclick="addPhone()">
+                                        Edit <span class="nhsuk-u-visually-hidden"> status </span>
+                                    </a>
+
+                                </dd>
+
+                            </div>
+
+                        </dl>
+                    </div>
+
+                     <p>If you need to increase the number of contacts then you can <a href="add-contact-first-name" onclick="addContactFromList()">add a supplier contact</a></p>
+
+        <a class="nhsuk-button nhsuk-u-margin-top-4" href="../../supplier-info" id="continue-button"
+             onclick="redirectToNewContact()" >Save and return to supplier information</a>
+    </main>
         </div>
 
 
@@ -294,20 +390,28 @@ function redirectToNewContact() {
      localStorage.setItem("second-contact", "yes");
    }
 
-   function addJoe() {
-     localStorage.setItem("first-name", "Joe");
+   function addJohn() {
+     localStorage.setItem("first-name", "John");
    }
 
-   function addBloggs() {
-     localStorage.setItem("last-name", "Bloggs");
+   function addSmith() {
+     localStorage.setItem("last-name", "Smith");
    }
 
    function addEmail() {
-     localStorage.setItem("email", "joe.bloggs@nhs.net");
+     localStorage.setItem("email", "john.smith@nhs.net");
    }
 
    function addPhone() {
-     localStorage.setItem("phone", "07700 900362");
+     localStorage.setItem("phone", "0800 1234567");
+   }
+
+   function addStatus() {
+     localStorage.setItem("status", "active");
+   }
+
+   function addContactFromList() {
+     localStorage.setItem("added-from-list", "yes");
    }
 
 

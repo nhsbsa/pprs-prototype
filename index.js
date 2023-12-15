@@ -328,8 +328,10 @@ app.get('/pcp-prototype-version-3/supplier-area/edit-email', (req, res) => { res
 app.get('/pcp-prototype-version-3/supplier-area/edit-status', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/edit-status') });
 
 app.get('/pcp-prototype-version-3/supplier-area/main-suppliers/add/add-contact', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/main-suppliers/add/add-contact') });
+app.get('/pcp-prototype-version-3/supplier-area/main-suppliers/add/add-contact-status', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/main-suppliers/add/add-contact-status') });
 app.get('/pcp-prototype-version-3/supplier-area/main-suppliers/add/remove-contact', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/main-suppliers/add/remove-contact') });
 app.get('/pcp-prototype-version-3/supplier-area/main-suppliers/add/add-notes', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/main-suppliers/add/add-notes') });
+app.get('/pcp-prototype-version-3/supplier-area/main-suppliers/add/remove-note', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/main-suppliers/add/remove-note') });
 app.get('/pcp-prototype-version-3/supplier-area/main-suppliers/add/edit-notes', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/main-suppliers/add/edit-notes') });
 app.get('/pcp-prototype-version-3/supplier-area/main-suppliers/add/need-supplier-notes', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/main-suppliers/add/need-supplier-notes') });
 app.get('/pcp-prototype-version-3/supplier-area/main-suppliers/add/add-contact-last-name', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/main-suppliers/add/add-contact-last-name') });
@@ -353,6 +355,45 @@ app.get('/pcp-prototype-version-3/supplier-area/main-suppliers/view/add-contact-
 app.get('/pcp-prototype-version-3/supplier-area/main-suppliers/view/add-contact-last-name', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/main-suppliers/view/add-contact-last-name') });
 app.get('/pcp-prototype-version-3/supplier-area/main-suppliers/view/add-contact-email', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/main-suppliers/view/add-contact-email') });
 app.get('/pcp-prototype-version-3/supplier-area/main-suppliers/view/add-contact-phone', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/main-suppliers/view/add-contact-phone') });
+app.get('/pcp-prototype-version-3/supplier-area/main-suppliers/view/supplier-info-add-notes', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/main-suppliers/view/supplier-info-add-notes') });
+app.get('/pcp-prototype-version-3/supplier-area/main-suppliers/view/edit-note', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/main-suppliers/view/edit-note') });
+app.get('/pcp-prototype-version-3/supplier-area/main-suppliers/view/edit-second-note', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/main-suppliers/view/edit-second-note') });
+app.get('/pcp-prototype-version-3/supplier-area/main-suppliers/view/remove-note', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/main-suppliers/view/remove-note') });app.get('/pcp-prototype-version-3/supplier-area/main-suppliers/add/add-contact', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/main-suppliers/add/add-contact') });
+
+
+app.get('/pcp-prototype-version-3/supplier-area/additional-suppliers/add/add-contact', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/additional-suppliers/add/add-contact') });
+app.get('/pcp-prototype-version-3/supplier-area/additional-suppliers/add/add-contact-status', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/additional-suppliers/add/add-contact-status') });
+app.get('/pcp-prototype-version-3/supplier-area/additional-suppliers/add/remove-contact', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/additional-suppliers/add/remove-contact') });
+app.get('/pcp-prototype-version-3/supplier-area/additional-suppliers/add/add-notes', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/additional-suppliers/add/add-notes') });
+app.get('/pcp-prototype-version-3/supplier-area/additional-suppliers/add/remove-note', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/additional-suppliers/add/remove-note') });
+app.get('/pcp-prototype-version-3/supplier-area/additional-suppliers/add/edit-notes', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/additional-suppliers/add/edit-notes') });
+app.get('/pcp-prototype-version-3/supplier-area/additional-suppliers/add/edit-second-note', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/additional-suppliers/add/edit-second-note') });
+app.get('/pcp-prototype-version-3/supplier-area/additional-suppliers/add/need-supplier-notes', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/additional-suppliers/add/need-supplier-notes') });
+app.get('/pcp-prototype-version-3/supplier-area/additional-suppliers/add/add-contact-last-name', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/additional-suppliers/add/add-contact-last-name') });
+app.get('/pcp-prototype-version-3/supplier-area/additional-suppliers/add/add-contact-email', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/additional-suppliers/add/add-contact-email') });
+app.get('/pcp-prototype-version-3/supplier-area/additional-suppliers/add/add-contact-phone', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/additional-suppliers/add/add-contact-phone') });
+app.get('/pcp-prototype-version-3/supplier-area/additional-suppliers/add/supplier-info-updated', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/additional-suppliers/add/supplier-info-updated') });
+app.get('/pcp-prototype-version-3/supplier-area/additional-suppliers/add/add-new-suppliers-confirm', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/additional-suppliers/add/add-new-suppliers-confirm') });
+app.get('/pcp-prototype-version-3/supplier-area/additional-suppliers/add/add-new-suppliers', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/additional-suppliers/add/add-new-suppliers') });
+
+app.get('/pcp-prototype-version-3/supplier-area/additional-suppliers/view/edit-supplier-name', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/main-suppliers/view/edit-supplier-name') });
+app.get('/pcp-prototype-version-3/supplier-area/additional-suppliers/view/supplier-type-select', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/main-suppliers/view/supplier-type-select') });
+app.get('/pcp-prototype-version-3/supplier-area/additional-suppliers/view/confirmation-page', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/main-suppliers/view/confirmation-page') });
+app.get('/pcp-prototype-version-3/supplier-area/additional-suppliers/view/edit-contacts', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/main-suppliers/view/edit-contacts') });
+app.get('/pcp-prototype-version-3/supplier-area/additional-suppliers/view/remove-contact', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/main-suppliers/view/remove-contact') });
+app.get('/pcp-prototype-version-3/supplier-area/additional-suppliers/view/contact-first-name', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/main-suppliers/view/contact-first-name') });
+app.get('/pcp-prototype-version-3/supplier-area/additional-suppliers/view/contact-last-name', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/main-suppliers/view/contact-last-name') });
+app.get('/pcp-prototype-version-3/supplier-area/additional-suppliers/view/contact-email', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/main-suppliers/view/contact-email') });
+app.get('/pcp-prototype-version-3/supplier-area/additional-suppliers/view/contact-phone', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/main-suppliers/view/contact-phone') });
+app.get('/pcp-prototype-version-3/supplier-area/additional-suppliers/view/contact-status', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/main-suppliers/view/contact-status') });
+app.get('/pcp-prototype-version-3/supplier-area/additional-suppliers/view/add-contact-first-name', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/main-suppliers/view/add-contact-first-name') });
+app.get('/pcp-prototype-version-3/supplier-area/additional-suppliers/view/add-contact-last-name', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/main-suppliers/view/add-contact-last-name') });
+app.get('/pcp-prototype-version-3/supplier-area/additional-suppliers/view/add-contact-email', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/main-suppliers/view/add-contact-email') });
+app.get('/pcp-prototype-version-3/supplier-area/additional-suppliers/view/add-contact-phone', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/main-suppliers/view/add-contact-phone') });
+app.get('/pcp-prototype-version-3/supplier-area/additional-suppliers/view/supplier-info-add-notes', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/main-suppliers/view/supplier-info-add-notes') });
+app.get('/pcp-prototype-version-3/supplier-area/additional-suppliers/view/edit-note', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/main-suppliers/view/edit-note') });
+app.get('/pcp-prototype-version-3/supplier-area/additional-suppliers/view/edit-second-note', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/main-suppliers/view/edit-second-note') });
+app.get('/pcp-prototype-version-3/supplier-area/additional-suppliers/view/remove-note', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/main-suppliers/view/remove-note') });
 
 app.get('/pcp-prototype-version-3/supplier-area/edit-number', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/edit-number') });
 app.get('/pcp-prototype-version-3/supplier-area/add-another-contact', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/add-another-contact') });
@@ -367,7 +408,6 @@ app.get('/pcp-prototype-version-3/supplier-area/supplier-info-contact-updated', 
 app.get('/pcp-prototype-version-3/supplier-area/add-email-group-type', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/add-email-group-type') });
 app.get('/pcp-prototype-version-3/supplier-area/moved-main-supplier', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/moved-main-supplier') });
 app.get('/pcp-prototype-version-3/supplier-area/supplier-info-notes', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/supplier-info-notes') });
-app.get('/pcp-prototype-version-3/supplier-area/supplier-info-add-notes', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/supplier-info-add-notes') });
 app.get('/pcp-prototype-version-3/supplier-area/edit-note-page', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/edit-note-page') });
 app.get('/pcp-prototype-version-3/supplier-area/add-additional-notes', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/add-additional-notes') });
 app.get('/pcp-prototype-version-3/supplier-area/Supplier-info-second-note', (req, res) => { res.render('pcp-prototype-version-3/supplier-area/Supplier-info-second-note') });

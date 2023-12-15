@@ -18,27 +18,30 @@ Quarterly collection - dropdown table
     <main class="nhsuk-main-wrapper" id="maincontent" role="main">
         <div class="nhsuk-width-container">
 
-            <h1>Supplier add notes
+            <span class="nhsuk-caption-l">
+  Add a new main supplier
+</span>
+            <h1> Add supplier notes
             </h1>
 
             <div class="nhsuk-form-group ">
                 <label class="nhsuk-label" for="example">
                     Add a title for your note
                 </label>
-                <input class="nhsuk-input" id="example" name="example" type="text">
+                <div class="nhsuk-hint" id="example-hint">
+                    A title is required to help categorise notes.
+                </div>
+                <input class="nhsuk-input" id="example-title" name="example" type="text" value="Supplier contact away">
             </div>
 
             <div class="nhsuk-form-group ">
                 <label class="nhsuk-label" for="example">
-                    Add note
+                    Add detail to the note
                 </label>
-                <div class="nhsuk-hint" id="example-hint">
-                    You can add your notes in the text field below.
-                </div>
-                <textarea class="nhsuk-textarea nhsuk-u-margin-bottom-5" id="example" name="example" rows="5" aria-describedby="example-hint"></textarea>
+                <textarea class="nhsuk-textarea nhsuk-u-margin-bottom-5" id="example" name="example" rows="5" aria-describedby="example-hint">Joe Bloggs will be out of office from Monday, 10th April 2023. John Smith will be providing cover until their return on Thursday, 20th April 2023.</textarea>
             </div>
 
-            <a class="nhsuk-button" data-module="nhsuk-button" type="submit" href="/pcp-prototype-version-3/supplier-area/Supplier-info-notes">
+            <a class="nhsuk-button" data-module="nhsuk-button" type="submit" href="supplier-info-updated" onclick="noteEdited()">
                 Save and continue
             </a>
 
@@ -50,5 +53,9 @@ Quarterly collection - dropdown table
 
 <script>
     console.log(localStorage);
+
+    function noteEdited() {
+       localStorage.setItem("note-edited", "yes");
+    }
 </script>
 {% endblock %}

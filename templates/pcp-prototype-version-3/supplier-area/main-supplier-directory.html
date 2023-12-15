@@ -307,34 +307,10 @@
     console.log(localStorage);
 
     localStorage.removeItem("main-supplier-summary");
+    localStorage.removeItem("note-added");
+    localStorage.removeItem("note-saved");
+    localStorage.removeItem("note-removed");
 
-    let checkAll = document.getElementsByClassName("nhsuk-checkboxes__input");
-
-    let insetText = document.getElementById("inset-text-input");
-     console.log(insetText);
-
-  function checkAllBoxes() {
-    for (let i = 0; i < checkAll.length; i++) {
-       checkAll[i].checked = true;
-     }
-     let insetText = document.getElementById("inset-text-input");
-     console.log(insetText);
-     insetText.innerHTML =
-     '<span class="nhsuk-u-visually-hidden">Information: </span>'
-     +
-     '<p>Deselect suppliers individually or use this link to <a href="#" class="nhsuk-link nhsuk-link--no-visited-state" onclick="removeAllBoxes()">deselect all suppliers</a></p>';
-  }
-
-  function removeAllBoxes() {
-     for (let i = 0; i < checkAll.length; i++) {
-       checkAll[i].checked = false;
-     }
-     let insetText = document.getElementById("inset-text-input");
-     insetText.innerHTML =
-     '<span class="nhsuk-u-visually-hidden">Information: </span>'
-     +
-     '<p>Select suppliers individually or use this link to <a class="nhsuk-link nhsuk-link--no-visited-state" href="#" onclick="checkAllBoxes()">select all suppliers</a></p>';
-  }
 </script>
 
 
