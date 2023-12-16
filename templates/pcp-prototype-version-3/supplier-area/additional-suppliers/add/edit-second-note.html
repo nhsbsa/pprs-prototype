@@ -5,7 +5,7 @@ Quarterly collection - dropdown table
 {% endblock %}
 
 {% block content %}
-<div class="nhsuk-back-link nhsuk-u-margin-bottom-9">
+<div class="nhsuk-back-link nhsuk-u-margin-bottom-8">
 
     <a class="nhsuk-back-link__link" href="../../supplier-info" id="back-link">
         <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
@@ -38,7 +38,7 @@ Quarterly collection - dropdown table
                 <textarea class="nhsuk-textarea nhsuk-u-margin-bottom-5" id="example" name="example" rows="5" aria-describedby="example-hint">AAH Pharmaceuticals Ltd will not be contactable from 03 November 2024 to 05 November 2024 due to company wide training.</textarea>
             </div>
 
-            <a class="nhsuk-button" data-module="nhsuk-button" type="submit" href="../../supplier-info" >
+            <a class="nhsuk-button" data-module="nhsuk-button" type="submit" href="supplier-info-updated" onclick="noteEdited()" >
                 Save and continue
             </a>
 
@@ -47,8 +47,8 @@ Quarterly collection - dropdown table
 <script>
     console.log(localStorage);
 
-    function noteEdited() {
-       localStorage.setItem("note-edited", "yes");
+    function secondNoteEdited() {
+       localStorage.setItem("second-note-edited", "yes");
     }
 </script>
 {% endblock %}

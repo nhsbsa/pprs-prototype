@@ -4,7 +4,7 @@
 
 {% block content %}
 
-<div class="nhsuk-back-link">
+<div class="nhsuk-back-link nhsuk-u-margin-bottom-8">
 
     <a class="nhsuk-back-link__link" href="/pcp-prototype-version-3/supplier-area/supplier-select-page">
         <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
@@ -13,11 +13,6 @@
         Go back to select supplier section</a>
 </div>
 <div class="nhsuk-width-container">
-
-    <main class="nhsuk-main-wrapper" id="maincontent" role="main">
-
-        <div class="nhsuk-grid-row">
-            <div class="nhsuk-grid-column-full">
 
                 <h1>Main suppliers directory</h1>
 
@@ -309,7 +304,15 @@
     localStorage.removeItem("main-supplier-summary");
     localStorage.removeItem("note-added");
     localStorage.removeItem("note-saved");
+    localStorage.removeItem("note-edited");
     localStorage.removeItem("note-removed");
+    localStorage.removeItem("note-removed-last");
+    localStorage.removeItem("remove-last-note");
+    localStorage.removeItem("second-contact");
+    localStorage.removeItem("second-note-saved");
+    localStorage.removeItem("second-note-removed");
+    localStorage.removeItem("status");
+
 
 </script>
 

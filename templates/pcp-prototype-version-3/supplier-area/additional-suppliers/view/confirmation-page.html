@@ -5,7 +5,7 @@ Quarterly collection - dropdown table
 {% endblock %}
 
 {% block content %}
-<div class="nhsuk-back-link">
+<div class="nhsuk-back-link nhsuk-u-margin-bottom-8">
 
     <a class="nhsuk-back-link__link" href="../../../supplier-area-additional/add-suppliers-info">
         <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
@@ -49,7 +49,7 @@ Quarterly collection - dropdown table
                     </div>
                 </fieldset>
             </div>
-            <a class="nhsuk-button" href="/pcp-prototype-version-3/supplier-area/main-supplier-directory" id="redirectButton"
+            <a class="nhsuk-button" href="../../add-suppliers-info" id="redirectButton"
                onclick="redirectToSelectedPage()">Save and continue</a>
 </div>
 
@@ -60,10 +60,10 @@ function redirectToSelectedPage() {
     for (var radio of radioButtons) {
       if (radio.checked) {
        if (radio.value == 'yes') {
-          document.getElementById("redirectButton").href = "/pcp-prototype-version-3/supplier-area/main-supplier-directory";
+          document.getElementById("redirectButton").href = "../../add-supplier-directory";
        }
        if (radio.value == 'no') {
-          document.getElementById("redirectButton").href = "../../supplier-info";
+          document.getElementById("redirectButton").href = "../../add-suppliers-info";
        }
       }
     }
