@@ -1,0 +1,236 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Quarterly collection - dropdown table
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-back-link nhsuk-u-margin-bottom-8">
+
+    <a class="nhsuk-back-link__link" href="add-notes">
+        <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+             aria-hidden="true" height="24" width="24">
+            <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+        </svg>
+        Go back to add supplier notes</a>
+</div>
+
+        <div class="nhsuk-width-container">
+  <span class="nhsuk-caption-l">
+  Add a new main supplier
+</span>
+            <h1>Confirm main supplier details</h1>
+            <p >Ensure the details you have added are correct before proceeding to save the supplier to the main
+                supplier directory.</p>
+
+            <p class="nhsuk-u-margin-bottom-6">If you no longer need to save this supplier then you can
+                <a class="nhsuk-link nhsuk-link--no-visited-state" href="/pcp-prototype-version-3/supplier-area/main-supplier-directory" > exit and return to main supplier directory</a></p>
+
+            <h2>Supplier details</h2>
+            <dl class="nhsuk-summary-list nhsuk-u-margin-bottom-9">
+
+                <div class="nhsuk-summary-list__row">
+                    <dt class="nhsuk-summary-list__key">
+                        Supplier name
+                    </dt>
+                    <dd class="nhsuk-summary-list__value">
+                        A New Supplier
+                    </dd>
+
+                    <dd class="nhsuk-summary-list__actions">
+
+                        <a class="nhsuk-link nhsuk-link--no-visited-state" href="add-new-suppliers">
+                            Edit<span class="nhsuk-u-visually-hidden"> user</span></a>
+
+                    </dd>
+
+                </div>
+
+            </dl>
+
+
+            <h2>Contacts</h2>
+            <p class="nhsuk-u-margin-bottom-5">If any of the contact information is incorrect, or you need to remove a contact then you can <a class="nhsuk-link nhsuk-link--no-visited-state" href="add-new-suppliers-confirm"> edit the supplier contacts</a></p>
+
+            <table class="nhsuk-table nhsuk-table-responsive nhsuk-u-margin-bottom-5">
+                <caption class="nhsuk-table__caption">Contact information for A new supplier</caption>
+                <thead role="rowgroup" class="nhsuk-table__head">
+                <tr role="row">
+                    <th role="columnheader" class="" scope="col">
+                        Name
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                        Email
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                        Phone number
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                        Status
+                    </th>
+                </tr>
+                </thead>
+                <tbody class="nhsuk-table__body">
+                <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Name </span>Joe Bloggs</td>
+                    <td class="nhsuk-table__cell ">
+                        <span class="nhsuk-table-responsive__heading">Email</span>joe.bloggs@nhs.net</td>
+                    <td class="nhsuk-table__cell ">
+                        <span class="nhsuk-table-responsive__heading">Phone number</span>07700 900362</td>
+                    <td class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Status</span>
+                        <strong class="nhsuk-tag">Active</strong></td>
+<!--                    <td class="nhsuk-table__cell ">-->
+<!--                        <span class="nhsuk-table-responsive__heading">Action</span>-->
+<!--                        <a class="nhsuk-link nhsuk-link&#45;&#45;no-visited-state"-->
+<!--                                                      href="/pcp-prototype-version-3/supplier-area/edit-new-added-supplier">-->
+<!--                        Edit<span class="nhsuk-u-visually-hidden"> user</span></a>-->
+<!--                    </td>-->
+                </tr>
+                <tr role="row" class="nhsuk-table__row nhsuk-u-visually-hidden" id="second-contact">
+                    <td class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Name </span>
+                        Jane Smith</td>
+                    <td class="nhsuk-table__cell ">
+                        <span class="nhsuk-table-responsive__heading">Email</span>
+                        jane.smith@nhsbsa.nhs.uk</td>
+                    <td class="nhsuk-table__cell ">
+                        <span class="nhsuk-table-responsive__heading">Phone number</span>
+                        <span class="nhsuk-u-visually-hidden">No phone number exists</span></td>
+                    <td class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Status</span>
+                        <strong class="nhsuk-tag">Active</strong></td>
+<!--                    <td class="nhsuk-table__cell ">-->
+<!--                        <span class="nhsuk-table-responsive__heading">Action</span>-->
+<!--                        <a class="nhsuk-link nhsuk-link&#45;&#45;no-visited-state"-->
+<!--                                                      href="/pcp-prototype-version-3/supplier-area/edit-new-added-supplier">-->
+<!--                        Edit<span class="nhsuk-u-visually-hidden"> user</span></a>-->
+<!--                    </td>-->
+                </tr>
+                </tbody>
+            </table>
+
+            <div class="nhsuk-action-link nhsuk-u-margin-bottom-9">
+                <a class="nhsuk-action-link__link nhsuk-link--no-visited-state" href="add-contact" onclick="addAnotherContact()">
+                    <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+                    </svg>
+                    <span class="nhsuk-action-link__text">Add a supplier contact</span>
+                </a>
+            </div>
+
+            <h2>Supplier notes</h2>
+            <p id="no-notes" class="nhsuk-u-margin-bottom-5">There are no notes listed for this supplier. </p>
+
+            <details id="yes-notes" class="nhsuk-details nhsuk-expander nhsuk-u-visually-hidden">
+                <summary class="nhsuk-details__summary">
+    <span class="nhsuk-details__summary-text">
+      Supplier contact away
+    </span>
+                </summary>
+                <div class="nhsuk-details__text">
+                    <p class="nhsuk-u-margin-bottom-3">Joe Bloggs will be out of office from Monday, 10th April 2023. John Smith will be providing cover until their return on Thursday, 20th April 2023.</p>
+                    <a href="edit-notes" class="nhsuk-link nhsuk-link--no-visited-state">Edit Note</a><br>
+                    <a class="govuk-button govuk-button--warning nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-2 remove-button-notes" href="remove-note" onclick="removeFirstNote()">
+                        Remove note
+                    </a>
+                    <hr aria-hidden="true" class="nhsuk-u-margin-bottom-3 nhsuk-u-margin-top-5">
+                <h3 class="nhsuk-heading-xs" style="color: #4c6272; font-weight: 400;">History</h3>
+                    <p class="nhsuk-u-font-size-16 nhsuk-u-margin-bottom-3">01 April 2023: Note added by John Robinson (JOROB)</p>
+                    <p class="nhsuk-u-font-size-16 nhsuk-u-visually-hidden" id="second-comment">03 April 2023: Note edited by Olaoluwa Bamgbala (OLBAM)</p>
+                </div>
+
+            </details>
+
+            <details id="second-yes-notes" class="nhsuk-details nhsuk-expander nhsuk-u-visually-hidden">
+                <summary class="nhsuk-details__summary">
+    <span class="nhsuk-details__summary-text">
+      Company not contactable on specific dates
+    </span>
+                </summary>
+                <div class="nhsuk-details__text">
+                    <p class="nhsuk-u-margin-bottom-3">AAH Pharmaceuticals Ltd will not be contactable from 03 November 2024 to 05 November 2024 due to company wide training.</p>
+                    <a href="edit-second-note" class="nhsuk-link nhsuk-link--no-visited-state">Edit Note</a><br>
+                    <a class="govuk-button govuk-button--warning nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-2 remove-button-notes" href="remove-note" onclick="removeSecondNote()">
+                        Remove note
+                    </a>
+                    <hr aria-hidden="true" class="nhsuk-u-margin-bottom-3 nhsuk-u-margin-top-5">
+                    <h3 class="nhsuk-heading-xs" style="color: #4c6272; font-weight: 400;">History</h3>
+                    <p class="nhsuk-u-font-size-16 nhsuk-u-margin-bottom-3">13 May 2023: Note added by Olaoluwa Bamgbala (OLBAM)</p>
+                    <p class="nhsuk-u-font-size-16 nhsuk-u-visually-hidden" id="second-second-comment">03 April 2023: Note edited by Olaoluwa Bamgbala (OLBAM)</p>
+                </div>
+
+            </details>
+
+            <div class="nhsuk-action-link nhsuk-u-margin-bottom-9">
+                <a class="nhsuk-action-link__link nhsuk-link--no-visited-state" href="add-notes">
+                    <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+                    </svg>
+                    <span class="nhsuk-action-link__text">Add a supplier note</span>
+                </a>
+            </div>
+
+<!--            <div class="nhsuk-inset-text">-->
+<!--                <span class="nhsuk-u-visually-hidden">Information: </span>-->
+<!--                <p>If you no longer need to save the supplier then you can  <a-->
+<!--                        href="/pcp-prototype-version-3/supplier-area/main-supplier-directory" title="External website">return to main supplier directory</a>.</p>-->
+<!--            </div>-->
+            <a class="nhsuk-button" data-module="nhsuk-button" type="submit"
+               href="../../main-supplier-directory">
+                Save supplier to list
+            </a>
+
+        </div>
+
+<script>
+    console.log(localStorage);
+
+    function addAnotherContact() {
+     localStorage.setItem("second-contact", "yes");
+   }
+
+    localStorage.setItem("main-supplier-summary", "yes");
+
+    if (localStorage.getItem("note-added") === "yes") {
+       document.getElementById("yes-notes").classList.remove("nhsuk-u-visually-hidden");
+       document.getElementById("no-notes").classList.add("nhsuk-u-visually-hidden");
+    }
+
+    if (localStorage.getItem("second-contact") === "yes") {
+       document.getElementById("second-contact").classList.remove("nhsuk-u-visually-hidden");
+    }
+
+    if (localStorage.getItem("note-edited") === "yes") {
+       document.getElementById("second-comment").classList.remove("nhsuk-u-visually-hidden");
+    }
+
+    if (localStorage.getItem("note-saved") === "yes" && (localStorage.getItem("note-removed") === "no" || !localStorage.getItem("note-removed"))) {
+       document.getElementById("no-notes").classList.add("nhsuk-u-visually-hidden");
+       document.getElementById("yes-notes").classList.remove("nhsuk-u-visually-hidden");
+    }
+
+    if (localStorage.getItem("second-note-saved") === "yes" && (localStorage.getItem("note-removed") === "no" || !localStorage.getItem("note-removed"))) {
+       document.getElementById("no-notes").classList.add("nhsuk-u-visually-hidden");
+       document.getElementById("second-yes-notes").classList.remove("nhsuk-u-visually-hidden");
+    }
+
+    function removeFirstNote() {
+       if (localStorage.getItem("remove-second-note") === "yes") {
+           localStorage.setItem("remove-last-note", "yes");
+       };
+    }
+
+    function removeSecondNote() {
+       localStorage.setItem("remove-second-note", "yes");
+    }
+
+    if (localStorage.getItem("second-note-removed") === "yes") {
+       document.getElementById("second-yes-notes").classList.add("nhsuk-u-visually-hidden");
+    }
+
+</script>
+{% endblock %}
