@@ -452,6 +452,144 @@ app.get('/pcp-prototype-version-3/supplier-area-additional/additional-info-secon
 app.get('/pcp-prototype-version-3/supplier-area-additional/add-additional-notes', (req, res) => { res.render('pcp-prototype-version-3/supplier-area-additional/add-additional-notes') });
 app.get('/pcp-prototype-version-3/supplier-area-additional/additional-edit-notes-page', (req, res) => { res.render('pcp-prototype-version-3/supplier-area-additional/additional-edit-notes-page') });
 
+// PCP prototype version 4
+
+app.get('/pcp-prototype-version-4/choose-option', (req, res) => { res.render('pcp-prototype-version-4/choose-option') });
+app.get('/pcp-prototype-version-4/homepage', (req, res) => { res.render('pcp-prototype-version-4/homepage') });
+
+app.get('/pcp-prototype-version-4/login', (req, res) => { res.render('pcp-prototype-version-4/login') });
+app.get('/pcp-prototype-version-4/account-area', (req, res) => { res.render('pcp-prototype-version-4/account-area') });
+app.get('/pcp-prototype-version-4/account-area-all', (req, res) => { res.render('pcp-prototype-version-4/account-area-all') });
+app.get('/pcp-prototype-version-4/log-out', (req, res) => { res.render('pcp-prototype-version-4/log-out') });
+app.get('/pcp-prototype-version-4/new-user/forename', (req, res) => { res.render('pcp-prototype-version-4/new-user/forename') });
+app.get('/pcp-prototype-version-4/new-user/surname', (req, res) => { res.render('pcp-prototype-version-4/new-user/surname') });
+app.get('/pcp-prototype-version-4/new-user/email', (req, res) => { res.render('pcp-prototype-version-4/new-user/email') });
+app.get('/pcp-prototype-version-4/new-user/user-type', (req, res) => { res.render('pcp-prototype-version-4/new-user/user-type') });
+app.get('/pcp-prototype-version-4/new-user/confirm', (req, res) => { res.render('pcp-prototype-version-4/new-user/confirm') });
+app.get('/pcp-prototype-version-4/new-user/status', (req, res) => { res.render('pcp-prototype-version-4/new-user/status') });
+
+app.get('/pcp-prototype-version-4/edit-user/forename', (req, res) => { res.render('pcp-prototype-version-4/edit-user/forename') });
+app.get('/pcp-prototype-version-4/edit-user/surname', (req, res) => { res.render('pcp-prototype-version-4/edit-user/surname') });
+app.get('/pcp-prototype-version-4/edit-user/email', (req, res) => { res.render('pcp-prototype-version-4/edit-user/email') });
+app.get('/pcp-prototype-version-4/edit-user/user-type', (req, res) => { res.render('pcp-prototype-version-4/edit-user/user-type') });
+app.get('/pcp-prototype-version-4/edit-user/summary', (req, res) => { res.render('pcp-prototype-version-4/edit-user/summary') });
+app.get('/pcp-prototype-version-4/edit-user/remove-options', (req, res) => { res.render('pcp-prototype-version-4/edit-user/remove-options') });
+app.get('/pcp-prototype-version-4/edit-user/user-deleted', (req, res) => { res.render('pcp-prototype-version-4/edit-user/user-deleted') });
+app.get('/pcp-prototype-version-4/edit-user/status', (req, res) => { res.render('pcp-prototype-version-4/edit-user/status') });
+
+app.get('/pcp-prototype-version-4/edit-all-users/forename', (req, res) => { res.render('pcp-prototype-version-4/edit-all-users/forename') });
+app.get('/pcp-prototype-version-4/edit-all-users/surname', (req, res) => { res.render('pcp-prototype-version-4/edit-all-users/surname') });
+app.get('/pcp-prototype-version-4/edit-all-users/email', (req, res) => { res.render('pcp-prototype-version-4/edit-all-users/email') });
+app.get('/pcp-prototype-version-4/edit-all-users/user-type', (req, res) => { res.render('pcp-prototype-version-4/edit-all-users/user-type') });
+app.get('/pcp-prototype-version-4/edit-all-users/summary', (req, res) => { res.render('pcp-prototype-version-4/edit-all-users/summary') });
+app.get('/pcp-prototype-version-4/edit-all-users/remove-options', (req, res) => { res.render('pcp-prototype-version-4/edit-all-users/remove-options') });
+app.get('/pcp-prototype-version-4/edit-all-users/user-deleted', (req, res) => { res.render('pcp-prototype-version-4/edit-all-users/user-deleted') });
+app.get('/pcp-prototype-version-4/edit-all-users/status', (req, res) => { res.render('pcp-prototype-version-4/edit-all-users/status') });
+
+app.get('/pcp-prototype-version-4/homepage-dh', (req, res) => { res.render('pcp-prototype-version-4/homepage-dh') });
+app.get('/pcp-prototype-version-4/quarterly-multiple-screens', (req, res) => { res.render('quarterly-multiple-screens') });
+app.get('/pcp-prototype-version-4/quarterly-expander-list', (req, res) => { res.render('quarterly-expander-list') })
+app.get('/pcp-prototype-version-4/request-list', (req, res) => { res.render('pcp-prototype-version-4/request-list') });
+app.get('/pcp-prototype-version-4/product-list/results', (req, res) => { res.render('pcp-prototype-version-4/product-list/results') });
+app.get('/pcp-prototype-version-4/product-list/product-list-results', (req, res) => { res.render('pcp-prototype-version-4/product-list/product-list-results') });
+app.get('/pcp-prototype-version-4/product-list/product-list-results-add-product-name', (req, res) => { res.render('pcp-prototype-version-4/product-list/product-list-results-add-product-name') });
+app.get('/pcp-prototype-version-4/product-list/product-list-results-add-pack-size', (req, res) => { res.render('pcp-prototype-version-4/product-list/product-list-results-add-pack-size') });
+app.get('/pcp-prototype-version-4/product-list/product-list-results-add-review', (req, res) => { res.render('pcp-prototype-version-4/product-list/product-list-results-add-review') });
+app.get('/pcp-prototype-version-4/product-list/product-list-results-edit', (req, res) => { res.render('pcp-prototype-version-4/product-list/product-list-results-edit') });
+app.get('/pcp-prototype-version-4/product-list/product-list-results-master', (req, res) => { res.render('pcp-prototype-version-4/product-list/product-list-results-master') });
+app.get('/pcp-prototype-version-4/product-list/results-after-confirm', (req, res) => { res.render('pcp-prototype-version-4/product-list/results-after-confirm') });
+app.get('/pcp-prototype-version-4/product-list/product-view', (req, res) => { res.render('pcp-prototype-version-4/product-list/product-view') });
+app.get('/pcp-prototype-version-4/product-list/supplier-view', (req, res) => { res.render('pcp-prototype-version-4/product-list/supplier-view') });
+app.get('/pcp-prototype-version-4/product-list/additional-supplier-view', (req, res) => { res.render('pcp-prototype-version-4/product-list/additional-supplier-view') });
+app.get('/pcp-prototype-version-4/product-list/supplier-view-tabs', (req, res) => { res.render('pcp-prototype-version-4/product-list/supplier-view-tabs') });
+app.get('/pcp-prototype-version-4/product-list/supplier-view-tabs-manual', (req, res) => { res.render('pcp-prototype-version-4/product-list/supplier-view-tabs-manual') });
+app.get('/pcp-prototype-version-4/product-list/additional-supplier-view-tabs', (req, res) => { res.render('pcp-prototype-version-4/product-list/additional-supplier-view-tabs') });
+app.get('/pcp-prototype-version-4/product-list/additional-supplier-view-tabs-manual', (req, res) => { res.render('pcp-prototype-version-4/product-list/additional-supplier-view-tabs-manual') });
+app.get('/pcp-prototype-version-4/product-list/main-suppliers', (req, res) => { res.render('pcp-prototype-version-4/product-list/main-suppliers') });
+app.get('/pcp-prototype-version-4/product-list/main-suppliers-after-group', (req, res) => { res.render('pcp-prototype-version-4/product-list/main-suppliers-after-group') });
+app.get('/pcp-prototype-version-4/product-list/main-suppliers-without-dash', (req, res) => { res.render('pcp-prototype-version-4/product-list/main-suppliers-without-dash') });
+app.get('/pcp-prototype-version-4/product-list/supplier-contact', (req, res) => { res.render('pcp-prototype-version-4/product-list/supplier-contact') });
+app.get('/pcp-prototype-version-4/product-list/supplier-deadline-date', (req, res) => { res.render('pcp-prototype-version-4/product-list/supplier-deadline-date') });
+app.get('/pcp-prototype-version-4/product-list/supplier-deadline-time', (req, res) => { res.render('pcp-prototype-version-4/product-list/supplier-deadline-time') });
+app.get('/pcp-prototype-version-4/product-list/supplier-contact-pending', (req, res) => { res.render('pcp-prototype-version-4/product-list/supplier-contact-pending') });
+app.get('/pcp-prototype-version-4/product-list/additional-suppliers', (req, res) => { res.render('pcp-prototype-version-4/product-list/additional-suppliers') });
+app.get('/pcp-prototype-version-4/product-list/delete-product', (req, res) => { res.render('pcp-prototype-version-4/product-list/delete-product') });
+app.get('/pcp-prototype-version-4/product-list/loading-cdr-queries', (req, res) => { res.render('pcp-prototype-version-4/product-list/loading-cdr-queries') });
+app.get('/pcp-prototype-version-4/product-list/need-to-amend', (req, res) => { res.render('pcp-prototype-version-4/product-list/need-to-amend') });
+app.get('/pcp-prototype-version-4/product-list/send-template', (req, res) => { res.render('pcp-prototype-version-4/product-list/send-template') });
+app.get('/pcp-prototype-version-4/product-list/send-template-confirmation', (req, res) => { res.render('pcp-prototype-version-4/product-list/send-template-confirmation') });
+app.get('/pcp-prototype-version-4/product-list/complete-request', (req, res) => { res.render('pcp-prototype-version-4/product-list/complete-request') });
+app.get('/pcp-prototype-version-4/product-list/reason-for-completing-request', (req, res) => { res.render('pcp-prototype-version-4/product-list/reason-for-completing-request') });
+
+app.get('/pcp-prototype-version-4/historical-requests/option-1/historical-request', (req, res) => { res.render('pcp-prototype-version-4/historical-requests/option-1/historical-request') });
+app.get('/pcp-prototype-version-4/historical-requests/option-1/historical-requests-months', (req, res) => { res.render('pcp-prototype-version-4/historical-requests/option-1/historical-requests-months') });
+app.get('/pcp-prototype-version-4/historical-requests/option-2/option-2-historical', (req, res) => { res.render('pcp-prototype-version-4/historical-requests/option-2/option-2-historical') });
+app.get('/pcp-prototype-version-4/historical-requests/option-1/historical-result', (req, res) => { res.render('pcp-prototype-version-4/historical-requests/option-1/historical-result') });
+app.get('/pcp-prototype-version-4/historical-requests/option-2/historical-result', (req, res) => { res.render('pcp-prototype-version-4/historical-requests/option-2/historical-result') });
+app.get('/pcp-prototype-version-4/historical-requests/option-3/historical-result', (req, res) => { res.render('pcp-prototype-version-4/historical-requests/option-3/historical-result') });
+app.get('/pcp-prototype-version-4/historical-requests/option-1/historical-search', (req, res) => { res.render('pcp-prototype-version-4/historical-requests/option-1/historical-search') });
+app.get('/pcp-prototype-version-4/historical-requests/option-3/option-3-historical-search', (req, res) => { res.render('pcp-prototype-version-4/historical-requests/option-3/option-3-historical-search') });
+app.get('/pcp-prototype-version-4/historical-requests/option-3/option-3-results', (req, res) => { res.render('pcp-prototype-version-4/historical-requests/option-3/option-3-results') });
+app.get('/pcp-prototype-version-4/historical-requests/option-page', (req, res) => { res.render('pcp-prototype-version-4/historical-requests/option-page') });
+app.get('/pcp-prototype-version-4/new-request/current-requests', (req, res) => { res.render('pcp-prototype-version-4/new-request/current-requests') });
+app.get('/pcp-prototype-version-4/new-request/file-upload', (req, res) => { res.render('pcp-prototype-version-4/new-request/file-upload') });
+app.get('/pcp-prototype-version-4/new-request/file-upload1', (req, res) => { res.render('pcp-prototype-version-4/new-request/file-upload1') });
+app.get('/pcp-prototype-version-4/new-request/file-upload2', (req, res) => { res.render('pcp-prototype-version-4/new-request/file-upload2') });
+app.get('/pcp-prototype-version-4/new-request/file-upload3', (req, res) => { res.render('pcp-prototype-version-4/new-request/file-upload3') });
+app.get('/pcp-prototype-version-4/auto-email/choose-main-suppliers', (req, res) => { res.render('pcp-prototype-version-4/auto-email/choose-main-suppliers') });
+app.get('/pcp-prototype-version-4/auto-email/card-1', (req, res) => { res.render('pcp-prototype-version-4/auto-email/card-1') });
+app.get('/pcp-prototype-version-4/auto-email/confirm-page', (req, res) => { res.render('pcp-prototype-version-4/auto-email/confirm-page') });
+app.get('/pcp-prototype-version-4/auto-email/card-2', (req, res) => { res.render('pcp-prototype-version-4/auto-email/card-2') });
+app.get('/pcp-prototype-version-4/auto-email/confirmation', (req, res) => { res.render('pcp-prototype-version-4/auto-email/confirmation') });
+app.get('/pcp-prototype-version-4/auto-email-additional/choose-additional-suppliers', (req, res) => { res.render('pcp-prototype-version-4/auto-email-additional/choose-additional-suppliers') });
+app.get('/pcp-prototype-version-4/auto-email-additional/card-1', (req, res) => { res.render('pcp-prototype-version-4/auto-email-additional/card-1') });
+app.get('/pcp-prototype-version-4/auto-email-additional/confirm-page', (req, res) => { res.render('pcp-prototype-version-4/auto-email-additional/confirm-page') });
+app.get('/pcp-prototype-version-4/auto-email-additional/card-2', (req, res) => { res.render('pcp-prototype-version-4/auto-email-additional/card-2') });
+app.get('/pcp-prototype-version-4/auto-email-additional/confirmation', (req, res) => { res.render('pcp-prototype-version-4/auto-email-additional/confirmation') });
+app.get('/pcp-prototype-version-4/supplier-area/supplier-select-page', (req, res) => { res.render('pcp-prototype-version-4/supplier-area/supplier-select-page') });
+app.get('/pcp-prototype-version-4/supplier-area/main-supplier-directory', (req, res) => { res.render('pcp-prototype-version-4/supplier-area/main-supplier-directory') });
+app.get('/pcp-prototype-version-4/supplier-area/supplier-info', (req, res) => { res.render('pcp-prototype-version-4/supplier-area/supplier-info') });
+app.get('/pcp-prototype-version-4/supplier-area/add-supplier-directory', (req, res) => { res.render('pcp-prototype-version-4/supplier-area/add-supplier-directory') });
+app.get('/pcp-prototype-version-4/supplier-area/add-suppliers-info', (req, res) => { res.render('pcp-prototype-version-4/supplier-area/add-suppliers-info') });
+app.get('/pcp-prototype-version-4/supplier-area/add-new-suppliers', (req, res) => { res.render('pcp-prototype-version-4/supplier-area/add-new-suppliers') });
+app.get('/pcp-prototype-version-4/supplier-area/add-new-add-suppliers', (req, res) => { res.render('pcp-prototype-version-4/supplier-area/add-new-add-suppliers') });
+app.get('/pcp-prototype-version-4/supplier-area/edit-main-suppliers', (req, res) => { res.render('pcp-prototype-version-4/supplier-area/edit-main-suppliers') });
+app.get('/pcp-prototype-version-4/supplier-area/confirmation-page', (req, res) => { res.render('pcp-prototype-version-4/supplier-area/confirmation-page') });
+app.get('/pcp-prototype-version-4/supplier-area/confirm-user', (req, res) => { res.render('pcp-prototype-version-4/supplier-area/confirm-user') });
+app.get('/pcp-prototype-version-4/supplier-area/edit-name', (req, res) => { res.render('pcp-prototype-version-4/supplier-area/edit-name') });
+app.get('/pcp-prototype-version-4/supplier-area/edit-surname', (req, res) => { res.render('pcp-prototype-version-4/supplier-area/edit-surname') });
+app.get('/pcp-prototype-version-4/supplier-area/edit-email', (req, res) => { res.render('pcp-prototype-version-4/supplier-area/edit-email') });
+app.get('/pcp-prototype-version-4/supplier-area/edit-status', (req, res) => { res.render('pcp-prototype-version-4/supplier-area/edit-status') });
+app.get('/pcp-prototype-version-4/supplier-area/add-contact', (req, res) => { res.render('pcp-prototype-version-4/supplier-area/add-contact') });
+app.get('/pcp-prototype-version-4/supplier-area/edit-number', (req, res) => { res.render('pcp-prototype-version-4/supplier-area/edit-number') });
+app.get('/pcp-prototype-version-4/supplier-area/add-another-contact', (req, res) => { res.render('pcp-prototype-version-4/supplier-area/add-another-contact') });
+app.get('/pcp-prototype-version-4/supplier-area/supplier-info-updated', (req, res) => { res.render('pcp-prototype-version-4/supplier-area/supplier-info-updated') });
+app.get('/pcp-prototype-version-4/supplier-area/add-new-suppliers-confirm', (req, res) => { res.render('pcp-prototype-version-4/supplier-area/add-new-suppliers-confirm') });
+app.get('/pcp-prototype-version-4/supplier-area/main-supplier-added', (req, res) => { res.render('pcp-prototype-version-4/supplier-area/main-supplier-added') });
+app.get('/pcp-prototype-version-4/supplier-area/edit-new-added-supplier', (req, res) => { res.render('pcp-prototype-version-4/supplier-area/edit-new-added-supplier') });
+
+app.get('/pcp-prototype-version-4/supplier-area-additional/add-supplier-directory', (req, res) => { res.render('pcp-prototype-version-4/supplier-area-additional/add-supplier-directory') });
+app.get('/pcp-prototype-version-4/supplier-area-additional/add-suppliers-info', (req, res) => { res.render('pcp-prototype-version-4/supplier-area-additional/add-suppliers-info') });
+app.get('/pcp-prototype-version-4/supplier-area-additional/edit-additional-suppliers', (req, res) => { res.render('pcp-prototype-version-4/supplier-area-additional/edit-additional-suppliers') });
+app.get('/pcp-prototype-version-4/supplier-area-additional/add-supplier-directory', (req, res) => { res.render('pcp-prototype-version-4/supplier-area-additional/add-supplier-directory') });
+app.get('/pcp-prototype-version-4/supplier-area-additional/edit-additional-suppliers', (req, res) => { res.render('pcp-prototype-version-4/supplier-area-additional/edit-additional-suppliers') });
+app.get('/pcp-prototype-version-4/supplier-area-additional/edit-name', (req, res) => { res.render('pcp-prototype-version-4/supplier-area-additional/edit-name') });
+app.get('/pcp-prototype-version-4/supplier-area-additional/confirm-user', (req, res) => { res.render('pcp-prototype-version-4/supplier-area-additional/confirm-user') });
+app.get('/pcp-prototype-version-4/supplier-area-additional/supplier-info', (req, res) => { res.render('pcp-prototype-version-4/supplier-area-additional/supplier-info') });
+app.get('/pcp-prototype-version-4/supplier-area-additional/edit-name', (req, res) => { res.render('pcp-prototype-version-4/supplier-area-additional/edit-name') });
+app.get('/pcp-prototype-version-4/supplier-area-additional/edit-surname', (req, res) => { res.render('pcp-prototype-version-4/supplier-area-additional/edit-surname') });
+app.get('/pcp-prototype-version-4/supplier-area-additional/edit-email', (req, res) => { res.render('pcp-prototype-version-4/supplier-area-additional/edit-email') });
+app.get('/pcp-prototype-version-4/supplier-area-additional/edit-number', (req, res) => { res.render('pcp-prototype-version-4/supplier-area-additional/edit-number') });
+app.get('/pcp-prototype-version-4/supplier-area-additional/edit-status', (req, res) => { res.render('pcp-prototype-version-4/supplier-area-additional/edit-status') });
+app.get('/pcp-prototype-version-4/supplier-area-additional/add-new-suppliers', (req, res) => { res.render('pcp-prototype-version-4/supplier-area-additional/add-new-suppliers') });
+app.get('/pcp-prototype-version-4/supplier-area-additional/add-contact', (req, res) => { res.render('pcp-prototype-version-4/supplier-area-additional/add-contact') });
+app.get('/pcp-prototype-version-4/supplier-area-additional/add-another-contact', (req, res) => { res.render('pcp-prototype-version-4/supplier-area-additional/add-another-contact') });
+app.get('/pcp-prototype-version-4/supplier-area-additional/add-new-suppliers-confirm', (req, res) => { res.render('pcp-prototype-version-4/supplier-area-additional/add-new-suppliers-confirm') });
+app.get('/pcp-prototype-version-4/supplier-area-additional/supplier-info-updated', (req, res) => { res.render('pcp-prototype-version-4/supplier-area-additional/supplier-info-updated') });
+app.get('/pcp-prototype-version-4/supplier-area-additional/additional-supplier-added', (req, res) => { res.render('pcp-prototype-version-4/supplier-area-additional/additional-supplier-added') });
+app.get('/pcp-prototype-version-4/supplier-area-additional/confirmation-page', (req, res) => { res.render('pcp-prototype-version-4/supplier-area-additional/confirmation-page') });
+app.get('/pcp-prototype-version-4/supplier-area-additional/edit-new-added-supplier', (req, res) => { res.render('pcp-prototype-version-4/supplier-area-additional/edit-new-added-supplier') });
+
 
 
 /**

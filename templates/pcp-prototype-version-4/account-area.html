@@ -1,0 +1,141 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Quarterly collection - dropdown table
+{% endblock %}
+
+{% block content %}
+
+<div class="nhsuk-back-link">
+
+    <a class="nhsuk-back-link__link nhsuk-u-margin-bottom-5" href="homepage" id="back-link">
+        <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+            <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+        </svg>
+        Go back to Price Concessions homepage</a>
+</div>
+
+<div class="nhsuk-width-container">
+    <!--    <div class="nhsuk-grid-row">-->
+    <!--        <div class="nhsuk-grid-column-full">-->
+
+    <h1>
+        My account
+    </h1>
+
+<!--    <div class="moj-password-reveal">-->
+<!--        <input class="govuk-input govuk-input&#45;&#45;width-20" id="password" name="password" type="password" value="1234ABC!" data-module="moj-password-reveal" aria-autocomplete="list"><button type="button" class="govuk-button govuk-button&#45;&#45;secondary moj-password-reveal__button" style="-->
+<!--    padding-bottom: 9px; width: 80px;-->
+<!--    background-color: #4c6272;-->
+<!--    color: white;-->
+<!--    text-decoration: none; box-shadow: unset;">Show-->
+<!--        <span class="nhsuk-u-visually-hidden">password</span></button></div>-->
+
+    <dl class="nhsuk-summary-list nhsuk-u-margin-bottom-9">
+
+        <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+                First name
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+                Karen
+            </dd>
+
+            <dd class="nhsuk-summary-list__actions">
+
+                <a href="edit-user/forename">
+                    Edit <span class="nhsuk-u-visually-hidden"> surname</span>
+                </a>
+
+            </dd>
+
+        </div>
+
+        <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+                Last name
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+                White
+            </dd>
+
+            <dd class="nhsuk-summary-list__actions">
+
+                <a href="edit-user/surname">
+                    Edit <span class="nhsuk-u-visually-hidden"> forename</span>
+                </a>
+
+            </dd>
+
+        </div>
+
+        <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+                Email
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+                karenwhite@nhs.net
+            </dd>
+
+            <dd class="nhsuk-summary-list__actions">
+
+                <a href="edit-user/email">
+                    Edit <span class="nhsuk-u-visually-hidden"> email</span>
+                </a>
+
+            </dd>
+
+        </div>
+        <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+                Password
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+                &#x2022;&#x2022;&#x2022;&#x2022;&#x2022;&#x2022;&#x2022;&#x2022;&#x2022;
+            </dd>
+
+            <dd class="nhsuk-summary-list__actions">
+
+                <a href="#">
+                    Edit <span class="nhsuk-u-visually-hidden"> email</span>
+                </a>
+
+            </dd>
+
+        </div>
+
+        <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+                Status
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+                <span class="nhsuk-tag">Active</span>
+            </dd>
+            <dd class="nhsuk-summary-list__actions">
+<!--                <a href="email">-->
+<!--                    Edit <span class="nhsuk-u-visually-hidden"> email</span>-->
+<!--                </a>-->
+            </dd>
+
+        </div>
+
+        <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+                Role
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+                User
+            </dd>
+            <dd class="nhsuk-summary-list__actions">
+            </dd>
+        </div>
+
+    </dl>
+
+</div>
+
+
+<script>
+    console.log(localStorage);
+</script>
+{% endblock %}
