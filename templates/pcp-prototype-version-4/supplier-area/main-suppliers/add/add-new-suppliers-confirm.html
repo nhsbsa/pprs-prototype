@@ -1,0 +1,315 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Quarterly collection - dropdown table
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-back-link nhsuk-u-margin-bottom-8">
+
+    <a class="nhsuk-back-link__link" href="add-contact-status" id="back-link">
+        <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+            <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+        </svg>
+        Go back to add a supplier contact - status</a>
+</div>
+
+<div class="nhsuk-width-container">
+
+            <div class="nhsuk-form-group">
+                <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+                    <legend class="nhsuk-fieldset__legend nhsuk-label--xl">
+                        <span class="nhsuk-caption-l">
+  Add a new main supplier
+</span>
+                        <h1 class="nhsuk-fieldset__heading">
+                            Review supplier contact information
+                        </h1>
+                    </legend>
+
+                    <div class="nhsuk-grid-row">
+                        <div class="nhsuk-grid-column-three-quarters">
+                            <h2>Joe Bloggs</h2>
+                        </div>
+                        <div class="nhsuk-grid-column-one-quarter nhsuk-u-padding-right-0" >
+                            <a class="govuk-button govuk-button--warning remove-button" href="remove-contact">
+                                Remove contact
+                            </a>
+                        </div>
+                    </div>
+
+
+
+                    <dl class="nhsuk-summary-list nhsuk-u-margin-bottom-9">
+
+                        <div class="nhsuk-summary-list__row">
+                            <dt class="nhsuk-summary-list__key">
+                                First name
+                            </dt>
+                            <dd class="nhsuk-summary-list__value">
+                                Joe
+                            </dd>
+
+                            <dd class="nhsuk-summary-list__actions">
+
+                                <a href="add-contact" onclick="addJoe()">
+                                    Edit <span class="nhsuk-u-visually-hidden"> first name</span>
+                                </a>
+
+                            </dd>
+
+                        </div>
+
+                        <div class="nhsuk-summary-list__row">
+                            <dt class="nhsuk-summary-list__key">
+                                Last name
+                            </dt>
+                            <dd class="nhsuk-summary-list__value">
+                                Bloggs
+                            </dd>
+
+                            <dd class="nhsuk-summary-list__actions">
+
+                                <a href="add-contact-last-name" onclick="addBloggs()">
+                                    Edit <span class="nhsuk-u-visually-hidden"> last name</span>
+                                </a>
+
+                            </dd>
+
+                        </div>
+
+                        <div class="nhsuk-summary-list__row">
+                            <dt class="nhsuk-summary-list__key">
+                                Email
+                            </dt>
+                            <dd class="nhsuk-summary-list__value">
+                                joe.bloggs@nhs.net
+                            </dd>
+
+                            <dd class="nhsuk-summary-list__actions">
+
+                                <a href="add-contact-email" onclick="addEmail()">
+                                    Edit <span class="nhsuk-u-visually-hidden"> email</span>
+                                </a>
+
+                            </dd>
+
+                        </div>
+
+                        <div class="nhsuk-summary-list__row">
+                            <dt class="nhsuk-summary-list__key">
+                                Phone number
+                            </dt>
+                            <dd class="nhsuk-summary-list__value">
+                                <p>07700 900362</p>
+                            </dd>
+
+                            <dd class="nhsuk-summary-list__actions">
+
+                                <a href="add-contact-phone" onclick="addPhone()">
+                                    Edit <span class="nhsuk-u-visually-hidden"> phone number</span>
+                                </a>
+
+                            </dd>
+
+                        </div>
+
+                        <div class="nhsuk-summary-list__row">
+                            <dt class="nhsuk-summary-list__key">
+                                Status
+                            </dt>
+                            <dd class="nhsuk-summary-list__value">
+                                <strong class="nhsuk-tag">Active</strong>
+                            </dd>
+
+                            <dd class="nhsuk-summary-list__actions">
+
+                                <a href="add-contact-status">
+                                    Edit <span class="nhsuk-u-visually-hidden"> status</span>
+                                </a>
+
+                            </dd>
+
+                        </div>
+
+                    </dl>
+
+
+                    <div class="nhsuk-u-visually-hidden" id="second-contact">
+
+                        <div class="nhsuk-grid-row">
+                            <div class="nhsuk-grid-column-three-quarters">
+                                <h2>Jane Smith</h2>
+                            </div>
+                            <div class="nhsuk-grid-column-one-quarter nhsuk-u-padding-right-0" >
+                                <a class="govuk-button govuk-button--warning remove-button">
+                                    Remove contact
+                                </a>
+                            </div>
+                        </div>
+
+                        <dl class="nhsuk-summary-list">
+
+                            <div class="nhsuk-summary-list__row">
+                                <dt class="nhsuk-summary-list__key">
+                                    First name
+                                </dt>
+                                <dd class="nhsuk-summary-list__value">
+                                    Jane
+                                </dd>
+
+                                <dd class="nhsuk-summary-list__actions">
+
+                                    <a href="#">
+                                        Edit <span class="nhsuk-u-visually-hidden"> first name</span>
+                                    </a>
+
+                                </dd>
+
+                            </div>
+
+                            <div class="nhsuk-summary-list__row">
+                                <dt class="nhsuk-summary-list__key">
+                                    Last name
+                                </dt>
+                                <dd class="nhsuk-summary-list__value">
+                                    Smith
+                                </dd>
+
+                                <dd class="nhsuk-summary-list__actions">
+
+                                    <a href="#">
+                                        Edit <span class="nhsuk-u-visually-hidden"> last name</span>
+                                    </a>
+
+                                </dd>
+
+                            </div>
+
+                            <div class="nhsuk-summary-list__row">
+                                <dt class="nhsuk-summary-list__key">
+                                    Email
+                                </dt>
+                                <dd class="nhsuk-summary-list__value">
+                                    jane.smith@nhs.net
+                                </dd>
+
+                                <dd class="nhsuk-summary-list__actions">
+
+                                    <a href="#">
+                                        Edit <span class="nhsuk-u-visually-hidden"> email</span>
+                                    </a>
+
+                                </dd>
+
+                            </div>
+
+                            <div class="nhsuk-summary-list__row">
+                                <dt class="nhsuk-summary-list__key">
+                                    Phone number
+                                </dt>
+                                <dd class="nhsuk-summary-list__value">
+                                    <p>None</p>
+                                </dd>
+
+                                <dd class="nhsuk-summary-list__actions">
+
+                                    <a href="#">
+                                        Edit <span class="nhsuk-u-visually-hidden"> phone number</span>
+                                    </a>
+
+                                </dd>
+
+                            </div>
+
+                            <div class="nhsuk-summary-list__row">
+                                <dt class="nhsuk-summary-list__key">
+                                    Status
+                                </dt>
+                                <dd class="nhsuk-summary-list__value">
+                                    <strong class="nhsuk-tag">Active</strong>
+                                </dd>
+
+                                <dd class="nhsuk-summary-list__actions">
+
+                                    <a href="add-contact-status">
+                                        Edit <span class="nhsuk-u-visually-hidden"> status</span>
+                                    </a>
+
+                                </dd>
+
+                            </div>
+
+                        </dl>
+                    </div>
+
+
+                     <p>If you need to increase the number of contacts then you can <a href="add-contact" onclick="addAnotherContact()">add a supplier contact</a></p>
+                </fieldset>
+            </div>
+            <a class="nhsuk-button" href="need-supplier-notes" id="continue-button"
+             onclick="redirectToNewContact()" >Save and continue</a>
+        </div>
+
+
+    <script>
+    window.onload = function() {
+    if (localStorage.getItem("main-supplier-summary") == "yes") {
+    document.getElementById("back-link").setAttribute('href', "supplier-info-updated");
+    document.getElementById("back-link").innerHTML = "<svg class='nhsuk-icon nhsuk-icon__chevron-left' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden='true' height='24' width='24'><path d='M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z'></path></svg>Go back to confirm main supplier details";
+       }
+    };
+
+    console.log(localStorage);
+
+    if (localStorage.getItem("second-contact") === "yes") {
+       document.getElementById("second-contact").classList.remove("nhsuk-u-visually-hidden");
+    }
+
+function redirectToNewContact() {
+    let radioButtons = document.getElementsByName("example-hints");
+
+    if (localStorage.getItem("main-supplier-summary") === "yes") {
+      document.getElementById("continue-button").href = "supplier-info-updated";
+    }
+
+    for (var radio of radioButtons) {
+      if (radio.checked) {
+       if (radio.value == 'yes') {
+          document.getElementById("continue-button").href = "/pcp-prototype-version-3/supplier-area/add-another-contact";
+       }
+       if (radio.value == 'no') {
+          document.getElementById("continue-button").href = "/pcp-prototype-version-3/supplier-area/supplier-info-updated";
+       }
+      }
+    }
+  };
+
+  localStorage.removeItem("first-name", "Joe");
+  localStorage.removeItem("last-name", "Bloggs");
+  localStorage.removeItem("email", "joe.bloggs@nhs.net");
+  localStorage.removeItem("phone", "07700 900362");
+
+   function addAnotherContact() {
+     localStorage.setItem("second-contact", "yes");
+   }
+
+   function addJoe() {
+     localStorage.setItem("first-name", "Joe");
+   }
+
+   function addBloggs() {
+     localStorage.setItem("last-name", "Bloggs");
+   }
+
+   function addEmail() {
+     localStorage.setItem("email", "joe.bloggs@nhs.net");
+   }
+
+   function addPhone() {
+     localStorage.setItem("phone", "07700 900362");
+   }
+
+
+    </script>
+{% endblock %}

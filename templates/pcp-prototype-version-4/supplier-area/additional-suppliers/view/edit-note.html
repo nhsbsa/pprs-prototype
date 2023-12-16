@@ -1,0 +1,51 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Quarterly collection - dropdown table
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-back-link nhsuk-u-margin-bottom-8">
+
+    <a class="nhsuk-back-link__link" href="../../supplier-info" id="back-link">
+        <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+            <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+        </svg>
+        Go back to AAH Pharmaceuticals Ltd</a>
+</div>
+
+        <div class="nhsuk-width-container">
+            <h1> Supplier notes
+            </h1>
+
+            <div class="nhsuk-form-group ">
+                <label class="nhsuk-label" for="example">
+                    Add a title for your note
+                </label>
+                <div class="nhsuk-hint" id="example-hint">
+                    A title is required to help categorise notes.
+                </div>
+                <input class="nhsuk-input" id="example-title" name="example" type="text" value="Supplier contact away">
+            </div>
+
+            <div class="nhsuk-form-group ">
+                <label class="nhsuk-label" for="example">
+                    Add detail to the note
+                </label>
+                <textarea class="nhsuk-textarea nhsuk-u-margin-bottom-5" id="example" name="example" rows="5" aria-describedby="example-hint">Joe Bloggs will be out of office from Monday, 10th April 2023. John Smith will be providing cover until their return on Thursday, 20th April 2023.</textarea>
+            </div>
+
+            <a class="nhsuk-button" data-module="nhsuk-button" type="submit" href="../../supplier-info" >
+                Save and continue
+            </a>
+
+        </div>
+
+<script>
+    console.log(localStorage);
+
+    function noteEdited() {
+       localStorage.setItem("note-edited", "yes");
+    }
+</script>
+{% endblock %}

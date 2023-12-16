@@ -59,14 +59,14 @@ Quarterly collection - dropdown table
                 </fieldset>
             </div>
             <a class="nhsuk-button" href="/pcp-prototype-version-3/supplier-area/add-contact" id="continue-button"
-             onclick="redirectToNewContact()" >Save and continue</a>
+               onclick="redirectToNewContact()" >Save and continue</a>
 
         </div>
     </main>
 </div>
 
 
-    <script>
+<script>
 function redirectToNewContact() {
     let radioButtons = document.getElementsByName("example-hints");
 
@@ -76,7 +76,7 @@ function redirectToNewContact() {
           document.getElementById("continue-button").href = "/pcp-prototype-version-3/supplier-area/add-another-contact";
        }
        if (radio.value == 'no') {
-          document.getElementById("continue-button").href = "/pcp-prototype-version-3/supplier-area/supplier-info-updated";
+          document.getElementById("continue-button").href = "/pcp-prototype-version-3/supplier-area/new-supplier-info-updated";
        }
       }
     }

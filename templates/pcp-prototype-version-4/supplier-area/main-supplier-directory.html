@@ -4,26 +4,21 @@
 
 {% block content %}
 
-<div class="nhsuk-back-link">
+<div class="nhsuk-back-link nhsuk-u-margin-bottom-8">
 
-    <a class="nhsuk-back-link__link" href="/pcp-prototype-version-3/supplier-area/supplier-select-page">
+    <a class="nhsuk-back-link__link" href="supplier-select-page">
         <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
             <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
         </svg>
-        Go back to Supplier select page</a>
+        Go back to select supplier section</a>
 </div>
 <div class="nhsuk-width-container">
-
-    <main class="nhsuk-main-wrapper" id="maincontent" role="main">
-
-        <div class="nhsuk-grid-row">
-            <div class="nhsuk-grid-column-full">
 
                 <h1>Main suppliers directory</h1>
 
                 <div class="nhsuk-inset-text">
                     <span class="nhsuk-u-visually-hidden">Information: </span>
-                    <p>If you are missing a supplier you can <a href="/pcp-prototype-version-3/supplier-area/add-new-suppliers">add a new main supplier here</a></p>
+                    <p>If you are missing a supplier you can <a class="nhsuk-link nhsuk-link--no-visited-state" href="main-suppliers/add/add-new-suppliers">add a new main supplier here</a></p>
                 </div>
 
                 <nav class="nhsuk-u-margin-bottom-4 nhsuk-u-margin-top-4" id="nhsuk-nav-a-z" role="navigation" aria-label="A to Z Navigation">
@@ -117,13 +112,14 @@
                         </h2>
 
                         <ul class='nhsuk-list nhsuk-list--border'>
-                            <li><a href='/pcp-prototype-version-3/supplier-area/supplier-info'>AAH Pharmaceuticals Ltd</a></li>
-                            <li><a href='company/astrazeneca'>Accord-UK Ltd</a></li>
-                            <li><a href='company/astrazeneca'>Advanz Pharma</a></li>
-                            <li><a href='company/astrazeneca'>Alliance Healthcare (Distribution)Ltd</a></li>
-                            <li><a href='company/astrazeneca'>Aristo Pharma Ltd</a></li>
-                            <li><a href='company/astrazeneca'>Aspire Pharma Ltd</a></li>
-                            <li><a href='company/astrazeneca'>Aurobindo Pharma Ltd (Milpharm)</a></li>
+                            <li><a href='#' class="nhsuk-u-visually-hidden">A New Supplier</a></li>
+                            <li><a class="nhsuk-link nhsuk-link--no-visited-state" href='supplier-info'>AAH Pharmaceuticals Ltd</a></li>
+                            <li><a href='#'>Accord-UK Ltd</a></li>
+                            <li><a href='#'>Advanz Pharma</a></li>
+                            <li><a href='#'>Alliance Healthcare (Distribution)Ltd</a></li>
+                            <li><a href='#'>Aristo Pharma Ltd</a></li>
+                            <li><a href='#'>Aspire Pharma Ltd</a></li>
+                            <li><a href='#'>Aurobindo Pharma Ltd (Milpharm)</a></li>
                         </ul>
                     </div>
                 </div>
@@ -145,9 +141,9 @@
 
                         </h2>
                         <ul class='nhsuk-list nhsuk-list--border'>
-                            <li><a href='company/bristolmyers'>Bausch & Lomb</a></li>
-                            <li><a href='company/bristolmyers'>Bristol Laboratories Ltd</a></li>
-                            <li><a href='company/bristolmyers'>Brown & Burk UK Ltd</a></li>
+                            <li><a href='#'>Bausch & Lomb</a></li>
+                            <li><a href='#'>Bristol Laboratories Ltd</a></li>
+                            <li><a href='#'>Brown & Burk UK Ltd</a></li>
                         </ul>
                     </div>
                 </div>
@@ -167,9 +163,9 @@
                             C
                         </h2>
                         <ul class='nhsuk-list nhsuk-list--border'>
-                            <li><a href='company/chisei'>Colorama Pharmaceuticals Ltd</a></li>
-                            <li><a href='company/curium'>Consilient Health Ltd</a></li>
-                            <li><a href='company/curium'>Crescent Pharma Ltd</a></li>
+                            <li><a href='#'>Colorama Pharmaceuticals Ltd</a></li>
+                            <li><a href='#'>Consilient Health Ltd</a></li>
+                            <li><a href='#'>Crescent Pharma Ltd</a></li>
                         </ul>
                     </div>
                 </div>
@@ -191,8 +187,8 @@
 
                         </h2>
                         <ul class='nhsuk-list nhsuk-list--border'>
-                            <li><a href='company/chisei'>Dexcel-Pharma Ltd</a></li>
-                            <li><a href='company/chisei'>Dr Reddy's Laboratories (UK)Ltd</a></li>
+                            <li><a href='#'>Dexcel-Pharma Ltd</a></li>
+                            <li><a href='#'>Dr Reddy's Laboratories (UK)Ltd</a></li>
                         </ul>
                     </div>
                 </div>
@@ -214,7 +210,7 @@
 
                         </h2>
                         <ul class='nhsuk-list nhsuk-list--border'>
-                            <li><a href='company/chisei'>Ethigen Ltd</a></li>
+                            <li><a href='#'>Ethigen Ltd</a></li>
                         </ul>
                     </div>
                 </div>
@@ -258,7 +254,7 @@
 
                         </h2>
                         <ul class='nhsuk-list nhsuk-list--border'>
-                            <li><a href='company/chisei'>Genesis Pharmaceuticals Ltd
+                            <li><a href='#'>Genesis Pharmaceuticals Ltd
                             </a></li>
                         </ul>
                     </div>
@@ -302,40 +298,22 @@
 </div>
 
 
-
-</main>
-</div>
-
 <script>
     console.log(localStorage);
 
-    let checkAll = document.getElementsByClassName("nhsuk-checkboxes__input");
+    localStorage.removeItem("main-supplier-summary");
+    localStorage.removeItem("note-added");
+    localStorage.removeItem("note-saved");
+    localStorage.removeItem("note-edited");
+    localStorage.removeItem("note-removed");
+    localStorage.removeItem("note-removed-last");
+    localStorage.removeItem("remove-last-note");
+    localStorage.removeItem("second-contact");
+    localStorage.removeItem("second-note-saved");
+    localStorage.removeItem("second-note-removed");
+    localStorage.removeItem("status");
 
-    let insetText = document.getElementById("inset-text-input");
-     console.log(insetText);
 
-  function checkAllBoxes() {
-    for (let i = 0; i < checkAll.length; i++) {
-       checkAll[i].checked = true;
-     }
-     let insetText = document.getElementById("inset-text-input");
-     console.log(insetText);
-     insetText.innerHTML =
-     '<span class="nhsuk-u-visually-hidden">Information: </span>'
-     +
-     '<p>Deselect suppliers individually or use this link to <a href="#" class="nhsuk-link nhsuk-link--no-visited-state" onclick="removeAllBoxes()">deselect all suppliers</a></p>';
-  }
-
-  function removeAllBoxes() {
-     for (let i = 0; i < checkAll.length; i++) {
-       checkAll[i].checked = false;
-     }
-     let insetText = document.getElementById("inset-text-input");
-     insetText.innerHTML =
-     '<span class="nhsuk-u-visually-hidden">Information: </span>'
-     +
-     '<p>Select suppliers individually or use this link to <a class="nhsuk-link nhsuk-link--no-visited-state" href="#" onclick="checkAllBoxes()">select all suppliers</a></p>';
-  }
 </script>
 
 

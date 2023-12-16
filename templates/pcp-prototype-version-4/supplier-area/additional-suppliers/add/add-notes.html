@@ -1,0 +1,65 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Quarterly collection - dropdown table
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-back-link nhsuk-u-margin-bottom-8">
+
+    <a class="nhsuk-back-link__link" href="need-supplier-notes">
+        <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+            <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+        </svg>
+        Go back to do you need to add notes for this supplier?</a>
+</div>
+
+        <div class="nhsuk-width-container">
+
+            <span class="nhsuk-caption-l">
+  Add a new additional supplier
+</span>
+            <h1> Add supplier notes
+            </h1>
+
+            <div class="nhsuk-form-group ">
+                <label class="nhsuk-label" for="example">
+                    Add a title for your note
+                </label>
+                <div class="nhsuk-hint" id="example-hint">
+                    A title is required to help categorise notes.
+                </div>
+                <input class="nhsuk-input" id="example-title" name="example" type="text">
+            </div>
+
+            <div class="nhsuk-form-group ">
+                <label class="nhsuk-label" for="example">
+                    Add detail to the note
+                </label>
+                <textarea class="nhsuk-textarea nhsuk-u-margin-bottom-5" id="example" name="example" rows="5" aria-describedby="example-hint"></textarea>
+            </div>
+
+            <a class="nhsuk-button nhsuk-u-margin-top-4" data-module="nhsuk-button" type="submit" href="supplier-info-updated" onclick="noteAdded()">
+                Save and continue
+            </a>
+
+        </div>
+
+<script>
+    console.log(localStorage);
+
+    function noteAdded() {
+       if (localStorage.getItem("note-saved") === "yes") {
+      localStorage.setItem("second-note-saved", "yes");
+      localStorage.removeItem("note-removed");
+      localStorage.removeItem("remove-last-note");
+      localStorage.removeItem("remove-second-note");
+      localStorage.removeItem("second-note-removed");
+      } else {
+        localStorage.setItem("note-saved", "yes");
+        localStorage.removeItem("note-removed");
+      }
+    }
+
+</script>
+{% endblock %}

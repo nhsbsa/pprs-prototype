@@ -1,0 +1,65 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Quarterly collection - dropdown table
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-back-link">
+
+    <a class="nhsuk-back-link__link" href="add-new-suppliers-confirm">
+        <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+            <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+        </svg>
+        Go back to review supplier contact information</a>
+</div>
+
+<div class="nhsuk-width-container">
+
+    <main class="nhsuk-main-wrapper" id="maincontent" role="main">
+        <div class="nhsuk-width-container">
+
+            <div class="nhsuk-form-group">
+                <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+                    <legend class="nhsuk-fieldset__legend nhsuk-label--xl">
+                                              <span class="nhsuk-caption-l">
+  Add a new main supplier
+</span>
+                        <h1 class="nhsuk-fieldset__heading">
+                            Do you want to remove the supplier contact?
+                        </h1>
+                    </legend>
+
+                    <div class="nhsuk-radios">
+
+                        <div class="nhsuk-radios__item nhsuk-u-margin-bottom-4">
+                            <input class="nhsuk-radios__input" id="example-hints-1" name="example-hints" type="radio" value="yes" aria-describedby="example-hints-1-item-hint">
+                            <label class="nhsuk-label nhsuk-radios__label" for="example-hints-1">
+                                Yes
+                            </label>
+                            <div class="nhsuk-hint nhsuk-radios__hint" id="example-hints-1-item-hint">
+                                This will remove Joe Bloggs and cannot be undone.
+                            </div>
+                        </div>
+
+                        <div class="nhsuk-radios__item">
+                            <input class="nhsuk-radios__input" id="example-hints-2" name="example-hints" type="radio" value="no" aria-describedby="example-hints-2-item-hint">
+                            <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
+                                No
+                            </label>
+                            <div class="nhsuk-hint nhsuk-radios__hint" id="example-hints-2-item-hint">
+                                Do not remove Joe Bloggs and return to review supplier contact information.
+                            </div>
+                        </div>
+
+                    </div>
+                </fieldset>
+            </div>
+            <a class="nhsuk-button" href="add-new-suppliers-confirm" id="redirectButton">Save and continue</a>
+        </div>
+    </main>
+
+</div>
+
+
+{% endblock %}
