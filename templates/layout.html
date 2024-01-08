@@ -108,9 +108,10 @@
      document.getElementById("logout").classList.add("hide-from-dh");
   }
 
- if (localStorage.getItem("version-four") == "yes") {
-     document.getElementById("account-logout").href = "/pcp-prototype-version-4/choose-option";
-  }
+
+    if (window.location.href.indexOf("version-4") > -1) {
+      document.getElementById("account-logout").href = "/pcp-prototype-version-4/choose-option";
+    }
 </script>
 
 {% endblock %}

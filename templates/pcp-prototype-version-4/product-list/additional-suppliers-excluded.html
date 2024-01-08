@@ -7,33 +7,33 @@ Quarterly collection dropdown - expander list
 {% block content %}
 <div class="nhsuk-back-link">
 
-    <a class="nhsuk-back-link__link nhsuk-u-margin-bottom-5" href="main-suppliers-after-group">
+    <a class="nhsuk-back-link__link nhsuk-u-margin-bottom-5" href="additional-suppliers-after-group">
         <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
             <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
         </svg>
-        Go back to main suppliers</a>
+        Go back to additional suppliers</a>
 </div>
 
         <h1><span class="nhsuk-caption-l">
      <span id="request-date">October 2023</span> - fourth request
      <span class="nhsuk-u-visually-hidden">: </span>
    </span>
-            Main suppliers manual contact
+            Additional suppliers manual contact
         </h1>
 
 <div class="nhsuk-form-group">
-    <p>All main suppliers in this section have been excluded from the group email. </p>
+    <p>All additional suppliers in this section have been excluded from the group email. </p>
 
     <p>You are required to contact each supplier in this list. To achieve this you must do the following.</p>
     <ol class="nhsuk-list nhsuk-list--number nhsuk-u-margin-bottom-7">
         <li>Access each supplier by selecting the &#39;Update&#39; link in the table.</li>
-        <li>Download the template, which contains all products.</li>
+        <li>Download the template, which contains only products for that supplier.</li>
         <li>Make any changes you need to the template and send from your own email to the supplier.</li>
         <li>Once you have sent the email, you must log this in the correspondence section.</li>
         <li>If a supplier has not replied, you must send a reminder from your own email and log this in the correspondence section.</li>
         <li>Once a supplier has replied, you must log this in the correspondence section.</li>
     </ol>
-
+    
     <fieldset class="nhsuk-fieldset nhsuk-u-margin-bottom-3 nhsuk-u-margin-top-3">
         <details class="nhsuk-details">
             <summary class="nhsuk-details__summary">
@@ -49,7 +49,7 @@ Quarterly collection dropdown - expander list
                         Supplier search
                     </label>
                     <div class="nhsuk-hint" id="example-with-hint-text-hint">
-                        If required, you can refine the main suppliers list by searching for a specific supplier.
+                        You can search the additional suppliers' template correspondence list for a specific supplier.
                     </div>
                     <input class="nhsuk-input" id="example" name="example" type="text">
                 </div>
@@ -68,11 +68,11 @@ Quarterly collection dropdown - expander list
 
 <div class="nhsuk-body-m flex--space-between" style="display: flex">
     <div class="nhsuk-u-visually-hidden">Currently viewing</div>
-    <div id="pageAndResultCount">Page 1 of 1 (2 results)</div>
+    <div id="pageAndResultCount">Page 1 of 1 (3 results)</div>
 </div>
 
 <table class="nhsuk-table nhsuk-table-responsive">
-    <caption class="nhsuk-table__caption">Manual template correspondence for main suppliers</caption>
+    <caption class="nhsuk-table__caption">Additional suppliers list</caption>
     <thead role="rowgroup" class="nhsuk-table__head">
     <tr role="row">
         <th role="columnheader" class="" scope="col">
@@ -88,7 +88,7 @@ Quarterly collection dropdown - expander list
             Last reminder
         </th>
         <th role="columnheader" class="" scope="col">
-            Replied on
+            Reply on
         </th>
         <th role="columnheader" class="" scope="col">
             Action
@@ -97,62 +97,65 @@ Quarterly collection dropdown - expander list
     </thead>
     <tbody class="nhsuk-table__body">
     <tr role="row" class="nhsuk-table__row">
-        <td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Supplier name</span>
-            Phoenix Healthcare Distributions Ltd</td>
-        <td role="cell" class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Sent on</span>
+        <td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Supplier</span>Indivior UK Ltd</td>
+        <td role="cell" class="nhsuk-table__cell" id="date-sent-4">
+            <span class="nhsuk-table-responsive__heading">Sent on</span>
             <span class="nhsuk-u-visually-hidden" id="hidden-sent-5">Template has not been sent</span>
         </td>
-        <td role="cell" class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Reminders</span>
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Total reminders</span>
             <span id="reminder-number">0</span></td>
-        <td role="cell" class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Last reminder</span>
-            <span class="nhsuk-u-visually-hidden">Reminder has not been sent</span>
+        <td role="cell" class="nhsuk-table__cell" id="reminder-sent-4">
+            <span class="nhsuk-table-responsive__heading">Last reminder</span>
+            <span class="nhsuk-u-visually-hidden" id="hidden-reminder-4">Reminder has not been sent</span>
             <span id="last-reminder"></span></td>
-        <td role="cell" class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Replied on</span>
-            <span class="nhsuk-u-visually-hidden" id="hidden-reply-5">Reply has not been received</span>
-            <span id="reply-in-manual"></span>
-        </td>
-        <td class="nhsuk-table__cell "><span class="nhsuk-table-responsive__heading">Action</span>
-            <a class="nhsuk-link nhsuk-link--no-visited-state" href="supplier-view-tabs-manual" id="supplier-update-manual">Update</a></td>
+        <td role="cell" class="nhsuk-table__cell" id="reply-in-manual">
+            <span class="nhsuk-table-responsive__heading">Replied on</span>
+            <span class="nhsuk-u-visually-hidden" id="hidden-reply-4">Reply has not been received</span></td>
+        <td class="nhsuk-table__cell ">
+            <span class="nhsuk-table-responsive__heading">Action</span>
+            <a class="nhsuk-link nhsuk-link--no-visited-state" href="additional-supplier-view-tabs-manual" id="supplier-update-manual">Update</a></td>
     </tr>
-
     <tr role="row" class="nhsuk-table__row">
-        <td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Supplier name</span>
-            Sandoz Ltd</td>
-        <td role="cell" class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Sent on</span>
+        <td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Supplier</span>Kora Healthcare Ltd</td>
+        <td role="cell" class="nhsuk-table__cell" id="date-sent-5">
+            <span class="nhsuk-table-responsive__heading">Sent on</span>
             <span class="nhsuk-u-visually-hidden" id="hidden-sent-6">Template has not been sent</span>
         </td>
-        <td role="cell" class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Reminders</span>
-            <span id="reminder-number-2">0</span></td>
-        <td role="cell" class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Last reminder</span>
-            <span class="nhsuk-u-visually-hidden">Reminder has not been sent</span>
-            <span id="last-reminder-2"></span></td>
-        <td role="cell" class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Replied on</span>
-            <span class="nhsuk-u-visually-hidden" id="hidden-reply-6">Reply has not been received</span>
-            <span id="reply-in-manual-2"></span>
-        </td>
-        <td class="nhsuk-table__cell "><span class="nhsuk-table-responsive__heading">Action</span>
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Total reminders</span>
+            <span id="reminder-number-1">0</span></td>
+        <td role="cell" class="nhsuk-table__cell" id="reminder-sent-5">
+            <span class="nhsuk-table-responsive__heading">Last reminder</span>
+            <span class="nhsuk-u-visually-hidden" id="hidden-reminder-5">Reminder has not been sent</span>
+            <span id="last-reminder-1"></span></td>
+        <td role="cell" class="nhsuk-table__cell" id="reply-in-manual-1">
+            <span class="nhsuk-table-responsive__heading">Replied on</span>
+            <span class="nhsuk-u-visually-hidden" id="hidden-reply-5">Reply has not been received</span></td>
+        <td class="nhsuk-table__cell ">
+            <span class="nhsuk-table-responsive__heading">Action</span>
             Update</td>
     </tr>
-
     <tr role="row" class="nhsuk-table__row">
-        <td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Supplier name</span>
-            Teva UK Ltd</td>
-        <td role="cell" class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Sent on</span>
+        <td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Supplier</span>Martindale Pharmaceuticals Ltd</td>
+        <td role="cell" class="nhsuk-table__cell" id="date-sent-6">
+            <span class="nhsuk-table-responsive__heading">Sent on</span>
             <span class="nhsuk-u-visually-hidden" id="hidden-sent-7">Template has not been sent</span>
         </td>
-        <td role="cell" class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Reminders</span>
-            <span id="reminder-number-3">0</span></td>
-        <td role="cell" class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Last reminder</span>
-            <span class="nhsuk-u-visually-hidden">Reminder has not been sent</span>
-            <span id="last-reminder-3"></span></td>
-        <td role="cell" class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Replied on</span>
-            <span class="nhsuk-u-visually-hidden" id="hidden-reply-7">Reply has not been received</span>
-            <span id="reply-in-manual-3"></span>
-        </td>
-        <td class="nhsuk-table__cell "><span class="nhsuk-table-responsive__heading">Action</span>
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Total reminders</span>
+            <span id="reminder-number-2">0</span></td>
+        <td role="cell" class="nhsuk-table__cell" id="reminder-sent-6">
+            <span class="nhsuk-table-responsive__heading">Last reminder</span>
+            <span class="nhsuk-u-visually-hidden" id="hidden-reminder-6">Reminder has not been sent</span>
+            <span id="last-reminder-2"></span></td>
+        <td role="cell" class="nhsuk-table__cell" id="reply-in-manual-2">
+            <span class="nhsuk-table-responsive__heading">Replied on</span>
+            <span class="nhsuk-u-visually-hidden" id="hidden-reply-6">Reply has not been received</span></td>
+        <td class="nhsuk-table__cell ">
+            <span class="nhsuk-table-responsive__heading">Action</span>
             Update</td>
     </tr>
-
     </tbody>
 </table>
 
@@ -191,21 +194,20 @@ Quarterly collection dropdown - expander list
 <script>
     console.log(localStorage);
 
-    let dateEmailSent = localStorage.getItem("has-sent-email");
-    let dateReplyReceivedManual = localStorage.getItem("supplier-has-replied-manual");
+    let dateEmailSent = localStorage.getItem("has-sent-email-additional");
+    let dateReplyReceived = localStorage.getItem("supplier-has-replied-additional");
+    let dateReplyReceivedManual = localStorage.getItem("supplier-has-replied-manual-additional");
     let dateSent = new Date();
 
-    var shortMonth =  ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-
     let day = dateSent.getDate();
-    let month = dateSent.getMonth();
+    let month = dateSent.getMonth() + 1;
     let year = dateSent.getFullYear();
 
     if (day < 10) day = '0' + day;
-<!--    if (month < 10) month = '0' + month;-->
+    if (month < 10) month = '0' + month;
 
-    let currentDate = `${day} ${shortMonth[month]} ${year}`;
-    console.log(shortMonth[month]);
+    let currentDate = `${day}-${month}-${year}`;
+    console.log(currentDate);
 
     if (dateReplyReceivedManual == "yes") {
        document.getElementById("reply-in-manual").innerHTML = currentDate;
@@ -215,30 +217,28 @@ Quarterly collection dropdown - expander list
        }
     }
 
-    if (localStorage.getItem("has-sent-email-manual") == "yes") {
+    if (localStorage.getItem("has-sent-email-manual-additional") == "yes") {
         document.getElementById("hidden-sent-5").textContent = currentDate;
         document.getElementById("hidden-sent-5").classList.remove("nhsuk-u-visually-hidden");
     }
 
-    if (localStorage.getItem("reminder-one-sent") == "yes" && (!localStorage.getItem("reminder-two-sent") || localStorage.getItem("reminder-two-sent") == "no")) {
+    if (localStorage.getItem("reminder-one-sent-additional") == "yes" && (!localStorage.getItem("reminder-two-sent-additional") || localStorage.getItem("reminder-two-sent-additional") == "no")) {
        document.getElementById("reminder-number").textContent = "1";
        document.getElementById("last-reminder").textContent = currentDate;
-    } else if (localStorage.getItem("reminder-one-sent") == "yes" && localStorage.getItem("reminder-two-sent") == "yes") {
+    } else if (localStorage.getItem("reminder-one-sent-additional") == "yes" && localStorage.getItem("reminder-two-sent-additional") == "yes") {
        document.getElementById("reminder-number").textContent = "2";
        document.getElementById("last-reminder").textContent = currentDate;
     }
 
-        let requestDate = document.getElementById("request-date");
-        var monthNames = ["January", "February", "March", "April", "May","June","July", "August", "September", "October", "November","December"];
+    let requestDate = document.getElementById("request-date");
+       var monthNamesTitle = ["January", "February", "March", "April", "May","June","July", "August", "September", "October", "November","December"];
 
-        var d = new Date();
-        var dayToday = d.getDate();
-        var monthToday = monthNames[d.getMonth()];
-        var yearToday = d.getFullYear();
+        var dt = new Date();
+        var dayTodayt = dt.getDate();
+        var monthTodayt = monthNamesTitle[dt.getMonth()];
+        var yearTodayt = dt.getFullYear();
 
-        requestDate.innerHTML = monthToday + ' ' + yearToday;
-
-
+        requestDate.innerHTML = monthTodayt + ' ' + yearTodayt;
 
 </script>
 

@@ -509,7 +509,12 @@ app.get('/pcp-prototype-version-4/product-list/supplier-view-tabs-manual', (req,
 app.get('/pcp-prototype-version-4/product-list/additional-supplier-view-tabs', (req, res) => { res.render('pcp-prototype-version-4/product-list/additional-supplier-view-tabs') });
 app.get('/pcp-prototype-version-4/product-list/additional-supplier-view-tabs-manual', (req, res) => { res.render('pcp-prototype-version-4/product-list/additional-supplier-view-tabs-manual') });
 app.get('/pcp-prototype-version-4/product-list/main-suppliers', (req, res) => { res.render('pcp-prototype-version-4/product-list/main-suppliers') });
+app.get('/pcp-prototype-version-4/product-list/main-suppliers-included', (req, res) => { res.render('pcp-prototype-version-4/product-list/main-suppliers-included') });
+app.get('/pcp-prototype-version-4/product-list/main-suppliers-excluded', (req, res) => { res.render('pcp-prototype-version-4/product-list/main-suppliers-excluded') });
 app.get('/pcp-prototype-version-4/product-list/main-suppliers-after-group', (req, res) => { res.render('pcp-prototype-version-4/product-list/main-suppliers-after-group') });
+app.get('/pcp-prototype-version-4/product-list/additional-suppliers-included', (req, res) => { res.render('pcp-prototype-version-4/product-list/additional-suppliers-included') });
+app.get('/pcp-prototype-version-4/product-list/additional-suppliers-excluded', (req, res) => { res.render('pcp-prototype-version-4/product-list/additional-suppliers-excluded') });
+app.get('/pcp-prototype-version-4/product-list/additional-suppliers-after-group', (req, res) => { res.render('pcp-prototype-version-4/product-list/additional-suppliers-after-group') });
 app.get('/pcp-prototype-version-4/product-list/main-suppliers-without-dash', (req, res) => { res.render('pcp-prototype-version-4/product-list/main-suppliers-without-dash') });
 app.get('/pcp-prototype-version-4/product-list/supplier-contact', (req, res) => { res.render('pcp-prototype-version-4/product-list/supplier-contact') });
 app.get('/pcp-prototype-version-4/product-list/supplier-deadline-date', (req, res) => { res.render('pcp-prototype-version-4/product-list/supplier-deadline-date') });

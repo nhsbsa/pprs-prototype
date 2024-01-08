@@ -31,8 +31,6 @@ Quarterly collection dropdown - expander list
             role="presentation"><a class="nhsuk-tabs__tab" href="#tab-products" role="tab"
                                    id="products-panel" aria-selected="true">Requested products</a>
         </li>
-        <li class="nhsuk-tabs__list-item" id="heading-tab-template" role="presentation"><a
-                class="nhsuk-tabs__tab" href="#tab-template" role="tab" id="template-panel">Download template</a></li>
         <li class="nhsuk-tabs__list-item" id="heading-tab-correspondence" role="presentation"><a
                 class="nhsuk-tabs__tab" href="#tab-correspondence" role="tab" id="correspondence-panel">Correspondence</a>
         </li>
@@ -57,7 +55,7 @@ Quarterly collection dropdown - expander list
             </div>
 
             <table class="nhsuk-table-responsive" role="table">
-                <caption class="nhsuk-table__caption">DHSC product list</caption>
+                <caption class="nhsuk-table__caption">Amgen Ltd products included in template</caption>
                 <thead role="rowgroup" class="nhsuk-table__head">
                 <tr role="row">
                     <th role="columnheader" class="" scope="col">
@@ -180,21 +178,7 @@ Quarterly collection dropdown - expander list
                 </div>
             </nav>
 
-            <p><a class="nhsuk-link nhsuk-link--no-visited-state" href="#tab-template">Go to download template</a></p>
-
-        </div>
-    </div>
-
-    <div class="nhsuk-tabs__panel" id="tab-template" role="tabpanel" tabindex="-1"
-         aria-labelledby="tab1">
-        <div class="nhsuk-tabs-panel-inner">
-
-                  <h2>Download template</h2>
-                    <p>If you have not included this supplier in the group email then download the additional supplier template, make changes and send via your own email.</p>
-
-                    <a class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-bottom-6" href="#">Download additional supplier template</a>
-
-            <p>After the initial email has been sent, you must <a class="nhsuk-link nhsuk-link--no-visited-state" href="#tab-correspondence">track the correspondence</a></p>
+            <p>If this supplier has responded, you must <a class="nhsuk-link nhsuk-link--no-visited-state" href="#tab-correspondence">track this correspondence</a></p>
 
         </div>
     </div>
@@ -205,8 +189,7 @@ Quarterly collection dropdown - expander list
 
             <h2 class="nhsuk-u-margin-bottom-6">Correspondence</h2>
 
-            <p>If the template has been sent by a group email the recording of sending the template, as well as sending any reminders, is automatic. If the template has been sent manually then you must track these elements manually. </p>
-            <p class="nhsuk-u-margin-bottom-6">In both cases, you must update the correspondence when the supplier replies.</p>
+            <p class="nhsuk-u-margin-bottom-6">View when the group email was sent in the record of correspondence table. If the supplier has replied, you must log this so that the supplier is excluded from the group reminder email.</p>
 
             <table class="nhsuk-table nhsuk-table-responsive hide-question nhsuk-u-margin-bottom-7" id="yes-first-question-expander">
                 <caption class="nhsuk-table__caption">Record of correspondence</caption>
@@ -341,7 +324,7 @@ Quarterly collection dropdown - expander list
 
             </div>
 
-            <a class="nhsuk-button nhsuk-button--primary nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-6" id="update-button" href="additional-suppliers"
+            <a class="nhsuk-button nhsuk-button--primary nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-6" id="update-button" href="additional-suppliers-included"
                onclick="storeUpdateCorrespondence()">Update correspondence</a>
 
             <a class="nhsuk-button nhsuk-button--primary nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-6 hide-question" id="reset-button"

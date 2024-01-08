@@ -126,7 +126,7 @@ Quarterly collection dropdown - expander list
 
     <div class="hide-area" id="supplier-area">
         <h2>Suppliers</h2>
-        <p>To progress with this request, you must send templates to all main and additional suppliers. This can be achieved in two ways. You can send the same template to a group of suppliers, or download the template and send to individual suppliers via email. </p>
+        <p>To progress with this request, you must send templates to all main and additional suppliers. This can be achieved in two ways. First, you must select suppliers and send the template in a group email. For the remaining suppliers, you must download the template and send individually via email. </p>
         <p>You can track the supplier correspondence in each section.</p>
 
         <!--        <p class="nhsuk-u-margin-bottom-6">If the main or additional supplier template does not fit with the supplier  <a class="nhsuk-link nhsuk-link&#45;&#45;no-visited-state" href="#">create a bespoke supplier template</a></p>-->
@@ -141,7 +141,7 @@ Quarterly collection dropdown - expander list
                 <span class="nhsuk-card__link">
                   <span class="nhsuk-u-font-size-48">50</span>
                   <br>
-                    <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="main-suppliers">Main suppliers</a>
+                    <a class="nhsuk-card__link nhsuk-link--no-visited-state" id="access-main-suppliers" href="main-suppliers">Main suppliers</a>
                 </span>
                         </h2>
 
@@ -271,7 +271,7 @@ Quarterly collection dropdown - expander list
 
 </div>
 
-<div class="nhsuk-inset-text">
+<div class="nhsuk-inset-text nhsuk-u-visually-hidden" id="end-request">
     <span class="nhsuk-u-visually-hidden">Information: </span>
     <p>If not all suppliers have responded, but you need to close this request you can <a class="nhsuk-link nhsuk-link--no-visited-state" href="reason-for-completing-request" > complete the request </a></p>
 </div>
@@ -330,6 +330,10 @@ Quarterly collection dropdown - expander list
     function runCDRQuery() {
       localStorage.setItem("save-and-exit-ongoing", "yes");
       localStorage.setItem("save-and-exit", "no");
+    }
+
+    if (localStorage.getItem("save-and-exit-ongoing") == "yes") {
+      document.getElementById("end-request").classList.remove("nhsuk-u-visually-hidden");
     }
 
     console.log(localStorage);
@@ -443,7 +447,7 @@ Quarterly collection dropdown - expander list
 
         var dayToday = d.getDate();
         var dplus2 = new Date(d.setDate(d.getDate() + 2));
-        var monthToday = monthNames[d.getMonth() -1];
+        var monthToday = monthNames[d.getMonth()];
         var dateRequestedMonth = monthNames[dplus2.getMonth()]
         var yearToday = d.getFullYear();
 
@@ -454,6 +458,10 @@ Quarterly collection dropdown - expander list
         requestDate.innerHTML = monthToday + ' ' + yearToday;
         dateRequested.innerHTML = dayToday + ' ' + monthToday + ' ' + yearToday;
         deadlineDate.innerHTML = (dplus2.getDate() < 10 ? '0' : '') + dplus2.getDate() + ' ' + dateRequestedMonth + ' ' + yearToday;
+
+        if (localStorage.getItem("group-email-sent") === "yes") {
+           document.getElementById("access-main-suppliers").href = "main-suppliers-after-group";
+        }
 
 </script>
 
