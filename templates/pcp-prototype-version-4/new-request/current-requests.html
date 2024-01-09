@@ -72,7 +72,7 @@ Quarterly collection dropdown - expander list
 
                 <tr role="row" class="nhsuk-table__row">
                     <td role="cell" class="nhsuk-table__cell">
-                        <span class="nhsuk-table-responsive__heading">Requests </span>1st request
+                        <span class="nhsuk-table-responsive__heading">Requests </span>First request
                     </td>
                     <td role="cell" class="nhsuk-table__cell">
                         <span class="nhsuk-table-responsive__heading">Product quantity</span>84 items
@@ -94,7 +94,7 @@ Quarterly collection dropdown - expander list
 
                 <tr role="row" class="nhsuk-table__row">
                     <td role="cell" class="nhsuk-table__cell">
-                        <span class="nhsuk-table-responsive__heading">Requests </span>2nd request
+                        <span class="nhsuk-table-responsive__heading">Requests </span>Second request
                     </td>
                     <td role="cell" class="nhsuk-table__cell">
                         <span class="nhsuk-table-responsive__heading">Product quantity</span>58 items
@@ -116,7 +116,7 @@ Quarterly collection dropdown - expander list
 
                 <tr role="row" class="nhsuk-table__row">
                     <td role="cell" class="nhsuk-table__cell">
-                        <span class="nhsuk-table-responsive__heading">Requests </span>3rd request
+                        <span class="nhsuk-table-responsive__heading">Requests </span>Third request
                     </td>
                     <td role="cell" class="nhsuk-table__cell">
                         <span class="nhsuk-table-responsive__heading">Product quantity</span>82 items
@@ -138,7 +138,7 @@ Quarterly collection dropdown - expander list
 
                 <tr role="row" class="nhsuk-table__row hide-table-row" id="fourth-request">
                     <td role="cell" class="nhsuk-table__cell">
-                        <span class="nhsuk-table-responsive__heading">Requests </span>fourth request
+                        <span class="nhsuk-table-responsive__heading">Requests </span>Fourth request
                     </td>
                     <td role="cell" class="nhsuk-table__cell">
                         <span class="nhsuk-table-responsive__heading">Product quantity</span>82 items
@@ -195,12 +195,21 @@ Quarterly collection dropdown - expander list
         document.getElementById("fourth-request").classList.remove("hide-table-row");
     }
 
-    if (localStorage.getItem("save-and-exit-ongoing") == "yes") {
+    if (localStorage.getItem("save-and-exit-ongoing") == "yes" && !localStorage.getItem("complete-request")) {
         document.getElementById("fourth-request").classList.remove("hide-table-row");
         document.getElementById("edit-ref").href = "../product-list/supplier-contact";
         document.getElementById("status-tag").classList.remove("nhsuk-tag--orange");
         document.getElementById("status-tag").classList.add("nhsuk-tag--blue");
         document.getElementById("status-tag").innerHTML = "Ongoing";
+    }
+
+    if (localStorage.getItem("complete-request") == "yes") {
+        document.getElementById("fourth-request").classList.remove("hide-table-row");
+        document.getElementById("edit-ref").href = "../product-list/supplier-contact";
+        document.getElementById("edit-ref").textContent = "View";
+        document.getElementById("status-tag").classList.remove("nhsuk-tag--orange");
+        document.getElementById("status-tag").classList.add("nhsuk-tag--green");
+        document.getElementById("status-tag").innerHTML = "Completed";
     }
 
         let firstRequest = document.getElementById("first-request");

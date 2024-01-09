@@ -7,11 +7,11 @@ Quarterly collection dropdown - expander list
 {% block content %}
 <div class="nhsuk-back-link">
 
-    <a class="nhsuk-back-link__link nhsuk-u-margin-bottom-5" href="supplier-contact">
+    <a class="nhsuk-back-link__link nhsuk-u-margin-bottom-5" href="reason-for-completing-request">
         <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
             <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
         </svg>
-        Go back to request dashboard</a>
+        Go back to reason for completing the request</a>
 </div>
 
         <h1><span class="nhsuk-caption-l">
@@ -31,7 +31,7 @@ Quarterly collection dropdown - expander list
         </legend>
 
         <div class="nhsuk-hint nhsuk-u-margin-bottom-4">
-           By completing the request, no more action can be taken. For example, you will not be able to register replies or send reminders.
+           By completing the request, no more action can be taken. For example, you will not be able to register replies or send reminders on this request.
         </div>
 
         <div class="nhsuk-radios">
@@ -56,7 +56,7 @@ Quarterly collection dropdown - expander list
 </div>
 
 <a class="nhsuk-button nhsuk-u-margin-top-4" href="supplier-contact" id="continue-button"
-   onclick="deleteProduct()">Save</a>
+   onclick="completeRequest()">Save</a>
 
 <script>
     console.log(localStorage);
@@ -85,46 +85,6 @@ Quarterly collection dropdown - expander list
 <!--       }-->
 <!--    }-->
 
-    if (dateReplyReceived == "yes") {
-       document.getElementById("reply-in").innerHTML = currentDate;
-       document.getElementById("supplier-update").innerHTML = 'View';
-       if (document.getElementById("hidden-reply")) {
-       document.getElementById("hidden-reply").style.display = "none";
-       }
-    }
-
-    if (dateReplyReceivedManual == "yes") {
-       document.getElementById("reply-in-manual").innerHTML = currentDate;
-       document.getElementById("supplier-update-manual").innerHTML = 'View';
-       if (document.getElementById("hidden-reply-5")) {
-       document.getElementById("hidden-reply-5").style.display = "none";
-       }
-    }
-
-    if (localStorage.getItem("group-email-sent") == "yes") {
-        document.getElementById("hidden-sent").textContent = currentDate;
-        document.getElementById("hidden-sent-3").textContent = currentDate;
-        document.getElementById("hidden-sent-4").textContent = currentDate;
-        document.getElementById("hidden-sent-2").textContent = currentDate;
-        document.getElementById("hidden-sent").classList.remove("nhsuk-u-visually-hidden");
-        document.getElementById("hidden-sent-3").classList.remove("nhsuk-u-visually-hidden");
-        document.getElementById("hidden-sent-4").classList.remove("nhsuk-u-visually-hidden");
-        document.getElementById("hidden-sent-2").classList.remove("nhsuk-u-visually-hidden");
-    }
-
-    if (localStorage.getItem("has-sent-email-manual") == "yes") {
-        document.getElementById("hidden-sent-5").textContent = currentDate;
-        document.getElementById("hidden-sent-5").classList.remove("nhsuk-u-visually-hidden");
-    }
-
-    if (localStorage.getItem("reminder-one-sent") == "yes" && (!localStorage.getItem("reminder-two-sent") || localStorage.getItem("reminder-two-sent") == "no")) {
-       document.getElementById("reminder-number").textContent = "1";
-       document.getElementById("last-reminder").textContent = currentDate;
-    } else if (localStorage.getItem("reminder-one-sent") == "yes" && localStorage.getItem("reminder-two-sent") == "yes") {
-       document.getElementById("reminder-number").textContent = "2";
-       document.getElementById("last-reminder").textContent = currentDate;
-    }
-
         let requestDate = document.getElementById("request-date");
         var monthNames = ["January", "February", "March", "April", "May","June","July", "August", "September", "October", "November","December"];
 
@@ -135,19 +95,21 @@ Quarterly collection dropdown - expander list
 
         requestDate.innerHTML = monthToday + ' ' + yearToday;
 
-        var dplus2 = new Date(d.setDate(d.getDate() + 2));
-        var monthToday = monthNames[d.getMonth()];
-        var yearToday = d.getFullYear();
+        function completeRequest() {
+         let radioButtons = document.getElementsByName("example");
 
-
-        console.log('dplus2', dplus2.getDate() );
-        console.log('monthToday', dplus2.getMonth() +1);
-        console.log('dplus2', dplus2.getFullYear() );
-
-        document.getElementById("example-day").value = (dplus2.getDate() < 10 ? '0' : '') + dplus2.getDate();
-        document.getElementById("example-month").value = dplus2.getMonth() +1;
-        document.getElementById("example-year").value = dplus2.getFullYear();
-
+    for (var radio of radioButtons) {
+      if (radio.checked) {
+       if (radio.value == 'yes') {
+          localStorage.setItem("complete-request", "yes");
+          document.getElementById("continue-button").href = "../new-request/current-requests"
+       }
+       if (radio.value == 'no') {
+          localStorage.setItem("complete-request", "no");
+       }
+      }
+    }
+        }
 
 </script>
 
