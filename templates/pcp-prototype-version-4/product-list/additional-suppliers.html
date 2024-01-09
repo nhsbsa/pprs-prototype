@@ -288,38 +288,6 @@ Quarterly collection dropdown - expander list
     let currentDate = `${day}-${month}-${year}`;
     console.log(currentDate);
 
-    if (dateReplyReceived == "yes") {
-       document.getElementById("reply-in").innerHTML = currentDate;
-       document.getElementById("supplier-update").innerHTML = 'View';
-       if (document.getElementById("hidden-reply")) {
-       document.getElementById("hidden-reply").style.display = "none";
-       }
-    }
-
-    if (dateReplyReceivedManual == "yes") {
-       document.getElementById("reply-in-manual").innerHTML = currentDate;
-       document.getElementById("supplier-update-manual").innerHTML = 'View';
-       if (document.getElementById("hidden-reply-5")) {
-       document.getElementById("hidden-reply-5").style.display = "none";
-       }
-    }
-
-    if (localStorage.getItem("group-email-sent-additional") == "yes") {
-        document.getElementById("hidden-sent").textContent = currentDate;
-        document.getElementById("hidden-sent-3").textContent = currentDate;
-        document.getElementById("hidden-sent-4").textContent = currentDate;
-        document.getElementById("hidden-sent-2").textContent = currentDate;
-        document.getElementById("hidden-sent").classList.remove("nhsuk-u-visually-hidden");
-        document.getElementById("hidden-sent-3").classList.remove("nhsuk-u-visually-hidden");
-        document.getElementById("hidden-sent-4").classList.remove("nhsuk-u-visually-hidden");
-        document.getElementById("hidden-sent-2").classList.remove("nhsuk-u-visually-hidden");
-    }
-
-    if (localStorage.getItem("has-sent-email-manual-additional") == "yes") {
-        document.getElementById("hidden-sent-5").textContent = currentDate;
-        document.getElementById("hidden-sent-5").classList.remove("nhsuk-u-visually-hidden");
-    }
-
     if (localStorage.getItem("reminder-one-sent-additional") == "yes" && (!localStorage.getItem("reminder-two-sent-additional") || localStorage.getItem("reminder-two-sent-additional") == "no")) {
        document.getElementById("reminder-number").textContent = "1";
        document.getElementById("last-reminder").textContent = currentDate;

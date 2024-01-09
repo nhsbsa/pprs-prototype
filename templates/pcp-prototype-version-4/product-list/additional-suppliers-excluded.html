@@ -199,15 +199,19 @@ Quarterly collection dropdown - expander list
     let dateReplyReceivedManual = localStorage.getItem("supplier-has-replied-manual-additional");
     let dateSent = new Date();
 
+    var shortMonth =  ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
     let day = dateSent.getDate();
-    let month = dateSent.getMonth() + 1;
+    let month = dateSent.getMonth();
     let year = dateSent.getFullYear();
 
     if (day < 10) day = '0' + day;
-    if (month < 10) month = '0' + month;
+<!--    if (month < 10) month = '0' + month;-->
 
-    let currentDate = `${day}-${month}-${year}`;
-    console.log(currentDate);
+    console.log('month', month);
+
+    let currentDate = `${day} ${shortMonth[month]} ${year}`;
+    console.log(shortMonth[month]);
 
     if (dateReplyReceivedManual == "yes") {
        document.getElementById("reply-in-manual").innerHTML = currentDate;

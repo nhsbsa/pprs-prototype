@@ -205,29 +205,25 @@ Quarterly collection dropdown - expander list
     let dateReplyReceivedManual = localStorage.getItem("supplier-has-replied-manual-additional");
     let dateSent = new Date();
 
+    var shortMonth =  ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
     let day = dateSent.getDate();
-    let month = dateSent.getMonth() + 1;
+    let month = dateSent.getMonth();
     let year = dateSent.getFullYear();
 
     if (day < 10) day = '0' + day;
-    if (month < 10) month = '0' + month;
+<!--    if (month < 10) month = '0' + month;-->
 
-    let currentDate = `${day}-${month}-${year}`;
-    console.log(currentDate);
+    console.log('month', month);
+
+    let currentDate = `${day} ${shortMonth[month]} ${year}`;
+    console.log(shortMonth[month]);
 
     if (dateReplyReceived == "yes") {
        document.getElementById("reply-in").innerHTML = currentDate;
        document.getElementById("supplier-update").innerHTML = 'View';
        if (document.getElementById("hidden-reply")) {
        document.getElementById("hidden-reply").style.display = "none";
-       }
-    }
-
-    if (dateReplyReceivedManual == "yes") {
-       document.getElementById("reply-in-manual").innerHTML = currentDate;
-       document.getElementById("supplier-update-manual").innerHTML = 'View';
-       if (document.getElementById("hidden-reply-5")) {
-       document.getElementById("hidden-reply-5").style.display = "none";
        }
     }
 
@@ -240,11 +236,6 @@ Quarterly collection dropdown - expander list
         document.getElementById("hidden-sent-3").classList.remove("nhsuk-u-visually-hidden");
         document.getElementById("hidden-sent-4").classList.remove("nhsuk-u-visually-hidden");
         document.getElementById("hidden-sent-2").classList.remove("nhsuk-u-visually-hidden");
-    }
-
-    if (localStorage.getItem("has-sent-email-manual-additional") == "yes") {
-        document.getElementById("hidden-sent-5").textContent = currentDate;
-        document.getElementById("hidden-sent-5").classList.remove("nhsuk-u-visually-hidden");
     }
 
     if (localStorage.getItem("reminder-one-sent-additional") == "yes" && (!localStorage.getItem("reminder-two-sent-additional") || localStorage.getItem("reminder-two-sent-additional") == "no")) {

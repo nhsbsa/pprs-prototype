@@ -15,7 +15,7 @@ Quarterly collection dropdown - expander list
 </div>
 
 <h1><span class="nhsuk-caption-l">
-     <span id="request-date">October 2023</span> - 4th request
+     <span id="request-date">October 2023</span> - fourth request
      <span class="nhsuk-u-visually-hidden">: </span>
    </span>
     Request dashboard
@@ -210,7 +210,8 @@ Quarterly collection dropdown - expander list
                 <span class="nhsuk-card__link">
                   <span class="nhsuk-u-font-size-48">84</span>
                   <br>
-                  <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="additional-suppliers">Additional suppliers</a>
+                  <a class="nhsuk-card__link nhsuk-link--no-visited-state" id="access-additional-suppliers"
+                     href="additional-suppliers">Additional suppliers</a>
                 </span>
                         </h2>
 
@@ -423,9 +424,9 @@ Quarterly collection dropdown - expander list
 
 
     if (localStorage.getItem("group-email-sent") == "yes" && !localStorage.getItem("has-sent-email-manual")) {
-       document.getElementById("templates-sent").innerHTML = '4';
-    } else if (localStorage.getItem("group-email-sent") == "yes" && localStorage.getItem("has-sent-email-manual") == "yes") {
        document.getElementById("templates-sent").innerHTML = '5';
+    } else if (localStorage.getItem("group-email-sent") == "yes" && localStorage.getItem("has-sent-email-manual") == "yes") {
+       document.getElementById("templates-sent").innerHTML = '6';
     } else if (!localStorage.getItem("group-email-sent") && localStorage.getItem("has-sent-email-manual") == "yes") {
        document.getElementById("templates-sent").innerHTML = '1';
     }
@@ -451,16 +452,15 @@ Quarterly collection dropdown - expander list
         var dateRequestedMonth = monthNames[dplus2.getMonth()]
         var yearToday = d.getFullYear();
 
-        console.log('dplus2', dplus2.getDate() );
-        console.log('monthToday', monthToday);
-        console.log('dplus2', dplus2.getFullYear() );
-
         requestDate.innerHTML = monthToday + ' ' + yearToday;
         dateRequested.innerHTML = dayToday + ' ' + monthToday + ' ' + yearToday;
         deadlineDate.innerHTML = (dplus2.getDate() < 10 ? '0' : '') + dplus2.getDate() + ' ' + dateRequestedMonth + ' ' + yearToday;
 
         if (localStorage.getItem("group-email-sent") === "yes") {
            document.getElementById("access-main-suppliers").href = "main-suppliers-after-group";
+        }
+        if (localStorage.getItem("group-email-sent-additional") === "yes") {
+           document.getElementById("access-additional-suppliers").href = "additional-suppliers-after-group";
         }
 
 </script>
