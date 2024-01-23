@@ -42,7 +42,7 @@ Quarterly collection dropdown - expander list
             Supplier deadline
         </dt>
         <dd class="nhsuk-summary-list__value">
-            <span id="deadline-date">October 2023</span> at 5pm
+            <span id="deadline-date">October 2023</span> at <span id="deadline-time">5pm</span>
         </dd>
         <dd class="nhsuk-summary-list__actions">
 
@@ -139,7 +139,7 @@ Quarterly collection dropdown - expander list
                     <div class="nhsuk-card__content">
                         <h2 class="nhsuk-card__heading nhsuk-heading-s">
                 <span class="nhsuk-card__link">
-                  <span class="nhsuk-u-font-size-48">50</span>
+                  <span class="nhsuk-u-font-size-48">8</span>
                   <br>
                     <a class="nhsuk-card__link nhsuk-link--no-visited-state" id="access-main-suppliers" href="main-suppliers">Main suppliers</a>
                 </span>
@@ -208,7 +208,7 @@ Quarterly collection dropdown - expander list
                     <div class="nhsuk-card__content">
                         <h2 class="nhsuk-card__heading nhsuk-heading-s">
                 <span class="nhsuk-card__link">
-                  <span class="nhsuk-u-font-size-48">84</span>
+                  <span class="nhsuk-u-font-size-48">7</span>
                   <br>
                   <a class="nhsuk-card__link nhsuk-link--no-visited-state" id="access-additional-suppliers"
                      href="additional-suppliers">Additional suppliers</a>
@@ -454,7 +454,16 @@ Quarterly collection dropdown - expander list
 
         requestDate.innerHTML = monthToday + ' ' + yearToday;
         dateRequested.innerHTML = dayToday + ' ' + monthToday + ' ' + yearToday;
-        deadlineDate.innerHTML = (dplus2.getDate() < 10 ? '0' : '') + dplus2.getDate() + ' ' + dateRequestedMonth + ' ' + yearToday;
+
+        if (localStorage.getItem("supplier-deadline-day")) {
+              deadlineDate.innerHTML = (localStorage.getItem("supplier-deadline-day")) + ' ' + dateRequestedMonth + ' ' + yearToday;
+        } else {
+            deadlineDate.innerHTML = (dplus2.getDate() < 10 ? '0' : '') + dplus2.getDate() + ' ' + dateRequestedMonth + ' ' + yearToday;
+        }
+
+        if (localStorage.getItem("time-of-deadline")) {
+            document.getElementById("deadline-time").innerHTML = localStorage.getItem("time-of-deadline");
+        }
 
         if (localStorage.getItem("group-email-sent") === "yes") {
            document.getElementById("access-main-suppliers").href = "main-suppliers-after-group";

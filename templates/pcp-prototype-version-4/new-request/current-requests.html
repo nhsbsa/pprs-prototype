@@ -44,7 +44,7 @@ Quarterly collection dropdown - expander list
 
             <div class="nhsuk-body-m flex--space-between" style="display: flex">
                 <div class="nhsuk-u-visually-hidden">Currently viewing</div>
-                <div id="pageAndResultCount">Page 1 of 1 (3 results)</div>
+                <div id="pageAndResultCount">Page 1 of 1 (<span id="results-indicator">3</span> results)</div>
             </div>
 
             <table role="table" class="nhsuk-table-responsive nhsuk-u-margin-bottom-8">
@@ -189,6 +189,10 @@ Quarterly collection dropdown - expander list
     document.getElementById("back-link").setAttribute('href', "../product-list/supplier-contact");
     document.getElementById("back-link").innerHTML = "<svg class='nhsuk-icon nhsuk-icon__chevron-left' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden='true' height='24' width='24'><path d='M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z'></path></svg>Go back to request dashboard";
       }
+    }
+
+    if (localStorage.getItem("complete-request") == "yes") {
+        document.getElementById("results-indicator").innerHTML = "4";
     }
 
     if (localStorage.getItem("save-and-exit") == "yes") {
