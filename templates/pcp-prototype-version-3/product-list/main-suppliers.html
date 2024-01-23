@@ -81,22 +81,25 @@ Quarterly collection dropdown - expander list
     <caption class="nhsuk-table__caption">Main supplier template correspondence</caption>
     <thead role="rowgroup" class="nhsuk-table__head">
     <tr role="row">
-        <th role="columnheader" class="" scope="col">
+        <th role="columnheader" class="nhsbsa-u-whitespace__normal" scope="col">
             Supplier
         </th>
-        <th role="columnheader" class="" scope="col">
+        <th role="columnheader" class="nhsbsa-u-whitespace__normal" scope="col">
+            Type of email
+        </th>
+        <th role="columnheader" class="nhsbsa-u-whitespace__normal" scope="col">
             Sent on
         </th>
-        <th role="columnheader" class="" scope="col">
+        <th role="columnheader" class="nhsbsa-u-whitespace__normal" scope="col">
             Total reminders
         </th>
-        <th role="columnheader" class="" scope="col">
+        <th role="columnheader" class="nhsbsa-u-whitespace__normal" scope="col">
             Last reminder
         </th>
-        <th role="columnheader" class="" scope="col">
+        <th role="columnheader" class="nhsbsa-u-whitespace__normal" scope="col">
             Replied on
         </th>
-        <th role="columnheader" class="" scope="col">
+        <th role="columnheader" class="nhsbsa-u-whitespace__normal" scope="col">
             Action
         </th>
     </tr>
@@ -106,6 +109,9 @@ Quarterly collection dropdown - expander list
         <td class="nhsuk-table__cell">
             <span class="nhsuk-table-responsive__heading">Supplier name</span>
             AAH Pharmaceuticals Ltd</td>
+        <td class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Type of email</span>
+            <span id="type-of-email-1"></span></td>
         <td role="cell" class="nhsuk-table__cell" id="date-sent">
             <span class="nhsuk-table-responsive__heading">Sent on</span>
             <span class="nhsuk-u-visually-hidden" id="hidden-sent">Template has not been sent</span>
@@ -118,7 +124,7 @@ Quarterly collection dropdown - expander list
         <td role="cell" class="nhsuk-table__cell" >
             <span class="nhsuk-table-responsive__heading">Replied on</span>
             <span class="nhsuk-u-visually-hidden" id="hidden-reply">Reply has not been received</span>
-            <span id="reply-in">23 Nov 2023</span>
+            <span id="reply-in"></span>
         </td>
         <td class="nhsuk-table__cell ">
             <span class="nhsuk-table-responsive__heading">Action</span>
@@ -128,6 +134,9 @@ Quarterly collection dropdown - expander list
         <td class="nhsuk-table__cell">
             <span class="nhsuk-table-responsive__heading">Supplier name</span>
             Accord-UK Ltd</td>
+        <td class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Type of email</span>
+            <span id="type-of-email-2"></span></td>
         <td role="cell" class="nhsuk-table__cell ">
             <span class="nhsuk-table-responsive__heading">Sent on</span>
             <span class="nhsuk-u-visually-hidden" id="hidden-sent-2">Template has not been sent</span>
@@ -145,6 +154,9 @@ Quarterly collection dropdown - expander list
         <td class="nhsuk-table__cell">
             <span class="nhsuk-table-responsive__heading">Supplier name</span>
             Alliance Healthcare (Distributions) Ltd</td>
+        <td class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Type of email</span>
+            <span id="type-of-email-3"></span></td>
         <td role="cell" class="nhsuk-table__cell">
             <span class="nhsuk-table-responsive__heading">Sent on</span>
             <span class="nhsuk-u-visually-hidden" id="hidden-sent-3">Template has not been sent</span>
@@ -160,6 +172,9 @@ Quarterly collection dropdown - expander list
     <tr role="row" class="nhsuk-table__row">
         <td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Supplier name</span>
             Kent Pharmaceuticals Ltd</td>
+        <td class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Type of email</span>
+            <span id="type-of-email-4"></span></td>
         <td role="cell" class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Sent on</span>
             <span class="nhsuk-u-visually-hidden" id="hidden-sent-4">Template has not been sent</span>
         </td>
@@ -174,6 +189,9 @@ Quarterly collection dropdown - expander list
     <tr role="row" class="nhsuk-table__row">
         <td class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Supplier name</span>
             Phoenix Healthcare Distributions Ltd</td>
+        <td class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Type of email</span>
+            <span id="type-of-email-5"></span></td>
         <td role="cell" class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Sent on</span>
             <span class="nhsuk-u-visually-hidden" id="hidden-sent-5">Template has not been sent</span>
         </td>
@@ -184,7 +202,7 @@ Quarterly collection dropdown - expander list
             <span id="last-reminder"></span></td>
         <td role="cell" class="nhsuk-table__cell"><span class="nhsuk-table-responsive__heading">Replied on</span>
             <span class="nhsuk-u-visually-hidden" id="hidden-reply-5">Reply has not been received</span>
-            <span id="reply-in-manual">23 Nov 2023</span>
+            <span id="reply-in-manual"></span>
         </td>
         <td class="nhsuk-table__cell "><span class="nhsuk-table-responsive__heading">Action</span>
             <a class="nhsuk-link nhsuk-link--no-visited-state" href="supplier-view-tabs-manual" id="supplier-update-manual">Update</a></td>
@@ -240,7 +258,7 @@ Quarterly collection dropdown - expander list
     let year = dateSent.getFullYear();
 
     if (day < 10) day = '0' + day;
-    if (month < 10) month = '0' + month;
+<!--    if (month < 10) month = '0' + month;-->
 
     let currentDate = `${day} ${shortMonth[month]} ${year}`;
     console.log(shortMonth[month]);
@@ -277,11 +295,16 @@ Quarterly collection dropdown - expander list
         document.getElementById("hidden-sent-3").classList.remove("nhsuk-u-visually-hidden");
         document.getElementById("hidden-sent-4").classList.remove("nhsuk-u-visually-hidden");
         document.getElementById("hidden-sent-2").classList.remove("nhsuk-u-visually-hidden");
+        document.getElementById("type-of-email-1").textContent = "Group";
+        document.getElementById("type-of-email-2").textContent = "Group";
+        document.getElementById("type-of-email-3").textContent = "Group";
+        document.getElementById("type-of-email-4").textContent = "Group";
     }
 
     if (localStorage.getItem("has-sent-email-manual") == "yes") {
         document.getElementById("hidden-sent-5").textContent = currentDate;
         document.getElementById("hidden-sent-5").classList.remove("nhsuk-u-visually-hidden");
+        document.getElementById("type-of-email-5").textContent = "Manual";
     }
 
     if (localStorage.getItem("reminder-one-sent") == "yes" && (!localStorage.getItem("reminder-two-sent") || localStorage.getItem("reminder-two-sent") == "no")) {
