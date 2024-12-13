@@ -162,4 +162,6 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+.idea/sonarlint/issuestore/index.pb
+
 # End of https://www.gitignore.io/api/node,macos,windows

@@ -672,6 +672,19 @@ app.get('/pcp-prototype-version-4/supplier-area/additional-suppliers/view/edit-n
 app.get('/pcp-prototype-version-4/supplier-area/additional-suppliers/view/edit-second-note', (req, res) => { res.render('pcp-prototype-version-4/supplier-area/additional-suppliers/view/edit-second-note') });
 app.get('/pcp-prototype-version-4/supplier-area/additional-suppliers/view/remove-note', (req, res) => { res.render('pcp-prototype-version-4/supplier-area/additional-suppliers/view/remove-note') });
 
+// reference prices admin
+
+app.get('/reference-prices-prototype-version-1/admin/reference-prices-admin-dashboard', (req, res) => { res.render('reference-prices-prototype-version-1/admin/reference-prices-admin-dashboard') });
+app.get('/reference-prices-prototype-version-1/admin/reference-prices/reference-price-list', (req, res) => { res.render('reference-prices-prototype-version-1/admin/reference-prices/reference-price-list') });
+app.get('/reference-prices-prototype-version-1/admin/reference-prices/view-product-details', (req, res) => { res.render('reference-prices-prototype-version-1/admin/reference-prices/view-product-details') });
+app.get('/reference-prices-prototype-version-1/admin/outstanding-reference-prices/outstanding-reference-price-list', (req, res) => { res.render('reference-prices-prototype-version-1/admin/outstanding-reference-prices/outstanding-reference-price-list') });
+app.get('/reference-prices-prototype-version-1/admin/outstanding-reference-prices/bulk-upload/bulk-upload', (req, res) => { res.render('reference-prices-prototype-version-1/admin/outstanding-reference-prices/bulk-upload/bulk-upload') });
+app.get('/reference-prices-prototype-version-1/admin/outstanding-reference-prices/bulk-upload/bulk-upload-summary', (req, res) => { res.render('reference-prices-prototype-version-1/admin/outstanding-reference-prices/bulk-upload/bulk-upload-summary') });
+app.get('/reference-prices-prototype-version-1/admin/outstanding-reference-prices/bulk-upload/bulk-upload-confirmation', (req, res) => { res.render('reference-prices-prototype-version-1/admin/outstanding-reference-prices/bulk-upload/bulk-upload-confirmation') });
+app.get('/reference-prices-prototype-version-1/admin/outstanding-reference-prices/bulk-upload/bulk-upload-zero-outstanding-products', (req, res) => { res.render('reference-prices-prototype-version-1/admin/outstanding-reference-prices/bulk-upload/bulk-upload-zero-outstanding-products') });
+// reference prices company
+app.get('/reference-prices-prototype-version-1/company/reference-prices-company-dashboard', (req, res) => { res.render('reference-prices-prototype-version-1/company/reference-prices-company-dashboard') });
+
 /**
  * Server Activation
  */
